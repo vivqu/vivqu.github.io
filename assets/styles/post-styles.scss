@@ -1,0 +1,52 @@
+---
+---
+@import url('https://unpkg.com/primer/build/build.css');
+
+p > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p > img + em {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #6a737d;
+}
+
+p.source {
+    font-size: 14px;
+    color: #6a737d;
+}
+
+ol {
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+}
+
+li {
+    margin-left: 20px;
+}
+
+hr {
+    margin-block-start: 4em;
+    margin-block-end: 4em;
+}
+
+blockquote {
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+img[alt=maps-notification] { 
+    width: 250px;
+}
+
+img[alt=celebration-map] { 
+    width: 550px;
+}

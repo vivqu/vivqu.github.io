@@ -1,6 +1,6 @@
 <h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>code</h2>
 <p class="f4 mb-4 text-gray">Some publicly available repositories.</p>
-<div class="d-sm-flex flex-wrap gutter-condensed">
+<div class="d-sm-flex flex-wrap gutter-condensed mb-4">
   {% if site.repos.sort_by == 'stars' %}
     {% assign sort_order = 'stargazers_count', 'last' %}
   {% else %}

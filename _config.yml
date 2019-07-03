@@ -20,21 +20,16 @@ defaults:
       image: true
 
 repos:
-  sort_by: stars # pushed
+  sort_by: stars
   limit: 9
   exclude:
     forks: true
-    # projects:
-    # - repo-name
 
 social_media:
   twitter: vivqu
   medium: vivqu
   pinterest: vivqu
   instagram: skwishum
-
-bio:
-  header:
 
 projects:
   - name: WorldAnimals
@@ -51,4 +46,4 @@ projects:
     web_url: https://www.sanfransokyopodcast.com/
     image_url: assets/img/san_fransokyo_logo.png
     image_size: 100
-    description: American podcast abroad in Japan
+    description: An American podcast abroad in Japan

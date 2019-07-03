@@ -38,14 +38,9 @@
           </div>
         {% endunless %}
 
-        {% if site.projects %}
-          {% include projects.html %}
-        {% endif %}
+        {% include projects.html %}
         {% include code-repos.html %}
-
-        {% unless posts_total == 0 %}
-          {% include thoughts.html %}
-        {% endunless %}
+        {% include writing.html %}
       </div>
     </div>
   </div>
