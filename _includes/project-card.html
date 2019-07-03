@@ -12,9 +12,9 @@
         #
       </div>
     {% endif %}
-    <p class="f3 lh-condensed text-center link-gray-dark mb-0" {% if project.image_size %}style="margin-top:0px"{% else %}style="margin-top:10px"{% endif %}>{{ project.name }}</p>
+    <p class="github-component f3 lh-condensed text-center link-gray-dark mb-0" {% if project.image_size %}style="margin-top:0px"{% else %}style="margin-top:10px"{% endif %}>{{ project.name }}</p>
     {% if project.description %}
-      <p class="f5 text-gray text-center mb-0 mt-1">{{ project.description }}</p>
+      <p class="github-component f5 text-gray text-center mb-0 mt-1" style="height: 38px;">{{ project.description }}</p>
     {% endif %}
   </a>
 {% else %}

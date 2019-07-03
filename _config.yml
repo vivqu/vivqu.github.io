@@ -37,15 +37,18 @@ bio:
   header:
 
 projects:
-  - name: WorldAnimals app
+  - name: WorldAnimals
     web_url: https://worldanimalsapp.com
     image_url: assets/img/worldanimals_icon.png
+    description: Does a dog say "woof" in Chinese?
 
-  - name: Haiku app
+  - name: Haiku
     web_url: https://itunes.apple.com/us/app/haiku-simple-writing-app-for-haikus/id1227312972?mt=8&ign-mpt=uo%3D4
     image_url: assets/img/haiku_icon.png
+    description: Writing poems with ease
 
-  - name: San Fransokyo podcast
+  - name: San Fransokyo
     web_url: https://www.sanfransokyopodcast.com/
     image_url: assets/img/san_fransokyo_logo.png
     image_size: 100
+    description: American podcast abroad in Japan
