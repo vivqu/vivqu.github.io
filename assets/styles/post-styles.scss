@@ -45,12 +45,25 @@ p > img {
     max-width: 560px;
 }
 
-p > img + em {
+.float-left > img, .float-right > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    margin-top: 10px;
+}
+
+p > img + em, .float-left > img + em, .float-right > img + em {
     display: block;
     text-align: center;
     font-size: 14px;
     margin-top: 5px;
     color: #6a737d;
+}
+
+.float-left > img + em, .float-right > img + em {
+    max-width: 300px;
+    margin-bottom: 5px;
 }
 
 p.source {
@@ -97,4 +110,19 @@ img[alt=maps-notification] {
 
 img[alt=celebration-map] { 
     width: 550px;
+}
+
+.float-left, .float-right {
+    max-width: 300px;
+    
+}
+
+.float-left {
+    float: left;
+    margin-right: 20px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 20px;
 }
