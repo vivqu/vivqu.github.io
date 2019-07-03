@@ -1,9 +1,10 @@
 <h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>writing</h2>
-<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">Latest from my blog <i>Simulated Annealing</i>. You can find the full archive and recommended reading here.</p>
-<div class="d-sm-flex flex-wrap gutter-condensed mb-4">
-  {% for post in site.posts %}
+<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">Latest posts from my blog, <i>Simulated Annealing</i>.</p>
+<div class="d-sm-flex flex-wrap gutter-condensed">
+  {% for post in site.posts limit: 4 %}
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-3">
       {% include post-list.html %}
     </div>
   {% endfor %}
 </div>
+<p class="f4 mb-5 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}"><a href="/blog/">See more...</a></p>
