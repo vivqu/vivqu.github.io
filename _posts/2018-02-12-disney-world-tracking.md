@@ -1,6 +1,7 @@
 ---
 title: "How Disney World solved the user tracking problem"
 published: true
+source: true
 ---
 <p class="source">
 (This article was originally published in Prototyper, click <a href="https://blog.prototypr.io/how-disney-world-solved-the-user-tracking-problem-beece7a95e97" target="_blank">here</a> to read on Medium.)
@@ -22,7 +23,7 @@ Disney’s mass surveillance is a curiosity rather than deeply disturbing. They 
 
 2. Tracking has clear boundaries for where it starts and stops.
 
-------
+<hr class="section-divider" />
 
 ## 1. Tracking as a side effect
 Disney first avoids associating their public image with cutting-edge technology and user tracking. Theme park visitors prefer to see the park as an effortless experience sprouting directly from the brain of Walt Disney rather than a highly controlled set coordinated from a central command center with NASA-level (or higher) gadgetry. Park planners encourage you to accept that it’s “magic” and not think about how the sausage is made. If one of the ways they produce this experience is through user tracking, then so be it.
@@ -53,7 +54,7 @@ Far, far down the list of benefits on their website is where you find the hint o
 
 Disney has managed to turn your own smartphone into a stream of data they can utilize. We agree to it because the resulting personalized experience is so compelling. And they would never disclose the extent of their tracking or ask for more information without tempting guests with new, overwhelming benefits— a lesson that other products don’t seem to have learned.
 
-------
+<hr class="section-divider" />
 
 ## 2. Clear boundaries
 In 2015, Wired published an article called [“Disney’s $1 billion bet on a magical wristband"](https://www.wired.com/2015/03/disney-magicband/), which brilliantly captures how the company figured out how to prompt mass adoption of a wearable tracker (and thousands of receivers around the park) to serve the ultimate effortless experience. Diners can now preorder their meals and later be seated at a park restaurant where their food “magically” appears, without ever needing to coordinate with a human. Cliff Kuang captures the situation perfectly:
@@ -75,7 +76,7 @@ There are plenty of examples where lack of clear boundaries cause tracking anxie
 
 Sometimes there is no easy way to introduce boundaries to alleviate a user’s privacy concerns. If there was, smart product designers and engineers would have thought of it already. For the truly tracking-sensitive, often the ultimate solution is just to physically create boundaries from the devices. Unplug the Amazon Echo. In college, my brilliant information security professor always taped a piece of masking tape to his laptop webcam. “A hacker is able to turn on your webcam without the green light indicator turning on,” he told us. The next day the entire class also had small pieces of duct tape covering their webcams.
 
-------
+<hr class="section-divider" />
 
 These two principles form the underlying technology strategy of Disney theme parks. Both of them can be used to prompt critical thinking from product teams: are we gathering more signals in an unobtrusive manner? If a user does notice, is it clear that there are immediate benefits for them to give us their information? What kind of data is necessary to provide an effortless, “magical” experience? How can we demarcate physical or digital boundaries that will enable trust and de-escalate or remove the privacy question altogether?
 
