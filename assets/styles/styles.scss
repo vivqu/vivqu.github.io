@@ -20,9 +20,8 @@
 }
 
 .content-body {
-  display: flex;
+  width: 100%;
   align-content: center;
-  justify-content: start;
   padding: 40px;
   flex-grow: 1;
 }
@@ -88,13 +87,13 @@ a:visited {
   width: 230px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .sidebar {
     width: 100%;
   }
 }
 
-nav {
+nav.masthead {
   margin-block-start: 2em;
   display: flex;
   justify-content: center;
@@ -118,9 +117,10 @@ nav h4 {
   max-width: 150px;
 }
 
-@media only screen and (max-width: 768px) {
-  nav {
+@media only screen and (max-width: 767px) {
+  nav.masthead {
     flex-direction: row;
+    display: flex;
   }
 
   nav h4 {
@@ -129,6 +129,12 @@ nav h4 {
 
   .logo-image {
     max-width: 100px;
+  }
+}
+
+@media only screen and (max-width: 414px) { 
+  nav h4 {
+    width: 25%;
   }
 }
 
@@ -149,6 +155,7 @@ nav a:hover {
 }
 
 .footerLayout {
+  width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
