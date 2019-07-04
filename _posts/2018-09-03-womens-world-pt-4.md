@@ -9,9 +9,9 @@ source: true
 </p>
 <br>
 This is the final post in a four-part series on Mosuo matriarchal culture. 
-1. [Introduction to the Mosuo](/2018/09/03/womens-world-pt-1/)
-2. [Family organization](/2018/09/03/womens-world-pt-2/)
-3. [Love & marriage](/2018/09/03/womens-world-pt-3/)
+1. [Introduction to the Mosuo](/blog/2018/09/03/womens-world-pt-1/)
+2. [Family organization](/blog/2018/09/03/womens-world-pt-2/)
+3. [Love & marriage](/blog/2018/09/03/womens-world-pt-3/)
 4. __Clash with modern lifestyles and values__
 
 <hr class="section-divider" />

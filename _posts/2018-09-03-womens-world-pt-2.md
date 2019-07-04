@@ -9,10 +9,10 @@ source: true
 </p>
 <br>
 This is the second post in a four-part series on Mosuo matriarchal culture. 
-1. [Introduction to the Mosuo](/2018/09/03/womens-world-pt-1/)
+1. [Introduction to the Mosuo](/blog/2018/09/03/womens-world-pt-1/)
 2. __Family organization__
-3. [Love & marriage](/2018/09/03/womens-world-pt-3/)
-4. [Clash with modern lifestyles and values](/2018/09/03/womens-world-pt-4/)
+3. [Love & marriage](/blog/2018/09/03/womens-world-pt-3/)
+4. [Clash with modern lifestyles and values](/blog/2018/09/03/womens-world-pt-4/)
 
 <hr class="section-divider" />
 
@@ -30,7 +30,7 @@ As a [matrilineal society](https://en.wikipedia.org/wiki/Matrilineality), family
 
 The basic family unit is a __static multigenerational household__. Three or more generations will live together in a large compound, made up of several buildings surrounding a central courtyard. Wealthier families will have multiple compounds, located strategically for operations of the family businesses. One compound might be further outside town, next to farming fields. Another may be built on the lakeshore to double as an inn for tourists.
 
-The key aspect of their family unit that feels exceptionally foreign to us is the fact that it’s __static__. Mosuo relatives live in the same household for their entire lives. You are born into your mother’s family and no life event causes you to leave. Getting married does not mean a major change in your family structure. An individual does not move out to live together with their spouse, and the spouse definitely does not move into their partner’s family home. This has fascinating repercussions for behaviors of married people, which we will discuss later in [part three of the series](/2018/09/03/womens-world-pt-3/).
+The key aspect of their family unit that feels exceptionally foreign to us is the fact that it’s __static__. Mosuo relatives live in the same household for their entire lives. You are born into your mother’s family and no life event causes you to leave. Getting married does not mean a major change in your family structure. An individual does not move out to live together with their spouse, and the spouse definitely does not move into their partner’s family home. This has fascinating repercussions for behaviors of married people, which we will discuss later in [part three of the series](/blog/2018/09/03/womens-world-pt-3/).
 
 <div class="float-left">
     <img src="/assets/img/posts/mosuo/generations.png" alt="mosuo-generations">
@@ -87,4 +87,4 @@ My last thought about this family culture is that it would not be easily transla
 
 <hr class="section-divider" />
 
-In [part three](/2018/09/03/womens-world-pt-3/), we learn about the Mosuo understanding of love and marriage and how much it differs from our ways of conducting romantic relationships.
+In [part three](/blog/2018/09/03/womens-world-pt-3/), we learn about the Mosuo understanding of love and marriage and how much it differs from our ways of conducting romantic relationships.

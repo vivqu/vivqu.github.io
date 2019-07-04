@@ -9,10 +9,10 @@ source: true
 </p>
 <br>
 This is the third post in a four-part series on Mosuo matriarchal culture. 
-1. [Introduction to the Mosuo](/2018/09/03/womens-world-pt-1/)
-2. [Family organization](/2018/09/03/womens-world-pt-2/)
+1. [Introduction to the Mosuo](/blog/2018/09/03/womens-world-pt-1/)
+2. [Family organization](/blog/2018/09/03/womens-world-pt-2/)
 3. __Love & marriage__
-4. [Clash with modern lifestyles and values](/2018/09/03/womens-world-pt-4/)
+4. [Clash with modern lifestyles and values](/blog/2018/09/03/womens-world-pt-4/)
 
 <hr class="section-divider" />
 
@@ -116,4 +116,4 @@ Maybe that’s just mainstream upbringing talking. I am too conditioned to a cer
 
 <hr class="section-divider" />
 
-For the [final part](/2018/09/03/womens-world-pt-4/) in the series, we consider the modern forces that are changing the Mosuo culture and whether or not the matriarchal culture can be sustained in the future.
+For the [final part](/blog/2018/09/03/womens-world-pt-4/) in the series, we consider the modern forces that are changing the Mosuo culture and whether or not the matriarchal culture can be sustained in the future.

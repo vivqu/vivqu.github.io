@@ -10,9 +10,9 @@ source: true
 <br>
 This is the first post in a four-part series on Mosuo matriarchal culture. 
 1. __Introduction to the Mosuo__
-2. [Family organization](/2018/09/03/womens-world-pt-2/)
-3. [Love & marriage](/2018/09/03/womens-world-pt-3/)
-4. [Clash with modern lifestyles and values](/2018/09/03/womens-world-pt-4/)
+2. [Family organization](/blog/2018/09/03/womens-world-pt-2/)
+3. [Love & marriage](/blog/2018/09/03/womens-world-pt-3/)
+4. [Clash with modern lifestyles and values](/blog/2018/09/03/womens-world-pt-4/)
 
 <hr class="section-divider" />
 
@@ -68,4 +68,4 @@ Regardless, we were able to learn about a rich tapestry of social traditions tha
 
 <hr class="section-divider" />
 
-In [part 2](/2018/09/03/womens-world-pt-2/), we discuss how the Mosuo definition of family is the foundation behind their social customs, and how this definition may seem very strange by mainstream standards.
+In [part 2](/blog/2018/09/03/womens-world-pt-2/), we discuss how the Mosuo definition of family is the foundation behind their social customs, and how this definition may seem very strange by mainstream standards.
