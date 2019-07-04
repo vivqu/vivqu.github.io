@@ -1,21 +1,15 @@
-{% if site.style == 'dark' %}
-{% assign icon_color = "#ffffff" %}
-{% else %}
 {% assign icon_color = "#24292e" %}
-{% endif %}
-
 {% assign content = page.content %}
-
 {% assign posts_total = site.posts | size %}
 
-{% assign user = site.github.owner %}
+<!-- {% assign user = site.github.owner %} -->
 
 {% if page.path contains '_posts' %}
 {% assign page_title = page.title %}
 {% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
 {% else %}
-{% assign page_title = user.name %}
-{% assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
+{% assign page_title = "Vivian Qu" %}
+<!-- {% assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %} -->
 {% endif %}
 
 <!doctype html>
@@ -25,17 +19,17 @@
   <meta charset="utf-8">
   <title>{{ page.title }}</title>
   <meta name="description" content="{{ meta_description }}" />
-  <meta property="og:title" content="{{ user.name }}" />
-  <meta property="og:image" content="{{ user.avatar_url }}" />
+  <!-- <meta property="og:title" content="{{ user.name }}" />
+  <meta property="og:image" content="{{ user.avatar_url }}" /> -->
   <meta property="og:description" content="{{ meta_description }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="{{ "/assets/styles/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" type="image/png" href="assets/img/favicon.ico">
+  <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   {% if page.path contains '_posts' %}
   <link href="{{ "/assets/styles/post-styles.css" | relative_url }}" rel="stylesheet" type="text/css">
   {% endif%}
 </head>
 
-<body class="bg-white min-height-full" {% if site.style == 'dark' %}style="background-color: #2f363d !important"
-  {% endif %}>
+<body class="bg-white min-height-full">

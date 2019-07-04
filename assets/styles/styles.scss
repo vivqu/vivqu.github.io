@@ -19,6 +19,14 @@
     width: 12px;
 }
 
+.content-body {
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  padding: 40px;
+  flex-grow: 1;
+}
+
 .emoji {
   width: 18px;
   height: auto;
@@ -42,8 +50,13 @@
   min-height: 100vh;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: -apple-system, 'BlinkMacSystemFont', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+}
+
+h4 {
+  font-style: normal;
+  font-weight: 400;
 }
 
 p, ol, ul {
@@ -59,9 +72,92 @@ a:visited {
   color: #0c7fb9;
 }
 
+.sidebar {
+  width: 230px;
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+nav {
+  margin-block-start: 2em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav h4 {
+  width: 100%;
+  text-align: center;
+}
+
+.logo-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.logo-image {
+  max-width: 150px;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-direction: row;
+  }
+
+  nav h4 {
+    width: 15%;
+  }
+
+  .logo-image {
+    max-width: 100px;
+  }
+}
+
+@media only screen and (max-width: 536px) {
+  .project-card {
+    width: 100%;
+  }
+}
+
+nav a, nav a:visited {
+  color: #40404f;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #1e6ce3;
+}
+
 .article > p {
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+
+.footerLayout {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+
+.socialIconBack {
+	color: #0c7fb9;
+}
+
+.socialIconTop {
+	color: #ffff;
+}
+
+.footerIcons {
+	padding-bottom: 30px;
+  display: flex;
 }

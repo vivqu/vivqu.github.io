@@ -6,7 +6,7 @@ plugins:
   - jekyll-github-metadata
   - jemoji
 
-permalink: /:year/:month/:day/:title/
+permalink: /blog/:year/:month/:day/:title/
 
 defaults:
   - scope:
@@ -20,6 +20,7 @@ defaults:
       image: true
 
 repos:
+  show_on_home: false
   sort_by: stars
   limit: 9
   exclude:
@@ -47,3 +48,7 @@ projects:
     image_url: assets/img/san_fransokyo_logo.png
     image_size: 100
     description: An American podcast abroad in Japan
+
+email_address: hello@vivqu.com
+twitter_username: vivqu
+github_username: vivqu
