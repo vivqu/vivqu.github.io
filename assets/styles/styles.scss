@@ -171,8 +171,23 @@ nav a:hover {
 }
 
 .footerIcons {
-	padding-bottom: 30px;
   display: flex;
+}
+
+.footerText {
+  text-align: center;
+  width: 100%;
+  font-family: -apple-system, 'BlinkMacSystemFont', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  color: #6a737d;
+  padding-bottom: 30px;
+}
+
+.footerRule {
+  width: 70%; 
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-block-start: 4em; 
+  margin-block-end: 4em
 }
 
 hr.section-divider {
