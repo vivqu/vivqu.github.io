@@ -5,11 +5,15 @@
 <!-- {% assign user = site.github.owner %} -->
 
 {% if page.path contains '_posts' %}
-{% assign page_title = page.title %}
-{% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
+  {% assign page_title = page.title %}
+  {% assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
 {% else %}
-{% assign page_title = "Vivian Qu" %}
-<!-- {% assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %} -->
+  {% if page.web_title %}
+    {% assign page_title = page.web_title %}
+  {% else %}
+    {% assign page_title = page.title %}
+  {% endif %}
+  {% assign meta_description = page.description | strip_html | strip_newlines | xml_escape | truncate: 300 %}
 {% endif %}
 
 <!doctype html>
@@ -17,10 +21,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>{{ page.title }}</title>
+  <title>{{ page_title }}</title>
   <meta name="description" content="{{ meta_description }}" />
-  <!-- <meta property="og:title" content="{{ user.name }}" />
-  <meta property="og:image" content="{{ user.avatar_url }}" /> -->
+  <meta property="og:title" content="{{ author.name }}" />
   <meta property="og:description" content="{{ meta_description }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="{{ "/assets/styles/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
