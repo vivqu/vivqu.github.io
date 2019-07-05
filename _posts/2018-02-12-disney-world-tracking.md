@@ -2,6 +2,8 @@
 title: "How Disney World solved the user tracking problem"
 published: true
 source: true
+seo_description: "Privacy is more important than ever. But somehow most people are not concerned with Disney theme parks, which collect unbelievable amounts of visitor data."
+tags: Disney data privacy design
 ---
 <p class="source">
 (This article was originally published in Prototyper, click <a href="https://blog.prototypr.io/how-disney-world-solved-the-user-tracking-problem-beece7a95e97" target="_blank">here</a> to read on Medium.)

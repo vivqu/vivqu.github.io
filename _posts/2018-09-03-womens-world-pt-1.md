@@ -3,6 +3,8 @@ title: "Part 1: What I learned from “Women’s World”"
 subtitle: "Notes from my journey to visit the Mosuo, China’s last matriarchal minority"
 published: true
 source: true
+seo_description: "An essay series on the culture and traditions of the Mosuo, a matriarchal ethnic minority in China."
+tags: matriarchy mosuo women
 ---
 <p class="source">
 (This article was originally published on Medium, click <a href="https://medium.com/@vivqu/what-i-learned-from-womens-world-4a69db76b773" target="_blank">here</a> to read it there.)

@@ -3,6 +3,8 @@ title: "Part 3: Three-step guide to falling in love"
 subtitle: "How does love work in a matriarchal society? We find out how to court a Mosuo woman and when couples are considered officially married"
 published: true
 source: true
+seo_description: "In the third part of the series, we learn about the rules of love and courtship for the Mosuo, a matriarchal ethnic minority."
+tags: mosuo women matriarchy love marriage
 ---
 <p class="source">
 (This article was originally published on Medium, click <a href="https://medium.com/p/three-step-guide-to-falling-in-love-f6a36521ead2" target="_blank">here</a> to read it there.)

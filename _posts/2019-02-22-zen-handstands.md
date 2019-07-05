@@ -3,6 +3,8 @@ title: "Zen and the Art of Handstands"
 subtitle: "or: How I Learned to Stop Worrying and Love the Body"
 published: true
 source: true
+seo_description: "zen-buddhism zen-and-the-art-of-archery handstands meditation"
+tags: zen handstands mind-body-duality
 ---
 <p class="source">
 (This article was originally published on Medium, click <a href="https://medium.com/@vivqu/zen-and-the-art-of-handstands-3a5b1ce3f25a" target="_blank">here</a> to read it there.)

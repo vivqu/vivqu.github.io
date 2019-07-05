@@ -3,6 +3,8 @@ title: "3 tips to outsmart Disney theme parks"
 subtitle: "The local’s guide to 'The Happiest Place on Earth'"
 published: true
 source: true
+seo_description: "Getting the fastest wait times, the order of parks to go to, and other tips to get the most out of your trip to Disney World."
+tags: Disney tips theme-park-optimization design
 ---
 <p class="source">
 (This article was originally published on Medium, click <a href="https://medium.com/@vivqu/3-tips-to-outsmart-disney-theme-parks-c8aea932343b" target="_blank">here</a> to read it there.)

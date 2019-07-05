@@ -7,7 +7,6 @@ author:
 plugins:
   - jekyll-octicons
   - jekyll-github-metadata
-  - jemoji
   - jekyll-feed
 
 permalink: /blog/:year/:month/:day/:title/

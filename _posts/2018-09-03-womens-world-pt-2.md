@@ -3,6 +3,8 @@ title: "Part 2: The (family) future is female"
 subtitle: "How the definition of family is radically different in matriarchal society."
 published: true
 source: true
+seo_description: "In the second part of the series, we learn about the family organization of the Mosuo, a matriarchal ethnic minority."
+tags: matriarchy mosuo women family
 ---
 <p class="source">
 (This article was originally published on Medium, click <a href="https://medium.com/@vivqu/the-family-future-is-female-6b38e3e00724" target="_blank">here</a> to read it there.)

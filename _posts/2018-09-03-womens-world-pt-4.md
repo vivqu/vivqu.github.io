@@ -3,6 +3,8 @@ title: "Part 4: Matriarchy meets the modern world"
 subtitle: "How can a centuries-old culture deal with Communism and increasing exposure to the modern world?"
 published: true
 source: true
+seo_description: "In the last part of the series, we learn about the how exposure to modern culture is impacting the Mosuo, a matriarchal ethnic minority."
+tags: mosuo women matriarchy culture-clash modernity
 ---
 <p class="source">
 (This article was originally published on Medium, click <a href="https://medium.com/@vivqu/matriarchy-meets-the-modern-world-d44888f0ee19" target="_blank">here</a> to read it there.)
