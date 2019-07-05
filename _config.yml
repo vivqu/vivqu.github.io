@@ -1,10 +1,14 @@
 layout: sidebar
 style: light
+description: "Using metallurgical-based metaheuristics as a metaphor for life. This product may contain: technology, design, societal consequences, gender issues, and occasional humor."
+author: 
+  name: Vivian Qu
 
 plugins:
   - jekyll-octicons
   - jekyll-github-metadata
   - jemoji
+  - jekyll-feed
 
 permalink: /blog/:year/:month/:day/:title/
 
