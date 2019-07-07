@@ -28,7 +28,7 @@
 
   <div class="content-body border-top border-md-top-0 bg-gray-light">
     <div class="mx-auto post-body" style="max-width: 700px;">
-      <div class="f4 mb-6">
+      <div class="f4 mb-10">
         <div class="f4">
           <h4 class="f5 mb-4">
             <a href="{{ site.url }}{{ site.baseurl | append:'/blog/' }}"
@@ -38,10 +38,34 @@
           {% if page.subtitle %}
           <h2 class="article-subtitle f2-light lh-condensed">{{ page.subtitle }}</h2>
           {% endif %}
-          <p class="article-date {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %} {% if post.source == false %}mb-5{% endif %}">
-          {{ page.date | date: "%b %d, %Y"}}</p>
+          <p
+            class="article-date {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %} {% if post.source == false %}mb-5{% endif %}">
+            {{ page.date | date: "%b %d, %Y"}}</p>
           {{ post_body }}
         </div>
+      </div>
+      <div class="post-navigation">
+        
+        <div class="post-prev-nav">
+            {% if page.previous.url %}
+          <div class="prev-arrow">
+            <a href="{{page.next.url}}">&laquo;</a>
+          </div>
+          <div class="prev">
+            <a href="{{page.previous.url}}">{{page.previous.title}}</a>
+          </div>
+          {% endif %}
+        </div>
+        {% if page.next.url %}
+        <div class="post-next-nav">
+          <div class="next">
+            <a href="{{page.next.url}}">{{page.next.title}}</a>
+          </div>
+          <div class="next-arrow">
+            <a href="{{page.next.url}}">&raquo;</a>
+          </div>
+        </div>
+        {% endif %}
       </div>
     </div>
     {% include social-footer.html %}

@@ -191,8 +191,8 @@ nav > p {
   width: 70%; 
   margin-left: auto; 
   margin-right: auto; 
-  margin-block-start: 4em; 
-  margin-block-end: 4em
+  margin-block-start: 0em; 
+  margin-block-end: 0em
 }
 
 hr.section-divider {
@@ -220,4 +220,44 @@ hr.section-divider:before {
   color: rgba(0,0,0,.68);
   position: relative;
   top: -30px;
+}
+
+.post-navigation {
+  font-size: 14px;
+  display: flex;
+  width: 100%;
+}
+
+.prev {
+  padding-right: 20px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.next {
+  text-align: right;
+  margin-right: 5px;
+}
+
+.next-arrow {
+  width: 10px;
+}
+
+.post-prev-nav {
+  width: 50%;
+  flex-direction: row;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.post-next-nav {
+  width: 50%;
+  flex-direction: row;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
 }

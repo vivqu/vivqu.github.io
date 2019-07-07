@@ -17,8 +17,8 @@
 
   <div class="content-body border-top border-md-top-0 bg-gray-light">
     <div class="mx-auto" style="max-width: 700px;">
-      <div class="f4 {% if site.style == 'dark' %}text-white{% endif %} mb-6">
-        <div class="f4 {% if site.style == 'dark' %}text-white{% endif %}">
+      <div class="f4 mb-10">
+        <div class="f4">
             <h1 class="f00-light lh-condensed">{{ page.title }}</h1>
             <p class="f3 mb-4 text-gray" style="margin-block-start: 0.3em;">
                 A blog by Vivian Qu.
@@ -29,8 +29,8 @@
             {% include blog-list.html %}
         </div>
       </div>
-      {% include social-footer.html %}
     </div>
+    {% include social-footer.html %}
   </div>
 </div>
 {% endif %}

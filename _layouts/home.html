@@ -30,9 +30,9 @@
     </div>
 
     <div class="content-body border-top border-md-top-0 bg-gray-light">
-      <div class="mx-auto" style="max-width: 900px;">
+      <div class="mx-auto mb-10" style="max-width: 700px;">
         {% unless content == ""  %}
-          <div class="f4 mb-6">
+          <div class="f4">
             {{ content }}
           </div>
         {% endunless %}
@@ -44,8 +44,8 @@
         {% unless posts_total == 0 %}
           {% include writing.html %}
         {% endunless %}
-        {% include social-footer.html %}
       </div>
+      {% include social-footer.html %}
     </div>
   </div>
 {% endif %}
