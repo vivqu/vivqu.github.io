@@ -39,7 +39,7 @@ projects:
   - name: WorldAnimals
     web_url: https://worldanimalsapp.com
     image_url: assets/img/worldanimals_icon.png
-    description: Does a dog say "woof" in Chinese?
+    description: Do dogs say "woof" in Chinese?
 
   - name: Haiku
     web_url: https://itunes.apple.com/us/app/haiku-simple-writing-app-for-haikus/id1227312972?mt=8&ign-mpt=uo%3D4
