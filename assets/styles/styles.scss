@@ -95,9 +95,6 @@ a:visited {
 
 nav.masthead {
   margin-block-start: 2em;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 nav > p {
@@ -105,10 +102,22 @@ nav > p {
   font-family: -apple-system, 'BlinkMacSystemFont', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
 }
 
-.mastheadLinks h4 {
+.masthead-links {
+  display: block;
+  width: 100%;
+}
+
+.masthead-links h4 {
   width: 100%;
   text-align: center;
   font-weight: 400;
+  padding-left: 0px;
+  padding-right: 0px;
+  align-self: center;
+}
+
+.masthead p {
+  margin-top: 40px;
 }
 
 .logo-wrapper {
@@ -122,24 +131,110 @@ nav > p {
   max-width: 150px;
 }
 
+.name-navigation {
+  display: inline;
+}
+
+.home-navigation {
+  display: none;
+}
+
+.masthead-name {
+  display: none;
+  width: 100%;
+}
+
+.masthead-name h1 {
+  text-align: center;
+  align-self: center;
+  font-weight: 400;
+}
+
 @media only screen and (max-width: 767px) {
   nav.masthead {
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    margin-block-start: 1em;
   }
 
-  .mastheadLinks h4 {
-    width: 15%;
+  .masthead-links {
+    margin-top: 20px;
+    display: flex;
+    width: 80%;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .masthead-links h4 {
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .masthead p {
+    width: 40%;
+    align-self: center;
+    text-align: center;
+    margin-top: 5px;
   }
 
   .logo-image {
     max-width: 100px;
   }
+
+  .name-navigation {
+    display: none;
+  }
+  
+  .home-navigation {
+    display: inline;
+  }
+
+  .masthead-name {
+    display: block;
+  }
 }
 
-@media only screen and (max-width: 414px) { 
-  .mastheadLinks h4 {
-    width: 25%;
+@media only screen and (max-width: 414px) {
+  nav.masthead {
+    margin-block-start: 1em;
+  }
+
+  .masthead-links {
+    margin-top: 20px;
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    width: 80%;
+    align-self: center;
+  }
+
+  .masthead-links h4 {
+    min-width: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 30%;
+  }
+
+  .masthead p {
+    width: 60%;
+    align-self: center;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .name-navigation {
+    display: none;
+  }
+  
+  .home-navigation {
+    display: inline;
+  }
+
+  .masthead-name {
+    display: block;
   }
 }
 
@@ -149,12 +244,12 @@ nav > p {
   }
 }
 
-.mastheadLinks a, .mastheadLinks a:visited {
+.masthead-links a, .masthead-links a:visited {
   color: #40404f;
   text-decoration: none;
 }
 
-.mastheadLinks a:hover {
+.masthead-links a:hover {
   text-decoration: none;
   color: #1e6ce3;
 }
