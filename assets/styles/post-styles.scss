@@ -30,17 +30,23 @@ p > img {
     margin-top: 10px;
 }
 
+.float-left > img + em, .float-right > img + em {
+    max-width: 300px;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 590px) {
+    p > img, .float-left > img, .float-right > img {
+        width: 90%;
+    }
+}
+
 p > img + em, .float-left > img + em, .float-right > img + em {
     display: block;
     text-align: center;
     font-size: 14px;
     margin-top: 5px;
     color: #6a737d;
-}
-
-.float-left > img + em, .float-right > img + em {
-    max-width: 300px;
-    margin-bottom: 5px;
 }
 
 p.source {
@@ -63,6 +69,9 @@ ol, ul {
     margin-left: 20px;
     margin-right: 20px;
     position: relative;
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+    line-height: 2.5;
 }
 
 li {
@@ -89,9 +98,15 @@ img[alt=celebration-map] {
     width: 550px;
 }
 
-.float-left, .float-right {
-    max-width: 300px;
-    
+@media only screen and (max-width: 590px) {
+    img[alt=maps-notification] { 
+        max-width: 250px;
+        width: 90%;
+    }
+
+    img[alt=celebration-map] { 
+        width: 90%;
+    }
 }
 
 .float-left {
@@ -102,6 +117,25 @@ img[alt=celebration-map] {
 .float-right {
     float: right;
     margin-left: 20px;
+}
+
+@media only screen and (max-width: 563px) {
+    .float-left {
+        display: block;
+        width: 100%;
+    }
+
+    .float-right {
+        display: flex;
+        align-content: center;
+        width: 100%;
+    }
+
+    .float-left > img + em, .float-right > img + em {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 footnote {

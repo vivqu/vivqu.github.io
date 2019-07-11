@@ -39,7 +39,7 @@
           <h2 class="article-subtitle f2-light lh-condensed">{{ page.subtitle }}</h2>
           {% endif %}
           <p
-            class="article-date {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %} {% if post.source == false %}mb-5{% endif %}">
+            class="article-date {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %} {% unless post.source == 'true' %}mb-5{% endunless %}">
             {{ page.date | date: "%b %d, %Y"}}</p>
           {{ post_body }}
         </div>
