@@ -1,7 +1,7 @@
 ---
 title: "Simulated Annealing: a framework for life decision-making"
 subtitle: "Searching for a decent outcome and enjoying the process"
-published: false
+published: true
 source: false
 # seo_description: "zen-buddhism zen-and-the-art-of-archery handstands meditation"
 # tags: zen handstands mind-body-duality
@@ -191,9 +191,11 @@ Simulated annealing makes no judgement on whether each iteration gets you closer
 
 So it is important to view simulated annealing itself as a __process to enjoy__. Within each iteration, you are intentionally giving yourself space to respond both rationally and emotionally, consciously and unconsciously, to the experience. By having a positive framing that is unconcerned with the fastest route towards the final outcome, you can view each twist and downturn in the path as leading to valuable insights, building a greater understanding of your own self.
 
-By contrast, when you are only focused on personal growth, reaching the end of your goal is the ultimate payoff for all the hard work. But what about the experience at the top? For personal growth lovers, this state is an ultimately boring one. You either spin endlessly at your goal, moving nowhere because there is no room to go up and no point in moving downwards, or switch to pursue some other goal. 
+By contrast, when you are only focused on personal growth, reaching the end of your goal is the ultimate payoff for all the hard work. But what about the experience at the top? Unless you drop dead the moment you reach the top, you have to keep living and doing things.
 
-Meanwhile, under the simulated annealing framework, you can continue searching even if you've reached the summit. The satisfaction of discovering new insights and self-knowledge produces value beyond the achievement of success. 
+For personal growth lovers, this state is an ultimately boring one. You either spin endlessly at your goal, moving nowhere because there is no room to go up and no point in moving downwards, or switch to pursue some other goal.
+
+Meanwhile, the simulated annealing framework does provide motivation for lateral or downward steps. The satisfaction of discovering new insights and self-knowledge produces value beyond the achievement of success. It treats life as a game to be _played_, not won.
 
 ![self-actualization](/assets/img/posts/simulated-annealing/self-actualization.png)
 
