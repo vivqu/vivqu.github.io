@@ -1,10 +1,10 @@
 ---
 title: "Simulated Annealing: a framework for life decision-making"
-subtitle: "Searching for a decent outcome and enjoying the process"
+subtitle: "Finding good outcomes and enjoying the ride"
 published: true
 source: false
-# seo_description: "zen-buddhism zen-and-the-art-of-archery handstands meditation"
-# tags: zen handstands mind-body-duality
+seo_description: "life-philosophy simulated-annealing probability possibility"
+tags: life life-philosophy simulated-annealing theory
 ---
 
 I enjoy learning about different systems for living a good life. These can range from specific productivity practices to high-level formulations that attempt to reimagine the very concept of meaning in your life.
