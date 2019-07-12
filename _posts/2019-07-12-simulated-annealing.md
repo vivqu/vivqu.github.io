@@ -5,6 +5,7 @@ published: true
 source: false
 seo_description: "life-philosophy simulated-annealing probability possibility"
 tags: life life-philosophy simulated-annealing theory
+image: simulated-annealing/self-actualization.png
 ---
 
 I enjoy learning about different systems for living a good life. These can range from specific productivity practices to high-level formulations that attempt to reimagine the very concept of meaning in your life.
