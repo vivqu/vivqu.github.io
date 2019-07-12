@@ -1,6 +1,6 @@
 ---
 title: "Simulated Annealing: a framework for life decision-making"
-subtitle: "Finding good outcomes and enjoying the ride"
+subtitle: "Finding good outcomes while enjoying the ride"
 published: true
 source: false
 seo_description: "life-philosophy simulated-annealing probability possibility"
