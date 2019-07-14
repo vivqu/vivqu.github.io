@@ -12,9 +12,9 @@ I enjoy learning about different systems for living a good life. These can range
 
 I am an efficient software engineer so I dislike repeating work to rebuild tools that already exist in the wild. ([At the bottom of this article](#a-list-of-other-life-frameworks), you can find a list of the ones I find particularly interesting and thoughtful.)
 
-But over the last few years another framework has gotten stuck in my head; I believe it adds something new to the conversation.
+But over the last few years I've been mulling over an idea. My background is in computer science and software design; the idea originally comes from those fields, and has in fact been around for a while. Recently, I've been thinking more and more on how the principles behind this "old" idea become new and interesting when you move beyond the bounds of technical applications, and start using it as systematic way to think about life.
 
-__Simulated annealing is a framework for life decision-making__. It can help you with whatever you are meaningfully striving towards in your life. Specifically, it tackles the following fundamental assumptions that others don't directly address: 
+In short, __simulated annealing is a framework for life decision-making__. It can help you with whatever you are meaningfully striving towards in your life. Specifically, it tackles the following fundamental assumptions that others don't directly address: 
 
 1. [Humans are very bad at knowing what they want](#1-humans-are-very-bad-at-knowing-what-they-want)
 2. [Humans are also bad at understanding probability](#2-humans-are-also-bad-at-understanding-probability)
@@ -23,7 +23,7 @@ __Simulated annealing is a framework for life decision-making__. It can help you
 <br>
 ## Simulated Annealing 101
 
-[Simulated annealing (SA)](https://en.wikipedia.org/wiki/Simulated_annealing) is a concept from computer science and applied mathematics. I first learned about it in college while taking a class about artificial intelligence, where we wrote toy programs to outcompete each other using various algorithms and strategies. SA is one of those strategies that turns out to have very practical implifications for life.
+[Simulated annealing (SA)](https://en.wikipedia.org/wiki/Simulated_annealing) is a concept taken from computer science and applied mathematics. I first learned about it in college while taking a class about artificial intelligence, where we wrote toy programs to outcompete each other using various algorithms and strategies. SA is one of those strategies that turns out to have very practical implifications for life.
 
 SA is a particularly effective strategy __under certain conditions__; specifically, when you have: 
 
