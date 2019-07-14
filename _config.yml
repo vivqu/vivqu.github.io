@@ -8,6 +8,7 @@ plugins:
   - jekyll-octicons
   - jekyll-github-metadata
   - jekyll-feed
+  - jekyll-last-modified-at
 
 permalink: /blog/:year/:month/:day/:title/
 
