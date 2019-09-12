@@ -23,7 +23,7 @@ In short, __simulated annealing is a framework for life decision-making__. It ca
 <br>
 ## Simulated Annealing 101
 
-[Simulated annealing (SA)](https://en.wikipedia.org/wiki/Simulated_annealing) is a concept taken from computer science and applied mathematics. I first learned about it in college while taking a class about artificial intelligence, where we wrote toy programs to outcompete each other using various algorithms and strategies. SA is one of those strategies that turns out to have very practical implifications for life.
+[Simulated annealing (SA)](https://en.wikipedia.org/wiki/Simulated_annealing) is a concept taken from computer science and applied mathematics. I first learned about it in college while taking a class about artificial intelligence, where we wrote toy programs to outcompete each other using various algorithms and strategies. SA is one of those strategies that turns out to have very practical implications for life.
 
 SA is a particularly effective strategy __under certain conditions__; specifically, when you have: 
 
