@@ -1,5 +1,5 @@
 ---
-title: "Zen and the Art of Handstands"
+title: "Zen and the art of handstands"
 subtitle: "or: How I Learned to Stop Worrying and Love the Body"
 published: true
 source: true

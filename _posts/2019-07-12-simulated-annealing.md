@@ -1,5 +1,5 @@
 ---
-title: "Simulated Annealing: a life framework"
+title: "Simulated annealing: a life framework"
 subtitle: "Making good decisions despite being biologically bad at making them"
 published: true
 source: false
