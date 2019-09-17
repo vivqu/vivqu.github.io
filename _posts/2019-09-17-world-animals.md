@@ -219,4 +219,4 @@ Stay tuned for the next post, where I'll describe the mistakes and learnings in 
 
 <hr class="section-divider" />
 
-<footnote>This article was last updated on 09/16/2019. v1 is 2,645 words and took 6.5 hours to write and 1 hour to edit. If you any feedback on this post or want to share your experience with React Native, you can send me a note <a href="mailto:hello@vivqu.com">here</a>.</footnote>
+<footnote>This article was last updated on 09/17/2019. v1 is 2,645 words and took 6.5 hours to write and 1 hour to edit. If you any feedback on this post or want to share your experience with React Native, you can send me a note <a href="mailto:hello@vivqu.com">here</a>.</footnote>
