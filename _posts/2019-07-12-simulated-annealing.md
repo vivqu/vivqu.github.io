@@ -10,7 +10,7 @@ image: simulated-annealing/self-actualization.png
 
 I enjoy learning about different systems for living a good life. These can range from specific productivity practices to high-level formulations that attempt to reimagine the very concept of meaning in your life.
 
-I am an efficient software engineer so I dislike repeating work to rebuild tools that already exist in the wild. ([At the bottom of this article](#a-list-of-other-life-frameworks), you can find a list of the ones I find particularly interesting and thoughtful.)
+As an efficient software engineer, I really dislike repeat work when perfectly good tools already exist in the wild. ([At the bottom of this article](#a-list-of-other-life-frameworks) you can find a list of existing frameworks I find particularly interesting and thoughtful.)
 
 But over the last few years I've been mulling over an idea. My background is in computer science and software design; the idea originally comes from those fields, and has in fact been around for a while. Recently, I've been thinking more and more on how the principles behind this "old" idea become new and interesting when you move beyond the bounds of technical applications, and start using it as systematic way to think about life.
 
@@ -23,7 +23,7 @@ In short, __simulated annealing is a framework for life decision-making__. It ca
 <br>
 ## Simulated Annealing 101
 
-[Simulated annealing (SA)](https://en.wikipedia.org/wiki/Simulated_annealing) is a concept taken from computer science and applied mathematics. I first learned about it in college while taking a class about artificial intelligence, where we wrote toy programs to outcompete each other using various algorithms and strategies. SA is one of those strategies that turns out to have very practical implications for life.
+[Simulated annealing (SA)](https://en.wikipedia.org/wiki/Simulated_annealing) is a concept taken from computer science and applied mathematics. I first encountered it in college during a class about artificial intelligence, where we wrote toy programs to outcompete each other using various algorithms and strategies. SA is one of those strategies that turns out to have very practical implications for life.
 
 SA is a particularly effective strategy __under certain conditions__; specifically, when you have: 
 

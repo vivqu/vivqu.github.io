@@ -1,6 +1,7 @@
 ---
 ---
 @import url('https://unpkg.com/primer/build/build.css');
+@import "autumn.css";
 
 .post-body {
     width: 100%;
@@ -11,7 +12,7 @@
 }
 
 .article-date {
-    margin-block-start: 2em;
+    margin-block-start: 15px;
     margin-block-end: 0;
 }  
 
@@ -20,6 +21,21 @@ p > img {
     margin-left: auto;
     margin-right: auto;
     max-width: 560px;
+}
+
+.article > video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 560px;
+}
+
+.video-subtitle {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #6a737d;
 }
 
 .float-left > img, .float-right > img {
@@ -145,4 +161,48 @@ img[alt=celebration-map] {
 footnote {
     color: #6a737d;
     font-size: 14px;
+}
+
+p > code, a > code {
+    font-size: 14px;
+}
+
+.highlight {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlight > pre{
+    margin: 20px;
+}
+
+.post-table {
+    max-width: 90%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: 1px solid #dedede;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.post-table > thead > tr > th {
+    padding: 8px;
+    background-color: #0c7fb9;
+    color: #fff;
+    border: 1px solid #dedede;
+    font-weight: normal;
+}
+
+.post-table > tbody > tr > td {
+    padding: 8px;
+    background-color: #fff;
+    border:1px solid #dedede;
+    text-align: center;
+}
+
+.post-table > tbody > tr > td:nth-child(1) {  
+    color: #777;
+    text-align: left;
 }
