@@ -1,7 +1,7 @@
 {% if project.web_url %}
   <a href="{{ project.web_url }}" target="_blank" class="github-component position-relative hover-grow height-full no-underline d-flex flex-column flex-justify-center text-center border border-gray-light rounded-1 bg-white p-5">
     {% if project.image_url %}
-      <img src="{{ project.image_url }}" {% if project.image_size %}width="{{project.image_size}}" height:"{{project.image_size}}"
+      <img src="{{ project.image_url }}" {% if project.image_width and project.image_height %}width="{{project.image_width}}" height="{{project.image_height}}"{% else if project.image_size %}width="{{project.image_size}}" height:"{{project.image_size}}"
       {% else %}style="margin-top:20px" width="70" height="70"{% endif %} class="mx-auto rounded-1 mb-3" alt="{{ project.name }}">
     {% else %}
       <div

@@ -37,6 +37,12 @@ social_media:
   instagram: skwishum
 
 projects:
+  - name: AR Grimoire
+    web_url: https://argrimoire.com
+    image_url: assets/img/ar-grimoire-icon.png
+    description: Augmented spellbook for D&D 5e
+    image_width: 87
+    image_height: 100
   - name: WorldAnimals
     web_url: https://worldanimalsapp.com
     image_url: assets/img/worldanimals_icon.png
