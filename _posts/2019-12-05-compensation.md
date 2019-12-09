@@ -1,7 +1,7 @@
 ---
 title: "Crowdsourcing compensation"
 subtitle: "Why you should directly ask your friends how much they make"
-published: true
+published: false
 source: false
 seo_description: "interviews hiring engineering"
 tags: interviews hiring
