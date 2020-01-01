@@ -5,10 +5,7 @@ source: true
 seo_description: "Privacy is more important than ever. But somehow most people are not concerned with Disney theme parks, which collect unbelievable amounts of visitor data."
 tags: Disney data privacy design
 ---
-<p class="source">
-(This article was originally published in Prototyper, click <a href="https://blog.prototypr.io/how-disney-world-solved-the-user-tracking-problem-beece7a95e97" target="_blank">here</a> to read on Medium.)
-</p>
-<br>
+
 Privacy concerns are more common than ever. People are worried about how companies will gather and exploit their data. The outcome of this tracking ranges from relatively benign ([“Amazon’s Next Big Business is Selling You”](https://www.wired.com/2012/10/amazon-next-advertising-giant/)) to potentially impacting our civil liberties and the basic functioning of governments ([“What Facebook Did to American Democracy”](https://www.theatlantic.com/technology/archive/2017/10/what-facebook-did/542502/)).
 
 It’s not an exaggeration to say that companies need to proceed very carefully with data tracking these days. But how did Disney World, which tracks tremendous amounts of guest data, escape our attention and suspicion?
@@ -83,3 +80,8 @@ Sometimes there is no easy way to introduce boundaries to alleviate a user’s p
 These two principles form the underlying technology strategy of Disney theme parks. Both of them can be used to prompt critical thinking from product teams: are we gathering more signals in an unobtrusive manner? If a user does notice, is it clear that there are immediate benefits for them to give us their information? What kind of data is necessary to provide an effortless, “magical” experience? How can we demarcate physical or digital boundaries that will enable trust and de-escalate or remove the privacy question altogether?
 
 Disney World is a special product in many ways. Few other products have its expansive physical real estate and the deep pockets that enable it to so relentlessly focus on the guest experience. But nevertheless there are important product lessons we can learn from the honed craft of Disney’s quiet and often invisible user tracking.
+
+<br>
+<p class="source">
+(This article was originally published in Prototyper, click <a href="https://blog.prototypr.io/how-disney-world-solved-the-user-tracking-problem-beece7a95e97" target="_blank">here</a> to read on Medium.)
+</p>

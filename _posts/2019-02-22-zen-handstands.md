@@ -6,10 +6,7 @@ source: true
 seo_description: "zen-buddhism zen-and-the-art-of-archery handstands meditation"
 tags: zen handstands mind-body-duality
 ---
-<p class="source">
-(This article was originally published on Medium, click <a href="https://medium.com/@vivqu/zen-and-the-art-of-handstands-3a5b1ce3f25a" target="_blank">here</a> to read it there.)
-</p>
-<br>
+
 I usually think about myself as two distinct entities: my body and my brain.
 
 This is certainly not a new idea. We humans have a long history of thinking this way. Religions emphasize this mind-body duality as the divide between holy soul and mortal flesh. Self-help books will sell you a three-point plan for tricking your body into following your mental goals, using tools like keystone habits and early morning cold showers. The spirit is willing but the flesh is weak.
@@ -79,3 +76,8 @@ But as I continue to practice handstands and acrobatics, I am more and more remi
 “So just sit back,” my body says to my brain, “I got this.”
 
 > This state, in which nothing definite is thought, planned, striven for, desired or expected, which aims in no particular direction and yet knows itself capable alike of the possible and the impossible, so unswerving is its power — this state, which is at bottom purposeless and egoless, was called by the Master truly “spiritual”.
+
+<br>
+<p class="source">
+(This article was originally published on Medium, click <a href="https://medium.com/@vivqu/zen-and-the-art-of-handstands-3a5b1ce3f25a" target="_blank">here</a> to read it there.)
+</p>

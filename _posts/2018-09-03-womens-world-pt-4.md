@@ -6,10 +6,7 @@ source: true
 seo_description: "In the last part of the series, we learn about the how exposure to modern culture is impacting the Mosuo, a matriarchal ethnic minority."
 tags: mosuo women matriarchy culture-clash modernity
 ---
-<p class="source">
-(This article was originally published on Medium, click <a href="https://medium.com/@vivqu/matriarchy-meets-the-modern-world-d44888f0ee19" target="_blank">here</a> to read it there.)
-</p>
-<br>
+
 This is the final post in a four-part series on Mosuo matriarchal culture. 
 1. [Introduction to the Mosuo](/blog/2018/09/03/womens-world-pt-1/)
 2. [Family organization](/blog/2018/09/03/womens-world-pt-2/)
@@ -87,3 +84,8 @@ Easier transportation into the area also means easier departure. More and more y
 <hr class="section-divider" />
 
 The Mosuo have a profoundly unique culture. But as the outside world more deeply penetrates the Lugu Lake area, it becomes critical to record and reflect on their dwindling traditions. Thinking deeply about these customs and how they play out in the modern world is important for two reasons — first, because it could help us understand how the community can adapt in order to preserve some aspects of this way of life. And second, because this new perspective gives us insight on how to reframe our own lives in a happier and more supportive way.
+
+<br>
+<p class="source">
+(This article was originally published on Medium, click <a href="https://medium.com/@vivqu/matriarchy-meets-the-modern-world-d44888f0ee19" target="_blank">here</a> to read it there.)
+</p>
