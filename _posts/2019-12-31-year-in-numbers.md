@@ -19,7 +19,7 @@ So off to Victoria Station we went.
 
 We were there to take the [Senmō Line](https://en.wikipedia.org/wiki/Senm%C5%8D_Main_Line) at the crack of dawn on the next day. We had hauled ourselves 
 across Japan to ride this train because the line is endangered, facing possible closure from low ridership. We woke up at 4am and boarded an old snowy train 
-to see the sunrise along the western coast of Hokkaido and herald in the new year. The train only had two other riders, 
+to see the sunrise along the eastern coast of Hokkaido and herald in the new year. The train only had two other riders, 
 both photographers who clustered with me around the train windows. The [resulting photo](https://www.instagram.com/p/BuFkVEyBUfK/) is one of my favorite 
 from our time in Japan:
 
