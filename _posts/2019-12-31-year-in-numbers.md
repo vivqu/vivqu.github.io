@@ -123,7 +123,7 @@ an audio journal or diary to record certain life experiences.
 
 <br />
 
-## Japanese, apps, and writing
+# Japanese, apps, and writing
 
 For the first five months of the year, I was attending Japanese class part-time from 1:30pm - 5:00pm every day. Just counting the time outside
 of class, language study took 375.5 hours total, or about 2.5 hours of study every single day. After May, I left school and effectively stopped Japanese study. I 
@@ -140,13 +140,13 @@ especially after the podcast winds down.
 
 <br />
 
-## 2020: The Year of Recombination
+# Looking forward to 2020
 
 I still need to devote some dedicated brain time to thinking about specific goals for the new year (not to mention the decade!), despite laying out some general 
 ideas in the above sections. 
 
 I usually pick a theme for each new year, and I have decided that next year's theme will be **recombination.** I will better define what recombination means and
-my personal and professional goals in future writing. 
+my personal and professional goals in some future writing. 
 
 Happy New Year's Eve!
 
