@@ -8,7 +8,7 @@ tags: blog career reflection
 image: assets/img/posts/2019-year-in-review/senmo-sunrise.png
 ---
 
-Last year on this day, I was going to sleep on an extremely uncomfortable hotel bed in [Abashiri, Hokkaido](https://www.japan-guide.com/e/e6865.html). We had just 
+Last year on this day, I was going to sleep on an uncomfortable hotel bed in [Abashiri, Hokkaido](https://www.japan-guide.com/e/e6865.html). We had just 
 finished an exceptionally mediocre meal at [Victoria Station](https://goo.gl/maps/THDHX2Umt2kL3ggW8). It was a classic example
 of Japanese "family restaurants" ([ファミレス](https://www.japan-guide.com/e/e2036_family.html), _famiresu_), places that no one is ever excited about
 but do good enough in a pinch. 
