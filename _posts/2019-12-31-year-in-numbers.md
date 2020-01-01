@@ -152,6 +152,6 @@ Happy New Year's Eve!
 
 <hr class="section-divider" />
 
-<footnote>This article was last updated on 12/31/2019. v1 is 1,199 words and took 2.13 hours to write and edit. If you any feedback on this post or want to share your experience with interviewing, you can send me a note <a href="mailto:hello@vivqu.com">here</a>.</footnote>
+<footnote>This article was last updated on 12/31/2019. v1 is 1,199 words and took 2.13 hours to write and edit. If you any feedback on this post or want to share what you learned in 2019, you can send me a note <a href="mailto:hello@vivqu.com">here</a>.</footnote>
 
 
