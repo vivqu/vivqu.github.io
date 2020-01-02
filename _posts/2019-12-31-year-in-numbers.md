@@ -123,7 +123,7 @@ an audio journal or diary to record certain life experiences.
 
 <br />
 
-# Japanese, apps, and writing
+# Japanese, apps, writing, and more
 
 For the first five months of the year, I was attending Japanese class part-time from 1:30pm - 5:00pm every day. Just counting the time outside
 of class, language study took 375.5 hours total, or about 2.5 hours of study every single day. After May, I left school and effectively stopped Japanese study. I 
@@ -137,6 +137,20 @@ I completely revamped the blog in July. I published 4 blog posts totaling 11,910
 [Simulated Annealing: a life framework](/blog/2019/07/12/simulated-annealing/) 
 and [Saving time with React Native](/blog/2019/09/17/world-animals/). I'm looking forward to investing more time in writing in 2020,
 especially after the podcast winds down.
+
+In September, we purchased the [Eight Sleep](https://www.eightsleep.com/) bed which has been a complete game-changer. As someone who sleeps cold, I love that
+the bed is warmed when I get in the covers and how the temperature can be adjusted throughout the night. Legitimately a large portion of my arguments with
+Dru were around our divergent sleep preferences, and now we barely need to discuss anything anymore. Some stats about my sleep that the bed collected
+over the last four months:
+
+- Averaged 7 hours 46 min of sleep per night
+- Tend to go to bed 45 minutes later on weekends than weekdays. I do get the same amount of sleep on weekends as weekdays.
+- Average bedtime is 10:50pm
+- Average wake time is 6:52am
+- Sleep most on Mondays and least on Thursdays
+
+I use an [Oura Ring](https://ouraring.com/) for sleep tracking as well. I'm still getting a sense of my own baselines for metrics like 
+[average heart rate variability](https://ouraring.com/heart-rate-variability-basics/) and [body temperature trends](https://ouraring.com/body-temperature-trends/).
 
 <br />
 
@@ -152,6 +166,6 @@ Happy New Year's Eve!
 
 <hr class="section-divider" />
 
-<footnote>This article was last updated on 12/31/2019. v1 is 1,199 words and took 2.13 hours to write and edit. If you any feedback on this post or want to share what you learned in 2019, you can send me a note <a href="mailto:hello@vivqu.com">here</a>.</footnote>
+<footnote>This article was last updated on 01/01/2020. v2 is 1,367 words and took 2.13 hours to write and edit. If you any feedback on this post or want to share what you learned in 2019, you can send me a note <a href="mailto:hello@vivqu.com">here</a>.</footnote>
 
 
