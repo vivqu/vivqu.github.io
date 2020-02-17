@@ -98,6 +98,15 @@ li {
     margin-left: 20px;
 }
 
+li > ol {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+}
+
 hr {
     margin-block-start: 4em;
     margin-block-end: 4em;
@@ -205,4 +214,14 @@ p > code, a > code {
 .post-table > tbody > tr > td:nth-child(1) {  
     color: #777;
     text-align: left;
+}
+
+.twitter-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.quote-container {
+    margin-left: 30px;
 }
