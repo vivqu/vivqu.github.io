@@ -8,7 +8,7 @@ tags: interviews hiring compensation
 image: assets/img/posts/compensation-101/coffee-chat.png
 ---
 
-I spent a few months last year searching for a new [senior software engineering role](https://vivqu.com/blog/2019/12/09/job-search/). Looking back on the process, the hardest part was figuring out my approach to compensation and salary negotiation.
+I spent a few months last year searching for a new [senior software engineering role](/blog/2019/12/09/job-search/). Looking back on the process, the hardest part was figuring out my approach to compensation and salary negotiation.
 
 At the beginning, my plan was to get as many offers as possible. This is the standard advice that most job seekers in the tech industry receive and it's very appealing due to its straightforwardness. By getting multiple offers, you are receiving the most up-to-date signals on your market value and can leverage the offers against each other to maximize your compensation. I am especially drawn to this myself, since my engineer brain likes working with concrete facts and numbers.
 
@@ -89,7 +89,7 @@ For example, a former coworker with the same experience level had accepted an of
 *A [re-enactment](https://unsplash.com/photos/rRWiVQzLm7k) of the coffee chat with my coworker.*
 
 <br />
-I had ended up receiving multiple [offers](https://vivqu.com/blog/2019/12/09/job-search/), but only one was from a [FAANG](https://en.wikipedia.org/wiki/Facebook,_Apple,_Amazon,_Netflix_and_Google)-sized company. The rest were from smaller startups, who had extended me offer packages that were, understandably, heavily-skewed towards stock compensation. The difference in company sizes made it very difficult to use the alternate offers as leverage during negotiations. The large company was able to argue their offer was better because it was guaranteed income. The other offers, while generous with their equity grants, were significantly riskier and could be framed as uncertain lottery tickets.
+I had ended up receiving multiple [offers](/blog/2019/12/09/job-search/), but only one was from a [FAANG](https://en.wikipedia.org/wiki/Facebook,_Apple,_Amazon,_Netflix_and_Google)-sized company. The rest were from smaller startups, who had extended me offer packages that were, understandably, heavily-skewed towards stock compensation. The difference in company sizes made it very difficult to use the alternate offers as leverage during negotiations. The large company was able to argue their offer was better because it was guaranteed income. The other offers, while generous with their equity grants, were significantly riskier and could be framed as uncertain lottery tickets.
 
 Having the concrete numbers from my coworker allowed me to push back the big company's resistance. Even if it was a year prior and not an offer I received personally, I countered using actual data to argue that my market rate was higher. After hearing this, the company offered me an additional 10% in my offer package, citing that their "understanding of market rate was updated" for the role.
 

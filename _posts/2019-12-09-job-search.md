@@ -114,8 +114,8 @@ more money raised, which means they can scale up by hiring more people.
 
 <br />
 
-Company size and valuation, of course, is ultimately tied to the types of compensation offers you will receive. I'll cover my thoughts about
-compensation in a subsequent post. Just know that it's challenging to compare offers from companies of drastically different sizes, since each
+Company size and valuation, of course, is ultimately tied to the types of compensation offers you will receive. You can read about my 
+approach to compensation [here](/blog/2020/02/16/compensation/). It's challenging to compare offers from companies of drastically different sizes, since each
 can argue about upside and risk in a way that makes their offer seem better.
 
 <br />
