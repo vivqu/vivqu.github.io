@@ -54,7 +54,7 @@
   min-height: 100vh;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, .post-subtitle {
   font-family: -apple-system, 'BlinkMacSystemFont', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
 }
 
@@ -63,7 +63,11 @@ h4 {
   font-weight: 400;
 }
 
-p, ol, ul, .post-subtitle  {
+.post-subtitle, .post-date {
+  font-size: 14px;
+}
+
+p, ol, ul, .post-date  {
   font-family: Lora;
   line-height: 1.8;
 }
