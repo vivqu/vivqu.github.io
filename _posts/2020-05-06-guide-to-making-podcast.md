@@ -218,7 +218,7 @@ In the end, the most effective strategy for developing my voice was just to **do
 
 I'm nowhere near done learning about my storytelling style---after all, I've only been through the German forest once!---but I'm leaps and bounds better than before.
 
-<h2 id="musical-framing">Musical framing</h2>
+<h2 id="musical-framing">Musical framing 🎶🖼</h2>
 
 Music was the most rewarding aspect of the editing process for me. I personally feel that the right music can elevate an episode from a decent one to something truly great. Getting the music perfect was also important to the show's content --- Japan actually has a very distinct soundscape, and I learned that adding music at the right time made our words more interesting and evocative.
 
@@ -255,12 +255,12 @@ My favorite compliment about the show was from a friend who said that the final 
 
 <br />
 
-# Podcast by the numbers
+<h1 id="podcast-by-the-numbers">Podcast by the numbers 📶</h1>
 
 Last but not least, a summary of the podcast by the numbers. I have already analyzed some podcast data in my [2019 recap post](/blog/2019/12/31/year-in-numbers/#podcasting), but I wanted to reexamine the data since that post didn't include all the episodes.
 
 
-## Editing time
+<h2 id="editing-time">Editing time ✂️</h2>
 
 I was most curious to see how my editing efficiency changed over time since editing was particularly laborious and time-consuming for me. I carefully time-tracked the time spent making the podcast to see if there was any improvement.
 
@@ -305,7 +305,7 @@ I recently talked to a coworker who majored in broadcasting for her college degr
 
 Still, I would like to improve my editing ability. I want to learn new editing software and research more techniques for speeding up the editing process. I also think upgrading my equipment could cut even more time by providing better base audio to work with, removing the need to clean the audio manually.
 
-## Number of listeners
+<h2 id="number-of-listeners">Number of listeners 👂🏻🙋🏻‍♀️</h2>
 
 Starting off, I had low expectations for the number of listeners for the podcast. I would have considered it a wild success if we got more than 20 listeners for an episode. The podcast was primarily a vehicle for us to keep in touch and share our day-to-day experience of living in Japan with close friends and family. It's honestly more like an audio diary than professional podcast, so I was not expecting it to become popular with thousands of listeners. And spoiler: it didn't.
 
@@ -352,7 +352,7 @@ Why the sharp dip in listeners after episode 11? I suspect this is partly becaus
 
 <br/>
 
-## Release cadence and episode length
+<h2 id="release-cadence-and-episode-length">Release cadence and episode length ⏰📏</h2>
 
 Another contributing factor to the decrease in overall listeners likely had to do with the release cadence. I was sticking to monthly-ish episode releases for most of the podcast. But after episode 11, we were so busy with moving back to the US and I didn't release another episode for four months. I'm not shocked that the number of listeners declined accordingly.
 
@@ -383,7 +383,8 @@ To be fair, while I could have been more disciplined, the irregularities couldn'
 *We travelled outside Tokyo at least a few days every month except in October, when my parents came to visit, and August, our last month in Japan.*
 
 <br />
-# Final reflections
+
+<h1 id="final-reflections">Final reflections 🤔📻</h1>
 
 If you've gotten this far in the article, you might be (justifiably) overwhelmed by the amount of information I've regurgitated. I would encourage you to ignore all of it and get started, to just **do a lot of work**. I started out knowing nothing and made a lovely podcast despite that fact.
 
