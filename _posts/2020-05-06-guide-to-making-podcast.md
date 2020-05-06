@@ -10,7 +10,7 @@ image: assets/img/posts/podcast-summary/german-forest.png
 
 # The German forest 🌲
 
-In Jessica Abel's excelled illustrated guide [Out on the Wire](https://www.amazon.com/Out-Wire-Storytelling-Secrets-Masters/dp/0385348436), radio producers discuss various aspects of audio storytelling. One of the best stories is told by _Radiolab_ host Jad Abrumad. At the beginning of his career, he was tasked to work on an hour-long segment of [Wagner's Ring Cycle](https://www.pbs.org/wnet/gperf/gp-at-the-met-wagner-e2-80-99s-ring-cycle-the-story-of-the-ring-opera-synopses/1377/). It's an awe-inspiring and terrifying piece for even professional musicians to play, "an eighteen-hour cycle of operas that tries to encompass the totality of European art in one work."
+In Jessica Abel's excellent illustrated guide [Out on the Wire](https://www.amazon.com/Out-Wire-Storytelling-Secrets-Masters/dp/0385348436), radio producers discuss various aspects of audio storytelling. One of the best stories is told by _Radiolab_ host Jad Abrumad. At the beginning of his career, he was tasked to work on an hour-long segment of [Wagner's Ring Cycle](https://www.pbs.org/wnet/gperf/gp-at-the-met-wagner-e2-80-99s-ring-cycle-the-story-of-the-ring-opera-synopses/1377/). It's an awe-inspiring and terrifying piece for even professional musicians to play, "an eighteen-hour cycle of operas that tries to encompass the totality of European art in one work."
 
 Abrumad, blissfully ignorant of the immensity of the project, quickly learned his mistake when everything started falling apart:
 
