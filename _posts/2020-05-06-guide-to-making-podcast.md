@@ -257,12 +257,12 @@ My favorite compliment about the show was from a friend who said that the final 
 
 # Podcast by the numbers
 
-Last but not least, a summary of the podcast by the numbers. I have already analyzed some podcast data in my [2019 recap post](/blog/2019/12/31/year-in-numbers/#podcasting), but I wanted to revisit the data since that analysis didn't cover all the episodes.
+Last but not least, a summary of the podcast by the numbers. I have already analyzed some podcast data in my [2019 recap post](/blog/2019/12/31/year-in-numbers/#podcasting), but I wanted to reexamine the data since that post didn't include all the episodes.
 
 
 ## Editing time
 
-I was most curious to see how my editing efficiency changed over time. Editing was particularly laborious and time-consuming for me. I carefully time-tracked the time spent making the podcast to see if there was any improvement.
+I was most curious to see how my editing efficiency changed over time since editing was particularly laborious and time-consuming for me. I carefully time-tracked the time spent making the podcast to see if there was any improvement.
 
 The first episode was 17 minutes in length and took 11.5 hours to produce. The time to produce combines the audio recording and editing phases, as well as writing the blog post for the website. 
 
@@ -288,21 +288,28 @@ A lot of my increases in time efficiency came with simple skill improvement and 
 
 Slowly over time, it became unnecessary to listen to the final cut so many times. I could adjust the audio properly in the first few passes while I was editing individual segments. By the last episode, I was good enough that I only had to listen to the final audio cut once, just to confirm that I was happy with episode's overall sound.
 
+<br />
+
+![biking](/assets/img/posts/podcast-summary/biking.png)
+*Biking is a great time to listen to the final draft of an episode.*
+
+<br />
+
 I also was able to spend less time in the editing phase once I had established the [musical style](#musical-framing) and [voice](#finding-my-voice) of the podcast. I didn't have to spend additional time exploring new artists and songs since I already had defined a core set of musical groups that I could reuse for each episode. I didn't need to listen to other podcasts for inspiration as part of my editing process.
 
-But despite all the personal growth, I continue to be disappointed in the amount of time I spend editing. According to [The Audacity to Podcast](https://theaudacitytopodcast.com/how-much-time-does-it-take-to-podcast-tap188/), a meta-podcast about podcasting, audio podcasting should have a 4:1 work ratio, with four minutes of work for every one minute of content. That implies that I'm _at least_ 5x slower than other podcasters. 
+But despite all the personal growth, I continue to be disappointed in the amount of time I spend editing. According to [The Audacity to Podcast](https://theaudacitytopodcast.com/how-much-time-does-it-take-to-podcast-tap188/), a meta-podcast about podcasting, audio podcasting should have a **4:1 work ratio**, with four minutes of work for every one minute of content. That implies that I'm at least _5x slower_ than other podcasters. 
 
-I learned that I am a perfectionist about my podcast, willing to sink more time into the process to achieve a higher quality of content. While it has had a positive impact on the resulting sound of this show, I think it's unsustainable to spend this much time on future podcasts. The sheer amount of time it takes for me to produce episodes is holding me back, the clearest impact being how inconsistent the [release cadence](#release-cadence-and-episode-length) was for the show. It's also hard to commit this much time to a project which I'm not working on full-time, alongside other projects and obligations. Speeding up the editing phase makes it easier to keep podcasting as a long-running hobby.
+I learned that I am a perfectionist about my podcast, willing to sink more time into the process to achieve a higher quality of content. While this obsessiveness has had a positive impact on the resulting sound of this show, I think it's unsustainable to spend this much time on individual episodes. The sheer amount of time it takes for me to produce the show is holding me back, the most immediate impact being how inconsistent the [release cadence](#release-cadence-and-episode-length) was for the show. It's also hard to commit this much time to a project which I'm not working on full-time, alongside other projects and obligations. Speeding up the editing phase makes it easier to keep podcasting as a long-running hobby.
 
 I recently talked to a coworker who majored in broadcasting for her college degree. She said said that an 18x ratio of edit time to final audio time was actually pretty good. So I might be being a bit hard on myself.
 
-I would still like to improve my editing abilities further for future podcasts. I want to learn new editing software and research more techniques for speeding up the editing process. I also think upgrading my equipment could cut even more time by providing better base audio to work with, removing the need to clean the audio manually.
+Still, I would like to improve my editing ability. I want to learn new editing software and research more techniques for speeding up the editing process. I also think upgrading my equipment could cut even more time by providing better base audio to work with, removing the need to clean the audio manually.
 
 ## Number of listeners
 
-Starting off, I had low expectations for the number of listeners for the show. I would have considered the show a wild success if we got more than 20 listeners for an episode. The podcast was intended as a way for us to keep in touch and share our day-to-day experience of living in Japan with our close friends and family. It honestly is more like an audio diary than professional podcast, so I was not expecting it to become popular with thousands of listeners. And spoiler: it didn't.
+Starting off, I had low expectations for the number of listeners for the podcast. I would have considered it a wild success if we got more than 20 listeners for an episode. The podcast was primarily a vehicle for us to keep in touch and share our day-to-day experience of living in Japan with close friends and family. It's honestly more like an audio diary than professional podcast, so I was not expecting it to become popular with thousands of listeners. And spoiler: it didn't.
 
-A lovely surprise was discovering there were podcast listeners coming from countries where didn't know anyone, like Turkey and South Africa. Some of my favorite feedback to get was that someone outside my immediate circle, like a friend of a friend, really enjoyed the show.
+But a lovely surprise was discovering there were podcast listeners coming from countries where we didn't know anyone, like Turkey and South Africa. My favorite type of feedback was always when I was told someone I didn't know, like a friend of a friend, really enjoyed the show.
 
 <br />
 
@@ -322,7 +329,7 @@ A lovely surprise was discovering there were podcast listeners coming from count
 | FR | 1 |
 | ZA | 1 |
 
-In terms of audience numbers, the show started off with consistently around 15-20 listeners. We received the most listeners (146 unique downloads) for our second-to-last episode: [Episode 11: Slow March Into the Grave](https://www.sanfransokyopodcast.com/episodes/2019/8/14/episode-11-slow-march-into-the-grave). This was perhaps the most interesting one since it was our last recorded episode while we were still in Japan, reflecting on the last year of living abroad. 
+In terms of audience numbers, the show started off with consistently around 15-20 listeners. We started gaining more listeners around episode 9 and peaked (146 unique downloads) in the second-to-last full episode: [Episode 11: Slow March Into the Grave](https://www.sanfransokyopodcast.com/episodes/2019/8/14/episode-11-slow-march-into-the-grave). This was perhaps the most interesting one since it was our last recorded episode while we were still in Japan, reflecting on the last year of living abroad. 
 
 <br />
 
@@ -331,7 +338,7 @@ In terms of audience numbers, the show started off with consistently around 15-2
 
 <br />
 
-Why the sharp dip in listeners after episode 11? A significant portion of our traffic came from social channels, primarily Facebook and Instagram posts. Most of these 150 listeners were probably extended family and acquaintances who weren't regular listeners of the show, but wanted to check out this specific episode. 
+Why the sharp dip in listeners after episode 11? I suspect this is partly because a significant portion of our traffic came from social channels, primarily Facebook and Instagram posts. Most of these 150 listeners were probably extended family and acquaintances who weren't regular listeners of the show, so they didn't stick around after checking out episode 11.
 
 <br />
 
@@ -347,7 +354,7 @@ Why the sharp dip in listeners after episode 11? A significant portion of our tr
 
 ## Release cadence and episode length
 
-I was sticking to a monthly-ish release cadence for most of the show. But after episode 11, we were so busy with moving back to the US and I didn't release another episode for four months. I'm not shocked that the number of listeners declined accordingly.
+Another contributing factor to the decrease in overall listeners likely had to do with the release cadence. I was sticking to monthly-ish episode releases for most of the podcast. But after episode 11, we were so busy with moving back to the US and I didn't release another episode for four months. I'm not shocked that the number of listeners declined accordingly.
 
 [@eriktorenberg](https://twitter.com/eriktorenberg), who runs the [Venture Stories Podcast](https://www.villageglobal.vc/podcast/), has a great [Twitter thread](https://twitter.com/eriktorenberg/status/1255574856776597504) summarizing lessons learned from publishing more than 500 podcast episodes. One of his top pieces of advice is to have consistent **release cadence** and **episode length**. 
 
@@ -358,7 +365,7 @@ I was sticking to a monthly-ish release cadence for most of the show. But after 
 </div>
 
 <br />
-Graphing episode length and release cadence together, you can both metrics were pretty inconsistent. In terms of episode length, I was originally aiming for around 20-30 minute episodes. As the show progressed and we had more and more interesting content to discussion, the length of episodes ballooned to almost an hour. 
+Graphing episode length and release cadence together, you can see both metrics were pretty inconsistent. In terms of episode length, I was originally aiming for around 20-30 minute episodes. As the show progressed and we had more and more interesting content to discuss, the length of episodes ballooned to almost an hour. 
 
 <br />
 
@@ -367,9 +374,9 @@ Graphing episode length and release cadence together, you can both metrics were 
 
 <br />
 
-It was hard for me to cut down these final episodes since I liked how all the segments revolved around central themes. I think the long episodes are very enjoyable as standalone pieces. However, taken together, I do agree that it's not ideal to have high variance in episode length. Like Torenberg says, the lack of consistency upsets listener expectations. I'm definitely planning on sticking to a more consistent schedule for future podcasts.
+It was hard for me to cut down these final episodes because I liked how all the segments revolved around central themes. I think the long episodes are very enjoyable as standalone pieces. However, taken together, I can see how annoying high variance in episode length could be as a listener. I definitely plan on sticking to a more consistent schedule for future podcasting projects.
 
-While I could have been more disciplined, the irregularities couldn't be totally avoided since our time in Japan was filled with many other activities. Besides [other](https://worldanimalsapp.com/) [projects](https://argrimoire.com/) I was working on, I was going to Japanese language school five days a week. We hosted various groups of friends and family for 7 months out of the 13 months in Japan. We capitalized on living in Tokyo and travelled as much as we could. Every single holiday (Japan has [50% more national holidays](https://www.officeholidays.com/countries/japan/2019) compared to the U.S.) we tried to plan a trip to a different area of Japan, either by ourselves or with our international visitors. In total we travelled 72 out of 396 days, or about 18% of the time we lived in Japan.
+To be fair, while I could have been more disciplined, the irregularities couldn't be totally avoided. Our time in Japan was filled with many other activities. Aside from [other](https://worldanimalsapp.com/) [projects](https://argrimoire.com/) I was working on, I was going to Japanese language school five days a week. We hosted various groups of friends and family for 7 months out of the 13 months in Japan. We capitalized on living in Tokyo and travelled as much as we could. Every single holiday (Japan has [50% more national holidays](https://www.officeholidays.com/countries/japan/2019) compared to the U.S.) we tried to plan a trip to a different area of Japan, either by ourselves or with our international visitors. In total we travelled 72 out of 396 days, or about 18% of the time we lived in Japan.
 
 <br />
 ![days_travelled](/assets/img/posts/podcast-summary/days-travelled.png)
