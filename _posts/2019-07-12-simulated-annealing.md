@@ -242,4 +242,5 @@ I'm always looking for new frameworks to investigate. I'd also love to hear any 
 
 <hr class="section-divider" />
 
-<footnote>This article was last updated on 07/12/2019. v1 is 4,102 words and took 9 hours to write, 8.25 hours to edit, 2.5 hours to draw the illustrations.</footnote>
+<footnote><p>This article was last updated on 07/12/2019. v1 is 4,102 words and took 9 hours to write, 8.25 hours to edit, 2.5 hours to draw the illustrations.</p>
+<p>Thanks to Adam for gifting me a <a href="https://ko-fi.com/vivianqu" target="_blank">coffee</a> for this post.</p></footnote>
