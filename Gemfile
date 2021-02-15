@@ -6,3 +6,5 @@ gem "jekyll-octicons"
 gem "jekyll-feed"
 gem "jekyll-last-modified-at"
 end
+
+gem "jekyll", "~> 3.9"
