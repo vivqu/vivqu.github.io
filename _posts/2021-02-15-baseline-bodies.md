@@ -47,9 +47,11 @@ Other actionable resources I've used to create a maintenance routine include:
 <hr class="section-divider" />
 
 > As I began to offer movement solutions for seemingly mundane things like foot pain and pelvic incontinence, many people responded, detailing why, for them, these movement solutions just weren’t possible. Their inability to fit foot and hip exercises into their day was the result of the larger immobility of their situation. School, or work, or relationships, or work distribution within the home, was preventing their body parts from moving. They were immobilized by the expectations of a society, of their culture.
+>
 > -- Katy Bowman, _Movement Matters_
 
 > Luckily, though, we have a nearly flawless musculoskeletal system. Nearly. The flaw is that our environment is no longer harsh and unforgiving. We tamed it by eliminating most of the constant working motion. And before you shout hurrah, let me point out that that’s what’s causing your wrist to hurt or those other symptoms attributed to “computer pain syndrome.” The correct term should be “environmental pain syndrome.” If motion is the price of muscles, pain is the price of lack of motion and muscle. The computer is not guilty!
+>
 > -- Pete Egoscue, _Pain Free at Your PC_
 
 <hr class="section-divider" />
