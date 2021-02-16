@@ -12,6 +12,8 @@ One of my resolutions for 2021 is to get serious about maintaining mobility.
 
 Maybe it's only in my imagination, but I definitely feel like my body is getting less elastic and stretchable in my late 20s. I remember reading that a human body typically reaches its physical peak capability of adding muscle around 28 years old. [Other studies](https://courses.lumenlearning.com/suny-lifespandevelopment/chapter/physical-changes-of-aging/) show lean tissue loss and body fat increases begin at age 30. 
 
+<div class="twitter-container"><blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">one thing they don’t tell you enough about being in your thirties is that you can simply throw out your neck at any time and all it takes is looking one way too fast</p>&mdash; rachel syme (@rachsyme) <a href="https://twitter.com/rachsyme/status/1361206914294702080?ref_src=twsrc%5Etfw">February 15, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
 Personal experience also indicates that I am reaching a critical junction in my body's latent recovery ability. A few years ago, I was doing donuts in a jet ski and threw my partner off the back (on purpose, for fun). He almost broke his thumb trying to hold on, and his hand was sore for weeks afterwards. When he went for a medical evaluation, the doctor told him he could try physical therapy or get it surgically repaired but she didn't recommend it. As the doctor said, "you are at the age now where things will start breaking and it won't be worth fixing it." So his thumb will forever hurt a little bit from now on.
 
 It's alarming to think that my body will no longer be youthful and healthy by default. I mentioned to a friend who is the same age that I was going to start stretching every day, in a concerted effort to maintain mobility. She was offended. If I had to guess from her reaction, my friend didn't like being reminded that we were getting older. She was also dismissive that a stretching regimen was needed, viewing it as something only for the elderly. I think this attitude is by no means uncommon; most people my age still imagine their bodies are infinitely resilient. It's a major mental shift to acknowledge that this is changing. 
@@ -56,4 +58,4 @@ Other actionable resources I've used to create a maintenance routine include:
 
 <hr class="section-divider" />
 
-<footnote>This article was last updated on 2/15/2021. v1 is 1,637 words and took 4.5 hours to write and edit. Thanks to Steph H. for the recommendation to read <i>Movement Matters</i>.</footnote>
+<footnote>This article was last updated on 2/16/2021. v1 is 1,637 words and took 4.5 hours to write and edit. Thanks to Steph H. for the recommendation to read <i>Movement Matters</i>.</footnote>
