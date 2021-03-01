@@ -61,6 +61,8 @@ Time spent on understanding codebases is not evenly distributed across senior an
 
 The findings have significant consequences depending on the makeup of the engineering teams. Teams with a larger proportion of junior engineers should invest more in architecture documentation since every incremental document has huge time-saving effects across the whole group.
 
+<div class="twitter-container"><blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">I can&#39;t say this enough.<br><br>You will read code more than you write code.<br><br>Learn to get good at it.</p>&mdash; Laurie (@laurieontech) <a href="https://twitter.com/laurieontech/status/1300422871328518146?ref_src=twsrc%5Etfw">August 31, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
 ## Developers are expensive
 
 Open-source projects are usually understaffed, relying on a core set of developers and only occasional contributions from the community. Any way of increasing knowledge for these community members can have outsize effects. By making onboarding faster and easier, more changes could come from those occasional contributors. This significantly lightens the burden on core developers and reduces the bottleneck of limited engineering resources.
