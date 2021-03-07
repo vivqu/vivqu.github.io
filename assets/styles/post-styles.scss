@@ -181,9 +181,18 @@ img[alt="celebration-map"] {
   }
 }
 
-footnote {
+footer {
   color: #6a737d;
   font-size: 14px;
+}
+
+footnote {
+  color: #6a737d;
+
+  .reference {
+    margin-top: 1.5em;
+    margin-left: 1.3em;
+  }
 }
 
 p > code,

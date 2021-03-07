@@ -399,4 +399,4 @@ To conclude, I'll leave you with the words of Jonathan Goldstein, host of [Heavy
 
 <hr class="section-divider" />
 
-<footnote>This article was last updated on 05/06/2020. v1 is 5,071 words and took 12.75 hours to write and edit.</footnote>
+<footer>This article was last updated on 05/06/2020. v1 is 5,071 words and took 12.75 hours to write and edit.</footer>

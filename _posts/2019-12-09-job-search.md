@@ -277,4 +277,4 @@ And make sure you learn from my scheduling mistakes.
 
 <hr class="section-divider" />
 
-<footnote>This article was last updated on 12/09/2019. v1 is 2,964 words and took 11.75 hours to write and edit. If you any feedback on this post or want to share your experience with interviewing, you can send me a note <a href="mailto:hello@vivqu.com">here</a>.</footnote>
+<footer>This article was last updated on 12/09/2019. v1 is 2,964 words and took 11.75 hours to write and edit. If you any feedback on this post or want to share your experience with interviewing, you can send me a note <a href="mailto:hello@vivqu.com">here</a>.</footer>

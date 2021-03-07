@@ -52,4 +52,4 @@ The craft of software engineering can learn a lot from other practices that stre
 
 <hr class="section-divider" />
 
-<footnote>This article was last updated on 10/18/2020. v1 is 842 words and took 1.5 hours to write and edit.</footnote>
+<footer>This article was last updated on 10/18/2020. v1 is 842 words and took 1.5 hours to write and edit.</footer>

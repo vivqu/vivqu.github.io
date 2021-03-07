@@ -174,4 +174,4 @@ I feel very strongly about improving my own thinking around compensation as well
 
 <hr class="section-divider" />
 
-<footnote>This article was last updated on 02/16/2020. v1 is 2,591 words and took 7.5 hours to write and edit.</footnote>
+<footer>This article was last updated on 02/16/2020. v1 is 2,591 words and took 7.5 hours to write and edit.</footer>

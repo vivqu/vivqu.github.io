@@ -152,5 +152,35 @@ I'm fascinated by the theory behind good software architecture. I am still early
 
 <hr class="section-divider" />
 
-<footnote>This article was last updated on 3/1/2021. v1 is 2,831 words and took 10.55 hours to write and edit.</footnote>
+<footer>This article was last updated on 3/7/2021. v2 is 2,831 words and includes some footers with additional related quotations. It took 10.55 hours to write and edit.</footer>
 
+<br />
+<br />
+<br />
+<footnote>
+    <p>
+        Since the first version of this essay, I've found more writing that discusses the importance of architecture writing or documentation in general. These don't exactly fit into the main content of this post, so I've included them below.
+    </p>
+    <p class="reference">
+        1. From <a href="https://observablehq.com/@mbostock/10-years-of-open-source-visualization" target="_blank">10 Years of Open-Source Visualization</a>:
+    </p>
+    <blockquote>
+        <p>
+            When building a tool, it’s easy to forget how much you’ve internalized: how much knowledge and context you’ve assumed. Your tool can feel familiar or even obvious to you while being utterly foreign to everyone else. If your goal is for other people to use the darn thing — meaning you’re not just building for yourself, or tinkering for its own sake (which are totally valid reasons) — you gotta help people use it! It doesn’t matter what’s possible or what you intended; all that matters is whether people actually succeed in practice.
+        </p>
+        <p>
+            [...]
+        </p>
+        <p>
+            To maximize your impact, then, teaching must be central to your strategy. This means documentation, tutorials, examples, videos, tweets, and more. Teaching one-on-one or in workshops is a great way to force your internalized knowledge to the surface, to find common ground with your audience, to be inspired by their work, and to learn how to teach more effectively (see #2), but a library of material that teaches without requiring your time is the only way to scale as your audience grows. You need the pedagogical equivalent of passive income, if you will.
+        </p>
+    </blockquote>
+    <p class="reference">
+        And another good quotation that emphasizes the importance of shaping the visualization to match the purpose it serves (ie. "motivated" visualization):
+    </p>
+    <blockquote>
+        <p>
+            A given visual form — say the pie chart or treemap — isn’t “good” or “bad” in an absolute sense, but it may or may not be appropriate to your data and the specific question you want answered. The only way to know whether a form is effective is if it communicates: you must put your data in it and see. So don’t set out to use a specific form; instead set out to answer a specific question of your data.
+        </p>
+    </blockquote>
+</footnote>

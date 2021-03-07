@@ -58,4 +58,4 @@ Other actionable resources I've used to create a maintenance routine include:
 
 <hr class="section-divider" />
 
-<footnote>This article was last updated on 2/16/2021. v1 is 1,637 words and took 4.5 hours to write and edit. Thanks to Steph H. for the recommendation to read <i>Movement Matters</i>.</footnote>
+<footer>This article was last updated on 2/16/2021. v1 is 1,637 words and took 4.5 hours to write and edit. Thanks to Steph H. for the recommendation to read <i>Movement Matters</i>.</footer>

@@ -166,6 +166,6 @@ Happy New Year's Eve!
 
 <hr class="section-divider" />
 
-<footnote>This article was last updated on 01/01/2020. v2 is 1,367 words and took 2.13 hours to write and edit. If you any feedback on this post or want to share what you learned in 2019, you can send me a note <a href="mailto:hello@vivqu.com">here</a>.</footnote>
+<footer>This article was last updated on 01/01/2020. v2 is 1,367 words and took 2.13 hours to write and edit. If you any feedback on this post or want to share what you learned in 2019, you can send me a note <a href="mailto:hello@vivqu.com">here</a>.</footer>
 
 
