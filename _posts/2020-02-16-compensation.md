@@ -170,8 +170,12 @@ Finally, make sure that you understand the complex details of your offer. I have
 - [Carta Resource Center](https://carta.com/blog/category/employee-resource-center/)
 - [Reverse interview questions: Compensation](https://github.com/viraptor/reverse-interview#compensation)
 
+Some general Q&As:
+- [https://tldr.tech/ama/levels-fyi](Levels.FYI Cofounders AMA)
+- [https://news.ycombinator.com/item?id=27332305](Ask HN: Negotiating Salary)
+
 I feel very strongly about improving my own thinking around compensation as well as helping support others do the same. These conversations also should not end once you sign your offer---continuing to think critically keeps you informed about market rates and helps determine when you should look for a new job. If you want to discuss numbers or share what has helped you in your compensation and negotiation process, send me a note <a href="mailto:hello@vivqu.com">here</a>.
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 02/16/2020. v1 is 2,591 words and took 7.5 hours to write and edit.</footer>
+<footer>This article was last updated on 07/07/2021. v1 is 2,598 words and took 7.5 hours to write and edit.</footer>
