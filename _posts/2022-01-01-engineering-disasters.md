@@ -5,7 +5,7 @@ published: true
 source: false
 seo_description: "software engineering architecture communication management failure"
 tags: tech software-engineering 
-image: assets/img/posts/engineering-disasters/computer-panic.png
+image: assets/img/posts/engineering-disasters/computer-panic.jpg
 ---
 
 <p class="source">
