@@ -163,6 +163,7 @@ Here is my running list of scenarios and how I might deal with them. I will keep
 
 Finally, make sure that you understand the complex details of your offer. I have accepted two different job roles with significant equity compensation, and sometimes I am still confused about how everything works. Here's a list of resources to get you started:
 
+- [End of Year Pay Report 2021 | Levels.FYI](https://www.levels.fyi/2021/)
 - [The Holloway Guide to Equity Compensation](https://www.holloway.com/g/equity-compensation)
 - [How to value your equity offer](https://carta.com/blog/value-equity-offer-startup-equity-calculator/)
 - [Stock options are really complicated](https://www.benkuhn.net/options)
@@ -178,4 +179,4 @@ I feel very strongly about improving my own thinking around compensation as well
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 07/07/2021. v1 is 2,598 words and took 7.5 hours to write and edit.</footer>
+<footer>This article was last updated on 01/06/2022. v1 is 2,605 words and took 7.5 hours to write and edit.</footer>

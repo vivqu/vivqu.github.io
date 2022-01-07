@@ -45,7 +45,7 @@ are not immune to engineering disasters. Neither are brilliant individual contri
 may find themselves in a different kind of chaotic mess in the future.
 
 The biggest reason I think that engineering disasters happen so reliably, eventually appearing at least once in an individual's career,
-is the seductive danger of ["leverage points" thinking](https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/)—in other words, hoping that a relatively small amonut of effort can cause massive changes in complex systems. We software engineers are 
+is the seductive danger of ["leverage points" thinking](https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/)—in other words, hoping that a relatively small amount of effort can cause massive changes in complex systems. We software engineers are 
 particularly susceptible to this thinking. If only we had used the right architecture, if only we can quickly execute this rewrite 
 or refactor, all our painful problems will be solved. All of the stories in the collection have some element of this wishful thinking,
 causing people to dig in their heels and refuse to change course. As Donella H. Meadows perfectly sums up in the conclusion of her essay,

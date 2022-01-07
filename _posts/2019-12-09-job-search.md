@@ -266,7 +266,7 @@ To summarize:
 
 After a tiring seven weeks, I can report that I was pretty satisfied with my approach. I was able to think through many of my 
 assumptions and requirements for a new job role. I learned about a wide range of products and interesting technology. I also 
-met many really smart peers and managers, with whom I hopefully can continue to stay in touch which.
+met many really smart peers and managers, with whom I hopefully can continue to stay in touch with.
 
 I will probably not be attempting such a massive job pipeline next time around. My best advice is to try this time-consuming 
 rigorous approach once or twice in your career if you can. Quit your job and treat searching for a new job as your new full-time role, 
