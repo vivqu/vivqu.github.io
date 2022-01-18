@@ -14,7 +14,7 @@ image: assets/img/posts/engineering-disasters/computer-panic.jpg
 
 ## Studying catastrophic project failures
 
-Many engineers, myself included, like to believe engineering is fundamentally rational
+Many engineers, myself included, like to believe engineering is a fundamentally rational
 discipline. We spend our work hours carefully implementing complicated algorithms, instrumenting
 tests to validate program execution, and weighing technical tradeoffs to achieve the optimal outcome.
 Given that everyone building technology should be imminently logical, it's easy to assume that
@@ -41,7 +41,7 @@ and rational people can end up in emotionally intense, stressful situations. Eve
 to be humble, to hope that I can gain some kernels of wisdom to help diffuse and de-escalate future disasters I find
 myself in. I try to internalize these learnings so that I can be kind to myself and my teammates if and when a 
 project trainwreck is unavoidable. It's helpful to realize that prestigious companies with seasoned veteran engineers
-are not immune to engineering disasters. Neither are brilliant individual contributors, who having survived one disaster,
+are not immune to engineering disasters. Neither are brilliant individual contributors who, having survived one disaster,
 may find themselves in a different kind of chaotic mess in the future.
 
 The biggest reason I think that engineering disasters happen so reliably, eventually appearing at least once in an individual's career,
@@ -75,4 +75,4 @@ from 1986:
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 1/1/2022. v1 is 822 words and took 4.5 hours to write and edit.</footer>
+<footer>This article was last updated on 1/18/2022. v1 is 822 words and took 4.5 hours to write and edit.</footer>
