@@ -4,7 +4,7 @@ subtitle: "How we can build better knowledge systems"
 published: true
 source: false
 seo_description: "writing digital gardens tech"
-tags: tech writing blogs digital-garden
+tags: writing
 image: assets/img/posts/digital-gardens/garden.png
 ---
 

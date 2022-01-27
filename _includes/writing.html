@@ -1,10 +1,8 @@
 <h2 class="f2-light lh-condensed">Writing</h2>
-<p class="f4 mb-4 text-gray" style="margin-block-start: 0.2em;">Latest posts from my blog, <i>Simulated Annealing</i>.</p>
+<p class="f4 mb-4 text-gray" style="margin-block-start: 0.2em;">Latest from my blog, <i>Simulated Annealing</i>.</p>
 <div class="d-sm-flex flex-wrap gutter-condensed">
   {% for post in site.posts limit: 4 %}
-    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-3">
-      {% include post-list.html %}
-    </div>
+    {% include post-list.html %}
   {% endfor %}
 </div>
 <p class="f4 mb-5 text-gray"><a href="/blog/">See more...</a></p>

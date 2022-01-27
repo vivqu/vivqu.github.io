@@ -4,7 +4,7 @@ subtitle: "Notes from my journey to visit the Mosuo, China’s last matriarchal 
 published: true
 source: true
 seo_description: "An essay series on the culture and traditions of the Mosuo, a matriarchal ethnic minority in China."
-tags: matriarchy mosuo women
+tags: matriarchy travel
 ---
 
 This is the first post in a four-part series on Mosuo matriarchal culture. 

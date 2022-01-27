@@ -4,7 +4,7 @@ subtitle: "How the definition of family is radically different in matriarchal so
 published: true
 source: true
 seo_description: "In the second part of the series, we learn about the family organization of the Mosuo, a matriarchal ethnic minority."
-tags: matriarchy mosuo women family
+tags: matriarchy travel
 ---
 
 This is the second post in a four-part series on Mosuo matriarchal culture. 

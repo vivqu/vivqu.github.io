@@ -4,7 +4,7 @@ subtitle: "How can a centuries-old culture deal with Communism and increasing ex
 published: true
 source: true
 seo_description: "In the last part of the series, we learn about the how exposure to modern culture is impacting the Mosuo, a matriarchal ethnic minority."
-tags: mosuo women matriarchy culture-clash modernity
+tags: matriarchy travel
 ---
 
 This is the final post in a four-part series on Mosuo matriarchal culture. 

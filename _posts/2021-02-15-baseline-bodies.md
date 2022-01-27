@@ -4,7 +4,7 @@ subtitle: "Loving your aging body and fixing a sedentary life"
 published: true
 source: false
 seo_description: "movement health aging longevity"
-tags: movement health aging longevity
+tags: health
 image: assets/img/posts/baseline-bodies/old-lady.jpeg
 ---
 

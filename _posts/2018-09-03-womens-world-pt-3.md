@@ -4,7 +4,7 @@ subtitle: "How does love work in a matriarchal society? We find out how to court
 published: true
 source: true
 seo_description: "In the third part of the series, we learn about the rules of love and courtship for the Mosuo, a matriarchal ethnic minority."
-tags: mosuo women matriarchy love marriage
+tags: matriarchy travel
 ---
 
 This is the third post in a four-part series on Mosuo matriarchal culture. 

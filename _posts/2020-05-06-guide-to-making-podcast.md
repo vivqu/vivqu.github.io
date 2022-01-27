@@ -4,7 +4,7 @@ subtitle: "My first time making it out of the German forest alive"
 published: true
 source: false
 seo_description: "projects sanfransokyo podcast beginner 101"
-tags: projects sanfransokyo podcast
+tags: travel podcast
 image: assets/img/posts/podcast-summary/german-forest.png
 ---
 

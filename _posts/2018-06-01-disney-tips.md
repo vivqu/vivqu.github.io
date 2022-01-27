@@ -4,7 +4,7 @@ subtitle: "The local’s guide to 'The Happiest Place on Earth'"
 published: true
 source: true
 seo_description: "Getting the fastest wait times, the order of parks to go to, and other tips to get the most out of your trip to Disney World."
-tags: Disney tips theme-park-optimization design
+tags: disney
 ---
 
 One of my earliest childhood memories is watching my father take off at a dead sprint as we passed the ticket gate and entered into Main Street boulevard at Magic Kingdom. Clutched in his hand were our park tickets. He was running away from his wife and two daughters in order to secure a precious commodity: the earliest FastPass ride reservation time for a popular ride, usually Peter Pan Flight. This brilliant man had the insight that the other families didn’t. My father knew that Magic Kingdom was a game and he was playing to win.

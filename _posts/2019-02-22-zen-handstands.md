@@ -4,7 +4,7 @@ subtitle: "or: How I Learned to Stop Worrying and Love the Body"
 published: true
 source: true
 seo_description: "zen-buddhism zen-and-the-art-of-archery handstands meditation"
-tags: zen handstands mind-body-duality
+tags: health
 ---
 
 I usually think about myself as two distinct entities: my body and my brain.

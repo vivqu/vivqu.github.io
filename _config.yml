@@ -1,6 +1,7 @@
 layout: sidebar
 style: light
 name: Simulated Annealing
+title: Simulated Annealing
 url: https://vivqu.com
 description: "Using metaheuristics as a metaphor for life. This product may contain: technology, design, societal consequences, gender issues, and occasional humor."
 author: 
@@ -9,9 +10,12 @@ author:
   
 plugins:
   - jekyll-octicons
-  - jekyll-github-metadata
   - jekyll-feed
   - jekyll-last-modified-at
+
+plugin_dir: '_plugins'
+
+safe: false
 
 permalink: /blog/:year/:month/:day/:title/
 
@@ -25,6 +29,11 @@ defaults:
       path: "assets/img"
     values:
       image: true
+
+collections:
+  tags:
+    output: true
+    permalink: tags/:path/
 
 repos:
   show_on_home: false

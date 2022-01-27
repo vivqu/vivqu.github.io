@@ -4,7 +4,7 @@ subtitle: "What I wish I knew before I started my job search"
 published: true
 source: false
 seo_description: "interviews hiring engineering compensation"
-tags: interviews hiring compensation
+tags: tech interviews
 image: assets/img/posts/compensation-101/coffee-chat.png
 ---
 

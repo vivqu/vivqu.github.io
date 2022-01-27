@@ -4,7 +4,7 @@ subtitle: "An incomplete collection of failed rewrites, refactors, and other eng
 published: true
 source: false
 seo_description: "software engineering architecture communication management failure"
-tags: tech software-engineering 
+tags: tech writing
 image: assets/img/posts/engineering-disasters/computer-panic.jpg
 ---
 

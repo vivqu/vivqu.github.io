@@ -4,7 +4,7 @@ subtitle: "Actual developer data from launching a React Native mobile app"
 published: true
 source: false
 seo_description: "react-native mobile-game mobile-dev software-engineering"
-tags: react-native mobile software-engineering
+tags: tech
 image: assets/img/posts/world-animals/code-time.png
 ---
 

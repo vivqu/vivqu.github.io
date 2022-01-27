@@ -4,7 +4,7 @@ subtitle: "Making good decisions despite being biologically bad at making them"
 published: true
 source: false
 seo_description: "life-philosophy simulated-annealing probability possibility"
-tags: life life-philosophy simulated-annealing theory
+tags: writing work travel
 image: assets/img/posts/simulated-annealing/self-actualization.png
 ---
 

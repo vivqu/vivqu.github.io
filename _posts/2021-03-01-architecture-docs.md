@@ -4,7 +4,7 @@ subtitle: "The business impact of documentation and exploring architecture autom
 published: true
 source: false
 seo_description: "software engineering architecture communication"
-tags: tech software-engineering architecture
+tags: tech writing
 image: assets/img/posts/architecture-docs/code-diagram.png
 ---
 
