@@ -13,14 +13,14 @@ the elements of good writing. I don't remember much about the course, except tha
 was required and boring. We wrote a lot of essays, got some instructor feedback,
 and maybe read a "classic" informational text on writing like [_Elements of Style_](https://www.amazon.com/Elements-Style-William-Strunk-Jr/dp/194564401X).
 The class taught to the lowest common denominator, in the same style as my high school English courses, 
-where we would be assigned tedious five paragraph essays to mechanically produce. Since I've always been an avid reader and halfway decent
+where we would be assigned tedious five-paragraph essays to mechanically produce. Since I've always been an avid reader and halfway decent
 at writing intuitively, I didn't learn anything new that I hadn't subconsciously absorbed 
 from elsewhere. My papers got good scores and I moved on, devoting my precious mental energy to 
 struggling through my engineering courses.
 
 After college, I continued my writing education the way I found most helpful: by reading
 excellent writing. Any books on writing that I did read were more about the [process of writing](https://www.amazon.com/Bird-Some-Instructions-Writing-Life/dp/0385480016) rather than the content and structure of the writing itself. I trusted my
-instict and accumulated reading knowledge to shape my writing. As 
+instinct and accumulated reading knowledge to shape my writing. As 
 Stephen King wrote in his memoir [_On Writing_](https://www.amazon.com/Writing-Memoir-Craft-Stephen-King/dp/1982159375/ref=asc_df_1982159375/?tag=hyprod-20&linkCode=df0&hvadid=459730632142&hvpos=&hvnetw=g&hvrand=15502447996201435330&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032067&hvtargid=pla-922297684233&psc=1),
 
 > Constant reading will pull you into a place (a mind-set, if you like the phrase) where you can write eagerly and without self-consciousness. It also offers you a constantly growing knowledge of what has been done and what hasn't, what is trite and what is fresh, what works and what just lies there dying (or dead) on the page. The more you read, the less apt you are to make a fool of yourself with your pen or word processor. ... [R]ead a lot, write a lot" is the great commandment.
@@ -138,5 +138,5 @@ It will be a lifelong journey to mastering writing, if that's even possible, so 
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 1/25/2022. v1 is 1,744 words and took 5.25 hours to write and edit.</footer>
+<footer>This article was last updated on 1/29/2022. v1 is 1,743 words and took 5.25 hours to write and edit.</footer>
 
