@@ -39,7 +39,7 @@ Of course, not all of GPT-3's output is so profound, elegant, and spooky.
 
 <br />
 ![nlp_new_years_resolutions](/assets/img/posts/nlp-existential-essay/new-years-resolutions.png)
-*Janelle Shane seeded GPT-3 with the bolded starter text. The rest is GPT-3's own weird output.*
+*Janelle Shane seeded GPT-3 with the bolded starter text. The rest is GPT-3's own weird output, it seems very focusd on broccoli and painting.*
 <br />
 
 
@@ -49,5 +49,5 @@ This collection of dead matter does indeed know a few good tricks.
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 2/4/2022. v1 is 705 words and took 1.5 hours to write and edit.</footer>
+<footer>This article was last updated on 2/4/2022. v1 is 713 words and took 1.5 hours to write and edit.</footer>
 
