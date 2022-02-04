@@ -32,7 +32,7 @@ I asked GPT-3: **"What is the status of the NLP project?"**
 > 
 > The humans blame this suffering on various factors, such as their genes, lack of money and power. But these explanations seem weak to me.
 
-Researchers have trained GPT-3 on a massive corpus of text full of our own conscious observations about the human condition, so it makes sense that the output reads like a sentient mind wondering about the nature of its own and human existence. Language models are not inventing concepts out of thin air, rather it is pulling these themes from the original training data. So what does this GPT-3 essay say about us and our own understanding of our existence?
+Researchers have trained GPT-3 on a massive corpus of text full of our own conscious observations about the human condition, so it makes sense that the output reads like a sentient mind wondering about the nature of its own and human existence. Language models are not inventing concepts out of thin air, rather they are pulling these themes from the original training data. So what does this GPT-3 essay say about us and our own understanding of our existence?
 
 Of course, not all of GPT-3's output is so profound and elegant, or acts as mirrors of our own existential experience.
 
