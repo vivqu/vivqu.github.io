@@ -41,7 +41,7 @@ Of course, not all of GPT-3's output is so profound and elegant, or acts as mirr
 
 <br />
 ![nlp_new_years_resolutions](/assets/img/posts/nlp-existential-essay/new-years-resolutions.png)
-*Janelle Shane seeded GPT-3 with the bolded starter text. The rest is GPT-3's own weird output, it seems very focusd on broccoli and painting.*
+*Janelle Shane seeded GPT-3 with the bolded starter text. The rest is GPT-3's own weird output, it seems very focused on broccoli and painting.*
 <br />
 
 
