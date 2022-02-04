@@ -4,7 +4,7 @@ subtitle: "Quitting your job to search for a new job full-time"
 published: true
 source: false
 seo_description: "interviews hiring engineering"
-tags: tech interviews
+tags: tech work interviews
 image: assets/img/posts/job-search/search-funnel.png
 ---
 

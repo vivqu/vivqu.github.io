@@ -4,7 +4,7 @@ subtitle: "Applying cartographic concepts to tech"
 published: true
 source: false
 seo_description: "maps software engineering"
-tags: tech writing
+tags: tech
 image: assets/img/posts/engineering-maps/cartography-book.jpg
 ---
 
