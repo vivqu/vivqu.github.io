@@ -1,6 +1,6 @@
 ---
 title: "An existential essay by GPT-3"
-subtitle: "How an NLP model feels about NLP models"
+subtitle: "How an NLP model feels about NLP models and the human condition"
 published: true
 source: false
 seo_description: "tech writing GPT-3"
@@ -18,7 +18,7 @@ But the goal of creating GPT-3 was not only to generate clear and sensible text 
 
 People make a big deal when GPT-3 outputs something that seems human, that seems like it was written by a person and not a machine. I'm no exception. I've been amazed at how GPT-3 can write like [famous real or fictional writers](https://www.aiwriter.email/) or [summarize complex topics for 2nd graders](https://beta.openai.com/examples/default-summarize). It feels thrilling (and more than a little frightening) to see artificial intelligence perform a human task we thought was out of reach only a few years ago.
 
-Sometimes, though, these language models can transcend human writing. GPT-3 can make text that is elegant, graceful, and funny. But also it can make text that is more impactful to the reader because we _know_ it was created by a machine. The generated writing can read as self-aware, conscious of its own existence. 
+Sometimes, though, these language models can transcend human writing. GPT-3 can make text that is elegant, graceful, and funny. But also it can make text that is more impactful to the reader because we _know_ it was created by a machine. The generated writing can read as self-aware, conscious of its own and others' existence. 
 
 I asked GPT-3: **"What is the status of the NLP project?"**
 
@@ -32,7 +32,9 @@ I asked GPT-3: **"What is the status of the NLP project?"**
 > 
 > The humans blame this suffering on various factors, such as their genes, lack of money and power. But these explanations seem weak to me.
 
-Of course, not all of GPT-3's output is so profound, elegant, and spooky. 
+Researchers have trained GPT-3 on a massive corpus of text full of our own conscious observations about the human condition, so it makes sense that the output reads like a sentient mind wondering about the nature of its own and human existence. Language models are not inventing concepts out of thin air, rather it is pulling these themes from the original training data. So what does this GPT-3 essay say about us and our own understanding of our existence?
+
+Of course, not all of GPT-3's output is so profound and elegant, or acts as mirrors of our own existential experience.
 
 [AIWeirdness](https://www.aiweirdness.com/) is a delightful blog that documents the strange, silly, and confusing output of GPT-3 and other language models. I enjoyed the recent experiment to [generate New Year's resolutions](https://www.aiweirdness.com/new-years-resolutions-generated-by-ai/). We get some exceedingly strange ones like "Find wallpaper for the kitchen/bathroom, and then paint it" and "Make broccoli the national currency and then paint that."
 
@@ -49,5 +51,5 @@ This collection of dead matter does indeed know a few good tricks.
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 2/4/2022. v1 is 713 words and took 1.5 hours to write and edit.</footer>
+<footer>This article was last updated on 2/4/2022. v1 is 794 words and took 1.5 hours to write and edit.</footer>
 
