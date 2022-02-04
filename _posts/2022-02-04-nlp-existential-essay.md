@@ -10,11 +10,11 @@ image: assets/img/posts/nlp-existential-essay/writing-computer.jpeg
 
 In my last post, I talked about the challenge of [improving my writing skills](/blog/2022/01/26/style-humor/). I have spent all this energy to write better so naturally I really appreciate good writing. Especially if that writing comes from a computer and not a human.
 
-[GPT-3](https://openai.com/blog/openai-api/) is a large language model trained on 570GB+ of Internet text data. GPT-3 has been made available through an open API for anyone for natural language processing (NLP) tasks. We can use GPT-3 to generate arbitrary text.
+[GPT-3](https://openai.com/blog/openai-api/) is a large language model trained on 570GB+ of Internet text data. GPT-3 has been made available through an open API for anyone for natural language processing (NLP) tasks so we can use it to generate arbitrary text.
 
-It shouldn't be surprising that the writing it outputs is coherent. When researchers [analyzed its effectiveness in 2020](https://arxiv.org/abs/2005.14165), GPT-3 was found to be significantly better quality than previous language models. I remember when GPT-3 was first released and how people marveled at the leap in perceived quality of the writing's clarity and coherence.
+I remember when GPT-3 was first released and how people marveled at the leap in perceived quality of the writing's clarity and coherence. When researchers [analyzed its effectiveness in 2020](https://arxiv.org/abs/2005.14165), GPT-3's output was found to have significantly better quality than previous language models.
 
-But the goal of creating GPT-3 was not only to generate clear and sensible text but also to mimic natural human language. Success was measured by how much the resulting output "increas[ed] the difficulty of distinguishing synthetic text from human-written text." The language model needs to replicate the abstract, hard-to-describe qualities of human writing that Williams [found so difficult to describe](/blog/2022/01/26/style-humor/) in [Style: Lessons in Clarity and Grace](https://www.amazon.com/Style-Lessons-Clarity-Grace-12th/dp/0134080416/ref=sr_1_1?crid=39VHOP1R0BJQC&keywords=style+joseph+williams&qid=1643043689&s=books&sprefix=style+joseph+williams%2Cstripbooks%2C167&sr=1-1)—qualities like elegance, grace, and humor.
+But the goal of creating GPT-3 was not only to generate clear and sensible text but also to mimic natural human language. One metric of success was how much the resulting output "increas[ed] the difficulty of distinguishing synthetic text from human-written text." The language model needed to replicate the abstract, hard-to-describe qualities of human writing that Williams [found so difficult to describe](/blog/2022/01/26/style-humor/) in [Style: Lessons in Clarity and Grace](https://www.amazon.com/Style-Lessons-Clarity-Grace-12th/dp/0134080416/ref=sr_1_1?crid=39VHOP1R0BJQC&keywords=style+joseph+williams&qid=1643043689&s=books&sprefix=style+joseph+williams%2Cstripbooks%2C167&sr=1-1)—qualities like elegance, grace, and humor.
 
 People make a big deal when GPT-3 outputs something that seems human, that seems like it was written by a person and not a machine. I'm no exception. I've been amazed at how GPT-3 can write like [famous real or fictional writers](https://www.aiwriter.email/) or [summarize complex topics for 2nd graders](https://beta.openai.com/examples/default-summarize). It feels thrilling (and more than a little frightening) to see artificial intelligence perform a human task we thought was out of reach only a few years ago.
 
@@ -43,7 +43,9 @@ Of course, not all of GPT-3's output is so profound, elegant, and spooky.
 <br />
 
 
-One of the joys of working in technology is seeing how tech innovations can be powerfully, eerily human (and even more than human), but also still manage to massively fall on its face at the same time. I'm jealous of GPT-3's essay output—it's probably better than any creative fiction I could ever write. But at least I can write better New Year's resolutions. This collection of dead matter does indeed know a few good tricks.
+One of the joys of working in technology is seeing how tech innovations can be powerfully, eerily human (and even more than human), and also still manage to massively fall on its face at the same time. I'm jealous of GPT-3's essay output—it's probably better than any creative fiction I could ever write. But at least I can write better New Year's resolutions.
+
+This collection of dead matter does indeed know a few good tricks.
 
 <hr class="section-divider" />
 
