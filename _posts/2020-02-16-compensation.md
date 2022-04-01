@@ -163,7 +163,7 @@ Here is my running list of scenarios and how I might deal with them. I will keep
 
 Finally, make sure that you understand the complex details of your offer. I have accepted two different job roles with significant equity compensation, and sometimes I am still confused about how everything works. Here's a list of resources to get you started:
 
-- [End of Year Pay Report 2021 | Levels.FYI](https://www.levels.fyi/2021/)
+- [Levels.FYI: End of Year Pay Report 2021](https://www.levels.fyi/2021/)
 - [The Holloway Guide to Equity Compensation](https://www.holloway.com/g/equity-compensation)
 - [How to value your equity offer](https://carta.com/blog/value-equity-offer-startup-equity-calculator/)
 - [Stock options are really complicated](https://www.benkuhn.net/options)
@@ -172,12 +172,13 @@ Finally, make sure that you understand the complex details of your offer. I have
 - [Reverse interview questions: Compensation](https://github.com/viraptor/reverse-interview#compensation)
 - [What is your labor worth? Tech compensation in 2021](https://jacobian.org/2021/oct/13/tech-salaries-2021/)
 
-Some general Q&As:
-- [https://tldr.tech/ama/levels-fyi](Levels.FYI Cofounders AMA)
-- [https://news.ycombinator.com/item?id=27332305](Ask HN: Negotiating Salary)
+Some general information:
+- [Levels.FYI Cofounders AMA](https://tldr.tech/ama/levels-fyi)
+- [Ask HN: Negotiating Salary](https://news.ycombinator.com/item?id=27332305)
+- [2022 Compensation Best Practices Report](https://www.payscale.com/research-and-insights/cbpr/)
 
 I feel very strongly about improving my own thinking around compensation as well as helping support others do the same. These conversations also should not end once you sign your offer---continuing to think critically keeps you informed about market rates and helps determine when you should look for a new job. If you want to discuss numbers or share what has helped you in your compensation and negotiation process, send me a note <a href="mailto:hello@vivqu.com">here</a>.
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 02/15/2022. v1 is 2,614 words and took 7.5 hours to write and edit.</footer>
+<footer>This article was last updated on 04/1/2022. v1 is 2,614 words and took 7.5 hours to write and edit.</footer>
