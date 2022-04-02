@@ -4,7 +4,7 @@ subtitle: "Advice for engineers and managers at early-stage startups"
 published: true
 source: false
 seo_description: "tech work engineering ladders"
-tags: tech work
+tags: tech work management
 image: assets/img/posts/engineering-ladder/engineering-ladder.jpg
 ---
 
@@ -70,13 +70,13 @@ Promotion without a formalized career ladder can be susceptible to internal bias
 <br />
 <span style="text-decoration: underline">For engineers</span>:
 
-Educate yourself on industry standards and performance expectations for different levels of seniority. There are many open-sourced career ladders from a wide range of tech companies that will help you understand the shared, underlying standard for what defines an effective senior engineer. I will be collecting links to these career ladders and resources in the next blog post.
+Educate yourself on industry standards and performance expectations for different levels of seniority. There are many open-sourced career ladders from a wide range of tech companies that will help you understand the shared, underlying standard for what defines an effective senior engineer. (See the [next blog post](/blog/2022/04/02/engineering-expectations/) for links to resources and an open-sourced version of an engineering ladder.)
 
-Hold your manager accountable for clear expectations and a path to grow to the next level. Hopefully, they are already doing most of this work to disambiguate the informal promotion process and level expectations. But even the best managers can benefit from direct communication from you about your current projects and goals (see [Things your manager might not know](https://jvns.ca/blog/things-your-manager-might-not-know/)).
+Hold your manager accountable for clear expectations and a path to grow to the next level. Hopefully, they are already doing most of this work to disambiguate the informal promotion process and level expectations. But even the best managers can benefit from [direct communication](https://jvns.ca/blog/things-your-manager-might-not-know/) from you about your current projects and goals.
 
 Get comfortable with the subjectivity of engineering level expectations. All career ladders are imperfect frameworks that attempt to apply rigor and consistency to a fundamental squishy question: “How good is this person at their job?” Even when engineering ladders are implemented, there are likely unspoken aspects that are guiding performance at higher levels. Find out which performance requirements are unique to your company and which can be generalized to the broader industry. Look to real-life role models, such as more experienced engineers on your team, as a way to see these expectations in action.
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 3/11/2022. v1 is 1,388 words and took 3.75 hours to write and edit.</footer>
+<footer>This article was last updated on 4/2/2022. v1 is 1,388 words and took 3.75 hours to write and edit.</footer>
 
