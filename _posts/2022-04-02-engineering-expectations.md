@@ -47,7 +47,7 @@ This guideline is first and foremost a tool to help you and your manager to talk
 
 <br/>
 
-<iframe style="width:800px;height:720px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSvTxTmu9ARXQ7D-s1U0ZH187O8G0_ZclU-twR6O5l1JOA03R_CRQQZqaeLnD-CDshXRYMcHFmszLIH/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<iframe style="width:800px;height:720px;max-width:100%;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSvTxTmu9ARXQ7D-s1U0ZH187O8G0_ZclU-twR6O5l1JOA03R_CRQQZqaeLnD-CDshXRYMcHFmszLIH/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 <br />
 ([Click here](https://docs.google.com/spreadsheets/d/e/2PACX-1vSvTxTmu9ARXQ7D-s1U0ZH187O8G0_ZclU-twR6O5l1JOA03R_CRQQZqaeLnD-CDshXRYMcHFmszLIH/pubhtml?gid=0&single=true) to open in Google Spreadsheets.)
