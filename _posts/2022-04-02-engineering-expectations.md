@@ -5,7 +5,7 @@ published: true
 source: false
 seo_description: "tech work engineering ladders"
 tags: tech work management
-image: assets/img/posts/engineering-ladder/engineering-ladder.jpg
+image: assets/img/posts/engineering-expectations/matrix.png
 ---
 
 In my [last post](/blog/2022/03/11/engineering-ladder/), I discussed why providing structured career resources at early-stage startups is vital. 
