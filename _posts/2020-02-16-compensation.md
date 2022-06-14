@@ -53,6 +53,9 @@ Some websites I referenced included:
 - [The Holloway Guide to Equity Compensation: Typical Employee Equity Levels](https://www.holloway.com/g/equity-compensation)
 - [State of Software Engineers 2020 (Hired.com): Competitive Pay Numbers](https://hired.com/page/state-of-software-engineers/#companies)
 - [Female Pay Transparency Responses (Google Sheets)](https://docs.google.com/spreadsheets/d/1N1VGyQy5oavP1QqNkxvnuCg10m0IaO7nR9pR8y7iC1o/edit#gid=628532919)
+- [What is your labor worth? Tech compensation in 2021](https://jacobian.org/2021/oct/13/tech-salaries-2021/)
+- [The Elpha Salary Database](https://elpha.com/salary-database)
+- [The State of Pay for Women in 2022](https://elpha.com/resources/state-of-pay-for-women-2022)
 
 In addition to online websites, Twitter is an excellent source for specific numbers on compensation. Unfortunately, it's hard to find these tweets and the discussions might not be happening exactly when you are looking for a job. 
 
@@ -170,7 +173,6 @@ Finally, make sure that you understand the complex details of your offer. I have
 - [What I wish I'd known about equity before joining a unicorn](https://gist.github.com/yossorion/4965df74fd6da6cdc280ec57e83a202d)
 - [Carta Resource Center](https://carta.com/blog/category/employee-resource-center/)
 - [Reverse interview questions: Compensation](https://github.com/viraptor/reverse-interview#compensation)
-- [What is your labor worth? Tech compensation in 2021](https://jacobian.org/2021/oct/13/tech-salaries-2021/)
 - [Equity 101 for Software Engineers at Big Tech and Startups](https://blog.pragmaticengineer.com/equity-for-software-engineers/)
 
 Some general information:
@@ -182,4 +184,4 @@ I feel very strongly about improving my own thinking around compensation as well
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 04/15/2022. v1 is 2,624 words and took 7.5 hours to write and edit.</footer>
+<footer>This article was last updated on 06/03/2022. v1 is 2,636 words and took 7.5 hours to write and edit.</footer>
