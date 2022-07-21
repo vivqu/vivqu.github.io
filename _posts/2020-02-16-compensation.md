@@ -174,6 +174,7 @@ Finally, make sure that you understand the complex details of your offer. I have
 - [Carta Resource Center](https://carta.com/blog/category/employee-resource-center/)
 - [Reverse interview questions: Compensation](https://github.com/viraptor/reverse-interview#compensation)
 - [Equity 101 for Software Engineers at Big Tech and Startups](https://blog.pragmaticengineer.com/equity-for-software-engineers/)
+- [The state of startup compensation, H1 2022](https://carta.com/blog/compensation-report-h1-2022/)
 
 Some general information:
 - [Levels.FYI Cofounders AMA](https://tldr.tech/ama/levels-fyi)
@@ -184,4 +185,4 @@ I feel very strongly about improving my own thinking around compensation as well
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 06/03/2022. v1 is 2,636 words and took 7.5 hours to write and edit.</footer>
+<footer>This article was last updated on 07/20/2022. v1 is 2,643 words and took 7.5 hours to write and edit.</footer>
