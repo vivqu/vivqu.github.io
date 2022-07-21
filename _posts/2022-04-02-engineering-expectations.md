@@ -25,6 +25,7 @@ Here is a list of company career ladders I used as references:
 - [Etsy Engineering Career Ladder](https://etsy.github.io/Etsy-Engineering-Career-Ladder/)
 - [Dropbox Engineering Career Framework](https://dropbox.github.io/dbx-career-framework/)
 - [Patreon Engineering Levels](https://levels.patreon.com/)
+- [Rent the Runway Career Ladders](https://docs.google.com/spreadsheets/d/1k4sO6pyCl_YYnf0PAXSBcX776rNcTjSOqDxZ5SDty-4/edit#gid=0)
 
 [Marco Rogers](https://twitter.com/polotek) has a [great presentation](https://speakerdeck.com/polotek/creating-a-career-ladder-for-engineers) that breaks down the process of creating a career ladder for engineers. He identifies three different systems for career ladders: the starter kit, snowflake model, and spreadsheet matrix. 
 
@@ -65,4 +66,4 @@ As Simon Gerber says in his very interesting and thorough [history of career gro
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 4/2/2022. v1 is 706 words and took 3 hours to write and edit.</footer>
+<footer>This article was last updated on 7/21/2022. v1 is 711 words and took 3 hours to write and edit.</footer>
