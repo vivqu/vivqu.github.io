@@ -7,3 +7,5 @@ gem "jekyll-last-modified-at"
 end
 
 gem "jekyll", "~> 3.9"
+
+gem "webrick", "~> 1.7"
