@@ -1,9 +1,15 @@
 <h1>Writing ✍️</h1>
-<p class="f4 mt-1 mb-5 text-gray" style="margin-block-start: 0.2em;">Popular posts from my blog <a href="/blog">Simulated Annealing</a> ...</p>
+<p class="f4 mt-1 mb-5 text-gray" style="margin-block-start: 0.2em;">Popular posts from my blog <a href="/blog">Simulated Annealing</a></p>
 <div class="d-sm-flex flex-wrap gutter-condensed">
   {% for post in site.posts %}
     {% if post.best_of %}
       {% include post-list.html hide_tags=true %}
     {% endif %}
+  {% endfor %}
+</div>
+<p class="f4 mt-3 mb-5 text-gray" style="margin-block-start: 0.2em;">(... and more recently ...)</p>
+<div class="d-sm-flex flex-wrap gutter-condensed">
+  {% for post in site.posts limit: 2 %}
+    {% include post-list.html hide_tags=true  %}
   {% endfor %}
 </div>
