@@ -29,7 +29,7 @@
       <div class="d-sm-flex flex-wrap gutter-condensed mb-4">
         {% for post in site.posts %}
           {% if post.best_of %}
-          {% include post-list.html %}
+            {% include post-list.html hide_tags=true %}
           {% endif %}
         {% endfor %}
       </div>
