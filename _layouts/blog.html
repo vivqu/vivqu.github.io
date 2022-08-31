@@ -1,18 +1,5 @@
 {% include header.html %}
 
-{% if site.layout == 'stacked' %}
-<div class="container-lg py-6 p-responsive text-center">
-  {% include masthead.html %}
-
-  <div class="container-md f4 text-left border rounded-2 bg-white p-3 p-sm-5 mt-6">
-    <h1>{{ page.title }}</h1>
-    <p class="f3 mb-5 text-gray">
-      Writing on software, creativity, and good books.
-    </p>
-    {% include blog-list.html %}
-  </div>
-</div>
-{% else %}
 <div class="d-md-flex min-height-full">
   <div class="sidebar flex-self-stretch border-md-right border-gray-light bg-white px-4 px-md-6 px-lg-7 py-6">
     {% include masthead.html %}
@@ -41,6 +28,5 @@
     {% include social-footer.html %}
   </div>
 </div>
-{% endif %}
 
 {% include footer.html %}

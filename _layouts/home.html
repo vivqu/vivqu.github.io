@@ -1,29 +1,5 @@
 {% include header.html %}
 
-{% if site.layout == 'stacked' %}
-  <div class="container-lg py-6 p-responsive text-center">
-    {% include masthead.html %}
-
-    <div>
-      {{ content }}
-    </div>
-
-    <div class="my-6">
-      {% include projects.html %}
-    </div>  
-    {% if repos.show_on_home %}
-      <div class="my-6">
-        {% include code-repos.html %}
-      </div>
-    {% endif %}
-
-    {% unless posts_total == 0 %}
-      <div class="my-6">
-        {% include writing.html %}
-      </div>
-    {% endunless %}
-  </div>
-{% else %}
   <div class="d-md-flex min-height-full">
     <div class="sidebar flex-self-stretch border-md-right border-gray-light bg-white px-4 px-md-6 px-lg-7 py-6">
       {% include masthead.html %}
@@ -48,6 +24,5 @@
       {% include social-footer.html %}
     </div>
   </div>
-{% endif %}
 
 {% include footer.html %}

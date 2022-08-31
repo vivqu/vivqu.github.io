@@ -1,30 +1,9 @@
-{% include header.html %} {% capture post_body %}
+{% include header.html %} 
+{% capture post_body %}
 <div class="article">
   {{ content }}
 </div>
-{% endcapture %} {% if site.layout == 'stacked' %}
-<div class="container-lg py-6 p-responsive text-center">
-  {% include masthead.html metadata=false %}
-
-  <div
-    class="container-md f4 text-left border rounded-2 bg-white p-3 p-sm-5 mt-6"
-  >
-  <p class="f4 mb-4">
-    <a
-    href="/blog" class="post-title">
-      &laquo; Simulated Annealing
-    </a>
-  </p>
-    <h1 class="article-header f1-light lh-condensed">{{ page.title }}</h1>
-    <p
-      class="{% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %} mb-5"
-    >
-      Published {{ page.date | date: "%b %d, %Y"}}
-    </p>
-    {{ post_body }}
-  </div>
-</div>
-{% else %}
+{% endcapture %} 
 <div class="d-md-flex min-height-full">
   <div
     class="sidebar flex-self-stretch border-md-right border-gray-light bg-white px-4 px-md-6 px-lg-7 py-6"
@@ -81,4 +60,5 @@
     {% include social-footer.html %}
   </div>
 </div>
-{% endif %} {% include footer.html %}
+
+{% include footer.html %}
