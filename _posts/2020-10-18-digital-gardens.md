@@ -6,6 +6,7 @@ source: false
 seo_description: "writing digital gardens tech"
 tags: writing
 image: assets/img/posts/digital-gardens/garden.png
+best_of: true
 ---
 
 ["Digital gardens"](#appendix) are a new take on presenting information on blogs. Rather than a linear series of blog posts, these digital gardens are instead a networked collection of ever-evolving notes. Built into the concept is the idea of "growth" -- there is an upfront expectation that the notes and the graph will change over time. The content is an ongoing work in progress, with the information dynamically being recombined, edited, or removed at will.

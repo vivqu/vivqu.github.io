@@ -6,6 +6,7 @@ source: false
 seo_description: "interviews hiring engineering compensation"
 tags: tech work interviews
 image: assets/img/posts/compensation-101/coffee-chat.png
+best_of: true
 ---
 
 I spent a few months last year searching for a new [senior software engineering role](/blog/2019/12/09/job-search/). Looking back on the process, the hardest part was figuring out my approach to compensation and salary negotiation.

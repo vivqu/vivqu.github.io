@@ -20,15 +20,22 @@
 
   <div class="content-body border-top border-md-top-0 mt-4 bg-gray-light">
     <div class="mx-auto" style="max-width: 700px;">
-      <div class="f4 mb-10">
-        <div class="f4">
-            <h1>{{ page.title }}</h1>
-            <p class="f4 mb-8 text-gray">
-              programmer's log // epoch time <script>document.write(new Date().getTime());</script> //
-              writing on software, creativity, and good books.
-            </p>
-            {% include blog-list.html %}
-        </div>
+      <h1>{{ page.title }}</h1>
+      <p class="f4 mb-6 text-gray">
+        programmer's log // epoch time <script>document.write(new Date().getTime());</script> //
+        writing on software, creativity, and good books.
+      </p>
+      <h2 class="mb-4">Best of 👍</h2>
+      <div class="d-sm-flex flex-wrap gutter-condensed mb-4">
+        {% for post in site.posts %}
+          {% if post.best_of %}
+          {% include post-list.html %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <h2 class="mb-4">Recent posts ⌚️</h2>
+      <div class="mb-10">
+        {% include blog-list.html %}
       </div>
     </div>
     {% include social-footer.html %}
