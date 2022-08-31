@@ -63,8 +63,8 @@ h2,
 h3,
 h4,
 .post-subtitle {
-  font-family: -apple-system, "BlinkMacSystemFont", "Helvetica Neue",
-    "Helvetica", Arial, sans-serif;
+  font-weight: normal;
+  font-family: 'IBM Plex Serif', 'Times New Roman', serif;
 }
 
 h4 {
@@ -81,7 +81,7 @@ p,
 ol,
 ul,
 .post-date {
-  font-family: Lora;
+  font-family: 'IBM Plex Serif', 'Times New Roman', serif;
   line-height: 1.8;
 }
 
@@ -93,11 +93,13 @@ p {
 }
 
 a {
-  color: #0c7fb9;
+  color: #24292e;
+  text-decoration: underline;
+  text-decoration-color: #12a2eb;
 }
 
-a:visited {
-  color: #0c7fb9;
+a:hover {
+  text-decoration-color: #a9afb2;
 }
 
 .sidebar {
