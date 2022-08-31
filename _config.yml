@@ -44,9 +44,6 @@ repos:
 
 social_media:
   twitter: vivqu
-  medium: vivqu
-  pinterest: vivqu
-  instagram: skwishum
 
 projects:
   - name: AR Grimoire
@@ -74,6 +71,4 @@ projects:
 email_address: hello@vivqu.com
 twitter_username: vivqu
 github_username: vivqu
-instagram_username: skwishum
-pinterest_username: vivqu
 linkedin_username: vivqu
