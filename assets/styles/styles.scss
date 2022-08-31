@@ -61,20 +61,28 @@
 h1,
 h2,
 h3,
-h4,
-.post-subtitle {
-  font-weight: normal;
+h4 {
+  font-weight: normal !important;
   font-family: 'IBM Plex Serif', 'Times New Roman', serif;
+}
+
+.post-subtitle,
+.post-date {
+  color: #6a737d;
+  font-family: -apple-system, "BlinkMacSystemFont", "Helvetica Neue",
+    "Helvetica", Arial, sans-serif;
+}
+
+.post-subtitle {
+  font-size: 16px;
+}
+.post-date {
+  font-size: 14px;
 }
 
 h4 {
   font-style: normal;
   font-weight: 400;
-}
-
-.post-subtitle,
-.post-date {
-  font-size: 14px;
 }
 
 .post-title, .post-title:hover {
@@ -88,8 +96,7 @@ h4 {
 
 p,
 ol,
-ul,
-.post-date {
+ul {
   font-family: 'IBM Plex Serif', 'Times New Roman', serif;
   line-height: 1.8;
 }
@@ -283,6 +290,10 @@ a.masthead-secondary-link {
   color: #778 !important;
 }
 
+a.masthead-secondary-link:hover {
+  color: #1e6ce3 !important;
+}
+
 .masthead-links a:hover {
   text-decoration: none;
   color: #1e6ce3;
@@ -329,8 +340,7 @@ form-control:focus {
 .footerText {
   text-align: center;
   width: 100%;
-  font-family: -apple-system, "BlinkMacSystemFont", "Helvetica Neue",
-    "Helvetica", Arial, sans-serif;
+  font-family: 'IBM Plex Serif', 'Times New Roman', serif;
   color: #6a737d;
   padding-bottom: 30px;
 }
@@ -371,6 +381,7 @@ hr.section-divider:before {
 }
 
 .post-navigation {
+  font-family: 'IBM Plex Serif', 'Times New Roman', serif;
   font-size: 14px;
   display: flex;
   width: 100%;
@@ -423,7 +434,7 @@ hr.section-divider:before {
     background-color: rgb(188, 141, 160);
     border-radius: 20px;
     color: rgb(64, 63, 76);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     cursor: pointer;
   }

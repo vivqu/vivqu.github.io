@@ -5,12 +5,9 @@
   {% include masthead.html %}
 
   <div class="container-md f4 text-left border rounded-2 bg-white p-3 p-sm-5 mt-6">
-    <h1 class="f00-light lh-condensed">{{ page.title }}</h1>
-    <p class="f3 mb-4 text-gray" style="margin-block-start: 0.3em;">
-      A blog by Vivian Qu.
-    </p>
-    <p class="f4 mb-5 text-gray">
-      Warning: may contain software engineering, product design, general musings, and occasional humor. Read at your own risk.
+    <h1>{{ page.title }}</h1>
+    <p class="f3 mb-5 text-gray">
+      Writing on software, creativity, and good books.
     </p>
     {% include blog-list.html %}
   </div>
@@ -21,13 +18,14 @@
     {% include masthead.html %}
   </div>
 
-  <div class="content-body border-top border-md-top-0 bg-gray-light">
+  <div class="content-body border-top border-md-top-0 mt-4 bg-gray-light">
     <div class="mx-auto" style="max-width: 700px;">
       <div class="f4 mb-10">
         <div class="f4">
-            <h1 class="f00-light lh-condensed">{{ page.title }}</h1>
+            <h1>{{ page.title }}</h1>
             <p class="f4 mb-8 text-gray">
-              A programmer's log containing writing on software, creativity, and good books.
+              programmer's log // epoch time <script>document.write(new Date().getTime());</script> //
+              writing on software, creativity, and good books.
             </p>
             {% include blog-list.html %}
         </div>
