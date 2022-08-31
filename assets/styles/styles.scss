@@ -77,6 +77,15 @@ h4 {
   font-size: 14px;
 }
 
+.post-title, .post-title:hover {
+  text-decoration: none;
+}
+
+.post-title:hover {
+  color: #1e6ce3;
+}
+
+
 p,
 ol,
 ul,
@@ -268,6 +277,10 @@ nav > p {
 .masthead-links a:visited {
   color: #40404f;
   text-decoration: none;
+}
+
+a.masthead-secondary-link {
+  color: #778 !important;
 }
 
 .masthead-links a:hover {

@@ -252,3 +252,13 @@ a > code {
 .instagram-media {
   margin: 0 auto !important;
 }
+
+a {
+  color: #24292e;
+  text-decoration: underline;
+  text-decoration-color: #12a2eb;
+}
+
+a:hover {
+  text-decoration-color: #a9afb2;
+}

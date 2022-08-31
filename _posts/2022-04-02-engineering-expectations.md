@@ -42,7 +42,7 @@ I chose to use the spreadsheet matrix for my version of a skill ladder since I a
 
 In this section, I have tried to distill down areas for growth and development that are important for engineers. These expectations incorporate what I value on my past and present teams, as well as accepted industry conventions. 
 
-You do not have to comprehensively fulfill all the expectations for the next level to be considered “at that level”. By definition, engineering levels are attempting to translate a subjective set of requirements into a consistent evaluation standard, so they will inevitably miss important nuance and context. <u>Treat these level expectations more as guiding principles rather than a checklist you have to complete.</u> Look to real-life role models, such as more experienced engineers on your team, as a way to see these principles in action.
+You do not have to comprehensively fulfill all the expectations for the next level to be considered “at that level”. By definition, engineering levels are attempting to translate a subjective set of requirements into a consistent evaluation standard, so they will inevitably miss important nuance and context. <b>Treat these level expectations more as guiding principles rather than a checklist you have to complete.</b> Look to real-life role models, such as more experienced engineers on your team, as a way to see these principles in action.
 
 This guideline is first and foremost a tool to help you and your manager to talk about expectations and growth. Feel free to copy, remix, and/or adapt this ladder to best suit your needs.
 
