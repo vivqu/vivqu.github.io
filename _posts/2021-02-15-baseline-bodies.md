@@ -6,6 +6,7 @@ source: false
 seo_description: "movement health aging longevity"
 tags: health
 image: assets/img/posts/baseline-bodies/old-lady.jpeg
+read_time: 7 min
 ---
 
 One of my resolutions for 2021 is to get serious about maintaining mobility. 

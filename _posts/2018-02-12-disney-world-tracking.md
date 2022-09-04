@@ -4,6 +4,7 @@ published: true
 source: true
 seo_description: "Privacy is more important than ever. But somehow most people are not concerned with Disney theme parks, which collect unbelievable amounts of visitor data."
 tags: disney tech
+read_time: 10 min
 ---
 
 Privacy concerns are more common than ever. People are worried about how companies will gather and exploit their data. The outcome of this tracking ranges from relatively benign ([“Amazon’s Next Big Business is Selling You”](https://www.wired.com/2012/10/amazon-next-advertising-giant/)) to potentially impacting our civil liberties and the basic functioning of governments ([“What Facebook Did to American Democracy”](https://www.theatlantic.com/technology/archive/2017/10/what-facebook-did/542502/)).
@@ -81,7 +82,7 @@ These two principles form the underlying technology strategy of Disney theme par
 
 Disney World is a special product in many ways. Few other products have its expansive physical real estate and the deep pockets that enable it to so relentlessly focus on the guest experience. But nevertheless there are important product lessons we can learn from the honed craft of Disney’s quiet and often invisible user tracking.
 
-<br>
-<p class="source">
-(This article was originally published in Prototyper, click <a href="https://blog.prototypr.io/how-disney-world-solved-the-user-tracking-problem-beece7a95e97" target="_blank">here</a> to read on Medium.)
-</p>
+<hr class="section-divider" />
+
+<footer><p>This article was last updated on 02/12/2018. v1 is 2,242 words and was originally published in Prototyper, click <a href="https://blog.prototypr.io/how-disney-world-solved-the-user-tracking-problem-beece7a95e97" target="_blank">here</a> to read on Medium.
+</p></footer>

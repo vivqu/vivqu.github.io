@@ -6,6 +6,7 @@ source: false
 seo_description: "tech writing GPT-3"
 tags: tech writing
 image: assets/img/posts/nlp-existential-essay/writing-computer.jpeg
+read_time: 4 min
 ---
 
 In my last post, I talked about the challenge of [improving my writing skills](/blog/2022/01/26/style-humor/). I have spent all this energy to write better so naturally I really appreciate good writing. Especially if that writing comes from a computer and not a human.

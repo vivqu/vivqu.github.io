@@ -5,6 +5,7 @@ published: true
 source: true
 seo_description: "zen-buddhism zen-and-the-art-of-archery handstands meditation"
 tags: health
+read_time: 9 min
 ---
 
 I usually think about myself as two distinct entities: my body and my brain.
@@ -77,7 +78,7 @@ But as I continue to practice handstands and acrobatics, I am more and more remi
 
 > This state, in which nothing definite is thought, planned, striven for, desired or expected, which aims in no particular direction and yet knows itself capable alike of the possible and the impossible, so unswerving is its power — this state, which is at bottom purposeless and egoless, was called by the Master truly “spiritual”.
 
-<br>
-<p class="source">
-(This article was originally published on Medium, click <a href="https://medium.com/@vivqu/zen-and-the-art-of-handstands-3a5b1ce3f25a" target="_blank">here</a> to read it there.)
-</p>
+<hr class="section-divider" />
+
+<footer><p>This article was last updated on 02/22/2019. v1 is 2,133 words and was originally published on Medium, click <a href="https://medium.com/@vivqu/zen-and-the-art-of-handstands-3a5b1ce3f25a" target="_blank">here</a> to read it there.
+</p></footer>

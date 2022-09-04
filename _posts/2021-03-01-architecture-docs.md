@@ -6,6 +6,7 @@ source: false
 seo_description: "software engineering architecture communication"
 tags: tech writing
 image: assets/img/posts/architecture-docs/code-diagram.png
+read_time: 12 min
 ---
 
 Aleksey Kladov wrote a [smart, concise explanation](https://matklad.github.io//2021/02/06/ARCHITECTURE.md.html) about why all open-source projects need an explainer for the high-level architecture of the codebase. I would go further to state that every software project needs to have an ARCHITECTURE.md file.

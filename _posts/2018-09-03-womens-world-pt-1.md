@@ -5,6 +5,7 @@ published: true
 source: true
 seo_description: "An essay series on the culture and traditions of the Mosuo, a matriarchal ethnic minority in China."
 tags: matriarchy travel
+read_time: 5 min
 ---
 
 This is the first post in a four-part series on Mosuo matriarchal culture. 
@@ -69,7 +70,7 @@ Regardless, we were able to learn about a rich tapestry of social traditions tha
 
 In [part 2](/blog/2018/09/03/womens-world-pt-2/), we discuss how the Mosuo definition of family is the foundation behind their social customs, and how this definition may seem very strange by mainstream standards.
 
-<br>
-<p class="source">
-(This article was originally published on Medium, click <a href="https://medium.com/@vivqu/what-i-learned-from-womens-world-4a69db76b773" target="_blank">here</a> to read it there.)
-</p>
+<hr class="section-divider" />
+
+<footer><p>This article was last updated on 09/3/2018. v1 is 1,174 words and was originally published on Medium, click <a href="https://medium.com/@vivqu/what-i-learned-from-womens-world-4a69db76b773" target="_blank">here</a> to read it there.)
+</p></footer>

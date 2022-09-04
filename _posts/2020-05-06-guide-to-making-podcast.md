@@ -6,6 +6,7 @@ source: false
 seo_description: "projects sanfransokyo podcast beginner 101"
 tags: travel podcast
 image: assets/img/posts/podcast-summary/german-forest.png
+read_time: 21 min
 ---
 
 # The German forest 🌲

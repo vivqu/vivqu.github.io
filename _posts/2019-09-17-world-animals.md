@@ -6,6 +6,7 @@ source: false
 seo_description: "react-native mobile-game mobile-dev software-engineering"
 tags: tech
 image: assets/img/posts/world-animals/code-time.png
+read_time: 11 min
 ---
 
 In July 2019, I launched the [WorldAnimals](https://worldanimalsapp.com) app on iOS and Android. The app is a mobile game that teaches you different animal onomatopoeia from languages around the world.

@@ -5,6 +5,7 @@ published: true
 source: true
 seo_description: "In the second part of the series, we learn about the family organization of the Mosuo, a matriarchal ethnic minority."
 tags: matriarchy travel
+read_time: 8 min
 ---
 
 This is the second post in a four-part series on Mosuo matriarchal culture. 
@@ -88,7 +89,7 @@ My last thought about this family culture is that it would not be easily transla
 
 In [part three](/blog/2018/09/03/womens-world-pt-3/), we learn about the Mosuo understanding of love and marriage and how much it differs from our ways of conducting romantic relationships.
 
-<br>
-<p class="source">
-(This article was originally published on Medium, click <a href="https://medium.com/@vivqu/the-family-future-is-female-6b38e3e00724" target="_blank">here</a> to read it there.)
-</p>
+<hr class="section-divider" />
+
+<footer><p>This article was last updated on 09/3/2018. v1 is 1,961 words and was originally published on Medium, click <a href="https://medium.com/@vivqu/the-family-future-is-female-6b38e3e00724" target="_blank">here</a> to read it there.
+</p></footer>

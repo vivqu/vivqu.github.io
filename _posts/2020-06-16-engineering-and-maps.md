@@ -6,6 +6,7 @@ source: false
 seo_description: "maps software engineering"
 tags: tech
 image: assets/img/posts/engineering-maps/cartography-book.jpg
+read_time: 4 min
 ---
 
 Recently, I've been learning about mapmaking during the lockdown. I started these studies as a form of escapism, one that lets me imagine and explore huge regions of _outside_ while being stuck inside.

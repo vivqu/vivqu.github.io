@@ -6,6 +6,7 @@ source: false
 seo_description: "2019 year in review"
 tags: work travel
 image: assets/img/posts/2019-year-in-review/senmo-sunrise.png
+read_time: 6 min
 ---
 
 Last year on this day, I was going to sleep on an uncomfortable hotel bed in [Abashiri, Hokkaido](https://www.japan-guide.com/e/e6865.html). We had just 

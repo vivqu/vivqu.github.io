@@ -5,6 +5,7 @@ published: true
 source: true
 seo_description: "Getting the fastest wait times, the order of parks to go to, and other tips to get the most out of your trip to Disney World."
 tags: disney
+read_time: 14 min
 ---
 
 One of my earliest childhood memories is watching my father take off at a dead sprint as we passed the ticket gate and entered into Main Street boulevard at Magic Kingdom. Clutched in his hand were our park tickets. He was running away from his wife and two daughters in order to secure a precious commodity: the earliest FastPass ride reservation time for a popular ride, usually Peter Pan Flight. This brilliant man had the insight that the other families didn’t. My father knew that Magic Kingdom was a game and he was playing to win.
@@ -135,7 +136,8 @@ This article has focused on tips to outsmart your fellow park-goers and the park
 > The way to get started is to quit talking and begin doing.
 > — Walt Disney
 
-<br>
-<p class="source">
-(This article was originally published on Medium, click <a href="https://medium.com/@vivqu/3-tips-to-outsmart-disney-theme-parks-c8aea932343b" target="_blank">here</a> to read it there.)
-</p>
+
+<hr class="section-divider" />
+
+<footer><p>This article was last updated on 06/1/2018. v1 is 3,185 words and was originally published on Medium, click <a href="https://medium.com/@vivqu/3-tips-to-outsmart-disney-theme-parks-c8aea932343b" target="_blank">here</a> to read it there.
+</p></footer>

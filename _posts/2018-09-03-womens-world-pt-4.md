@@ -5,6 +5,7 @@ published: true
 source: true
 seo_description: "In the last part of the series, we learn about the how exposure to modern culture is impacting the Mosuo, a matriarchal ethnic minority."
 tags: matriarchy travel
+read_time: 7 min
 ---
 
 This is the final post in a four-part series on Mosuo matriarchal culture. 
@@ -85,7 +86,7 @@ Easier transportation into the area also means easier departure. More and more y
 
 The Mosuo have a profoundly unique culture. But as the outside world more deeply penetrates the Lugu Lake area, it becomes critical to record and reflect on their dwindling traditions. Thinking deeply about these customs and how they play out in the modern world is important for two reasons — first, because it could help us understand how the community can adapt in order to preserve some aspects of this way of life. And second, because this new perspective gives us insight on how to reframe our own lives in a happier and more supportive way.
 
-<br>
-<p class="source">
-(This article was originally published on Medium, click <a href="https://medium.com/@vivqu/matriarchy-meets-the-modern-world-d44888f0ee19" target="_blank">here</a> to read it there.)
-</p>
+<hr class="section-divider" />
+
+<footer><p>This article was last updated on 09/3/2018. v1 is 1,512 words and was originally published on Medium, click <a href="https://medium.com/@vivqu/matriarchy-meets-the-modern-world-d44888f0ee19" target="_blank">here</a> to read it there.
+</p></footer>

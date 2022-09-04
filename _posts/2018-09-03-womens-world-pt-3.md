@@ -5,6 +5,7 @@ published: true
 source: true
 seo_description: "In the third part of the series, we learn about the rules of love and courtship for the Mosuo, a matriarchal ethnic minority."
 tags: matriarchy travel
+read_time: 11 min
 ---
 
 This is the third post in a four-part series on Mosuo matriarchal culture. 
@@ -117,7 +118,7 @@ Maybe that’s just mainstream upbringing talking. I am too conditioned to a cer
 
 For the [final part](/blog/2018/09/03/womens-world-pt-4/) in the series, we consider the modern forces that are changing the Mosuo culture and whether or not the matriarchal culture can be sustained in the future.
 
-<br>
-<p class="source">
-(This article was originally published on Medium, click <a href="https://medium.com/p/three-step-guide-to-falling-in-love-f6a36521ead2" target="_blank">here</a> to read it there.)
-</p>
+<hr class="section-divider" />
+
+<footer><p>This article was last updated on 09/3/2018. v1 is 2,618 words and was originally published on Medium, click <a href="https://medium.com/p/three-step-guide-to-falling-in-love-f6a36521ead2" target="_blank">here</a> to read it there.)
+</p></footer>

@@ -6,6 +6,7 @@ source: false
 seo_description: "tech work engineering ladders"
 tags: tech work management
 image: assets/img/posts/engineering-ladder/engineering-ladder.jpg
+read_time: 6 min
 ---
 
 Early-stage startups don’t usually have an [engineering ladder](http://www.engineeringladders.com/). When you only have a handful of engineers and no HR team at all, implementing a formalized evaluation and promotion process for engineers generates unnecessary bureaucracy. On these very small teams, engineering leaders can typically just get in a room together to align expectations for the team.

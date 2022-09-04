@@ -6,6 +6,7 @@ source: false
 seo_description: "life-philosophy simulated-annealing probability possibility"
 tags: writing work travel
 image: assets/img/posts/simulated-annealing/self-actualization.png
+read_time: 18 min
 ---
 
 I enjoy learning about different systems for living a good life. These can range from specific productivity practices to high-level formulations that attempt to reimagine the very concept of meaning in your life.

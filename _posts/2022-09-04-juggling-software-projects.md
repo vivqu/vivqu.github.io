@@ -6,7 +6,7 @@ source: false
 seo_description: "tech work engineering career"
 tags: tech work management
 image: assets/img/posts/juggling-software-projects/juggling-balls.jpg
-read_time: 10 min
+read_time: 5 min
 ---
 
 There is a lot of information out there on how to level up in your career as a software engineer. Usually, the main suggestion is to sign up for more projects and leadership opportunities. The goal is to incrementally experience and then master the responsibilities of a senior technical lead or engineering manager. Eventually, so the advice goes, your increased scope/accomplishments satisfy the requirements of the company’s career ladder and you receive the promotion to the next level.
@@ -29,7 +29,7 @@ This is a great metaphor because it really clearly demonstrates the change in wo
 
 What are some ways that we can increase the air time for software projects?
 
-- **Documentation**. Concise, well-written technical documents are important for enabling asynchronous communication for projects. Other stakeholders and project members can consult the written documentation and even have discussions through comments without requiring your immediate attention. There are also plenty of other benefits, such as creating a lasting record of the project and creating a better remote work environment.
+- **Documentation**. [Concise, well-written technical documents](/blog/2021/03/01/architecture-docs/) are important for enabling asynchronous communication for projects. Other stakeholders and project members can consult the written documentation and even have discussions through comments without requiring your immediate attention. There are also plenty of other benefits, such as creating a lasting record of the project and creating a better remote work environment.
 - **Growing the team’s ability to handle ambiguity**. Another way to the active management of projects is to empower the team with the knowledge of how to make decisions and solve complex problems themselves. Rather than trying to define every edge case from the start, you can deliberately leave areas of the project undefined to allow the team to fill in the gaps. Instead of just answering undefined technical questions directly, explain your reasoning or challenge your coworkers to try to answer it first. By distributing the technical know-how and context among the team, you can scale your own decision-making powers and enable others to help keep projects on track.
 - **Push vs. pull updates**. A non-trivial part of the cognitive load for leading projects involves monitoring progress to make sure things stay on track. You always know the current status when you are solely responsible for the end-to-end project. When people transition to hands-off project leadership, they often default to a “pull” model for project status by personally checking in on the team. You end up running a constant mental subroutine to remind you to ask about the current status, which adds a lot of mental overhead. But paradoxically, it can feel easier to ask for updates, since you don’t need to explain your internal model of priorities and concerns. Shifting to a “push” mode is key to freeing up your own mental bandwidth. It requires active education and context-sharing with the team on when to notify you. It’s not enough to implement new processes (such as meetings/standups/async updates) share information since unexpected issues can arise in the interim. The team needs a similar mental model of priorities and concerns so they know when it’s appropriate to pull you in.
 
@@ -39,4 +39,4 @@ We need to accept that some balls will be harder to catch or might end up on the
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 9/4/2022. v1 is 1207 words and took 4.75 hours to write and edit. Thanks to my husband Dru Knox who first taught me this metaphor.</footer>
+<footer>This article was last updated on 9/4/2022. v1 is 1,207 words and took 4.75 hours to write and edit. Thanks to my husband Dru Knox who first taught me this metaphor.</footer>

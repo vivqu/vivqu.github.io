@@ -6,6 +6,7 @@ source: false
 seo_description: "interviews hiring engineering"
 tags: tech work interviews
 image: assets/img/posts/job-search/search-funnel.png
+read_time: 13 min
 ---
 
 Searching for a new job is stressful. It falls into the category of activities that are deeply frustrating yet unavoidable. 
