@@ -6,6 +6,7 @@ source: false
 seo_description: "tech work engineering career"
 tags: tech work management
 image: assets/img/posts/juggling-software-projects/juggling-balls.jpg
+read_time: 10 min
 ---
 
 There is a lot of information out there on how to level up in your career as a software engineer. Usually, the main suggestion is to sign up for more projects and leadership opportunities. The goal is to incrementally experience and then master the responsibilities of a senior technical lead or engineering manager. Eventually, so the advice goes, your increased scope/accomplishments satisfy the requirements of the company’s career ladder and you receive the promotion to the next level.

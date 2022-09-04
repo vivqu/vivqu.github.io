@@ -35,6 +35,7 @@
             class="article-date mb-7 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}"
           >
             {{ page.date | date: "%b %d, %Y"}}
+            {% if page.read_time %}· {{page.read_time}} read{% endif %}
           </p>
           {{ post_body }}
       </div>
