@@ -37,6 +37,10 @@ There is also a key emotional component to changing your working style. It can f
 
 We need to accept that some balls will be harder to catch or might end up on the ground. Building this mental fortitude is the only way we can ultimately achieve the goal of increasing our ability to juggle more balls. It is an important evolution in one’s engineering career to be okay with error, trust in our teammates, and slowly add in tolerances to the company culture/processes so that we collectively can recover from large mistakes and build even more great software. 
 
+<br/>
+
+![juggle_balls](/assets/img/posts/juggling-software-projects/juggling-balls.jpg)
+
 <hr class="section-divider" />
 
 <footer>This article was last updated on 9/4/2022. v1 is 1,207 words and took 4.75 hours to write and edit. Thanks to my husband Dru Knox who first taught me this metaphor.</footer>
