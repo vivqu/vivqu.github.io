@@ -11,7 +11,7 @@ read_time: 2 min
 
 I have done a lot of reading and learning in my first year of being a manager. I wanted to share my recommendations so others can jumpstart their manager transition more easily.
 
-This is a ongoing shortlist of the most helpful books and articles I've read, both for myself and also for ideas to share with my team...
+This is an ongoing shortlist of the most helpful books and articles I've read, both for myself and also for ideas to share with my team...
 
 <br />
 _Last updated: 9/11/22_
