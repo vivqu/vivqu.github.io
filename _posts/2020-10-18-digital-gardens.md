@@ -144,6 +144,7 @@ If you enjoyed reading about my thoughts on digital gardens and want to explore 
 - [Tyler Angert's collection of digital garden and information forests](https://www.are.na/tyler-angert/digital-gardens-and-information-forests)
 - [swyx](https://www.swyx.io/writing/digital-garden-tos/)
 - [Gordon Brander](http://gordonbrander.com/pattern/)
+- [Rach Smith](https://rachsmith.com/)
 
 On working in public: 
 - [Andy Matuschak, "Work with the garage door up"](https://notes.andymatuschak.org/z21cgR9K3UcQ5a7yPsj2RUim3oM2TzdBByZu)
@@ -152,4 +153,4 @@ On working in public:
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 10/18/2020. v1 is 2,654 words and took 7.9 hours to write and edit.</footer>
+<footer>This article was last updated on 09/18/2022. v1 is 2,654 words and took 7.9 hours to write and edit.</footer>
