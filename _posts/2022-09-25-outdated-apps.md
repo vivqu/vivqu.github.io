@@ -5,7 +5,7 @@ published: true
 source: false
 seo_description: "tech mobile platform"
 tags: tech
-image: assets/img/posts/management-books/book-recs.jpg
+image: assets/img/posts/outdated-apps/iphone-apps.jpg
 read_time: 10 min
 ---
 
