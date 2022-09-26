@@ -38,9 +38,9 @@ Never mind the fact that my app has a 5-star rating and was still being download
 
 Beyond the financial cost, what is the most insulting to me about Apple’s policy is how poorly thought out their measure of “quality” is for apps. The message contains two separate statements about my app: (1) it hasn’t been updated in three years, and (2) it doesn’t meet a “minimum download threshold.” Fixing either of those so-called problems doesn’t magically mean my app will be a high-quality, positive experience for users.
 
-There is absolutely no requirement for what is contained in the app update since Apple only states, “the app will remain available if an app update is submitted and approved within 90 days.” At least in Google’s case, the Play Store requires an update to their [minimum target level API](https://www.theverge.com/2022/4/7/23014518/google-play-store-cracks-down-on-outdated-apps) which at least ensures that developers will need to be using a newer version of Android Studio. 
+There is absolutely no requirement for what is contained in the app update since Apple only states, “the app will remain available if an app update is submitted and approved within 90 days.” At least in Google’s case, the Play Store requires an update to their [minimum target level API](https://www.theverge.com/2022/4/7/23014518/google-play-store-cracks-down-on-outdated-apps) which ensures that developers use a newer version of Android Studio. 
 
-The intention behind Apple and Google’s policies is to force developers to make sure their apps run successfully on the latest devices and operating systems. Apple claims that the App Store improvement process will improve user experience because “keeping apps up to date to conform with modern screen sizes, SDKs, APIs [...] ensures users can have a great experience with any app they get from the App Store”. But my app was working correctly, which makes it feel like I am being forced to push a completely useless and performative update.
+The intention behind Apple and Google’s policies is to force developers to make sure their apps run successfully on the latest devices and operating systems. Apple claims that the App Store improvement process will improve user experience because “keeping apps up to date to conform with modern screen sizes, SDKs, APIs [...] ensures users can have a great experience with any app they get from the App Store”. But my app was already working correctly, making this update useless and performative.
 
 <br />
 ![app-screenshot](/assets/img/posts/outdated-apps/worldanimals.png)
@@ -100,7 +100,7 @@ After 4 hours of work to re-compile my app and 44 hours waiting in the review qu
 *WorldAnimals is now available for another three years (hopefully).*
 
 <br />
-I still love mobile development--a large part of my engineering career has been building mobile apps of all sizes, for small hobby side projects and for huge unicorn companies. I am proud of WorldAnimals and want to make sure it's still available for download. But this outdated policy will make me seriously think twice about building fun, experimental mobile apps on iOS in the future.
+I still love mobile development--a large part of my engineering career has been building mobile apps of all sizes, for small hobby side projects and for huge unicorn companies. I am proud of WorldAnimals and want to make sure it's still available for download. But this outdated policy will make me seriously think twice about building fun, experimental apps on iOS in the future.
 
 <hr class="section-divider" />
 
