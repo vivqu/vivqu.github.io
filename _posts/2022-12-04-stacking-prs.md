@@ -37,7 +37,7 @@ This is a better state since each pull request is focused on one specific sub-ar
 
 Timothy Andrew has a detailed write-up of the [stacked PR workflow](https://timothya.com/blog/git-stack/#headline-1) and tools to make the workflow easier. Stacking PRs can be quite cognitively complex because it requires dexterity with branching, cherry-picking, and rebasing commits. Engineers need to be able to thoughtfully decompose their work into comprehensible chunks, which may be challenging if there are many interdependent changes. There is also some practice required to learn how to update a base branch to address comments and merge the pull requests in the appropriate order. 
 
-(Note: GitHub finally added in [pull request retargeting](https://github.blog/changelog/2020-05-19-pull-request-retargeting/) in 2020 to make managing multiple feature branches easier, demonstrating how critical the stacked PRs workflow is to advanced software development practitioners. This is likely after [complaints](https://jg.gg/2018/09/29/stacked-diffs-versus-pull-requests/) about how much better Phabricator ([RIP](https://admin.phacility.com/phame/post/view/11/phacility_is_winding_down_operations/)) was at enabling stacked diffs, a variant on the same idea of chunking up a large body of engineering work. Perhaps it's unsurprising that I'm a huge fan of stacked pull requests given I used Phabricator at my first job! It's also why I like squashing my commits when I merge in approved pull requests.)
+(Note: GitHub finally added in [pull request retargeting](https://github.blog/changelog/2020-05-19-pull-request-retargeting/) in 2020 to make managing multiple feature branches easier, demonstrating how critical the stacked PRs workflow is to advanced software development practitioners. Phabricator ([RIP](https://admin.phacility.com/phame/post/view/11/phacility_is_winding_down_operations/)) was an [arguably](https://jg.gg/2018/09/29/stacked-diffs-versus-pull-requests/) better platform for this workflow due to stacked diffs, a variant on the same idea of chunking up a large body of engineering work. Perhaps it's unsurprising that I'm a huge fan of stacked pull requests given I used Phabricator at my first job! It's also why I like squashing my commits when I merge in approved pull requests.)
 
 ## Benefits of stacking PRs
 
@@ -67,4 +67,4 @@ So in conclusion, teach your junior teammates how to stack PRs!
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 10/4/2022. v1 is 1,026 words and took 2 hours to write and edit.</footer>
+<footer>This article was last updated on 10/4/2022. v1 is 1,024 words and took 2 hours to write and edit.</footer>
