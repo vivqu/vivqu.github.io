@@ -28,6 +28,7 @@ _Last updated: 9/11/22_
 - [Work on what matters](https://staffeng.com/guides/work-on-what-matters), StaffEng
 - [When your manager isn't supporting you, build a Voltron](https://larahogan.me/blog/manager-voltron/) by Lara Hogan
 - [Get your work recognized: write a brag document](https://jvns.ca/blog/brag-documents/) by Julia Evans
+- [What makes a great manager?](https://abinoda.substack.com/p/great-manager) by Abi Noda
 
 **Resources**
 - [Career Checkup Template](https://lethain.com/career-checkup/) by Will Lethain
@@ -41,4 +42,4 @@ _Last updated: 9/11/22_
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 9/11/2022. v1 is 219 words and took 0.5 hours to write and edit.</footer>
+<footer>This article was last updated on 10/23/2022. v1 is 224 words and took 0.5 hours to write and edit.</footer>
