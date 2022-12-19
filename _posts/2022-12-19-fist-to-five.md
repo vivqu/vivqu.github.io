@@ -1,6 +1,6 @@
 ---
 title: "Friends & fist-to-five"
-subtitle: "Making lightning fast decisions about where to eat dinner"
+subtitle: "Making lightning-fast decisions about where to eat dinner"
 published: true
 source: false
 seo_description: "friends decision-making"
