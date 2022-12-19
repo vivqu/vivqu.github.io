@@ -5,7 +5,7 @@ published: true
 source: false
 seo_description: "friends decision-making"
 tags: life
-image: assets/img/posts/stacking-prs/stacked-rocks.jpg
+image: assets/img/posts/fist-to-five/fingers.jpg
 read_time: 5 min
 ---
 
