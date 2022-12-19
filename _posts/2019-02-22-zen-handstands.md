@@ -4,7 +4,7 @@ subtitle: "or: How I Learned to Stop Worrying and Love the Body"
 published: true
 source: true
 seo_description: "zen-buddhism zen-and-the-art-of-archery handstands meditation"
-tags: health
+tags: health life
 read_time: 9 min
 ---
 

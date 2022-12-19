@@ -4,7 +4,7 @@ subtitle: "Reflecting on going there and back again"
 published: true
 source: false
 seo_description: "2019 year in review"
-tags: work travel
+tags: work travel life
 image: assets/img/posts/2019-year-in-review/senmo-sunrise.png
 read_time: 6 min
 ---
