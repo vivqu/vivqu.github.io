@@ -7,6 +7,7 @@ seo_description: "tech mobile platform"
 tags: tech
 image: assets/img/posts/outdated-apps/iphone-apps.jpg
 read_time: 10 min
+best_of: true
 ---
 
 On August 22nd, I got an email out of the blue from Apple that notified me that I had a new App Review message. It was for my app, [WorldAnimals](https://worldanimalsapp.com/), a light-hearted game for guessing animal onomatopoeia sounds in different languages. 

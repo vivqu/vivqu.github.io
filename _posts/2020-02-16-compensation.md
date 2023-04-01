@@ -6,7 +6,6 @@ source: false
 seo_description: "interviews hiring engineering compensation"
 tags: tech work interviews
 image: assets/img/posts/compensation-101/coffee-chat.png
-best_of: true
 read_time: 11 min
 ---
 
