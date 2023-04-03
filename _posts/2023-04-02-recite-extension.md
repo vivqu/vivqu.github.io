@@ -75,4 +75,4 @@ As Johann Wolfgang von Goethe said,
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 4/2/2023. v1 is 761 words and took 1.5 hours to write and edit.</footer>
+<footer>This article was last updated on 4/2/2023. v1 is 779 words and took 1.5 hours to write and edit.</footer>
