@@ -37,7 +37,9 @@ So I guess I had to build it myself.
 
 <hr class="section-divider" />
 
-I'm proud to announce [Recite](https://chrome.google.com/webstore/detail/recite/jpngepoglfflfacfcjfodbgnmhejlaoa?hl=en&authuser=0), a simple Chrome extension to display your reading highlights. Each time you open a new tab, the extension will fetch a random quote and display it with a minimal and elegant design.
+I'm proud to announce [Recite](https://chrome.google.com/webstore/detail/recite/jpngepoglfflfacfcjfodbgnmhejlaoa?hl=en&authuser=0), a simple Chrome extension to display your reading highlights. It's free to download from the Chrome web store, and does not collect any data or personal information.
+
+How it works is each time you open a new tab, the extension will fetch a random quote and display it with a minimal and elegant design.
 
 <br />
 ![recite-screenshot](/assets/img/posts/recite-extension/screencap.png)
