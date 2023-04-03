@@ -1,6 +1,6 @@
 ---
-title: "Building the Recite Chrome Extension"
-subtitle: "Rediscover your reading gems in Chrome new tabs"
+title: "Building the Recite Chrome extension"
+subtitle: "Rediscover your reading gems in new tabs"
 published: true
 source: false
 seo_description: "chrome-extension quotes reading"
