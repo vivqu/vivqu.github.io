@@ -490,3 +490,14 @@ hr.section-divider:before {
 
   }
 }
+
+.newsletter {
+  width: 580px;
+  height: 300px;
+}
+
+@media only screen and (max-width: 414px) {
+  .newsletter {
+    width: 100%;
+  }
+}
