@@ -67,7 +67,7 @@ I've been using it for a while to randomly select from my saved quotes (447 rows
 *Individual columns can also be configured to update the display if you already have an existing spreadsheet that you don't want to modify.*
 <br />
 
-If you want to look at the source code or load an unpacked version yourself (using your own Google spreadsheets API key), you can check out the code [here](https://github.com/vivqu/recite_extension). You can also see the [Google OAuth and API usage policy](/recite/) and [privacy policy](/recite/privacy-policy/) for more details.
+If you want to look at the source code or load an unpacked version yourself (using your own Google spreadsheets API key), you can check out the code [here](https://github.com/vivqu/recite_extension). You can also see the [Google OAuth and API usage policy](/recite/) and [privacy policy](/recite/privacy-policy) for more details.
 
 As Johann Wolfgang von Goethe said, 
 
