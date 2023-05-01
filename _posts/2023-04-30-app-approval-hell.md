@@ -1,5 +1,5 @@
 ---
-title: "The App Review Experience from Hell"
+title: "The app review experience from hell"
 subtitle: "Misadventures in working with Chrome extensions and Google OAuth"
 published: true
 source: false
@@ -9,7 +9,7 @@ image: assets/img/posts/app-approval-hell/computer-disaster.jpg
 read_time: 15 min
 ---
 
-I've [written previously](/blog/2022/09/25/outdated-apps/) about my strong opinions about the App Store and Google Play stores. These platforms and the massive tech companies that operate them make misguided policy decisions that disadvantage small indie developers and decrease the creativity and richness of their mobile app ecosystems, typically motivated by corporate profits or just plain indifference. 
+I've [written previously](/blog/2022/09/25/outdated-apps/) about my strong opinions about the App Store and Google Play stores. These platforms and the massive tech companies that operate them make misguided policy decisions that disadvantage small indie developers while also decreasing the creativity and richness of their mobile app ecosystems, motivated by corporate profits or just plain indifference. 
 
 But at this point, after years as a professional mobile developer as well as building multiple side projects, I thought I had seen it all—the good, the bad, and the ugly of getting my apps approved. I believed I had good understanding of the bargain that companies and developers make when engaging with app ecosystems.
 
@@ -19,7 +19,7 @@ My Chrome extension [Recite](/blog/2023/04/02/recite-extension/) is about as bas
 
 The [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle) (or 80/20 rule) is often applied to productivity and time management to explain that 20% of your time spent will account for 80% of the results. However, people often forget the implied correllary, which is that the last 20% of a project will consume 80% of your time. For the Recite project, the time spent between building a complete, production-ready extension and making the app available to users was even more extreme than 80/20. I spent less than one working day making the software functional and more than 11 weeks stuck in review processes.
 
-Come along with me as we descend into a developer's nightmare, one stage at a time:
+Come along with me as we descend into an app approval hellscape, one stage at a time:
 - Part 1: Dreadfully long review times.
 - Part 2: Want to charge for your Chrome extension? Too bad.
 - Part 3: Surprise! An extra submission process!
@@ -27,9 +27,9 @@ Come along with me as we descend into a developer's nightmare, one stage at a ti
 
 # Part 1: Dreadfully long review times.
 
-The [Chrome Web Store](https://chrome.google.com/webstore/category/extensions) is the marketplace to download and install extensions and add-ons for the Chrome web browser. It debuted in 2011 and now hosts over 100k extensions. The App Store and Google Play Store were launched in 2008 and 2012, respectively. 
+The [Chrome Web Store](https://chrome.google.com/webstore/category/extensions) is the marketplace to download and install extensions and add-ons for the Chrome web browser. It debuted in 2011 and now hosts over 100k extensions.
 
-I assumed that the Chrome Web Store would have an equally developed submission process, given that it has been around as long as the most widely-used app distribution platforms. At the very least, I thought,  Google's experience and learnings from running the largest app marketplace in the world (with over 3 million Android apps!) should transfer to the Chrome Web Store as well.
+I assumed that the Chrome Web Store would have a well-developed submission process. The App Store and Google Play Store were launched in 2008 and 2012, respectively. Given the timeline, the Chrome Web Store has been around just as long as these other massive app distribution platforms. At the very least, I thought,  Google's experience and learnings from running the largest app marketplace in the world (with over 3 million Android apps!) should transfer to the Chrome Web Store as well.
 
 The documentation on how to [publish in the Chrome Web Store](https://developer.chrome.com/docs/webstore/publish/) seemed easy enough at first. It's a basic submission form where you upload a zip file of your extension, description and other metadata, and relevant links to websites and policies.
 
@@ -89,16 +89,16 @@ I'm sure there are still ways to [effectively monetize Chrome extensions](https:
 
 # Part 3: Surprise! An extra submission process!
 
-The next unpleasant delay was Google login verification. Recite uses a Google API key that is restricted to a single API type (Google Sheets) and requests read-only permissions to access a user's spreadsheets.
+The next unpleasant delay was Google API OAuth verification. Recite uses a Google API key that is restricted to a single API type (Google Sheets) and requests read-only permissions to access a user's spreadsheets.
 
-Read-only spreadsheets access is categorized as a "sensitive scope" which requires [API OAuth verification](https://developers.google.com/identity/protocols/oauth2/production-readiness/brand-verification). In other words, I needed to undergo a second submission process with Google in order to get the API portion of the extension working.
+Read-only spreadsheets access is categorized as a "sensitive scope" which requires additional [API OAuth verification](https://developers.google.com/identity/protocols/oauth2/production-readiness/brand-verification). In other words, I needed to undergo a second submission process with Google in order to get the API portion of the extension working.
 
 <br />
 ![sensitive-scopes](/assets/img/posts/app-approval-hell/sensitive-scopes.png)
 *The extension requests a single sensitive scope in order to read from a user's Google spreadsheets.*
 <br />
 
-I only remembered that I needed to do this after the first version of my extension was submitted, approved, and released in the Chrome Web Store. This meant that I accidentally shipped a developer-only version of the API key, so no one besides me could functionally use the extension.
+I only realized that I needed to do this after the first version of my extension was submitted, approved, and released in the Chrome Web Store. This meant that I accidentally shipped a developer-only version of the API key, so no one besides me could functionally use the extension.
 
 I found the error because as soon as my extension was live, I asked a friend to try it out and they immediately got blocked from using it. Oops!
 
@@ -109,7 +109,7 @@ I found the error because as soon as my extension was live, I asked a friend to 
 
 Admittedly, this was my fault for quickly hacking together the project and not paying close enough attention to check all the requirements were met. I've worked with plenty of other APIs that require authorization to know that there is a difference between developer and production access, and it's very common to have a API verification process.
 
-However, there were a few issues on Google's side that made it very easy to overlook:
+However, there were a few issues on Google's side that made it very easy to overlook or forget:
 1. No feedback from the extension submission review
 2. Lack of communication about verification
 
@@ -119,27 +119,27 @@ Once again, I overestimated the standards and rigor of the Chrome Web Store revi
 
 I am used to App Store reviews for mobile submissions that provide a high bar for automated and manual quality. While there are still occasionally mistakes and erroneous rejections, I've also been alerted to legitimate issues by an App Store reviewer doing testing of my mobile apps.
 
-I don't think its unreasonable to assume that Google has the capability to detect usage of their own API keys. They could help developers by automatically flagging extensions which include API keys that haven't been successfully verified. The publishing process would actually serve as a useful checkpoint, where developers get feedback on potential user experience issues, rather than the current situation where zero (or negative) value gets added plus reviews take forever.
+I don't think its unreasonable to assume that Google has the capability to detect usage of their own API keys. They could help developers by automatically flagging extensions which include API keys that haven't been successfully verified. The publishing process would actually serve as a useful checkpoint, where developers get feedback on potential user experience issues, rather than the current situation where zero (or negative) value gets added.
 
 ## 2. Lack of communication about verification
 
 When requiring people to go through any process, it's always a good idea to be as explicit as possible. The Google Cloud Console team has apparently taken the opposite approach, since communication about the verification process is incredibly confusing.
 
-Nowhere on any of the [Credentials](https://console.cloud.google.com/apis/credentials) screens does it indicate that approval is needed when you set up your client credentials and API keys. Ultimately, the developer will need to visit a completely separate screen ("OAuth consent screen") in order to productionize their API keys.
+Nowhere on any of the [credentials page](https://console.cloud.google.com/apis/credentials) does it indicate that approval is needed when you set up your client credentials and API keys. Ultimately, the developer will need to visit a completely separate screen ([OAuth consent screen](https://console.cloud.google.com/apis/credentials/consent)) in order to productionize their API keys.
 
 <br />
 ![credentials](/assets/img/posts/app-approval-hell/credentials.png)
-*Configuring the OAuth consent screen, adding API scopes, and submitting the OAuth app for verification are instead on the "OAuth consent screen" page.*
+*Configuring the OAuth consent screen, adding API scopes, and submitting the OAuth app for verification are located on a different page in the navigation bar.*
 <br />
 
 It would be a much more logical place to set permission scopes when configuring the API key or client ID, and it would also be a great place to show an early alert to the developer if they add a sensitive or restricted scope that requires additional verification.
 
 <br />
 ![api-key](/assets/img/posts/app-approval-hell/api-key.png)
-*The page to set up your API keys.*
+*The page to set up your Google API keys.*
 <br />
 ![client-id](/assets/img/posts/app-approval-hell/client-id.png)
-*The page to set up your client ID.*
+*The page to set up your Google client ID.*
 <br />
 
 Compare this to Zoom's much better UX for setting up developer credentials. There is a clear and obvious series of steps for setting all the right information, with "Scopes" and "Activation" clearly called out.
@@ -162,7 +162,7 @@ When you try create a new Google OAuth consent screen, there is no indicator of 
 *Only after you hit the "Create" button are you shown all of the information that you need to fill out.*
 <br />
 
-After the OAuth consent screen is configured, only a small section at the top of the page indicates "Publishing status". It's easy to overlook or forget to come back to it once the app is ready to be released. 
+And even after the OAuth consent screen is configured, only a small section at the top of the page indicates "Publishing status". It's easy to overlook or forget to come back to it once the app is ready to be released. 
 
 <br />
 ![publishing-status](/assets/img/posts/app-approval-hell/publishing-status.png)
@@ -190,14 +190,14 @@ However, none of these documentation pages clearly state whether a scope has reg
 ![sheets-details](/assets/img/posts/app-approval-hell/sheets-details.png)
 <br />
 
-So the only way to determine if your scope is sensitive or restricted is when you configured your OAuth consent screen for the first time. 
+So the only way to determine if your scope is sensitive or restricted is when you configured your OAuth consent screen for the first time:
 
 <br />
 ![scope-info](/assets/img/posts/app-approval-hell/scope-info.png)
 *The small lock icons next to each scope is all that indicates whether it's default, sensitive, or restricted.*
 <br />
 
-This is a terrible place to communicate critical information about scopes and sensitivity, and it's difficult to reference after the fact. It would be much better to also have this information in the docs or even in a separate search screen outside of the OAuth consent screen setup flow.
+This is a terrible way to communicate critical information about scopes and sensitivity, and it's difficult to reference after setup. It would be much better to also have this information in the docs or even in a separate search screen outside of the OAuth consent screen configuration.
 
 The worst part is that the sensitivity level dramatically impacts how long it would take to verify your OAuth app. The higher the sensitivity of the scope, [the longer the wait times for reviews](https://support.google.com/cloud/answer/9110914?hl=en):
 - Default: 2-3 business days
@@ -206,7 +206,7 @@ The worst part is that the sensitivity level dramatically impacts how long it wo
 
 This is absolutely not clear when setting up the scopes for the first time. The difference between a few days to _several weeks_ could have a significant impact on a project's success. 
 
-And in keeping with the trend of inconsistent and unclear messaging, the sidebar for the consent screen includes conflicting information with the FAQ documentation.
+And in keeping with the trend of inconsistent and unclear messaging, the sidebar for the consent screen displays conflicting information with the FAQ documentation.
 
 <br />
 ![sidebar-scopes](/assets/img/posts/app-approval-hell/sidebar-scopes.png)
@@ -215,18 +215,18 @@ And in keeping with the trend of inconsistent and unclear messaging, the sidebar
 *This section says that sensitive scopes only take 3-5 days, but the FAQ says up to 10 days. Which one is is it?*
 <br />
 
-Each individual problem with the documentation and all of the different flows/screens of the Google Cloud Console may not be that big of a deal. But when you start adding it all together, it amounts to major confusion for developers. Important information about review times depending on specific API permissions is buried deep in the errata of FAQ docs or sidebars that users easily can ignore. 
+Each individual documentation issue and any one setup flow being a little hard to understand may not be that big of a deal. But when you start adding it all together, it amounts to major confusion for developers when using Google Cloud Console. Important information about review times depending on specific API permissions is buried deep in the errata of FAQ docs or sidebars that users easily can ignore. 
 
-The actual impact on my side project of missing the verification process was just some embarrassment when I showed a friend an incomplete project. But for startups or software projects where every minute and day counts, such a poor developer experience in the Google Cloud Console can lead to unacceptably long delays.
+The actual impact on my side project of missing the verification process was just some embarrassment when I showed a friend an incomplete project. But for startups or software projects where every minute and day counts, such a poor developer experience can accidentally cause long delays.
 
 <br />
 # Part 4: How do I get approved? Nyah nyah, I won't tell you.
 
-Now that there was only one more submission process to get through, it was smooth sailing to get the extension working correctly, right?
+So now that I knew there was only one more submission process to get through, it was smooth sailing to get the extension working correctly, right?
 
 Alas, there was one more level to descend to in developer hell.
 
-If the Chrome web store was comically slow in responding but lax in its review process, the API OAuth verification was the exact opposite: quicker to respond but extremely anal about every requirement.
+If the Chrome web store was comically slow in responding but lax in its review process, the API OAuth verification was the exact opposite: quicker to respond but extremely nitpicky about every requirement.
 
 I submitted my verification request on February 9th and finally was approved on March 19th, a full 38 days later. It took almost the same time end-to-end as getting the first version of the extension approved. But instead of radio silence, I was in an endless back-and-forth with the reviewers:
 
@@ -258,10 +258,10 @@ The OAuth homepage was particularly frustrating to set up because there were no 
 
 <br />
 ![homepage-example](/assets/img/posts/app-approval-hell/homepage-example.png)
-*So grateful that Michael Holstrom shared his [OAuth homepage](https://holtstrom.com/michael/about/) after passing Google review so we didn't have to repeat the same excruciating back-and-forth (to the same extent).*
+*So grateful that Michael Holstrom shared his [OAuth homepage](https://holtstrom.com/michael/about/) after passing Google review so I didn't have to do the exact same guess-and-check with the review feedback.*
 <br />
 
-Several times the rejection reason was simply wrong and I had to waste another few days to see if they would actually send me a different reason why I got rejected.
+Several times the rejection reason was simply wrong and I had to waste another few days waiting for a response, hoping that next time they would actually send me a real reason why I got rejected.
 
 <br />
 ![invalid-rejection](/assets/img/posts/app-approval-hell/invalid-rejection.png)
@@ -271,19 +271,19 @@ Several times the rejection reason was simply wrong and I had to waste another f
 *Several more days wasted just telling them they were wrong.*
 <br />
 
-I want to emphasize again: I went through the trouble of setting all of this up so that my extension could have the ability to read one row from a Google spreadsheet to display a saved quote. The amount of overhead was truly a Kafkaesque nightmare.
+I want to emphasize again: I went through the trouble of setting all of this up so that my extension could have the ability to read **one row from a Google spreadsheet** to display a saved quote. The amount of bureacratic overhead was truly a Kafkaesque nightmare.
 
-The most disappointing of all this is that Google should have a complete picture of my app. They have the source code and extension submission data from the Chrome web store, as well as all the additional information that I had to provide with the API OAuth verification process. From the outside, it looks like unnecessary and irritating extra hoops to jump through to justify my usage of their platforms. 
+The most disappointing of all this is that Google should have a complete picture of my app. They not only have the source code and extension submission details from the Chrome Web Store, but also all the additional information that I had to provide with the API OAuth verification process. From the outside, it looks like unnecessary and irritating extra hoops to jump through to justify my usage of their platforms. 
 
-I know the reality of the situation is probably quite different--I'm sure the people who work on Google Cloud Console and Chrome extensions are in completely separate internal orgs, running isolated product processes, with backends and systems that don't talk to one another. But [Conway's law](https://en.wikipedia.org/wiki/Conway%27s_law) is still not a good justification for a deeply infuriating process to just get our apps and APIs approved.
+I know the reality of the situation is probably quite different--I'm sure the people who work on Google Cloud Console and Chrome extensions are in completely separate internal orgs, running isolated product processes, with backends and systems that don't talk to one another. But [Conway's law](https://en.wikipedia.org/wiki/Conway%27s_law) is still not a good justification for a deeply infuriating process, all to get dead simple apps and API usage made available to the public.
 
 <hr class="section-divider" />
 
 In the end, it took me 78 days to release a working Chrome extension that was built in less than 2 days.
 
-I'm not sure if there are any takeaways from this writeup beyond a general plea to improve submissions for Chrome extensions and API OAuth apps. I hope that I can at least give some comfort and schadenfreudian delight to other developers. I hope that the links to my [Google OAuth page](/recite) and [privacy policy](/recite/privacy-policy) help others who are stuck in review purgatory.
+I'm not sure if there are any takeaways from this writeup beyond a general plea to improve submissions for Chrome extensions and API OAuth apps. I hope that I can at least give some comfort and schadenfreudian delight to other developers. I also wanted to document this delightful experience so that the artifacts I was forced to make (like the [Google OAuth page](/recite) and [privacy policy](/recite/privacy-policy)) may help others who are stuck in review purgatory.
 
-And though I would never say the way the App Store and Play Store do reviews are perfect, I have learned viscerally that they could be so *so* much worse.
+And though I would never say that the way the App Store and Play Store do reviews are perfect, I have learned viscerally that they could be so *so* much worse.
 
 <hr class="section-divider" />
 
