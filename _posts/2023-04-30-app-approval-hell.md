@@ -11,13 +11,13 @@ read_time: 15 min
 
 I've [written previously](/blog/2022/09/25/outdated-apps/) about my strong opinions about the App Store and Google Play stores. These platforms and the massive tech companies that operate them make misguided policy decisions that disadvantage small indie developers while also decreasing the creativity and richness of their mobile app ecosystems, motivated by corporate profits or just plain indifference. 
 
-But at this point, after years as a professional mobile developer as well as building multiple side projects, I thought I had seen it all—the good, the bad, and the ugly of getting my apps approved. I believed I had good understanding of the bargain that companies and developers make when engaging with app ecosystems.
+But at this point, after years as a professional mobile developer as well as building multiple side projects, I thought I had seen it all—the good, the bad, and the ugly of getting my apps approved. I believed I had a good understanding of the bargain that companies and developers make when engaging with app ecosystems.
 
 That is, until I decided to make a Chrome extension with Google login.
 
 My Chrome extension [Recite](/blog/2023/04/02/recite-extension/) is about as basic as you can get. It's only 1,744 lines of code and uses bare HTML/CSS/JS, one simple third-party utility library ([lodash](https://lodash.com/)), and makes GET requests to two Google spreadsheets API endpoints. I quickly built it as a fun weekend project in less than 8 hours. The final step was just to wrap it up by publishing through official channels so anyone could install the extension.
 
-The [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle) (or 80/20 rule) is often applied to productivity and time management to explain that 20% of your time spent will account for 80% of the results. However, people often forget the implied correllary, which is that the last 20% of a project will consume 80% of your time. For the Recite project, the time spent between building a complete, production-ready extension and making the app available to users was even more extreme than 80/20. I spent less than one working day making the software functional and more than 11 weeks stuck in review processes.
+The [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle) (or 80/20 rule) is often applied to productivity and time management to explain that 20% of your time spent will account for 80% of the results. However, people often forget the implied corollary, which is that the last 20% of a project will consume 80% of your time. For the Recite project, the time spent between building a complete, production-ready extension and making the app available to users was even more extreme than 80/20. I spent less than one working day making the software functional and more than 11 weeks stuck in review processes.
 
 Come along with me as we descend into an app approval hellscape, one stage at a time:
 - Part 1: Dreadfully long review times.
