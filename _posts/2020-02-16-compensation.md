@@ -20,14 +20,14 @@ In the end, I randomly and haphazardly did research for a few weeks before begin
 <ul>
 <li><a href="#pre-interview-set-your-baselines">Pre-interview: Set your baselines</a>
     <ol style="list-style-type: decimal;">
-        <li><a href="1-free-online-research">Free online research</a></li>
-        <li><a href="2-crowdsourcing-compensation">Crowdsourcing compensation</a></li>
-        <li><a href="3-analyzing-macro-trends">Analyzing macro-trends</a></li>
-        <li><a href="4-paying-for-compensation-data">Paying for compensation data</a></li>
+        <li><a href="#1-free-online-research">Free online research</a></li>
+        <li><a href="#2-crowdsourcing-compensation">Crowdsourcing compensation</a></li>
+        <li><a href="#3-analyzing-macro-trends">Analyzing macro-trends</a></li>
+        <li><a href="#4-paying-for-compensation-data">Paying for compensation data</a></li>
     </ol>
 </li>
-<li><a href="during-the-interview-establish-a-game-plan">During the interview: Establish a game plan</a></li>
-<li><a href="getting-the-offer-do-your-due-diligence">Getting the offer: Do your due diligence</a></li>
+<li><a href="#during-the-interview-establish-a-game-plan">During the interview: Establish a game plan</a></li>
+<li><a href="#getting-the-offer-do-your-due-diligence">Getting the offer: Do your due diligence</a></li>
 </ul>
 
 <br />
