@@ -6,7 +6,7 @@ source: false
 seo_description: "life growth software-engineer career"
 tags: life career
 image: assets/img/posts/coming-into-focus/sf-marathon-2023.jpeg
-read_time: 15 min
+read_time: 8 min
 ---
 
 This morning, I was one of thousands of runners participating in the 1st half marathon race of the [San Francisco Marathon](https://www.thesfmarathon.com/). We started from Crissy Field, ran across the Golden Gate Bridge to Fort Baker, and then looped back across the bridge to finish in Golden Gate Park. It was absolutely perfect day for the run—cool but not too windy, with beautiful sweeping views of the bay.
