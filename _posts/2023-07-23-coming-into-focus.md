@@ -4,7 +4,7 @@ subtitle: "Finally seeing myself as a runner and good engineer"
 published: true
 source: false
 seo_description: "life growth software-engineer career"
-tags: life career
+tags: life work
 image: assets/img/posts/coming-into-focus/sf-marathon-2023.jpeg
 read_time: 8 min
 ---
