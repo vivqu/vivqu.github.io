@@ -5,7 +5,7 @@ published: true
 source: false
 seo_description: "friends annual-book-gift"
 tags: reading
-image: assets/img/posts/holiday-books/book-gifts.jpg
+image: assets/img/posts/holiday-book-list/book-gift-vivian.png
 read_time: 2 min
 ---
 
@@ -22,6 +22,10 @@ This is a list of the books I've recommended since starting the tradition. Check
 - 2018: [The Power](https://www.goodreads.com/book/show/29751398-the-power) by Naomi Alderman & [Everything I Never Told You](https://www.goodreads.com/book/show/18693763-everything-i-never-told-you) by Celeste Ng
 - 2017: [The Fifth Season](https://www.goodreads.com/book/show/19161852-the-fifth-season) by N.K. Jemisin & [Stories of Your Life and Others](https://www.goodreads.com/book/show/223380.Stories_of_Your_Life_and_Others) by Ted Chiang
 
+
+<br />
+![book-gift](/assets/img/posts/holiday-book-list/book-gift-vivian.png)
+<br />
 
 <hr class="section-divider" />
 
