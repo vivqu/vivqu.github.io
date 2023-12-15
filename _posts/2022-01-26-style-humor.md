@@ -4,7 +4,7 @@ subtitle: "How a book about the elements of writing is really funny"
 published: true
 source: false
 seo_description: "writing style humor clarity grace"
-tags: writing
+tags: writing reading
 image: assets/img/posts/style-humor/writing.jpeg
 read_time: 8 min
 ---

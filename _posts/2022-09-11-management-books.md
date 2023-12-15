@@ -4,7 +4,7 @@ subtitle: "An ongoing list of resources on being a good manager"
 published: true
 source: false
 seo_description: "tech recs engineering management"
-tags: tech work management
+tags: tech work management reading
 image: assets/img/posts/management-books/book-recs.jpg
 read_time: 2 min
 ---
