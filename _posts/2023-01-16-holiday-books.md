@@ -4,7 +4,7 @@ subtitle: "How to recommend books so people will actually read them"
 published: true
 source: false
 seo_description: "friends annual-book-gift"
-tags: reading
+tags: life reading
 image: assets/img/posts/holiday-books/book-gifts.jpg
 read_time: 8 min
 ---
