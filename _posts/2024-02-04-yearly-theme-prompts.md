@@ -11,7 +11,7 @@ read_time: 4 min
 
 At the start of each year, my husband and I each pick a "yearly theme" instead of new year's resolutions. The yearly theme acts as a guiding principle to help direct our energy, activities, and decisions throughout the year. 
 
-The original inspiration for choosing a yearly theme game from [The Cortex podcast](https://www.relay.fm/cortex). As CGP Grey and Myke Hurley emphasize every year, themes are a gentler and more adaptable way of improving your life than resolutions, which typically encourage a pass-fail only mindset. Themes can evolve as life circumstances and priorities change. A theme like "Year of Health" can help remind the theme-setter to skew towards the healthier choice, from waking up early to go for a run to skipping a cookie impulse buy.
+The original inspiration for choosing a yearly theme came from [The Cortex podcast](https://www.relay.fm/cortex). As CGP Grey and Myke Hurley emphasize every year, themes are a gentler and more adaptable way of improving your life than resolutions, which typically encourage a pass-fail only mindset. Themes can evolve as life circumstances and priorities change. A theme like "Year of Health" can help remind the theme-setter to skew towards the healthier choice, from waking up early to go for a run to skipping a cookie impulse buy.
 
 However, [naming things is really hard](https://martinfowler.com/bliki/TwoHardThings.html). If you are anything like me, I start with a long list of aspirations for the upcoming year but then have trouble distilling it down into a simple word or phrase. Since this will be my focus for an entire year, I want it to be a good name. As CGP Grey says in his video explainer [Your Theme](https://www.youtube.com/watch?v=NVGuFdX5guE),
 
