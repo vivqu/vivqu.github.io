@@ -13,13 +13,13 @@
           </div>
         {% endunless %}
 
-        {% include projects.html %}
-        {% if repos.show_on_home %}
-          {% include code-repos.html %}
-        {% endif %}
+
         {% unless posts_total == 0 %}
           {% include writing.html %}
         {% endunless %}
+
+        <br />
+        {% include projects.html %}
       </div>
       {% include social-footer.html %}
     </div>
