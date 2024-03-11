@@ -1,10 +1,10 @@
 ---
 title: "Architecting happiness"
-subtitle: "DIY & design projects in the home"
+subtitle: "Working on home improvement projects"
 published: true
 source: false
 seo_description: "design diy-projects"
-tags: life
+tags: life design
 image: assets/img/posts/home-projects/fireplace-paint.jpg
 read_time: 4 min
 ---
@@ -15,7 +15,7 @@ The first year was just focused on outfitting the place with basic furniture. We
 
 <br />
 ![empty-house](/assets/img/posts/home-projects/empty-house.jpg)
-*That was a friend's extra TV. We borrowed it so we had something to do while we sat in our empty living room.*
+*This was a friend's extra TV. We borrowed it so we had something to do while we sat in our empty living room.*
 <br />
 
 Dru and I had come back from a year living abroad in Japan in September 2019 and moved straight into a shared home with friends that already came partially furnished. We had brought very few things with us to Japan in the first place since international shipping was so expensive. And the basic everyday necessities we did collect over the year abroad, we eventually donated or sold in a second round when we moved back. The only furniture piece I made painful effort to keep was a beautiful Muji [kotatsu](https://en.wikipedia.org/wiki/Kotatsu) table, unavailable anywhere outside of Japan. The table was carefully wrapped in layers of blankets and bubble wrap before being packed into a shipping container to be sent overseas back to America.
@@ -44,8 +44,8 @@ So we have been slowly but surely changing our surroundings to better support wh
 <br />
 
 Check out the posts below for more details of our home projects:
-- [Designing my home office](/blog/2024/03/02/office-design)
-- ... (more to come!)
+- [The office](/blog/2024/03/10/office-design)
+- ...(more to come!)
 
 > "The house shelters daydreaming, the house protects the dreamer, the house allows one to dream in peace." 
 >
@@ -53,4 +53,4 @@ Check out the posts below for more details of our home projects:
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 3/2/2024. v1 is 720 words and took 2 hours to write and edit.</footer>
+<footer>This article was last updated on 3/10/2024. v1 is 720 words and took 2 hours to write and edit.</footer>
