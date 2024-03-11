@@ -33,7 +33,7 @@ The spaces we live in do really influence us. As Alain de Botton writes in _The 
 
 > In essence, what works of design and architecture talk to us about is the kind of life that would most appropriately unfold within and around them. They tell us of certain moods that they seek to encourage and sustain in their inhabitants. While keeping us warm and helping us in mechanical ways, they simultaneously hold out an invitation for us to be specific sorts of people. They speak of visions of happiness.
 
-So we have been slowly but surely changing our surroundings to better support who we want to be at home. Various furniture arrangements and room configurations have been tried. Walls have been painted. Many DIY projects of various sizes and ambitions have begun, only some completed. I feel like we're only beginning to see the shape of our "vision of happiness" as the decor start to harmonize with the quirks of this 100-year-old building.
+So we have been slowly but surely changing our surroundings to better support who we want to be at home. Multiple furniture arrangements and room configurations have been tried. Walls have been painted. Many DIY projects of various sizes and ambitions have begun, only some completed. I feel like we're only beginning to see the shape of our "vision of happiness" as the decor start to harmonize with the quirks of this 100-year-old building.
 
 <br />
 ![dru-diy](/assets/img/posts/home-projects/dru-diy.jpg)
