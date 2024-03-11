@@ -16,7 +16,7 @@ read_time: 8 min
 
 Our home office is the most used room in the house. My husband and I have been working from home since the pandemic shutdown so we are in this room at least 8 hours a day, 5 days a week. We also use the office as a maker space during evenings and weekends for our creative hobbies.
 
-For a long time, the office situation was extremely haphazard. I started off with the crappiest workspace imaginable. This was [back when we were living with friends](/blog/2024/03/10/home-projects/)--I thought the shutdown would only last two weeks and therefore I didn't put much effort into my (supposedly temporary) remote setup. I didn't even have a work desk at home, so I just posted up on the shared dining room table with a monitor and keyboard. After a few days, it became very obvious that this was an inconvenient and unsustainable setup for everyone involved.
+For a long time, the office situation was extremely haphazard. I started off with the crappiest workspace imaginable. This was [back when we were living with friends](/blog/2024/03/10/home-projects/)—I thought the shutdown would only last two weeks and therefore I didn't put much effort into my (supposedly temporary) remote setup. I didn't even have a work desk at home, so I just posted up on the shared dining room table with a monitor and keyboard. After a few days, it became very obvious that this was an inconvenient and unsustainable setup for everyone involved.
 
 <br />
 ![lockdown-office-setup](/assets/img/posts/office-design/lockdown-office-setup.jpeg)
@@ -33,7 +33,7 @@ The machine of our office was still slightly off-kilter. We had good desks and a
 
 Neal Zimmerman documents beautiful home offices in [At Work At Home: Design Ideas for Your Home Workplace](https://amzn.to/48MTvam). He outlines the key elements of a well-designed home office:
 
-> Why do some of these spaces work and others fall short? I've reviewed hundreds of home workplaces, and I've concluded that those that are the most successful have three basic features in common. First, they help their occupants _balance the two sides of their lives_--work life and home life--in a way that is harmonious not just for them, but also for the people with whom they share their living and working space. Second, the workplace is _well planned and well organized_; it allows the user to work in a "CEO" environment--that is, with Comfort, Efficiency, and Organization. Third, a successful home workplace has a _personal spirit about it_, which is a reflection of its occupant. It's this personal spirit that stimulates home workers to do their best work.
+> Why do some of these spaces work and others fall short? I've reviewed hundreds of home workplaces, and I've concluded that those that are the most successful have three basic features in common. First, they help their occupants _balance the two sides of their lives_—work life and home life—in a way that is harmonious not just for them, but also for the people with whom they share their living and working space. Second, the workplace is _well planned and well organized_; it allows the user to work in a "CEO" environment—that is, with Comfort, Efficiency, and Organization. Third, a successful home workplace has a _personal spirit about it_, which is a reflection of its occupant. It's this personal spirit that stimulates home workers to do their best work.
 
 So after years of suboptimal offices, enough was enough. I mustered the energy to research and plan improvements to the office. Hours and hours of time went into implementing the changes. Finally, I feel like we've reached a high quality steady state where that _personal spirit_ has started to present itself. 
 
@@ -97,18 +97,18 @@ Above the corkboard is a scale model I made of our house using foamcore. It was 
 
 > I think it's a fantastic exercise, not just in how easy this kind of fabrication can be but also in the perspective it lends your brain when you walk into the space you have replicated. Seriously, you should consider walking around your apartment or your house measuring all the rooms and making yourself a model of it. You will learn more than you think.
 > 
-> -- Adam Savage, _Tested_
+> — Adam Savage, _Tested_
 
 <br />
 # Storage wall & maker space
 
-We desperately needed some bookshelf space in the office. Our book collection is actually pretty modest right now--we donated a lot of our books when we moved abroad and never built our library back up once we came back. Now that there is proper shelving in our office, I'm definitely tempted to expand our collection.
+We desperately needed some bookshelf space in the office. Our book collection is actually pretty modest right now—we donated a lot of our books when we moved abroad and never built our library back up once we came back. Now that there is proper shelving in our office, I'm definitely tempted to expand our collection.
 
 <br />
 ![book-shelf](/assets/img/posts/office-design/book-shelf.JPG)
 <br />
 
-I mostly keep serious books in the office. Topics include things like software design, engineering, language learning, philosophy, and the craft of writing. Our fun books--fantasy, science fiction, manga, silly romance, and more--are stored in our living room bookshelves instead. This is both for theoretical and practical reasons. The seriousness of the books lends a more focused and academic atmosphere to the office. Also, we do need to use these books as reference for work purposes so it's nice to have them close by.
+I mostly keep serious books in the office. Topics include things like software design, engineering, language learning, philosophy, and the craft of writing. Our fun books—fantasy, science fiction, manga, silly romance, and more—are stored in our living room bookshelves instead. This is both for theoretical and practical reasons. The seriousness of the books lends a more focused and academic atmosphere to the office. Also, we do need to use these books as reference for work purposes so it's nice to have them close by.
 
 We use [library-grade bookends](https://www.thelibrarystore.com/product/cn66-02050/bookends) (thanks to Christopher Butler's recommendation). I have also filled out the shelves with ceramics that I've made myself.
 
@@ -136,7 +136,7 @@ On and under the shelves:
 - a [Brother label-maker](https://amzn.to/4c8REiK)
 - an [HP OfficeJet Pro 9015 Wireless Printer](https://amzn.to/48IXe8M) on a [Yamazaki Home printer stand](https://amzn.to/4a1p4xS)
 
-On the left side of the wall, we created a crafting and maker space. Part of this was because of the weird feature of the office--a small closet at the top of the ceiling. We couldn't have the bookshelves extend the whole length of the wall because of the placement of the closet doors. So we leaned into it and made the wall space below a functionally distinct area.
+On the left side of the wall, we created a crafting and maker space. Part of this was because of the weird feature of the office—a small closet at the top of the ceiling. We couldn't have the bookshelves extend the whole length of the wall because of the placement of the closet doors. So we leaned into it and made the wall space below a functionally distinct area.
 
 <br />
 ![led-light](/assets/img/posts/office-design/led-light.JPG)
@@ -160,7 +160,7 @@ I'm happy with the space so far but I'm sure there will be more things to build 
 
 > To describe a building as beautiful therefore suggests more than a mere aesthetic fondness; it implies an attraction to the particular way of life this structure is promoting through its roof, door handles, window frames, staircase and furnishings. A feeling of beauty is a sign that we have come upon a material articulation of certain of our ideas of a good life.
 > 
-> -- Alain de Botton, _The Architecture of Happiness_
+> — Alain de Botton, _The Architecture of Happiness_
 
 <hr class="section-divider" />
 
