@@ -57,4 +57,4 @@ Being the newest team member is a special opportunity to share learnings & feedb
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 9/7/2024. v1 is 917 words and took 2.5 hours to write and edit.</footer>
+<footer>This article was last updated on 9/7/2024. v1 is 899 words and took 2.5 hours to write and edit.</footer>
