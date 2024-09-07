@@ -424,10 +424,14 @@ hr.section-divider:before {
   flex: 1;
   flex-direction: row; 
   margin-top: 3px;
+  a {
+    text-decoration: none;
+  }
 
   .tag {
     display: inline-block;
     margin-right: 3px;
+    margin-bottom: 6px;
     padding: 2px 10px;
     text-align: center;
     background-color: rgb(188, 141, 160);
