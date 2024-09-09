@@ -5,7 +5,7 @@ published: true
 source: false
 seo_description: "onboarding tech engineering organization"
 tags: work tech
-image: assets/img/posts/creami/strawberry-cheesecake-icecream.JPG
+image: assets/img/posts/reflections-onboarding/onboarding.JPG
 read_time: 4 min
 ---
 
