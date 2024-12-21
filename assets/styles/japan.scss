@@ -1,0 +1,65 @@
+---
+---
+@import url("https://unpkg.com/primer/build/build.css");
+@import "autumn.css";
+
+.guide-book-list-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    .subtitle {
+        margin-block-start: 0;
+        margin-block-end: 1.5em;
+    }
+
+    .guide-book-img {
+        width: 300px;
+        border-radius: 5px;
+    }
+
+    .guide-book-list-row-text {
+        text-align: left;
+
+        .guide-book-list-row-links {
+            margin-top: 2rem;
+
+            p.guide-book-list-row-links-title {
+                margin-bottom: 0;
+            }
+        }
+
+        ul {
+            list-style: none;
+            margin-left: 0.8em;
+        
+            li {
+                line-height: 1.5;
+            }
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .guide-book-list-row {
+        flex-direction: column;
+
+        .guide-book-list-row-text {
+            text-align: center;
+
+            ul {
+                margin-left: 0;
+            }
+        }
+    }
+}
