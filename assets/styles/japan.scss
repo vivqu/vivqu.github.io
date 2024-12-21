@@ -16,7 +16,7 @@
     }
 
     .guide-book-img {
-        width: 300px;
+        width: 250px;
         border-radius: 5px;
     }
 
@@ -41,7 +41,9 @@
         }
 
         a {
+            color: #24292e;
             text-decoration: underline;
+            text-decoration-color: #12a2eb;
         }
     }
 }
