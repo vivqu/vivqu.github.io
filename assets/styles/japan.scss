@@ -3,6 +3,18 @@
 @import url("https://unpkg.com/primer/build/build.css");
 @import "autumn.css";
 
+a {
+    color: #24292e;
+}
+
+.book-title, .book-title:hover {
+    text-decoration: none;
+  }
+  
+.book-title:hover {
+    color: #1e6ce3;
+}
+
 .guide-book-list-row {
     display: flex;
     flex-direction: row;
@@ -41,7 +53,6 @@
         }
 
         a {
-            color: #24292e;
             text-decoration: underline;
             text-decoration-color: #12a2eb;
         }
