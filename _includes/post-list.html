@@ -1,23 +1,21 @@
-<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
-    <div class="d-flex flex-justify-between flex-items-start">
+<div class="d-flex flex-items-start">
+    <div class="post-date mt-1">{{ post.date | date: "%Y-%m-%d"}}</div>
+    <div class="post-list-content mb-2">
         <a class="post-title mb-1" href="{{ site.baseurl }}{{ post.url }}">
             {{ post.title }}
         </a>
-    </div>
-    {% if include.hide_subtitle != true %}<div class="post-subtitle mb-2">{{ post.subtitle }}</div>{% endif %}
-    <div class="post-date mb-2">{{ post.date | date: "%b %d, %Y"}}</div>
-    {% if include.hide_tags != true %}
-    <div class="tag-container mt-2 mb-2">
-        {% for tag in post.tags %}
-        {% capture tag_name %}{{ tag }}{% endcapture %}
-        {% if page.tag-name != tag %}
-        <a href="/tags/{{ tag_name }}">
-            <div class="tag {{tag}}">{{ tag_name }}</div>
-        </a>
+        {% if include.hide_subtitle != true %}<div class="post-subtitle mt-1 mb-1">{{ post.subtitle }}</div>{% endif %}
+        {% if include.hide_tags != true %}
+        <div class="tag-container mt-1 mb-3">
+            {% for tag in post.tags %}
+            {% capture tag_name %}{{ tag }}{% endcapture %}
+            {% if page.tag-name != tag %}
+            <a href="/tags/{{ tag_name }}">
+                <div class="tag {{tag}}">{{ tag_name }}</div>
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
         {% endif %}
-        {% endfor %}
     </div>
-    {% endif %}
-
-
 </div>

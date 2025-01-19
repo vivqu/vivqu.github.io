@@ -2,12 +2,12 @@
 
 {% assign post_count = 0 %}
 {% capture tag_posts %}
-  {% for post in site.posts %}
-    {% if post.tags contains page.tag-name %}
-      {% assign post_count = post_count | plus: 1 %}
-        {% include post-list.html %}              
-    {% endif %}
-  {% endfor %}
+{% for post in site.posts %}
+{% if post.tags contains page.tag-name %}
+{% assign post_count = post_count | plus: 1 %}
+{% include post-list.html %}
+{% endif %}
+{% endfor %}
 {% endcapture %}
 
 <div class="d-md-flex min-height-full">
@@ -15,25 +15,26 @@
     {% include masthead.html %}
   </div>
   <div class="content-body border-top border-md-top-0 bg-gray-light">
-      <div class="mx-auto mt-4 mb-8" style="max-width: 700px;">
-        <p class="f4 mb-6">
-          <a
-          href="/blog" class="post-title">
-            &laquo; Simulated Annealing
-          </a>
-        </p>
-          <div class="tag-container">
-            <div class="tag-title-text"><h2 class="f2-light lh-condensed">Tagged with </h2></div>
-            <div class="tag f3 tag-title {{page.tag-name}}">{{ page.tag-name }}</div>
-          </div>
-          <div class="mb-4">
-          <p class="subtitle">{{post_count}} {% if post_count == 1 %}post{% else %}posts{% endif %}</p>
+    <div class="mx-auto mt-4 mb-8" style="max-width: 700px;">
+      <p class="mb-6">
+        <a href="/blog" class="blog-nav-link">
+          &laquo; Simulated Annealing
+        </a>
+      </p>
+      <div class="tag-container">
+        <div class="tag-title-text">
+          <h2>Tagged with </h2>
         </div>
-        {{ tag_posts }}
+        <div class="tag tag-title {{page.tag-name}}">{{ page.tag-name }}</div>
       </div>
-      <div class="mt-10">
-        {% include social-footer.html %}
+      <div class="mb-7">
+        <span class="post-subtitle">{{post_count}} {% if post_count == 1 %}post{% else %}posts{% endif %}</span>
       </div>
+      {{ tag_posts }}
+    </div>
+    <div class="mt-10">
+      {% include social-footer.html %}
+    </div>
   </div>
 </div>
 

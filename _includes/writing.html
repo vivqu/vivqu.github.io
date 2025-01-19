@@ -1,14 +1,14 @@
 <h2 id="writing">Writing</h2>
-<p class="post-subtitle">Read more at the <a href="/blog">Simulated Annealing</a> blog.</p>
-<div class="d-sm-flex flex-wrap gutter-condensed mt-4">
-  {% for post in site.posts limit: 2 %}
+<div class="mt-4">
+  {% for post in site.posts limit: 3 %}
   {% include post-list.html hide_tags=true hide_subtitle=true %}
   {% endfor %}
 </div>
+<p class="post-subtitle">Check out {{ site.posts.size | minus: 3 }} more posts at the <a href="/blog">full archive</a>.</p>
 <br />
 <br />
 <h2>Popular posts</h2>
-<div class="d-sm-flex flex-wrap gutter-condensed mt-4">
+<div class="mt-4">
   {% for post in site.posts %}
   {% if post.best_of %}
   {% include post-list.html hide_tags=true hide_subtitle=true %}

@@ -33,13 +33,14 @@
         {% endfor %}
       </div>
       <h2 class="mb-4">Most popular</h2>
-      <div class="d-sm-flex flex-wrap gutter-condensed mb-4">
+      <div class="mb-4">
         {% for post in site.posts %}
         {% if post.best_of %}
-        {% include post-list.html hide_tags=true %}
+        {% include post-list.html hide_subtitle=true hide_tags=true %}
         {% endif %}
         {% endfor %}
       </div>
+      <br />
       <h2 class="mb-4">Recently</h2>
       <div class="mb-10">
         {% include blog-list.html %}
