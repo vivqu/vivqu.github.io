@@ -63,6 +63,12 @@ a:hover {
   color: $link-color;
 }
 
+blockquote {
+  color: $blockquote-color;
+  border-left: 2px solid $blockquote-border-color;
+  padding-left: 16px;
+}
+
 .article {
   h1,
   h2,
@@ -70,12 +76,6 @@ a:hover {
   h4,
   .highlight {
     margin-bottom: 16px;
-  }
-
-  blockquote {
-    color: $blockquote-color;
-    border-left: 2px solid $blockquote-border-color;
-    padding-left: 16px;
   }
 }
 
