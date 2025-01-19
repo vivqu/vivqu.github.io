@@ -79,6 +79,12 @@ a:hover {
   }
 }
 
+.blog-subtitle {
+  color: $subtitle-color;
+  margin-block-start: 0.4em;
+  font-size: $subtitle-size;
+}
+
 .subtitle {
   color: $subtitle-color;
   margin-block-start: 0.4em;

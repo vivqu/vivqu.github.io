@@ -14,17 +14,12 @@
   <div class="content-body border-top border-md-top-0 bg-gray-light">
     <div class="mx-auto post-body mt-4 mb-8" style="max-width: 700px;">
       <div class="mb-7">
-          <p class="mb-4">
+          <p class="mb-6">
             <a
             href="/blog" class="post-title">
               &laquo; Simulated Annealing
             </a>
           </p>
-          <div class="tag-container mt-2 mb-3">
-            {% for tag in page.tags %}
-              <a href="/tags/{{ tag }}"><div class="tag {{tag}}">{{ tag }}</div></a>
-            {% endfor %}
-          </div>
           <h1>{{ page.title }}</h1>
           {% if page.subtitle %}
           <h2 class="article-subtitle mb-2">
@@ -32,11 +27,16 @@
           </h2>
           {% endif %}
           <p
-            class="article-date mb-7 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}"
+            class="article-date {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}"
           >
             {{ page.date | date: "%b %d, %Y"}}
             {% if page.read_time %}· {{page.read_time}} read{% endif %}
           </p>
+          <div class="tag-container mt-3 mb-7">
+            {% for tag in page.tags %}
+              <a href="/tags/{{ tag }}"><div class="tag {{tag}}">{{ tag }}</div></a>
+            {% endfor %}
+          </div>
           {{ post_body }}
       </div>
       {% include email-subscribe-footer.html %}
