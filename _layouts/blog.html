@@ -26,7 +26,7 @@
         epoch time
         <script>document.write(new Date().getTime())</script>.
       </p>
-      <div class="tag-container mt-4 mb-5">
+      <div class="tag-container mt-4 mb-5" style="padding-top: 2px;">
         {% for tag in tags %}
         <a href="/tags/{{ tag }}">
           <div class="tag {{tag}}">{{tag}}</div>
@@ -50,7 +50,7 @@
         {% endfor %}
       </div>
     </div>
-    {% include social-footer.html %}
+    {% include nav-footer.html %}
   </div>
 </div>
 

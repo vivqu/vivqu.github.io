@@ -1,3 +1,4 @@
+{% if jekyll.environment == 'production' %}
 <script src="/assets/js/fingerprint.min.js"></script>
 <script>
 var host = window.location.hostname;
@@ -16,5 +17,6 @@ if(host != "localhost")
         ga('send', 'pageview');
 } 
 </script>
+{%endif %}
 </body>
 </html>
