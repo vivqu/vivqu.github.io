@@ -1,0 +1,32 @@
+{% include header.html %}
+
+<div class="d-md-flex min-height-full">
+    <div class="sidebar flex-self-stretch border-md-right border-gray-light bg-white px-4 px-md-6 px-lg-7 py-6">
+        {% include masthead.html %}
+    </div>
+
+    <div class="content-body border-top border-md-top-0 bg-gray-light">
+        <div class="mx-auto mt-4 mb-8" style="max-width: 700px;">
+            <div class="mb-5">
+                <div class="mb-3">
+                    <h2>Subscribe to my newsletter</h2>
+                    <p>Get updates on programming, creativity, and a few other topics. Usually
+                        published
+                        once a month.</p>
+                </div>
+                <div class="mb-4" style="display: flex; justify-content: center;">
+                    {% include email-subscribe-footer.html %}
+                </div>
+                <p>Or subscribe via <a href="/feed.xml" target="_blank">RSS ➜</a></p>
+            </div>
+            <h2>Recent</h2>
+            <p class="post-subtitle mb-4">You'll get posts like...</p>
+            {% for post in site.posts limit: 8 %}
+            {% include post-list.html hide_tags=true show_best_of=true %}
+            {% endfor %}
+        </div>
+        {% include social-footer.html %}
+    </div>
+</div>
+
+{% include footer.html %}
