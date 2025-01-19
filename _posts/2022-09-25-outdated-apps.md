@@ -30,7 +30,7 @@ I opened the message and was greeted with the ["App Store Improvement Notice"](h
 
 <br />
 ![app-notice](/assets/img/posts/outdated-apps/improvement-notice.png)
-*The message I received from the App Store Review told me my app was "oudated".*
+*The message I received from the App Store Review told me my app was "outdated".*
 
 <br />
 Never mind the fact that my app has a 5-star rating and was still being downloaded, with no complaints from any of my users. Also disregard the fact that I had other highly-rated apps up on the App Store, some of which had been updated much more recently than July 2019, clearly showing that I have not abandoned these apps entirely. If there had been an actual reviewer who checked my outdated app, they would have discovered that I architected the app from the beginning to dynamically scale the UI so it resizes to fit the latest iPhone devices. All these could be signals that indicate to Apple that this is not a garbage-filled scam app that is lowering the quality of their App Store.

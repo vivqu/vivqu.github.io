@@ -3,22 +3,8 @@
 
 @import url("https://unpkg.com/primer/build/build.css");
 @import "highlight-syntax";
-
-// If a user adds a custom font, this component will stop it from bleeding into GitHub components:
-.github-component {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !important;
-}
-
-.repo-language-color {
-  filter: brightness(125%) !important;
-  border-radius: 50%;
-  display: inline-block;
-  height: 12px;
-  position: relative;
-  top: 2px;
-  width: 12px;
-}
+@import "fonts";
+@import "variables";
 
 .content-body {
   width: 100%;
@@ -27,10 +13,54 @@
   flex-grow: 1;
 }
 
-.emoji {
-  width: 18px;
-  height: auto;
-  vertical-align: middle;
+body {
+  font-size: $text-size;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal !important;
+  font-family: 'StandardBook';
+}
+
+h1 {
+  font-size: $h1-size;
+}
+
+h2 {
+  color: $h2-color;
+  font-size: inherit;
+}
+
+h4 {
+  font-style: normal;
+  font-weight: 400;
+}
+
+p,
+ol,
+ul {
+  font-family: 'StandardBook';
+  line-height: $line-height;
+}
+
+p {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+a {
+  color: $text-color;
+  text-decoration: underline;
+  text-decoration-color: $link-color;
+}
+
+a:hover {
+  color: $link-color;
 }
 
 .article {
@@ -43,14 +73,14 @@
   }
 
   blockquote {
-    color: #6a737d;
-    border-left: 2px solid #959da5;
+    color: $blockquote-color;
+    border-left: 2px solid $blockquote-border-color;
     padding-left: 16px;
   }
 }
 
 .subtitle {
-  color: #6a737d;
+  color: $subtitle-color;
   margin-block-start: 0.4em;
 }
 
@@ -58,65 +88,27 @@
   min-height: 100vh;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-weight: normal !important;
-  font-family: 'IBM Plex Serif', 'Times New Roman', serif;
-}
-
 .post-subtitle,
 .post-date {
-  color: #6a737d;
-  font-family: -apple-system, "BlinkMacSystemFont", "Helvetica Neue",
-    "Helvetica", Arial, sans-serif;
+  color: $subtitle-color;
+  font-family: 'StandardBook';
 }
 
 .post-subtitle, .post-date  {
-  font-size: 14px;
-}
-
-h4 {
-  font-style: normal;
-  font-weight: 400;
+  font-size: $subtitle-size;
 }
 
 .post-title, .post-title:hover {
   text-decoration: none;
+  font-size: inherit;
 }
 
 .post-title:hover {
-  color: #1e6ce3;
-}
-
-
-p,
-ol,
-ul {
-  font-family: 'IBM Plex Serif', 'Times New Roman', serif;
-  line-height: 1.8;
-}
-
-p {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-}
-
-a {
-  color: #24292e;
-  text-decoration: underline;
-  text-decoration-color: #12a2eb;
-}
-
-a:hover {
-  text-decoration-color: #a9afb2;
+  color: $link-color;
 }
 
 .sidebar {
-  width: 230px;
+  width: $sidebar-width;
 }
 
 @media only screen and (max-width: 767px) {
@@ -131,8 +123,7 @@ nav.masthead {
 
 nav > p {
   text-align: left;
-  font-family: -apple-system, "BlinkMacSystemFont", "Helvetica Neue",
-    "Helvetica", Arial, sans-serif;
+  font-family: 'StandardBook';
 }
 
 .masthead-links {
@@ -153,6 +144,7 @@ nav > p {
   margin-top: 40px;
 }
 
+// Profile image
 .logo-wrapper {
   display: flex;
   width: 100%;
@@ -161,8 +153,8 @@ nav > p {
 }
 
 .logo-image {
-  max-width: 150px;
-  border-radius: 75px;
+  max-width: 100px;
+  border-radius: 50px;
 }
 
 .name-navigation {
@@ -281,21 +273,21 @@ nav > p {
 
 .masthead-links a,
 .masthead-links a:visited {
-  color: #40404f;
+  color: $masthead-text-color;
   text-decoration: none;
 }
 
 a.masthead-secondary-link {
-  color: #778 !important;
+  color: $masthead-secondary-color !important;
 }
 
 a.masthead-secondary-link:hover {
-  color: #1e6ce3 !important;
+  color: $link-color !important;
 }
 
 .masthead-links a:hover {
   text-decoration: none;
-  color: #1e6ce3;
+  color: $link-color;
 }
 
 .footerLayout {
@@ -306,13 +298,6 @@ a.masthead-secondary-link:hover {
   align-content: center;
 }
 
-.socialIconBack {
-  color: #0c7fb9;
-}
-
-.socialIconTop {
-  color: #ffff;
-}
 
 .footerIcons {
   display: flex;
@@ -320,13 +305,12 @@ a.masthead-secondary-link:hover {
 
 .emailFooterTitle {
   font-weight: 600;
-  font-size: 25px;
+  font-size: $email-footer-title-size;
 }
 
 .emailFooterText {
-  font-family: -apple-system, "BlinkMacSystemFont", "Helvetica Neue",
-    "Helvetica", Arial, sans-serif;
-  font-size: 15px;
+  font-family: 'StandardBook';
+  font-size: $email-footer-size;
 }
 
 input:focus,
@@ -339,8 +323,8 @@ form-control:focus {
 .footerText {
   text-align: center;
   width: 100%;
-  font-family: 'IBM Plex Serif', 'Times New Roman', serif;
-  color: #6a737d;
+  font-family: 'StandardBook'; 
+  color: $footer-text-color;
   padding-bottom: 30px;
 }
 
@@ -353,8 +337,8 @@ form-control:focus {
 }
 
 hr.section-divider {
-  margin-top: 52px;
-  margin-bottom: 42px;
+  margin-top: $section-divider-mt;
+  margin-bottom: $section-divider-mb;
   display: block;
   border: 0;
   text-align: center;
@@ -366,22 +350,21 @@ hr.section-divider {
 hr.section-divider:before {
   --x-height-multiplier: 0.342;
   --baseline-multiplier: 0.22;
-  font-family: medium-content-slab-serif-font, Georgia, Cambria,
-    "Times New Roman", Times, serif;
+  font-family: 'StandardBook';
   font-weight: 400;
   font-style: italic;
-  font-size: 30px;
+  font-size: $section-divider-font-size;
   letter-spacing: 0.6em;
   content: "...";
   display: inline-block;
-  color: rgba(0, 0, 0, 0.68);
+  color: $section-divider-color;
   position: relative;
   top: -30px;
 }
 
 .post-navigation {
-  font-family: 'IBM Plex Serif', 'Times New Roman', serif;
-  font-size: 14px;
+  font-family: 'StandardBook';
+  font-size: $post-nav-size;
   display: flex;
   width: 100%;
 }
@@ -434,11 +417,10 @@ hr.section-divider:before {
     margin-bottom: 6px;
     padding: 2px 10px;
     text-align: center;
-    background-color: rgb(188, 141, 160);
+    background-color: $tag-bg-color;
     border-radius: 20px;
-    color: rgb(64, 63, 76);
-    font-size: 12px;
-    font-weight: 500;
+    color: $tag-text-color;
+    font-size: $tag-text-size;
     cursor: pointer;
   }
 
@@ -451,61 +433,61 @@ hr.section-divider:before {
   }
 
   .tag.writing {
-    background-color: rgb(162, 199, 229);
+    background-color: $tag-writing;
   }
 
   .tag.tech {
-    background-color: rgb(135, 182, 167); 
+    background-color: $tag-tech; 
   }
 
   .tag.interviews {
-    background-color: rgb(227, 240, 155);
+    background-color: $tag-interviews;
   }
 
   .tag.travel {
-    background-color: rgb(247, 208, 138);
+    background-color: $tag-travel;
   }
 
   .tag.work {
-    background-color: rgb(247, 159, 121); 
+    background-color: $tag-work; 
   }
 
   .tag.disney {
-    background-color: #A2E3C4;
+    background-color: $tag-disney;
   }
 
   .tag.health {
-    background-color: rgb(191, 216, 189);
+    background-color: $tag-health;
   }
 
   .tag.matriarchy {
-    background-color: rgb(242, 176, 176);
+    background-color: $tag-matriarchy;
   }
 
   .tag.management {
-    background-color: rgb(171, 177, 255);
+    background-color: $tag-management;
   }
 
   .tag.life {
-    background-color: #D3D3FF;
+    background-color: $tag-life;
   }
 
   .tag.reading {
-    background-color: #f4b7f9;
+    background-color: $tag-reading;
   }
 
   .tag.design {
-    background-color: #ffd1dc;
+    background-color: $tag-design;
   }
 
   .tag.podcast {
-
+    background-color: $tag-podcast;
   }
 }
 
 .newsletter {
-  width: 580px;
-  height: 300px;
+  width: $newsletter-width;
+  height: $newsletter-height;
 }
 
 @media only screen and (max-width: 414px) {

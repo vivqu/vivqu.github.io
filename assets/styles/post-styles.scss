@@ -2,18 +2,20 @@
 ---
 
 @import url("https://unpkg.com/primer/build/build.css");
-@import "autumn.css";
+@import "autumn";
+@import "variables";
 
-.post-body {
-  width: 100%;
+body {
+  font-size: $text-size;
 }
 
-.article-subtitle {
-  margin-block-start: 0.4em;
+h1 {
+  font-size: $h1-size;
 }
 
-.article-date {
-  margin-block-start: 5px;
+h2 {
+  color: $text-color;
+  font-size: inherit;
 }
 
 h2,
@@ -28,20 +30,34 @@ p > img {
   max-width: 560px;
 }
 
+.post-body {
+  width: 100%;
+}
+
+.article-subtitle {
+  margin-block-start: 0.4em;
+  color: $subtitle-color;
+}
+
+.article-date {
+  margin-block-start: 5px;
+  color: $secondary-color;
+  font-size: $subtitle-size;
+}
+
 .article > video {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 560px;
+  max-width: $post-video-width;
 }
 
 .video-subtitle, .img-subtitle {
   display: block;
   text-align: center;
-  font-size: 14px;
+  font-size: $post-subtitle-size;
   margin-top: 5px;
-  color: #6a737d;
-  font-family: Lora;
+  color: $secondary-color;
 }
 
 iframe {
@@ -80,18 +96,18 @@ p > img + em,
   text-align: center;
   font-size: 14px;
   margin-top: 5px;
-  color: #6a737d;
+  color: $secondary-color;
 }
 
 p.source {
   font-size: 14px;
-  color: #6a737d;
+  color: $secondary-color;
   margin-block-start: 0;
 }
 
 p.large-quote {
   font-size: 22px;
-  color: #6a737d;
+  color: $blockquote-color;
   margin-block-start: 2em;
   margin-block-end: 2em;
   margin-left: 40px;
@@ -181,13 +197,13 @@ img[alt="celebration-map"] {
 }
 
 footer {
-  font-family: 'IBM Plex Serif', 'Times New Roman', serif;
-  color: #6a737d;
-  font-size: 14px;
+  font-family: 'StandardBook';
+  color: $secondary-color;
+  font-size: $footer-size;
 }
 
 footnote {
-  color: #6a737d;
+  color: $secondary-color;
 
   .reference {
     margin-top: 1.5em;
@@ -197,7 +213,7 @@ footnote {
 
 p > code,
 a > code {
-  font-size: 14px;
+  font-size: $code-text-size;
 }
 
 .highlight {
@@ -215,28 +231,28 @@ a > code {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  border: 1px solid #dedede;
+  border: 1px solid $post-table-border-color;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
 .post-table > thead > tr > th {
   padding: 8px;
-  background-color: #0c7fb9;
+  background-color: $post-table-title-color;
   color: #fff;
-  border: 1px solid #dedede;
+  border: 1px solid $post-table-border-color;
   font-weight: normal;
 }
 
 .post-table > tbody > tr > td {
   padding: 8px;
-  background-color: #fff;
-  border: 1px solid #dedede;
+  background-color: $post-table-bg-color;
+  border: 1px solid $post-table-border-color;
   text-align: center;
 }
 
 .post-table > tbody > tr > td:nth-child(1) {
-  color: #777;
+  color: $post-table-text-color;
   text-align: left;
 }
 
@@ -255,11 +271,11 @@ a > code {
 }
 
 a {
-  color: #24292e;
+  color: $text-color;
   text-decoration: underline;
-  text-decoration-color: #12a2eb;
+  text-decoration-color: $link-color;
 }
 
 a:hover {
-  text-decoration-color: #a9afb2;
+  color: $link-color;
 }
