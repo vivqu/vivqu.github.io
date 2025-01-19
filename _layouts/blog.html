@@ -25,25 +25,28 @@
         <script>document.write(new Date().getTime());</script> //
         on software, creativity, and good books.
       </p>
-      <div class="tag-container mb-7">
+      <div class="tag-container mb-5">
         {% for tag in tags %}
         <a href="/tags/{{ tag }}">
           <div class="tag {{tag}}">{{tag}}</div>
         </a>
         {% endfor %}
       </div>
-      <h2 class="mb-4">Most popular</h2>
-      <div class="mb-4">
+      <div class="mb-7">
+        <h2 class="mb-3">Recent</h2>
+        <div class="mb-2">
+          {% include blog-list.html limit=5 show_best_of=true %}
+        </div>
+        <p class="post-subtitle ">Check out {{ site.posts.size | minus: 3 }} more posts at the <a href="/archive">full
+            archive</a>.</p>
+      </div>
+      <h2 class="mb-3">Most popular</h2>
+      <div class="mb-10">
         {% for post in site.posts %}
         {% if post.best_of %}
         {% include post-list.html hide_subtitle=true hide_tags=true %}
         {% endif %}
         {% endfor %}
-      </div>
-      <br />
-      <h2 class="mb-4">Recently</h2>
-      <div class="mb-10">
-        {% include blog-list.html %}
       </div>
     </div>
     {% include social-footer.html %}

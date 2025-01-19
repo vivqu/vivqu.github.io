@@ -3,6 +3,7 @@ title: "The office"
 subtitle: "Designing the house machine for working"
 published: true
 source: false
+best_of: true
 seo_description: "design diy-projects home-office"
 tags: life work design
 image: assets/img/posts/office-design/office-intro.png

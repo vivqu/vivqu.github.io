@@ -1,9 +1,9 @@
 <div class="d-flex flex-items-start">
     <div class="post-date mt-1">{{ post.date | date: "%Y-%m-%d"}}</div>
     <div class="post-list-content mb-2">
-        <a class="post-title mb-1" href="{{ site.baseurl }}{{ post.url }}">
+        <span><a class="post-title mb-1" href="{{ site.baseurl }}{{ post.url }}">
             {{ post.title }}
-        </a>
+        </a>{% if include.show_best_of and post.best_of %} 🌟{% endif %}</span>
         {% if include.hide_subtitle != true %}<div class="post-subtitle mt-1 mb-1">{{ post.subtitle }}</div>{% endif %}
         {% if include.hide_tags != true %}
         <div class="tag-container mt-1 mb-3">
