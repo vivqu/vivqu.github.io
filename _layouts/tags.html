@@ -5,7 +5,7 @@
 {% for post in site.posts %}
 {% if post.tags contains page.tag-name %}
 {% assign post_count = post_count | plus: 1 %}
-{% include post-list.html %}
+{% include post-list.html show_best_of=true hide_tags=true %}
 {% endif %}
 {% endfor %}
 {% endcapture %}

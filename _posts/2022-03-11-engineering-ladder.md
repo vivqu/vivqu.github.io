@@ -3,6 +3,7 @@ title: "Working without an engineering ladder"
 subtitle: "Advice for engineers and managers at early-stage startups"
 published: true
 source: false
+best_of: true
 seo_description: "tech work engineering ladders"
 tags: tech work management
 image: assets/img/posts/engineering-ladder/engineering-ladder.jpg

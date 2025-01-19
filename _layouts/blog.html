@@ -20,12 +20,13 @@
   <div class="content-body border-top border-md-top-0 bg-gray-light">
     <div class="mx-auto mt-4 mb-8" style="max-width: 700px;">
       <h1>{{ page.title }}</h1>
-      <p class="blog-subtitle mb-4">
-        programmer's log // epoch time
-        <script>document.write(new Date().getTime());</script> //
-        on software, creativity, and good books.
+      <p class="blog-subtitle mb-5">
+        programmer's log //
+        on software, creativity, and good books //
+        epoch time
+        <script>document.write(new Date().getTime())</script>.
       </p>
-      <div class="tag-container mb-5">
+      <div class="tag-container mt-4 mb-5">
         {% for tag in tags %}
         <a href="/tags/{{ tag }}">
           <div class="tag {{tag}}">{{tag}}</div>
@@ -37,7 +38,7 @@
         <div class="mb-2">
           {% include blog-list.html limit=5 show_best_of=true %}
         </div>
-        <p class="post-subtitle ">Check out {{ site.posts.size | minus: 3 }} more posts at the <a href="/archive">full
+        <p class="post-subtitle ">Check out {{ site.posts.size | minus: 5 }} more posts at the <a href="/archive">full
             archive</a>.</p>
       </div>
       <h2 class="mb-3">Most popular</h2>
