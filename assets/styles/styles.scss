@@ -94,6 +94,12 @@ blockquote {
   min-height: 100vh;
 }
 
+.project-subtitle {
+  color: $subtitle-color;
+  font-family: 'StandardBook';
+  font-size: $project-subtitle-size;
+}
+
 .post-subtitle,
 .post-date {
   color: $subtitle-color;
@@ -104,12 +110,24 @@ blockquote {
   font-size: $subtitle-size;
 }
 
-.post-title, .post-title:hover {
+.post-title, 
+.post-title:hover, 
+.project-title,
+.project-title:hover {
   text-decoration: none;
   font-size: inherit;
+  margin-block-end: 0em;
 }
 
-.post-title:hover {
+.project-list  {
+  p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+}
+
+.post-title:hover,
+.project-title:hover {
   color: $link-color;
 }
 
@@ -229,12 +247,6 @@ nav > p {
     width: 60%;
     align-self: center;
     margin-top: 5px;
-  }
-}
-
-@media only screen and (max-width: 536px) {
-  .project-card {
-    width: 100%;
   }
 }
 

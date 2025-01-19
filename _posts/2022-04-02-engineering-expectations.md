@@ -15,8 +15,7 @@ In the [public resources](#public-resources) section, I have collected all the p
 
 [Engineering growth expectations](#engineering-growth-expectations) outlines my informal version of a career ladder. I show a matrix of skill areas crossed with expectations at each level of seniority. The ladder was created through a combination of consulting public resources, discussing with peers and mentors, and leaning on my own experience with existing career ladders. These expectations emphasize engineering values or skills that are specific to me and my current team, so you may want to alter them to better suit your own environment.
 
-<br/>
-# Public resources
+## Public resources
 
 Here is a list of company career ladders I used as references:
 - [Career Ladders](https://career-ladders.dev/engineering/) by [Sarah Drasner](https://twitter.com/sarah_edo) (Director of Web Engineering at Google)
@@ -37,8 +36,7 @@ Here is a list of company career ladders I used as references:
 
 I chose to use the spreadsheet matrix for my version of a skill ladder since I am most familiar with this system. It’s also the format most used in the tech industry, pioneered and perfected (arguably, at least to the extent that you can formally encode a fuzzy set of subjective expectations) by Google. This precedent has in turn has influenced many other companies which came afterward, including my previous companies. Choosing the most commonly-used ladder system is actually very useful since one of the original goals of creating an informal ladder is to provide enough information for junior engineers to understand their career progress in the context of the overall industry.
 
-<br />
-# Engineering growth expectations
+## Engineering growth expectations
 
 
 In this section, I have tried to distill down areas for growth and development that are important for engineers. These expectations incorporate what I value on my past and present teams, as well as accepted industry conventions. 

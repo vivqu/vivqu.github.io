@@ -1,0 +1,10 @@
+{% for project in site.projects %}
+<div class="project-list mb-6">
+    <p class="mb-1">
+        <a class="project-title" href="{{project.web_url}}">{{project.name}}</a>
+    </p>
+    <p>
+        <span class="project-subtitle">{{project.description}}</span>
+    </p>
+</div>
+{% endfor %}

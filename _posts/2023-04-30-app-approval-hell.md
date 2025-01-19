@@ -25,7 +25,7 @@ Come along with me as we descend into an app approval hellscape, one stage at a 
 - Part 3: Surprise! An extra submission process!
 - Part 4: How do I get approved? Nyah nyah, I won't tell you.
 
-# Part 1: Dreadfully long review times.
+## Part 1: Dreadfully long review times.
 
 The [Chrome Web Store](https://chrome.google.com/webstore/category/extensions) is the marketplace to download and install extensions and add-ons for the Chrome web browser. It debuted in 2011 and now hosts over 100k extensions.
 
@@ -59,7 +59,7 @@ Taken together, the painfully long and random review process paints a picture of
 I was lucky that I was just trying to publish a fun side project rather than trying to launch an actual software business, in which case the current state of the publishing process on the Chrome Web Store would be unacceptable.
 
 <br />
-# Part 2: Want to charge for your Chrome extension? Too bad.
+## Part 2: Want to charge for your Chrome extension? Too bad.
 
 Given that I suspected that Google has stopped investing resources into the Chrome Web Store, I perhaps should not have been surprised that basic features of a "store" were not available.
 
@@ -87,7 +87,7 @@ I'm sure there are still ways to [effectively monetize Chrome extensions](https:
 *Not all of my 77 users would have paid $0.99 but I may also have been incentivized to spread the word if it there was an easily monetizable option.*
 <br />
 
-# Part 3: Surprise! An extra submission process!
+## Part 3: Surprise! An extra submission process!
 
 The next unpleasant delay was Google API OAuth verification. Recite uses a Google API key that is restricted to a single API type (Google Sheets) and requests read-only permissions to access a user's spreadsheets.
 
@@ -113,7 +113,7 @@ However, there were a few issues on Google's side that made it very easy to over
 1. No feedback from the extension submission review
 2. Lack of communication about verification
 
-## 1. No feedback from the extension submission review
+### 1. No feedback from the extension submission review
 
 Once again, I overestimated the standards and rigor of the Chrome Web Store review process. 
 
@@ -121,7 +121,7 @@ I am used to App Store reviews for mobile submissions that provide a high bar fo
 
 I don't think its unreasonable to assume that Google has the capability to detect usage of their own API keys. They could help developers by automatically flagging extensions which include API keys that haven't been successfully verified. The publishing process would actually serve as a useful checkpoint, where developers get feedback on potential user experience issues, rather than the current situation where zero (or negative) value gets added.
 
-## 2. Lack of communication about verification
+### 2. Lack of communication about verification
 
 When requiring people to go through any process, it's always a good idea to be as explicit as possible. The Google Cloud Console team has apparently taken the opposite approach, since communication about the verification process is incredibly confusing.
 
@@ -220,7 +220,7 @@ Each individual documentation issue and any one setup flow being a little hard t
 The actual impact on my side project of missing the verification process was just some embarrassment when I showed a friend an incomplete project. But for startups or software projects where every minute and day counts, such a poor developer experience can accidentally cause long delays.
 
 <br />
-# Part 4: How do I get approved? Nyah nyah, I won't tell you.
+## Part 4: How do I get approved? Nyah nyah, I won't tell you.
 
 So now that I knew there was only one more submission process to get through, it was smooth sailing to get the extension working correctly, right?
 

@@ -14,13 +14,18 @@ h1 {
 }
 
 h2 {
-  color: $text-color;
+  color: $link-color;
   font-size: inherit;
+}
+
+h3 {
+  font-size: inherit;
+  color: $link-secondary-color;
 }
 
 h2,
 h3 {
-  margin-top: 25px;
+  margin-top: 40px;
 }
 
 p > img {

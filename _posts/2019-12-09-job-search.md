@@ -54,7 +54,7 @@ In the rest of this post, I attempt to document the methods I used and the learn
 
 # My job search in numbers
 
-### Maximizing the number of applications
+## Maximizing the number of applications
 
 The whole process took me seven weeks end-to-end, starting on October 15th and ending December 2nd. I applied to 43 tech companies and 
 received five full-time offers.
@@ -119,9 +119,7 @@ Company size and valuation, of course, is ultimately tied to the types of compen
 approach to compensation [here](/blog/2020/02/16/compensation/). It's challenging to compare offers from companies of drastically different sizes, since each
 can argue about upside and risk in a way that makes their offer seem better.
 
-<br />
-
-### Rejections and drop-off rate
+## Rejections and drop-off rate
 
 <br />
 ![search_funnel](/assets/img/posts/job-search/search-funnel.png)
@@ -156,7 +154,7 @@ some failing interviews with very prestigious companies. They all still went on 
 
 # The devil in the (scheduling) details
 
-### Learn how to play calendar tetris
+## Learn how to play calendar tetris
 
 In my opinion, the hardest part of the job search is time management. Sending out a large amount of applications to companies is easy; it's 
 coordinating the subsequent recruiter calls, phone interviews, and scheduling time for take-home assessments that is really hard. And you 
@@ -221,7 +219,7 @@ especially strict schedule if the company is also paying for flights and accommo
 the multiple rounds of onsite interviews are grueling for candidates. The right timing for onsites is an important factor in performing 
 well and ultimately receiving an offer.
 
-### Remember hiring processes are not consistent
+## Remember hiring processes are not consistent
 
 Even though I knew I needed to plan onsites carefully, I still ended up with a terrible onsite schedule. My last three onsites were
 within four days, and the very last two scheduled back-to-back. While the final outcome was good, the actual experience of going 

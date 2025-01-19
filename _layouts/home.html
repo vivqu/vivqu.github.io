@@ -1,28 +1,23 @@
 {% include header.html %}
 
-  <div class="d-md-flex min-height-full">
-    <div class="sidebar flex-self-stretch border-md-right border-gray-light bg-white px-4 px-md-6 px-lg-7 py-6">
-      {% include masthead.html %}
-    </div>
-
-    <div class="content-body border-top border-md-top-0 bg-gray-light">
-      <div class="mx-auto mt-4 mb-8" style="max-width: 700px;">
-        {% unless content == ""  %}
-          <div class="f4">
-            {{ content }}
-          </div>
-        {% endunless %}
-
-
-        {% unless posts_total == 0 %}
-          {% include writing.html %}
-        {% endunless %}
-
-        <br />
-        {% include projects.html %}
-      </div>
-      {% include social-footer.html %}
-    </div>
+<div class="d-md-flex min-height-full">
+  <div class="sidebar flex-self-stretch border-md-right border-gray-light bg-white px-4 px-md-6 px-lg-7 py-6">
+    {% include masthead.html %}
   </div>
+  <div class="content-body border-top border-md-top-0 bg-gray-light">
+    <div class="mx-auto mt-5 mb-8" style="max-width: 700px;">
+      <p>Hi, I'm Vivian Qu! 👋 I'm a software engineer and writer.</p>
+      <p>On this page, you can find my <a href="#writing">writing</a> and <a href="#projects">projects</a>.</p>
+      <br />
+      <br />
+      {% unless posts_total == 0 %}
+      {% include writing.html %}
+      {% endunless %}
+      <br />
+      {% include projects.html %}
+    </div>
+    {% include social-footer.html %}
+  </div>
+</div>
 
 {% include footer.html %}

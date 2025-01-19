@@ -37,9 +37,8 @@ new ones, both here and abroad.
 
 Now on to some numbers!
 
-<br>
 
-# Books Read
+## Books Read
 
 This year, I read [39 books](https://airtable.com/shrSZiDETix6eLVxW), including three full series:
 - [The Murderbot Diaries](https://www.marthawells.com/murderbot.htm) by Martha Wells
@@ -58,9 +57,7 @@ you start reading them!
 <br>
 I had read 38 books in 2018. In keeping with the trend going up and to the right, I'm setting a goal for 40 books in 2020. 
 
-<br>
-
-# Podcasting
+## Podcasting
 
 I published seven episodes of the [San Fransokyo Podcast](https://www.sanfransokyopodcast.com/) in 2019. I'm deeply proud of this show I have created, 
 not only as a resource to share our experiences with friends and family, but also as a way for us to remember Japan. Editing the last bonus episode
@@ -122,9 +119,7 @@ The podcast has been a wonderful experience for me, both for learning a new skil
 in the [first newsletter](https://tinyletter.com/vivqu/letters/simulated-annealing-1-endless-heatwaves) about how everyone should consider creating 
 an audio journal or diary to record certain life experiences.
 
-<br />
-
-# Japanese, apps, writing, and more
+## Japanese, apps, writing, and more
 
 For the first five months of the year, I was attending Japanese class part-time from 1:30pm - 5:00pm every day. Just counting the time outside
 of class, language study took 375.5 hours total, or about 2.5 hours of study every single day. After May, I left school and effectively stopped Japanese study. I 
@@ -153,9 +148,8 @@ over the last four months:
 I use an [Oura Ring](https://ouraring.com/) for sleep tracking as well. I'm still getting a sense of my own baselines for metrics like 
 [average heart rate variability](https://ouraring.com/heart-rate-variability-basics/) and [body temperature trends](https://ouraring.com/body-temperature-trends/).
 
-<br />
 
-# Looking forward to 2020
+## Looking forward to 2020
 
 I still need to devote some dedicated brain time to thinking about specific goals for the new year (not to mention the decade!), despite laying out some general 
 ideas in the above sections. 

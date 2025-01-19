@@ -20,7 +20,7 @@ Here is what I would do again during new job onboarding:
 - [Share 90-day reflections](#share-90-day-reflections)
 <br/>
 
-# Write a past work history overview
+## Write a past work history overview
 
 Once you've reached senior or staff-level, you've probably held multiple roles in the past, whether that's from internal transfers at the same company or working at multiple companies over the course of your career. And if you've switched jobs at least once,<sup><a href="#fn1" id="ref1">1</a></sup> you've likely also updated your LinkedIn and resume with a summary of your accomplishments in each role. 
 
@@ -34,7 +34,7 @@ I would recommend that every senior and staff engineer starting a new role write
 
 <br/>
 
-# Share 90-day reflections
+## Share 90-day reflections
 
 Almost every company encourages senior hires to do this, but it's not a mandatory part of onboarding. I neglected to write up 90-day reflections in my most recent onboarding and I honestly regret not doing it. 
 

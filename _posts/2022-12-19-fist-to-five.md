@@ -21,8 +21,7 @@ So instead, because hungry humans want to make a decision quickly, and because b
 
 This strategy comes with its own set of problems. The biggest downside is that we _interpret_ the proposals and other comments as revealing hidden preferences. The interpretation might be totally off base because human language is squishy and hard. 
 
-<br />
-# Finding a better way
+## Finding a better way
 
 Here's a common scenario in my friend group:
 - S offers up two options for dinner: "Thai or burgers?"
@@ -41,8 +40,7 @@ It only changed in 2018 when my college roommates were visiting me when I was li
 <br />
 I've used this technique to unblock group decisions ever since. And only recently did I learn that this actually has a name: [Fist-to-Five](https://en.m.wikipedia.org/wiki/Consensus_decision-making) consensus decision-making.
 
-<br />
-# How to use fist-to-five to make decisions
+## How to use fist-to-five to make decisions
 
 The way you do fist-to-five is simple:
 - Someone in the group proposes a suggestion.
@@ -63,8 +61,7 @@ When discussion is required, the people who made "yes" and "no" choices can have
 
 The key part of our modified version of fist-to-five is that an all-neutral outcome (3s) means that the group rejects the proposed option. This strategy breaks the stalemate that my group is often stuck in, where everyone is trying to choose what they think everyone else wants.
 
-<br />
-# Using fist-to-five elsewhere
+## Using fist-to-five elsewhere
 
 Fist-to-five decision-making really shines in low-stakes social situations. A group of friends is already bought in to the overall goal of choosing a delicious dinner spot where everyone will have a nice time eating together. A simplified expression of preference makes it much easier to reach a satisfying decision for everyone. And a neutral vote really does represent willingness to go with the group's consensus--there are few incentives for toxic intergroup dynamics, like members skewing their vote to appease others or coalition blocs that vote together.
 

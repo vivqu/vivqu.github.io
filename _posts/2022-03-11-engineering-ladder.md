@@ -25,8 +25,7 @@ One thing we can do as engineering leaders in early-stage companies is to decoup
 
 In the next sections, I give a general overview of the standard industry framework for career progression and tips on how to work without an engineering ladder.
 
-<br />
-# What is an engineering ladder, anyway?
+## What is an engineering ladder, anyway?
 
 I was fortunate to realize early in my career that software engineering ladders are largely made up. The career ladder at a specific company is simply a system that senior leaders and key decision-makers have collectively agreed on as a reasonable way to outline growth and compensate employees.
 
@@ -57,8 +56,7 @@ Senior is considered the first “career level”—in other words, an engineer 
 
 So what does this all mean for engineering teams at early-stage startups?
 
-<br/>
-# Tips for working without an engineering ladder
+## Tips for working without an engineering ladder
 
 <span style="text-decoration: underline">For managers</span>:
 

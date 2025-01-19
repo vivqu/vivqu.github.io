@@ -52,7 +52,7 @@ I drew heavy inspiration and used recommendations from these amazing workspaces:
 *Our dog Knuckles helped a lot with home office design.*
 <br />
 
-# My desk
+## My desk
 
 My goal is to keep the desk itself as simple and clutter-free as possible. Most of the storage is on the wall behind me which we'll cover in the next section. I do have a white [Stockpile Slim File Cabinet](https://lauradavidsondirect.com/products/stockpile-slim-file-cabinet-white) under my desk. The cabinet is lockable, which is very handy for storing valuable documents like our passports. I'm also considering buying a [sliding under-desk drawer](https://www.standupdeskstore.com/sliding-under-desk-pencil-drawer) to hold some pens and a scratchpad so they don't have to live on the desk itself.
 
@@ -100,7 +100,7 @@ Above the corkboard is a scale model I made of our house using foamcore. It was 
 > — Adam Savage, _Tested_
 
 <br />
-# Storage wall & maker space
+## Storage wall & maker space
 
 We desperately needed some bookshelf space in the office. Our book collection is actually pretty modest right now—we donated a lot of our books when we moved abroad and never built our library back up once we came back. Now that there is proper shelving in our office, I'm definitely tempted to expand our collection.
 

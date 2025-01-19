@@ -16,11 +16,11 @@ This is an ongoing shortlist of the most helpful books and articles I've read, b
 <br />
 _Last updated: 9/11/22_
 
-**Books**
+## Books
 - [The Manager's Path](https://www.amazon.com/Managers-Path-Leaders-Navigating-Growth/dp/1491973897) by Camille Fournier
 - [First, Break All the Rules: What the World's Greatest Managers Do Differently](https://www.amazon.com/First-Break-All-Rules-Differently/dp/1531865208) by Marcus Buckingham, et al.
 
-**Articles**
+## Articles
 - [The Engineering/Manager Pendulum](https://charity.wtf/2017/05/11/the-engineer-manager-pendulum/) by Charity Majors
 - [If management isn't a promotion, then engineering isn't a demotion](https://charity.wtf/2020/09/06/if-management-isnt-a-promotion-then-engineering-isnt-a-demotion/) by Charity Majors
 - [An epic treatise on scheduling, bug tracking, and triage](https://apenwarr.ca/log/20171213), apenwarr.ca
@@ -30,7 +30,7 @@ _Last updated: 9/11/22_
 - [Get your work recognized: write a brag document](https://jvns.ca/blog/brag-documents/) by Julia Evans
 - [What makes a great manager?](https://abinoda.substack.com/p/great-manager) by Abi Noda
 
-**Resources**
+## Resources
 - [Career Checkup Template](https://lethain.com/career-checkup/) by Will Lethain
 - [Performance Review Template](https://review.firstround.com/the-power-of-performance-reviews-use-this-system-to-become-a-better-manager), First Round Review
 - [Questions for our first 1:1](https://larahogan.me/blog/first-one-on-one-questions/) by Lara Hogan
