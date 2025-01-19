@@ -124,7 +124,7 @@ a:hover {
 }
 
 nav.masthead {
-  margin-block-start: 2em;
+  margin-block-start: 24px;
 }
 
 nav > p {
@@ -139,7 +139,6 @@ nav > p {
 
 .masthead-links h4 {
   width: 100%;
-  text-align: center;
   font-weight: 400;
   padding-left: 0px;
   padding-right: 0px;
@@ -150,19 +149,6 @@ nav > p {
   margin-top: 40px;
 }
 
-// Profile image
-.logo-wrapper {
-  display: flex;
-  width: 100%;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.logo-image {
-  max-width: 100px;
-  border-radius: 50px;
-}
-
 .name-navigation {
   display: block;
 }
@@ -171,62 +157,46 @@ nav > p {
   display: none;
 }
 
-.masthead-name {
-  display: none;
+.masthead-title {
   width: 100%;
+  margin-bottom: 32px;
 }
 
-.masthead-name h1 {
-  text-align: center;
+.masthead-title h1 {
   align-self: center;
   font-weight: 400;
 }
 
 @media only screen and (max-width: 767px) {
   nav.masthead {
+    padding: 8px 16px 4px 16px;
     flex-direction: column;
     display: flex;
     align-content: flex-start;
-    justify-content: center;
-    margin-block-start: 1em;
+    margin-block-start: 4px;
+  }
+
+  .masthead-title {
+    margin-bottom: 8px;
   }
 
   .masthead-links {
     margin-top: 20px;
     display: flex;
-    width: 80%;
-    align-self: center;
-    justify-content: center;
   }
 
   .masthead-links h4 {
-    width: 20%;
-    padding-left: 5px;
-    padding-right: 5px;
+    width: auto;
+    display: flex;
+    flex-shrink: 1;
+    padding-left: 0px;
+    padding-right: 25px;
   }
 
   .masthead p {
     width: 40%;
     align-self: center;
-    text-align: center;
     margin-top: 5px;
-  }
-
-  .logo-image {
-    max-width: 100px;
-    border-radius: 50px;
-  }
-
-  .name-navigation {
-    display: none;
-  }
-
-  .home-navigation {
-    display: inline;
-  }
-
-  .masthead-name {
-    display: block;
   }
 }
 
@@ -254,20 +224,7 @@ nav > p {
   .masthead p {
     width: 60%;
     align-self: center;
-    text-align: center;
     margin-top: 5px;
-  }
-
-  .name-navigation {
-    display: none;
-  }
-
-  .home-navigation {
-    display: inline;
-  }
-
-  .masthead-name {
-    display: block;
   }
 }
 
@@ -281,14 +238,6 @@ nav > p {
 .masthead-links a:visited {
   color: $masthead-text-color;
   text-decoration: none;
-}
-
-a.masthead-secondary-link {
-  color: $masthead-secondary-color !important;
-}
-
-a.masthead-secondary-link:hover {
-  color: $link-color !important;
 }
 
 .masthead-links a:hover {
