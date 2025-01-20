@@ -78,6 +78,30 @@ blockquote {
   }
 }
 
+.book-details-img {
+  width: 245px;
+  height: 350px;
+  border-radius: 8px;
+}
+
+.book-details-title {
+  margin-block-end: 0em;
+}
+
+h2.book-details-subtitle {
+  color: $subtitle-color;
+  margin-block-end: 0em;
+}
+
+.book-details-info {
+  font-size: $footnote-size;
+  color: $subtitle-color;
+
+  .book-details-info-list {
+    list-style-type: none;
+  }
+}
+
 .blog-subtitle, .book-list-subtitle {
   color: $subtitle-color;
   margin-block-start: 0.4em;

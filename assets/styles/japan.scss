@@ -1,7 +1,7 @@
 ---
 ---
-@import url("https://unpkg.com/primer/build/build.css");
 @import "autumn";
+@import "variables";
 
 a {
     color: #24292e;
@@ -12,7 +12,11 @@ a {
   }
   
 .book-title:hover {
-    color: #1e6ce3;
+    color: $link-color;
+}
+
+.book-details-list {
+    margin-left: 2em;
 }
 
 .guide-book-list-row {
@@ -35,11 +39,15 @@ a {
     .guide-book-list-row-text {
         text-align: left;
 
+        h3 {
+            font-size: inherit;
+        }
+
         .guide-book-list-row-links {
             margin-top: 2rem;
 
             p.guide-book-list-row-links-title {
-                margin-bottom: 0;
+                margin-bottom: 8px;
             }
         }
 
