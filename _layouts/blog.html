@@ -17,7 +17,7 @@
     {% include masthead.html %}
   </div>
 
-  <div class="content-body bg-gray-light">
+  <div class="content-body border-top border-md-top-0 bg-gray-light">
     <div class="mx-auto mt-3 mb-8" style="padding-top: 4px; max-width: 700px;">
       <h1>{{ page.title }}</h1>
       <p class="blog-subtitle mb-5">
@@ -42,12 +42,19 @@
             archive</a>.</p>
       </div>
       <h2 class="mb-3">Most popular</h2>
-      <div class="mb-10">
+      <div>
         {% for post in site.posts %}
         {% if post.best_of %}
         {% include post-list.html hide_subtitle=true hide_tags=true %}
         {% endif %}
         {% endfor %}
+      </div>
+      <hr class="section-divider" />
+      <div class="mb-3">
+        <p>Get emails about new posts. Usually published once a month.</p>
+      </div>
+      <div class="mb-10" style="display: flex; justify-content: center;">
+        {% include email-subscribe-footer.html %}
       </div>
     </div>
     {% include nav-footer.html %}
