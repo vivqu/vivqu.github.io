@@ -45,6 +45,14 @@ ul {
   line-height: $line-height;
 }
 
+.about-links {
+  ol,
+  ul {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
 p {
   margin-block-start: 1em;
   margin-block-end: 1em;
