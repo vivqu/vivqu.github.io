@@ -86,9 +86,20 @@ blockquote {
   }
 }
 
+.book-details-horizontal-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 .book-details-img {
   width: 245px;
   height: 350px;
+}
+
+.book-details-title-block {
+  margin-top: 0px;
+  display: block;
 }
 
 .book-details-title {
@@ -97,17 +108,46 @@ blockquote {
 
 h2.book-details-subtitle {
   color: $subtitle-color;
+  margin-block-start: 0em;
   margin-block-end: 0em;
 }
 
 .book-details-info {
   font-size: $footnote-size;
   color: $subtitle-color;
+  margin-top: 24px;
 
   .book-details-info-list {
     list-style-type: none;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .book-details-horizontal-container {
+      display: block;
+  }
+
+  .book-details-info {
+    display: none;
+  }
+
+  .book-details-img {
+    margin: auto;
+    display: block;
+  }
+
+  .book-details-title, .book-details-subtitle {
+    text-align: center;
+  }
+
+  .book-details-title-block {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 .blog-subtitle, .book-list-subtitle {
   color: $subtitle-color;
