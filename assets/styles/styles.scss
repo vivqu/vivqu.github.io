@@ -138,7 +138,13 @@ h2.book-details-subtitle {
   border-radius: 8px;
 }
 
-@media only screen and (max-width: 767px) {
+.book-details-author {
+  border-radius: 8px;
+  width: 400px;
+  height: 531px;
+}
+
+@media only screen and (max-width: 820px) {
   .book-details-horizontal-container {
       display: block;
   }
@@ -175,6 +181,11 @@ h2.book-details-subtitle {
   .book-details-flatlay {
     width: 300px;
     height: 280px;
+  }
+
+  .book-details-author {
+    width: 300px;
+    height: 398px;
   }
 }
 
