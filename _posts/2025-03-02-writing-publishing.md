@@ -120,27 +120,29 @@ To help build the aesthetic muscle, I researched many Japanese [design](https://
 *Design inspirations for the guide book. Links to the books [here](/books/autumn/book-list/).*
 <br />
 
-I also wanted illustrations to be a core component of the guide. My fondest memories of studying Japanese including looking at the cute illustrations in Japanese textbooks. These iconic clip art drawings are created by the illustrator Takashi Mifune and freely distributed on his website [Irasutoya](https://www.irasutoya.com/) for both personal and commercial use, with some minimal restrictions. And because of the generous usage terms, his art is ubiquitous throughout Japan. It is especially used in educational and informational materials, which was a perfect fit for the goals of this project.
+I also wanted illustrations to be a core component of the guide. My fondest memories of studying Japanese are centered on the cute illustrations in Japanese textbooks. These iconic clip art drawings are created by the illustrator Takashi Mifune and freely distributed on his website [Irasutoya](https://www.irasutoya.com/) for both personal and commercial use, with some minimal restrictions. And because of the generous usage terms, his art is ubiquitous throughout Japan. It is especially used in educational and informational materials, which was a perfect fit for the goals of this project.
 
 <br />
 <iframe width="560" height="315" src="https://www.youtube.com/embed/g3CyRZY90M4?si=EQ1NcblIXyIQha0a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <br />
 
-I love the quirky and cheerful vibe of Irasutoya art. I wanted this mood to really suffuse through the entire book, and so I made sure to develop my custom hand-drawn illustrations to be complementary in style. This way, the illustrations could sit alongside each other without feeling jarring or out of place. Plus using illustrations in the guidebook also gave me more visual flexibility. My travel photographs often were not perfectly framed or shot, so I could supplement with a custom drawing instead of needing to source or create additional photographs.
+I love the quirky and cheerful vibe of Irasutoya art. I wanted this mood to really suffuse through the entire book, and so I made sure to develop my custom hand-drawn illustrations to be complementary in style. This way, the artworks could sit alongside each other without feeling jarring or out of place. Plus using illustrations in the guidebook also gave me more visual flexibility. My travel photographs often were not perfectly framed or shot, so I could supplement with a drawing instead of needing to source additional photographs.
 
 <br />
 ![side-by-side-art](/assets/img/posts/writing-publishing/side-by-side-art.png)
 *Examples of Irasutoya artwork and my custom illustrations used in the book.*
 <br />
 
-I considered hiring an artist to do the book cover but ultimately decided to do the cover design myself. It wasn't necessarily a cost issue since estimates range from [$200](https://ntietz.com/blog/start-to-finish-on-selfpublishing-a-technical-book/) to [$500](https://lethain.com/self-publishing-staff-engineer/) for a high-quality cover design. However, I wanted to do every part of design development for the book myself. Early in the project, I combed through my backlog of Japan photographs to curate a set of autumn photos that I might use for the guide. I realized that I had so many options for a stunning cover photo, so I just needed to roll up my sleeves and iterate on the cover design until I was satisfied.
+I considered hiring an artist to do the book cover but ultimately decided to do the cover design myself. It wasn't necessarily a cost issue since estimates range from [$200](https://ntietz.com/blog/start-to-finish-on-selfpublishing-a-technical-book/) to [$500](https://lethain.com/self-publishing-staff-engineer/) for a high-quality cover design. However, I wanted to do every part of design development myself. Early in the project, I combed through my backlog of Japan photographs to curate a set of autumn photos that I might use for the guide. I realized that I had so many options for a stunning cover photo, so I just needed to roll up my sleeves and iterate on the cover design until I was satisfied.
 
 <br />
 ![autumn-album](/assets/img/posts/writing-publishing/autumn-photos.png)
 *Sample of the photos in the Google Photos album for the Autumn guide.*
 <br />
 
-In terms of the overall project, the visual and design aspects were definitely where I spent the most time. The writing only took seven months and I was multi-tasking with design-related tasks. Designing & illustrating the book took nine months end-to-end, and that work was the sole focus for five of those months. Now that the patterns and visual language has been established for this first book, I think the process will go much faster for the subsequent books.
+In terms of the overall project, the visual and design aspects were definitely where I spent the most time. The writing only took seven months and I was multi-tasking with design-related tasks. Designing & illustrating the book took nine months end-to-end, and that work was the sole focus for five of those months. 
+
+Now that the patterns and visual language has been established for this first book, I think the process will go much faster for the subsequent books.
 
 <br />
 # Tools
@@ -161,7 +163,9 @@ The formatting of the book itself was done completely through [Adobe Indesign](h
 
 I completed the development of the book in early December 2024, almost exactly one year since starting the project. I was so happy to have a finalized draft of the book. Riding high on that feeling of accomplishment, I wanted to get the book into the hands of friends and readers as quickly as possible. I naively thought that I was 99% done with the project, and assumed it would be as simple as uploading my files and pressing "Submit" to get the book distributed.
 
-Alas, self-publishing has a steep learning curve. It quickly became clear to me why a lot of writers end up working with agents and publishers, rather than go through self-publishing themselves. It often felt like navigating through a bureacratic maze, with random roadblocks and unnecessary platform complexity. It took me an additional 2.5 months to work through all the logistics, adding an additional 18% of time to the project timeline. A lot of that time was sitting around and waiting, working in fits and starts after I finally got a response from the publishing platforms. Filing a support ticket for help was like shouting into a dark void. 
+Alas, self-publishing has a steep learning curve. It quickly became clear to me why a lot of writers end up working with agents and publishers, rather than go through self-publishing themselves. It often felt like navigating through a bureacratic maze, with random roadblocks and unnecessary platform complexity. 
+
+It took me an additional 2.5 months to work through all the logistics, adding an additional 18% of time to the project timeline. A lot of that time was sitting around and waiting, working in fits and starts after I finally got a response from the publishing platforms. Filing a support ticket for help was like shouting into a dark void. 
 
 Here were the key hurdles I had to clear in order to publish my book:
 - Forming a LLC
