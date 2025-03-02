@@ -208,7 +208,8 @@ footer {
 
 footnote {
   color: $secondary-color;
-
+  font-size: $footnote-size;
+  
   .reference {
     margin-top: 1.5em;
     margin-left: 1.3em;
