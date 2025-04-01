@@ -87,6 +87,12 @@ But it is Shinkai's _Your Name_ that gives us a blueprint for how we can transce
 
 When I was younger, I dreamed about being a high school student in Tokyo. The uniforms, the classrooms, the silly and serious drama of school life, I felt like all of minute details had been shown to me by the shows I watched. I cut and paste together the perfect story in my mind. I imagined it all so vividly it sometimes felt like I was already there.
 
+<br />
+![school-rooftop](/assets/img/posts/paris-of-dreams/school-rooftop.jpg)
+*The rooftop is where I would hang out during lunch with my small gang of friends<br/>(source: [DeviantArt/arsenixc](https://www.deviantart.com/arsenixc/art/School-rooftop-639311572))*
+<br />
+
+
 And even though I knew it was an idle daydream, if I actually had gone to live abroad, I think I would still have been deeply shocked by the reality of being a foreigner in Japanese high school. Lack of [support for foreign students](https://newsonjapan.com/article/136428.php), the crushing [pressure of conformity](https://metropolisjapan.com/school-rules/), and [relentless bullying](https://jobsinjapan.com/living-in-japan-guide/bullying-crisis-in-japan-the-problem-of-ijime/) are all real challenges that many students in Japan face. And while not all of these issues might have necessarily happened to me, this perfect ideal of Tokyo high school life in my imagination never really existed.
 
 This was still a lesson I had to learn a decade later, when we finally had a chance to live in Japan. It was a hard but fulfilling path that we navigated to actually seeing Tokyo for what it is, rather than through the distorted lens of my preconceived notions. And once we started to understand and accept the place in truth, that was when we actually started to really fall in love. 
@@ -98,5 +104,9 @@ It was an endless surprise and delight to understand how much many contradiction
 So rather than just stopping at the lowest point of our sadness when confronted with the rudeness of reality, we should seek to understand the place even more. The parts of Paris and Tokyo that don't match our expectations aren't inherently bad. And neither are they constant or fixed forever. Once we start seeing the world for what it actually is, we can more deeply engage with the places themselves. Only then can we start falling in love with the actual city, not just the idea of the city, and become a participant in the real world rather than a passive consumer of a fantasy one.
 
 <hr class="section-divider" />
+
+<footnote>This article was written for <a href="https://www.aprilcools.club/" target="_blank">April Cools' Club 2025</a>. I usually don't write about anime or my nerdy nostalgia for high school slice-of-life so this was quite a fun change of pace. This essay also ended up being more like a visual essay with all the Youtube video embeddings and pictures. Maybe next year I'll try to make an actual Youtube video essay!</footnote>
+
+<br/>
 
 <footer>This article was last updated on 4/1/2025. v1 is 1,650 words and took 4.5 hours to write and edit.</footer>
