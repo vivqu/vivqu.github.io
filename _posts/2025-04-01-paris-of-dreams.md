@@ -101,7 +101,7 @@ It was an endless surprise and delight to understand how much many contradiction
 
 > There are a lot of moments where people start to develop one mental image of Japan and then they just get hit by something that seems so diametrically opposed to that. You get a lot of people going, "Huh?" It builds up an expectation and then knocks it down, much more than other countries I’ve been to.
 
-So rather than just stopping at the lowest point of our sadness when confronted with the rudeness of reality, we should seek to understand the place even more. The parts of Paris and Tokyo that don't match our expectations aren't inherently bad. And neither are they constant or fixed forever. Once we start seeing the world for what it actually is, we can more deeply engage with the places themselves. Only then can we start falling in love with the actual city, not just the idea of the city, and become a participant in the real world rather than a passive consumer of a fantasy one.
+So let's not get stopped at the lowest point of our sadness once Paris syndrome strikes. When faced with the rudeness of reality, we should push through to understand the place even more. The parts of Paris and Tokyo that don't match our expectations aren't inherently bad. In fact, seeing and understanding it can enable us to more deeply engage with the places themselves. Only then can we start falling in love with the actual city, not just the idea of the city, and become a participant in the real world rather than a passive consumer of a fantasy one.
 
 <hr class="section-divider" />
 
