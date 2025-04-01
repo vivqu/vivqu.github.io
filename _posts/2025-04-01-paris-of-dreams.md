@@ -107,6 +107,9 @@ It was an endless surprise and delight to understand how much many contradiction
 
 So let's not get stopped at the lowest point of our sadness once Paris syndrome strikes. When faced with the rudeness of reality, we should push through to understand the place even more. The parts of Paris and Tokyo that don't match our expectations aren't inherently bad. In fact, seeing and understanding it can enable us to more deeply engage with the places themselves. Only then can we start falling in love with the actual city, not just the idea of the city, and become a participant in the real world rather than a passive consumer of a fantasy one.
 
+<br />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pAFI7NYLI5Y?si=96JWbXF_fXdzgj4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <hr class="section-divider" />
 
 <footer>This article was last updated on 4/1/2025. v1 is 1,650 words and took 4.5 hours to write and edit.</footer>
