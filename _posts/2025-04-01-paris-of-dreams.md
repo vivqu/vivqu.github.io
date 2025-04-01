@@ -10,7 +10,7 @@ read_time: 7 min
 ---
 
 <br />
-<footnote>This article was written for <a href="https://www.aprilcools.club/" target="_blank">April Cools' Club 2025</a>. I usually don't write about anime or my nerdy nostalgia for high school slice-of-life so this was quite a fun change of pace. This essay also ended up being more like a visual essay with all the Youtube video embeddings and pictures. Maybe next year I'll try to make an actual Youtube video essay!</footnote>
+<footnote>This article was written for <a href="https://www.aprilcools.club/" target="_blank">April Cools' Club 2025</a>. Last year I wrote about <a href="/blog/2024/04/01/creami/">the Ninja Creami</a>. <br/><br/>I usually don't write about anime or my nerdy nostalgia for high school slice-of-life so this was quite a fun change of pace. This essay also ended up being more like a visual essay with all the Youtube video embeddings and pictures. Maybe next year I'll try to make an actual Youtube video essay!</footnote>
 
 <hr class="section-divider" />
 <br/>
