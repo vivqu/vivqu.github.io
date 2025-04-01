@@ -9,14 +9,18 @@ image: assets/img/posts/paris-of-dreams/architecture.png
 read_time: 7 min
 ---
 
+<br />
+<footnote>This article was written for <a href="https://www.aprilcools.club/" target="_blank">April Cools' Club 2025</a>. I usually don't write about anime or my nerdy nostalgia for high school slice-of-life so this was quite a fun change of pace. This essay also ended up being more like a visual essay with all the Youtube video embeddings and pictures. Maybe next year I'll try to make an actual Youtube video essay!</footnote>
 
+<hr class="section-divider" />
+<br/>
 <blockquote>
     <p>Once in a while when I wake up<br/>I find myself crying.</p>
     <p>The dream I must have had I can never recall.<br/>But... the sensation that I've lost something <br/>lingers for a long time after I wake up.</p>
     <p>— Your Name (<i>Kimi no Na wa</i>)</p>
 </blockquote>
 
-<hr class="section-divider" />
+<br />
 
 "Akogare no Paris" is a Japanese phrase which means "the Paris of our dreams." The media and art we consume works to construct an idealized, romantic vision of these places. And the elaborate fantasies exist in our imaginations forever; that is, unless they one day come into contact with reality.
 
@@ -104,9 +108,5 @@ It was an endless surprise and delight to understand how much many contradiction
 So let's not get stopped at the lowest point of our sadness once Paris syndrome strikes. When faced with the rudeness of reality, we should push through to understand the place even more. The parts of Paris and Tokyo that don't match our expectations aren't inherently bad. In fact, seeing and understanding it can enable us to more deeply engage with the places themselves. Only then can we start falling in love with the actual city, not just the idea of the city, and become a participant in the real world rather than a passive consumer of a fantasy one.
 
 <hr class="section-divider" />
-
-<footnote>This article was written for <a href="https://www.aprilcools.club/" target="_blank">April Cools' Club 2025</a>. I usually don't write about anime or my nerdy nostalgia for high school slice-of-life so this was quite a fun change of pace. This essay also ended up being more like a visual essay with all the Youtube video embeddings and pictures. Maybe next year I'll try to make an actual Youtube video essay!</footnote>
-
-<br/>
 
 <footer>This article was last updated on 4/1/2025. v1 is 1,650 words and took 4.5 hours to write and edit.</footer>
