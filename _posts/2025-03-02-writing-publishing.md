@@ -123,7 +123,9 @@ To help build the aesthetic muscle, I researched many Japanese [design](https://
 I also wanted illustrations to be a core component of the guide. My fondest memories of studying Japanese are centered on the cute illustrations in Japanese textbooks. These iconic clip art drawings are created by the illustrator Takashi Mifune and freely distributed on his website [Irasutoya](https://www.irasutoya.com/) for both personal and commercial use, with some minimal restrictions. And because of the generous usage terms, his art is ubiquitous throughout Japan. It is especially used in educational and informational materials, which was a perfect fit for the goals of this project.
 
 <br />
+<div class="iframe-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/g3CyRZY90M4?si=EQ1NcblIXyIQha0a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 <br />
 
 I love the quirky and cheerful vibe of Irasutoya art. I wanted this mood to really suffuse through the entire book, and so I made sure to develop my custom hand-drawn illustrations to be complementary in style. This way, the artworks could sit alongside each other without feeling jarring or out of place. Plus using illustrations in the guidebook also gave me more visual flexibility. My travel photographs often were not perfectly framed or shot, so I could supplement with a drawing instead of needing to source additional photographs.

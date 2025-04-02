@@ -177,7 +177,9 @@ I continue to struggle with the marketing aspects for all of my projects. I trie
 <br />
 <h1 id="closing-the-gap">Closing the gap 🙏🏻</h1>
 
+<div class="iframe-wrapper">
 <iframe src="https://player.vimeo.com/video/85040589?color=b70b0b&portrait=0&badge=0" width="560" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
 <p class="video-subtitle"><a href="https://vimeo.com/85040589">THE GAP by Ira Glass</a>.</p>
 
 > Nobody tells people who are beginners, [...] all of us who do creative work, we get into it because we have good taste. [...] There's a gap -- for the first couple years you're making stuff, what you're making isn't so good. It's trying to be good, it has ambition to be good, but it's not quite that good. But your taste, the thing that got you into the game, your taste is still killer. Your taste is good enough that you can tell that what you're making is kind of a disappointment to you. You can tell it's still sort of crappy.
@@ -186,7 +188,9 @@ I continue to struggle with the marketing aspects for all of my projects. I trie
 >
 > -- Ira Glass, _"On good taste"_
 
+<div class="iframe-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/X2wLP0izeJE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 <p class="video-subtitle">The original interview with Ira Glass.</p>
 
 <h2 id="finding-my-voice">Finding my voice 🗣</h2>
