@@ -45,7 +45,9 @@ But what happens when our conjured up worlds come face-to-face with stark realit
 Sometimes, Japanese tourists who visit Paris can feel a disappointment so strong that they can experience states of anxiety, delusion, and derealization. Their encounter with a reality is so different from their imagined experiences that it produces an intense form of culture shock. This psychological phenomenon is known as [Paris syndrome](https://en.wikipedia.org/wiki/Paris_syndrome), coined in the 1980s by Japanese psychiatrist Hiroaki Ota.
 
 <br/>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jXjfzMCbaBc?si=2llf0g_TMIzmEwz2&amp;start=863" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="iframe-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jXjfzMCbaBc?si=2llf0g_TMIzmEwz2&amp;start=863" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 <br />
 
 Though the term refers to the experience of Eastern tourists who visit Paris, it can happen to anyone. Just as Japanese visitors to Paris might find a sharp divide between their expectations and the reality of the situation, so too can Westerners visiting Japan.
@@ -53,7 +55,9 @@ Though the term refers to the experience of Eastern tourists who visit Paris, it
 With the rise of anime's popularity, international audiences have grown up on stories set in Tokyo and Japanese towns. The anime aesthetic creates a feeling of retroactive nostalgia for so many people who have never even been to Japan. The depictions of the buildings, streets, and trains are so realistic, often almost photoreal replications of real-world locations, that it gives us viewers the sensation that they have been there. Even though we're millions of miles away, we feel like we've been to these place and know them deeply from childhood. 
 
 <br/>
+<div class="iframe-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mOMjH6_oe9A?si=tYdGQXgn7gZzxqJL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 <br/>
 
 Fans of Japanese media are inexorably driven to visit in person, to take a pilgrimage to see if their mental picture matches up with reality. As Clothilde Sabre writes in [_French Anime and Manga Fans in Japan_](https://contents-tourism.press/wp-content/uploads/2016/08/IJCT-Vol.-1.1-Sabre-2016.pdf): 
@@ -69,7 +73,9 @@ The gap between expectations and reality can be enormous. It can feel underwhelm
 Makoto Shinkai is the master of creating deep attachment for every day Japan in the hearts of foreign audiences, just as Miyazaki has built up the dream of a new age [Ruritania](https://en.wikipedia.org/wiki/Ruritania) in Europe for Asian viewers. As this stunning visual compilation shows, the color and detail of Shinkai's animation so closely mirrors the real world:
 
 <br />
+<div class="iframe-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rGDxkIXKQ3Q?si=7kKi8yjukyYQXEmV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 <br />
 
 And even though it visually mimics locations in the real world, Shinkai's movies—the most well-known being [Your Name](https://www.youtube.com/watch?v=ayi6VfCKBcA), [Weathering with You](https://www.youtube.com/watch?v=Q6iK6DjV_iE), and [Suzume](https://www.youtube.com/watch?v=IfKNOUUtyCA)—tell stories filled to the brim with magic realism. The characters struggle against titanic forces of destruction using time travel, magical powers, and transfiguration. His stories explore grand themes of love and destiny in front of a backdrop of a mundane, slice of life existence.
@@ -108,7 +114,9 @@ It was an endless surprise and delight to understand how much many contradiction
 So let's not get stopped at the lowest point of our sadness once Paris syndrome strikes. When faced with the rudeness of reality, we should push through to understand the place even more. The parts of Paris and Tokyo that don't match our expectations aren't inherently bad. In fact, seeing and understanding it can enable us to more deeply engage with the places themselves. Only then can we start falling in love with the actual city, not just the idea of the city, and become a participant in the real world rather than a passive consumer of a fantasy one.
 
 <br />
+<div class="iframe-wrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pAFI7NYLI5Y?si=96JWbXF_fXdzgj4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <hr class="section-divider" />
 
