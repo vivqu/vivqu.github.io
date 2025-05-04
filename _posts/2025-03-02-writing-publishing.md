@@ -333,7 +333,7 @@ Thanks for reading, and once again<sup><a href="#fn1" id="ref1">1</a></sup>, her
 ![autumn-book](/assets/img/japan_guide/autumn/autumn-flatlay.png)
 <br />
 
-<footnote>1. See how awkward I am at this transition? <a href="#ref1" title="Jump back to footnote 1 in the text.">↵</a>
+<footnote id="fn1">1. See how awkward I am at this transition? <a href="#ref1" title="Jump back to footnote 1 in the text.">↵</a>
 </footnote>
 
 <hr class="section-divider" />
