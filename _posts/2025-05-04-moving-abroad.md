@@ -93,8 +93,8 @@ The most interesting retrospective from the journal was that our move to Japan w
 I had completely forgotten I felt this way, which just goes to show the unreliability of our memories! And even though I rediscovered my journal only at the end of our second move, these learnings really validated our decision to have an accelerated move. 
 
 Here is the rough timeline:
-- Dec 2024: Dru accepts his position at the London startup
-- Jan 2025: Visas are granted, Dru begins working alternating between London/US every 3 weeks
+- Dec 2024: Dru accepts his position at the London startup.
+- Jan 2025: Visas are granted, Dru begins working alternating between London/US every 3 weeks.
 - Feb 2025: I visit London for two weeks to find a new team based in London. We start surveying neighborhoods to live in. I choose my new team. Decide on how to transport the dog to the UK.
 - Mar 2025: Notify my previous team manager and begin the formal transfer process. Start relocation services and begin purging the house by selling/donating items. Chose storage service and property management company for our house in Oakland. 
 - Apr 2025: Announce my departure to my previous team. Shipping and hauling appointments completed. Hop on the flight with the dog to London!
