@@ -84,7 +84,7 @@ Yet I still don't believe this will obviate the need for software engineers and 
 
 > We can solve any problem by introducing an extra level of indirection.
 
-Which is usually immediately followed immediately by "...except for the problem of too many levels of indirection."
+Which is usually immediately followed by "...except for the problem of too many levels of indirection."
 
 So I'm sure we'll have absolutely no problems at all if we make generated AI code part of the fundamental infrastructure of developing software while underinvesting in software engineers. No problems at all.
 
