@@ -71,6 +71,8 @@ A lot of experienced active practitioners agree with me:
 - Manuel Kießling on [AI models needing to be directed in order to be effective](https://manuel.kiessling.net/2025/03/31/how-seasoned-developers-can-achieve-great-results-with-ai-coding-agents/)
 - Birgitta Böckeler on [the constant need for human steering with agentic coding](https://martinfowler.com/articles/exploring-gen-ai/13-role-of-developer-skills.html)
 - Simon Willison [treats LLMs as the equivalent of an intern for production code](https://simonwillison.net/2024/Sep/20/using-llms-for-code/)
+- Nicholas Carlini on using [LLMs for learning and automating boring tasks](https://nicholas.carlini.com/writing/2024/how-i-use-ai.html)
+- Sean Goedecke on [using LLMs as a staff engineer](https://www.seangoedecke.com/how-i-use-llms/)
 
 There are still plenty of situations where LLMs are enormously helpful in software development. Prototyping, bootstrapping greenfield projects, brainstorming various approaches to technical problems are all good use cases. For my personal projects, I use it extensively for doing all the last mile work to get from a coding project to an actual packaged product. There is so much fine detail polish to get something from v0 to a production-level v1 that falls outside of pure technical work. Marketing, writing copy, setting up a splash page are all necessary to explain to users what your software does. These are things I don't have to deal with in my day job with a fully staffed cross-functional team. Generative AI can help transform my shitty output into something that is at least not embarrassing through boosting my limited skills. A few rounds of back-and-forth refinement usually results in a decent result. 
 
