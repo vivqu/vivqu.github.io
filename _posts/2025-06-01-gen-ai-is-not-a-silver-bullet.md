@@ -55,7 +55,7 @@ The way to actually improve the art of software engineering, as outlined by Broo
 > 
 > The differences are not minor—it is rather like Salieri and Mozart. Study after study shows that the very best designers produce structures that are faster, smaller, simpler, cleaner, and produced with less effort. The differences between the great and the average approach an order of magnitude.
 
-I think this is just as important as ever. And one big concern I have is many companies buying into the LLM hype and defunding their engineering teams. As we discuss in the next section, the current benefits of generative AI in coding is relatively limited. We risk [kneecapping our own industry](https://charity.wtf/2024/06/10/generative-ai-is-not-going-to-build-your-engineering-team-for-you/) for a long time by [underinvesting in junior engineers](https://skamille.medium.com/things-i-currently-believe-about-ai-and-tech-employment-3e712df1dc51) and missing out on great software talent.
+I think this is just as important as ever. And one big concern I have is many companies buying into the LLM hype and [defunding](https://www.salesforceben.com/salesforce-will-hire-no-more-software-engineers-in-2025-says-marc-benioff/) their engineering teams. As we discuss in the next section, the current benefits of generative AI in coding is relatively limited. We risk [kneecapping our own industry](https://charity.wtf/2024/06/10/generative-ai-is-not-going-to-build-your-engineering-team-for-you/) for a long time by [underinvesting in junior engineers](https://skamille.medium.com/things-i-currently-believe-about-ai-and-tech-employment-3e712df1dc51) and missing out on great software talent.
 
 ## How LLMs are actually useful
 
