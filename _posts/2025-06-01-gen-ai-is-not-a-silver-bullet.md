@@ -73,6 +73,7 @@ A lot of experienced active practitioners agree with me:
 - Simon Willison [treats LLMs as the equivalent of an intern for production code](https://simonwillison.net/2024/Sep/20/using-llms-for-code/)
 - Nicholas Carlini on using [LLMs for learning and automating boring tasks](https://nicholas.carlini.com/writing/2024/how-i-use-ai.html)
 - Sean Goedecke on [using LLMs as a staff engineer](https://www.seangoedecke.com/how-i-use-llms/)
+- Alberto Fortin on [going back to using his brain after months of coding with LLMs](https://albertofortin.com/writing/coding-with-ai)
 
 There are still plenty of situations where LLMs are enormously helpful in software development. Prototyping, bootstrapping greenfield projects, brainstorming various approaches to technical problems are all good use cases. For my personal projects, I use it extensively for doing all the last mile work to get from a coding project to an actual packaged product. There is so much fine detail polish to get something from v0 to a production-level v1 that falls outside of pure technical work. Marketing, writing copy, setting up a splash page are all necessary to explain to users what your software does. These are things I don't have to deal with in my day job with a fully staffed cross-functional team. Generative AI can help transform my shitty output into something that is at least not embarrassing through boosting my limited skills. A few rounds of back-and-forth refinement usually results in a decent result. 
 
@@ -103,5 +104,5 @@ So I'm sure we'll have absolutely no problems at all if we make generated AI cod
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 6/4/2025. v1 is 2,052 words and took 4.25 hours to write and edit.</footer>
+<footer>This article was last updated on 6/19/2025. v2 is 2,067 words and took 4.25 hours to write and edit.</footer>
 
