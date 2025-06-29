@@ -201,7 +201,7 @@ Here's my recent reading list:
     </footnote>
 </p>
 <p>
-    <footnote id="fn3">3. This was a fortuitous accident. During our visit to London in February, I was checking out famous bookstores like Daunt Books and Waterstones. I purchased a recommended book from an author I was familiar with. That book was Babel by R.F. Kuang and it felt like serendipity to read about Hampstead while exploring Hampstead. <a href="#ref2" title="Jump back to footnote 3 in the text.">↵</a>
+    <footnote id="fn3">3. This was a fortuitous accident. During our visit to London in February, I was checking out famous bookstores like Daunt Books and Waterstones. I purchased a recommended book from an author I was familiar with. That book was Babel by R.F. Kuang and it felt like serendipity to read about Hampstead while exploring Hampstead. <a href="#ref3" title="Jump back to footnote 3 in the text.">↵</a>
     </footnote>
 </p>
 
