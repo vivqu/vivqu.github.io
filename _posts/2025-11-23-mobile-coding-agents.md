@@ -74,6 +74,7 @@ Some other tools I came across that enable more hands-off workflows:
 
 If you have more papers or personal examples of effective mobile coding agent use, I'd love to hear about it! Shoot me an email at <a href="mailto:hello@vivqu.com" target="_blank">hello@vivqu.com</a>.
 
+Mobile engineering is a niche and difficult problem space. With the structural roadblocks, plus the fact that Apple/Google don't seem to be invested in making the agentic experience better, not enough attention if being put into identifying and addressing the gaps. We as the mobile development community should start exploring and compiling gaps in the foundational models, taking an active role in shaping this powerful tool for ourselves.
 
 <br />
 <p>
@@ -83,5 +84,5 @@ If you have more papers or personal examples of effective mobile coding agent us
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 11/23/2025. v1 is 981 words and took 3.5 hours to write and edit.</footer>
+<footer>This article was last updated on 11/23/2025. v1 is 1,049 words and took 4 hours to write and edit.</footer>
 
