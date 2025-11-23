@@ -64,6 +64,7 @@ In the meantime, here's a rough survey of writeups about iOS agentic workflows:
 | [I Shipped a macOS App Built Entirely by Claude Code](https://www.indragie.com/blog/i-shipped-a-macos-app-built-entirely-by-claude-code) | SwiftUI | Claude Code | Terminal / Xcode |
 | [The Ultimate AI Agent Experiment: Building an Entire iOS App Without Writing a Single Line of Code](https://matteozajac.medium.com/the-ultimate-ai-agent-experiment-building-an-entire-ios-app-without-writing-a-single-line-of-code-b2d0662feb0a) | SwiftUI | Claude Code | Terminal / Xcode |
 | [Vibe Coding for mobile with Cursor AI](https://uxplanet.org/vibe-coding-with-cursor-ai-52f5023bc59a) | SwiftUI | Cursor AI   | Cursor |
+| (X) [Vibe coding an iOS app for the first time, now in the App Store](https://x.com/kvamme/status/1988997801087578267) | SwiftUI | GPT5-Codex / Composer | Cursor |
 | (Reddit) [Software engineer (16 years) built an iOS app in 3 weeks using Claude Code](https://www.reddit.com/r/ClaudeAI/comments/1lld60y/software_engineer_16_years_built_an_ios_app_in_3/) | SwiftUI | Claude Code | Terminal / Xcode |
 | (Reddit) [vibe coding native mobile apps: what's the best tool and process for a non technical person?](https://www.reddit.com/r/vibecoding/comments/1l4u39z/vibe_coding_native_mobile_apps_whats_the_best/) | various | various | various |
 
@@ -82,5 +83,5 @@ If you have more papers or personal examples of effective mobile coding agent us
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 11/23/2025. v1 is 963 words and took 3.5 hours to write and edit.</footer>
+<footer>This article was last updated on 11/23/2025. v1 is 981 words and took 3.5 hours to write and edit.</footer>
 
