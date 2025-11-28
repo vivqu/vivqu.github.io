@@ -56,6 +56,10 @@ p > img {
   max-width: $post-video-width;
 }
 
+.article .highlight {
+  background-color: #e7eaec;
+}
+
 .video-subtitle, .img-subtitle {
   display: block;
   text-align: center;
@@ -216,6 +220,10 @@ footnote {
   }
 }
 
+code {
+  font-size: 14px;
+}
+
 p > code,
 a > code {
   font-size: $code-text-size;
@@ -227,7 +235,10 @@ a > code {
 }
 
 .highlight > pre {
-  margin: 20px;
+  padding: 20px;
+  margin-bottom: 0px;
+  white-space: pre-wrap; // Wrap the code blocks
+  word-wrap: break-word;
 }
 
 .post-table {
