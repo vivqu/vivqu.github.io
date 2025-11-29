@@ -15,8 +15,9 @@ As I outlined in [why mobile coding agents are worse](/blog/2025/11/23/mobile-co
 
 While the jury is still out on whether AI will automate software engineers into obsolescence, I do believe that coding agents will unlock an entire category of new software: [home-cooked apps](https://maggieappleton.com/home-cooked-software). This term was first coined by [Robin Sloan](https://www.robinsloan.com/notes/home-cooked-app/) in 2020 and refers to custom-fit apps that are designed and distributed for a tiny group of people, made with love and care like a home-cooked meal. No blitzscaling or user growth projections or fundraising demands in sight.
 
-This idea has been expanded by [Maggie Appleton](https://maggieappleton.com/home-cooked-software) and [Jasmine Sun](https://www.msn.com/en-us/money/other/your-next-favorite-app-the-one-you-make-yourself/ar-AA1FhFQh) to a broader movement of "personal scale" software. It's really inspiring to learn about all these grassroots efforts to build software that can address the long tail of user needs, those problems that industrial/professional software always deprioritizes because there's not enough value or revenue to justify funding it.
+This idea has been expanded by [Maggie Appleton](https://maggieappleton.com/home-cooked-software) and [Jasmine Sun](https://www.msn.com/en-us/money/other/your-next-favorite-app-the-one-you-make-yourself/ar-AA1FhFQh) to a broader movement of "personal scale" software. It's really inspiring to learn about all these grassroots efforts to build software that can address the long tail of user needs. These are the problems that industrial/professional software has always deprioritized because there's not enough value or revenue to justify funding it.
 
+<br />
 ![app-opportunity](/assets/img/posts/vibe-coding-setup/app-opportunity.png)
 *The new territory AI-assisted workflows unlock, diagram from [Appleton's talk](https://maggieappleton.com/home-cooked-software)*
 <br />
@@ -210,27 +211,31 @@ The code --> compile --> manual test loop takes quite a lot of time with mobile 
 
 It's normally very frustrating to do the manual validation loop across different OS versions (which can have quite different APIs) and form factors (iPhone vs iPad) on every significant change, but with coding agents this part of the workflow is a breeze.
 
+![ipad-validation](/assets/img/posts/vibe-coding-setup/ipad-validation.png)
+*Asking the coding agent to do the same verification tasks again on iPad.*
+<br />
+
 Coding agents still struggle quite a bit with complex interactive tasks. It was able to identify the problem when I attached a video showing the bug, but it isn't able to fix layout issues that are combined with keyboard animations or transitions. I always ended up stepping in to debug the issue myself. 
 
 Complex layout interaction is definitely a major gap in the models themselves. It makes sense that it's a weakness given how challenging it would be to construct a dataset or benchmarks for interactive layouts and animations. I would suggest foregoing the agents entirely in this case (or have it just generate the starting code), and manually tune/test these cases for final app polish.
+
+## Next steps
 
 ![todo-complete](/assets/img/posts/vibe-coding-setup/todo-complete.png)
 *Before and after, from mock to real prototype app.*
 <br />
 
-## Next steps
-
 While the app is certainly not done, with more features and edge cases I can test, I also want to explore more topics within agentic mobile development.
 
 Specifically I'm curious about:
-- Investigate tools for obvious mobile vibe coding gaps (crash detection)
+- Investigating tools for mobile vibe coding gaps (crash detection)
 - Researching mobile (and UI) LLM benchmarks
 - Conducting a comparison of React Native, SwiftUI, and Swift in terms of agentic performance
-- Test a larger range of agents (Codex, CursorAI, etc) against Claude Code to see if there's any variance in mobile code quality
+- Testing a larger range of agents (Codex, CursorAI, etc) against Claude Code to see if there's any variance in mobile code quality
 
-There's a lot of open question about how we can make the agentic workflow better for mobile apps! I'm excited to keep digging in, and I hope we can start leveling up our collective knowledge across the whole mobile developer community.
+There's many open question about how we can make the agentic workflow better for mobile apps! I hope this essay adds useful information to the collective knowledge of the mobile dev community, and I'm excited to keep digging in.
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 11/29/2025. v1 is 2,399 words and took 5 hours to write and edit.</footer>
+<footer>This article was last updated on 11/30/2025. v1 is 2,411 words and took 5 hours to write and edit.</footer>
 
