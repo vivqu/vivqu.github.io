@@ -51,7 +51,7 @@ The lack of investment suggests that the companies are waiting for foundational 
 
 ### Mobile vibe coding in the wild
 
-Given all these challenges, I wanted to try out vibe coding myself. I'll share more of my setup and impressions using an agentic mobile workflow in an upcoming post. 
+Given all these challenges, I wanted to try out vibe coding myself. You can read more about my setup and impressions using an agentic workflow [here](/blog/2025/11/30/vibe-coding-setup/).
 
 In the meantime, here's a rough survey of writeups about iOS agentic workflows:
 
@@ -84,5 +84,5 @@ Mobile engineering is a niche and difficult problem space. With the structural r
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 11/23/2025. v1 is 1,049 words and took 4 hours to write and edit.</footer>
+<footer>This article was last updated on 11/30/2025. v2 is 1,078 words and took 4 hours to write and edit.</footer>
 
