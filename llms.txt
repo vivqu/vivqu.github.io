@@ -1,0 +1,90 @@
+# Vivian Qu
+
+> Personal website and blog of Vivian Qu, a software engineer and writer.
+
+## Core Content
+
+- [Blog](https://vivqu.com/blog): Simulated Annealing is a blog focused on software engineering, creativity, and good books
+- [About](https://vivqu.com/about): Background, contact information, and site colophon
+- [Books](https://vivqu.com/books): Books written by Vivian Qu
+- [Archive](https://vivqu.com/archive): Complete chronological list of blog posts
+- [Tags](https://vivqu.com/tags): Posts organized by topic
+
+## Books
+
+- [Autumn: A Local's Guide to Travel in Japan](https://vivqu.com/books/autumn): Seasonal travel recommendations for Japan in autumn
+
+## Projects
+
+- [Recite](https://vivqu.com/recite): Chrome extension for memorization through spaced repetition
+- [WorldAnimals](https://worldanimalsapp.com/): iOS and Android app for learning animal sounds in different languages
+- [Haiku](https://apps.apple.com/us/app/haiku-poems-made-simple/id1227312972): iOS app to write haikus
+- [AR Grimoire](https://argrimoire.com/): iOS app for D&D gameplay with AR capabilities
+- [San Fransokyo Podcast](https://www.sanfransokyopodcast.com/): Year abroad in Tokyo podcast
+
+
+## Blog Posts
+
+- [My mobile vibe coding setup](https://vivqu.com/blog/2025/11/30/vibe-coding-setup/): Building a home-cooked mobile app with Claude Code and SwiftUI
+- [Why are mobile coding agents worse?](https://vivqu.com/blog/2025/11/23/mobile-coding-agents/): Challenges in AI-assisted mobile development
+- [Rental nightmare in London](https://vivqu.com/blog/2025/09/30/rental-nightmare/): Moving abroad experiences
+- [Britpicking](https://vivqu.com/blog/2025/07/13/britpicking/): Cultural observations living in the UK
+- [No accounting for taste](https://vivqu.com/blog/2025/06/29/no-accounting-for-taste/): Writing and personal expression
+- [Gen AI is not a silver bullet](https://vivqu.com/blog/2025/06/01/gen-ai-is-not-a-silver-bullet/): Realistic perspectives on generative AI in software engineering
+- [Moving abroad to London](https://vivqu.com/blog/2025/05/04/moving-abroad/): International relocation experience
+- [Paris of dreams](https://vivqu.com/blog/2025/04/01/paris-of-dreams/): Travel writing
+- [Writing and publishing](https://vivqu.com/blog/2025/03/02/writing-publishing/): Reflections on the writing process
+- [Reflections on onboarding](https://vivqu.com/blog/2024/09/07/reflections-on-onboarding/): Engineering onboarding best practices
+- [Creami ice cream maker](https://vivqu.com/blog/2024/04/01/creami/): Kitchen tools and recipes
+- [Office design](https://vivqu.com/blog/2024/03/10/office-design/): Workspace setup and ergonomics
+- [Home projects](https://vivqu.com/blog/2024/03/10/home-projects/): DIY and home improvement
+- [Yearly theme prompts](https://vivqu.com/blog/2024/02/04/yearly-theme-prompts/): Goal setting framework
+- [Holiday book list](https://vivqu.com/blog/2023/12/15/holiday-book-list/): Annual reading recommendations
+- [Do things fast](https://vivqu.com/blog/2023/09/10/do-things-fast/): Moving quickly in engineering
+- [Coming into focus](https://vivqu.com/blog/2023/07/23/coming-into-focus/): Career reflection
+- [App approval hell](https://vivqu.com/blog/2023/04/30/app-approval-hell/): Navigating app store review processes
+- [Building a Chrome extension: Recite](https://vivqu.com/blog/2023/04/02/recite-extension/): Extension development case study
+- [Holiday book gifting](https://vivqu.com/blog/2023/01/16/holiday-books/): How to recommend books effectively
+- [Fist to five voting](https://vivqu.com/blog/2022/12/19/fist-to-five/): Team decision-making techniques
+- [Stacking PRs](https://vivqu.com/blog/2022/12/04/stacking-prs/): Git workflow for efficient code review
+- [Outdated apps](https://vivqu.com/blog/2022/09/25/outdated-apps/): Mobile app maintenance challenges
+- [Management books I recommend](https://vivqu.com/blog/2022/09/11/management-books/): Reading list for engineering managers
+- [Juggling software projects](https://vivqu.com/blog/2022/09/04/juggling-software-projects/): Project management strategies
+- [Engineering expectations at different levels](https://vivqu.com/blog/2022/04/02/engineering-expectations/): Career development guidance
+- [Engineering ladder](https://vivqu.com/blog/2022/03/11/engineering-ladder/): Leveling frameworks and career progression
+- [An existential essay by GPT-3](https://vivqu.com/blog/2022/02/04/nlp-existential-essay/): How an NLP model feels about NLP models and the human condition
+- [Clarity, grace, and humor](https://vivqu.com/blog/2022/01/26/style-humor/): Elements of good writing
+- [Patterns of engineering disasters](https://vivqu.com/blog/2022/01/01/engineering-disasters/): Failed rewrites, refactors, and engineering mishaps
+- [How to write architecture docs](https://vivqu.com/blog/2021/03/01/architecture-docs/): Technical documentation best practices
+- [Baseline bodies](https://vivqu.com/blog/2021/02/15/baseline-bodies/): Loving your aging body and fixing a sedentary life
+- [Digital gardens](https://vivqu.com/blog/2020/10/18/digital-gardens/): Personal knowledge management and note-taking
+- [Learning to build better software from maps](https://vivqu.com/blog/2020/06/16/engineering-and-maps/): Applying cartographic concepts to tech
+- [Guide to making a podcast](https://vivqu.com/blog/2020/05/06/guide-to-making-podcast/): Podcast production from concept to launch
+- [Compensation negotiation](https://vivqu.com/blog/2020/02/16/compensation/): Salary discussions and negotiation tactics
+- [2019 in numbers](https://vivqu.com/blog/2019/12/31/year-in-numbers/): Year in review from Tokyo
+- [Job search reflections](https://vivqu.com/blog/2019/12/09/job-search/): Career transitions and interviewing
+- [Saving time with React Native](https://vivqu.com/blog/2019/09/17/world-animals/): Developer data from launching WorldAnimals mobile app
+- [Simulated annealing: a life framework](https://vivqu.com/blog/2019/07/12/simulated-annealing/): Making good decisions despite being biologically bad at making them
+- [The zen of handstands](https://vivqu.com/blog/2019/02/22/zen-handstands/): Fitness, movement, and mindfulness
+- [Women's World series](https://vivqu.com/blog/2018/09/03/womens-world-pt-1/): Four-part series on matriarchy and society
+  - [Part 1: Introduction](https://vivqu.com/blog/2018/09/03/womens-world-pt-1/)
+  - [Part 2: Economics](https://vivqu.com/blog/2018/09/03/womens-world-pt-2/)
+  - [Part 3: Politics](https://vivqu.com/blog/2018/09/03/womens-world-pt-3/)
+  - [Part 4: Culture](https://vivqu.com/blog/2018/09/03/womens-world-pt-4/)
+- [Disney World tips and tricks](https://vivqu.com/blog/2018/06/01/disney-tips/): Practical travel guide for visiting Disney
+- [Disney World tracking](https://vivqu.com/blog/2018/02/12/disney-world-tracking/): Data analysis of theme park visits
+
+## Optional
+
+Additional resources that can be skipped if a shorter context is needed:
+
+- [Privacy Policy](https://vivqu.com/privacy): Site privacy information
+
+## Contact
+
+- Email: hello@vivqu.com
+- LinkedIn: [linkedin.com/in/vivqu](https://linkedin.com/in/vivqu)
+- GitHub: [github.com/vivqu](https://github.com/vivqu)
+- Instagram: [instagram.com/skwishum](https://www.instagram.com/skwishum/)
+- Threads: [@skwishum](https://www.threads.net/@skwishum)
+
