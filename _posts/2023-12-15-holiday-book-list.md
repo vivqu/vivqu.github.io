@@ -14,13 +14,14 @@ loved ones to support my favorite authors and bookstores. It's a really
 fun annual gift-giving tradition. You can read more about what's involved [here](/blog/2023/01/16/holiday-books/).
 
 This is a list of the books I've recommended since starting the tradition. Check out the detailed reviews below!
-- 2023: [Other Minds: The Octopus, the Sea, and the Deep Origins of Consciousness](https://www.goodreads.com/en/book/show/28116739) by Peter Godfrey-Smith ([review](#other-minds-by-peter-godfrey-smith))
-- 2022: [Blood, Sweat, and Chrome: The Wild & True Story of Mad Max: Fury Road](https://www.goodreads.com/book/show/57789644-blood-sweat-chrome) by Kyle Buchanan ([review](#blood-sweat-and-chrome-by-kyle-buchanan))
-- 2021: [A Deadly Education](https://www.goodreads.com/book/show/50548197-a-deadly-education) (The Scholomance, #1) by Naomi Novik ([review](#a-deadly-education-by-naomi-novik))
-- 2020: [Trick Mirror: Reflections on Self-Delusion](https://www.goodreads.com/book/show/43126457-trick-mirror) by Jia Tolentino ([review](#trick-mirror-by-jia-tolentino))
-- 2019: [All Systems Red](https://www.goodreads.com/book/show/32758901-all-systems-red) (The Murderbot Diaries #1) by Martha Wells ([review](#all-systems-red-by-martha-wells))
-- 2018: [The Power](https://www.goodreads.com/book/show/29751398-the-power) by Naomi Alderman & [Everything I Never Told You](https://www.goodreads.com/book/show/18693763-everything-i-never-told-you) by Celeste Ng
-- 2017: [The Fifth Season](https://www.goodreads.com/book/show/19161852-the-fifth-season) by N.K. Jemisin & [Stories of Your Life and Others](https://www.goodreads.com/book/show/223380.Stories_of_Your_Life_and_Others) by Ted Chiang
+- 2024: [Shark Heart: A Love Story](https://amzn.to/4afFiXU) by Emily Habeck ([review](#shark-heart-by-emily-habeck))
+- 2023: [Other Minds: The Octopus, the Sea, and the Deep Origins of Consciousness](https://amzn.to/4aaRUiV) by Peter Godfrey-Smith ([review](#other-minds-by-peter-godfrey-smith))
+- 2022: [Blood, Sweat, and Chrome: The Wild & True Story of Mad Max: Fury Road](https://amzn.to/48Eowk0) by Kyle Buchanan ([review](#blood-sweat-and-chrome-by-kyle-buchanan))
+- 2021: [A Deadly Education](https://amzn.to/48ZJh8K) by Naomi Novik ([review](#a-deadly-education-by-naomi-novik))
+- 2020: [Trick Mirror: Reflections on Self-Delusion](https://amzn.to/3XOUrrE) by Jia Tolentino ([review](#trick-mirror-by-jia-tolentino))
+- 2019: [All Systems Red](https://amzn.to/499waTt) by Martha Wells ([review](#all-systems-red-by-martha-wells))
+- 2018: [The Power](https://amzn.to/4pzkVJI) by Naomi Alderman & [Everything I Never Told You](https://amzn.to/4aPbQId) by Celeste Ng
+- 2017: [The Fifth Season](https://amzn.to/48Bh8pl) by N.K. Jemisin & [Stories of Your Life and Others](https://amzn.to/4iRELgK) by Ted Chiang
 
 
 <br />
@@ -30,6 +31,23 @@ This is a list of the books I've recommended since starting the tradition. Check
 <hr class="section-divider" />
 
 # Book Reviews
+
+## Shark Heart by Emily Habeck
+
+<u>Year</u>: 2024<br />
+<u>Genre</u>: Literary Fiction (Magic Realism)<br /><br />
+
+It’s uncommon for a fiction book that’s not sci-fi or fantasy to be my top choice for the year. But Shark Heart is a tour de force of writing and emotions with an immediately gripping love story. It’s also a perfect example of why I love magic realism: the fantastical and strange elements only further emphasize the challenges and triumphs of the characters.
+
+What can I say about Shark Heart to show its immense complexity without spoiling the details? Perhaps the book summary itself does it best:
+> For Lewis and Wren, their first year of marriage is also their last. A few weeks after their wedding, Lewis receives a rare diagnosis. He will retain most of his consciousness, memories, and intellect, but his physical body will gradually turn into a great white shark.
+
+Absurd, tragic, joyful, philosophical. I laughed, I cried, I tightly hugged my confused husband. A must read!
+
+<br />
+![shark-heart-book](/assets/img/posts/holiday-book-list/shark-heart.jpg)
+<br />
+
 
 ## Other Minds by Peter Godfrey-Smith
 
@@ -114,4 +132,4 @@ The story is snappy, fun, and darkly humorous, featuring the eponymous "Murderbo
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 12/15/2023. </footer>
+<footer>This article was last updated on 12/13/2025.</footer>
