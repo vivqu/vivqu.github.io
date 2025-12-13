@@ -120,7 +120,7 @@ My favorite book of 2020 was [Trick Mirror: Reflections on Self-Delusion](https:
 
 I've chosen [All Systems Red](https://www.goodreads.com/book/show/32758901-all-systems-red) for my top book of the year! This is the first book in the Murderbot Diaries series and won both Hugo and Nebula awards for best novella.
 
-The story is snappy, fun, and darkly humorous, featuring the eponymous "Murderbot" -- a cyborg who neither sees herself as robot or human. I loved this series because it deals with complex themes like freedom, ethics, identity, consciousness, and "human" rights without falling into the typical bleak and dystopian tone that other stories use. I was repeatedly delighted by how funny the book is. Here's the official summary:
+The story is snappy, fun, and darkly humorous, featuring the eponymous "Murderbot" -- a cyborg who neither sees themselves as robot or human. I loved this series because it deals with complex themes like freedom, ethics, identity, consciousness, and "human" rights without falling into the typical bleak and dystopian tone that other stories use. I was repeatedly delighted by how funny the book is. Here's the official summary:
 
 > On a distant planet, a team of scientists are conducting surface tests, shadowed by their Company-supplied ‘droid — a self-aware SecUnit that has hacked its own governor module, and refers to itself (though never out loud) as “Murderbot.” Scornful of humans, all it really wants is to be left alone long enough to figure out who it is. 
 > 
@@ -132,4 +132,4 @@ The story is snappy, fun, and darkly humorous, featuring the eponymous "Murderbo
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 12/13/2025.</footer>
+<footer>This article was last updated on 12/13/2025. It was first written on 12/15/2023.</footer>
