@@ -39,7 +39,7 @@
 - [Office design](https://vivqu.com/blog/2024/03/10/office-design/): Workspace setup and ergonomics
 - [Home projects](https://vivqu.com/blog/2024/03/10/home-projects/): DIY and home improvement
 - [Yearly theme prompts](https://vivqu.com/blog/2024/02/04/yearly-theme-prompts/): Goal setting framework
-- [Holiday book list](https://vivqu.com/blog/2023/12/15/holiday-book-list/): Annual reading recommendations
+- [Holiday book list](https://vivqu.com/blog/2025/12/14/holiday-book-list/): Annual reading recommendations
 - [Do things fast](https://vivqu.com/blog/2023/09/10/do-things-fast/): Moving quickly in engineering
 - [Coming into focus](https://vivqu.com/blog/2023/07/23/coming-into-focus/): Career reflection
 - [App approval hell](https://vivqu.com/blog/2023/04/30/app-approval-hell/): Navigating app store review processes

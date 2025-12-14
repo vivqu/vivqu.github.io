@@ -14,6 +14,7 @@ loved ones to support my favorite authors and bookstores. It's a really
 fun annual gift-giving tradition. You can read more about what's involved [here](/blog/2023/01/16/holiday-books/).
 
 This is a list of the books I've recommended since starting the tradition. Check out the detailed reviews below!
+- 2025: [Perfection](https://amzn.to/4afKUBs) by Vincenzo Latronico & [The Raven Scholar](https://amzn.to/495NR6p) by Antonia Hodgson ([review]())
 - 2024: [Shark Heart: A Love Story](https://amzn.to/4afFiXU) by Emily Habeck ([review](#shark-heart-by-emily-habeck))
 - 2023: [Other Minds: The Octopus, the Sea, and the Deep Origins of Consciousness](https://amzn.to/4aaRUiV) by Peter Godfrey-Smith ([review](#other-minds-by-peter-godfrey-smith))
 - 2022: [Blood, Sweat, and Chrome: The Wild & True Story of Mad Max: Fury Road](https://amzn.to/48Eowk0) by Kyle Buchanan ([review](#blood-sweat-and-chrome-by-kyle-buchanan))
@@ -31,6 +32,21 @@ This is a list of the books I've recommended since starting the tradition. Check
 <hr class="section-divider" />
 
 # Book Reviews
+
+## Perfection & The Raven Scholar
+
+<u>Year</u>: 2025<br />
+<u>Genre</u>: Literary Fiction and Fantasy<br /><br />
+
+**[Perfection](https://amzn.to/4afKUBs)** _by Vincenzo Latronico_: From the very first page, Perfection doesn’t pull any of its punches. The story follows an expat couple, Anna and Tom, who are living the picture-perfect millennial aesthetic in a tasteful Berlin loft filled with warm wood tones and monstera plants. It’s a simultaneously empathetic and deeply scathing commentary on self-perception, consumption, authenticity, and existential meaning. And besides the obvious parallels to my own life (as expats living in London), I also got the one-two punch of following the book up with news articles on the same themes of unthinking, bourgeoisie gentrification by digital nomads in [Mexico City](https://www.nytimes.com/2025/09/08/dining/mexico-city-food-restaurants.html) and [Lisbon](https://www.theguardian.com/world/2025/jul/27/lisbon-portugal-digital-nomads-foreign-remote-workers-integration). This might not be everyone’s cup of tea, but I loved it.
+
+> Sunlight floods the room from the bay window, reflects off the wide, honey-colored floorboards, and casts an emerald glow over the perforate leaves of a monstera shaped like a cloud. Its stems brush the back of a Scandinavian armchair, an open magazine left face down on the seat. The red of that magazine cover, the plant’s brilliant green, the petrol blue of the upholstery, and the pale ochre floor stand out against the white walls, their chalky tone picked up again in the pale rug that just creeps into the frame.
+
+**[The Raven Scholar](https://amzn.to/495NR6p)** _by Antonia Hodgson_: One sure sign of a book-of-the-year contender is if it immediately grabs and holds my attention hostage. The Raven Scholar begins with a stunning (most “magnificent”) opening. Once I finished chapter three, I was done for—the opening hook of the book is so compelling that I genuinely could not put the book down again until I was finished. Hodgson draws on her background writing historical mystery fiction to create a complex many-layered whodunit story. The fantasy world-building is so different and interesting, clearly inspired by Asian legends but so well-crafted that it doesn’t feel manufactured at all. I can’t say much more without spoilers, go read it!
+
+<br />
+![perfection-raven-scholar-book](/assets/img/posts/holiday-book-list/perfection-raven-scholar.png)
+<br />
 
 ## Shark Heart by Emily Habeck
 

@@ -60,7 +60,7 @@ receiving a message later with thoughts and reactions! And on top of all that, I
 bookstores by ordering the books from [Bookshop.org](https://bookshop.org/info/about-us), which shares the proceeds with an 
 independent bookstore of your choice.
 
-Here are my top picks since I started the tradition: [An ongoing list of great books](/blog/2023/12/15/holiday-book-list/).
+Here are my top picks since I started the tradition: [An ongoing list of great books](/blog/2025/12/14/holiday-book-list/).
 
 Usually I also try to include a second- and third-place choice from different genres. I read a lot of science-fiction and 
 fantasy and, unsurprisingly, I tend to heavily favor books from those genres. Each year, I include approximately 2-3 
