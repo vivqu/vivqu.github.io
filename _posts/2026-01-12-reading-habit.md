@@ -9,7 +9,7 @@ image: assets/img/posts/reading-habit/favorite-reading-spots.png
 read_time: 12 min
 ---
 
-A friend recently asked in the responses to my [annual book gifting tradition](/blog/2023/01/16/holiday-books/) how I maintain my reading habit. I thought this was a very good question, one that I haven’t actually examined in detail before. Over the [many years of tracking my reading](http://localhost:4000/blog/2019/12/31/year-in-numbers/#books-read), I’ve somewhat backed my way into a set of routines that work for me. 
+A friend recently asked in the responses to my [annual book gifting tradition](/blog/2023/01/16/holiday-books/) how I maintain my reading habit. I thought this was a very good question, one that I haven’t actually examined in detail before. Over the [many years of tracking my reading](/blog/2019/12/31/year-in-numbers/#books-read), I’ve somewhat backed my way into a set of routines that work for me. 
 
 I can’t claim the following is the most optimal setup, but I am proud that reading is central to my life. I’ve managed to fit books into my life amidst the chaos of work, personal commitments, hobbies, obligations, and even [international moves](/blog/2025/05/04/moving-abroad/). I like being a person who reads a lot, who has good book recommendations, and whose name pops up in people’s heads when they receive an unexpected book in the mail.
 
@@ -182,4 +182,4 @@ I'll leave you with these great words from [Blackbird Spyplane](https://www.blac
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 1/11/2026. v1 is 2,969 words and took 8 hours to write and edit.</footer>
+<footer>This article was last updated on 1/12/2026. v1 is 2,969 words and took 8 hours to write and edit.</footer>
