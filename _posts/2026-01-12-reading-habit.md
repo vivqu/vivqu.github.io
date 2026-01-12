@@ -6,7 +6,7 @@ source: false
 seo_description: "writing reading annual-book-gift"
 tags: reading life
 image: assets/img/posts/reading-habit/favorite-reading-spots.png
-read_time: 12 min
+read_time: 13 min
 ---
 
 A friend recently asked in the responses to my [annual book gifting tradition](/blog/2023/01/16/holiday-books/) how I maintain my reading habit. I thought this was a very good question, one that I haven’t actually examined in detail before. Over the [many years of tracking my reading](/blog/2019/12/31/year-in-numbers/#books-read), I’ve somewhat backed my way into a set of routines that work for me. 
@@ -27,6 +27,10 @@ I care about reading a lot, but I don't particularly care about being _well-read
 
 The concept of [adult personal curriculums](https://www.reddit.com/r/personalcurriculum/) blew up on social media last autumn, and if you like shaping your reading that way, then more power to you! For me, I find that long-term rigid structures don't work because it puts an undue amount of (self-imposed, unnecessary) pressure on a hobby I wish to be a low-effort and fulfilling.
 
+![aesthetic-journaling](/assets/img/posts/reading-habit/aesthetic-journaling.png)
+*Personal curriculums are just the next step in the natural evolution of [aesthetic journaling](https://mymellowdays.com/blogs/mellow-daysblog-en/how-to-create-an-aesthetic-journal-layout-part-1).*
+<br/>
+
 I also find it unpleasant to focus on what I _should_ be reading, which evokes a whole lot of feelings of guilt and obligation, and prefer to lean in to what I _want_ to read. I have learned by trial and error how to cultivate a book backlog, and now it only consists of titles that are actively interesting and stimulating to me. 
 
 My reading taste can swing from wildly eccentric to solidly mainstream. I alternate between super niche books and picking up the most popular trashy romantasy novel of the day. Frankly, the whole idea of needing a certain kind of book checklist in order to qualify as a good intellectual (or again that dreaded word, "well-read") smells like [literary snobbery](https://substack.com/home/post/p-172822282) to me.
@@ -45,6 +49,9 @@ I think I've always been quite defensive of eclectic, open-minded reading becaus
 
 So, all those words just to say: I read a wide-range of books.
 
+
+## *…on automating my book pipeline*
+
 How do I find these interesting books, then?
 
 I've managed to automate most of my book discovery to be _push-based_ rather than pull-based. This is ideal because it's requires very little input energy from me: I simply follow writers and influencers whose content I already enjoy, and their recommendations will eventually end up in my email inbox or social media feeds. I plan to add a blog roll to my website soon (inspired by [Chris Glass](https://chrisglass.com/blogroll/)) to share all my favorite websites and content creators.
@@ -57,7 +64,9 @@ When I see a new book title, I'll open my [todo app](https://culturedcode.com/th
 
 ![book-backlog-details](/assets/img/posts/reading-habit/book-backlog-details.png)
   
-If I miss or forget to capture a book title, I don't sweat it too much. The benefit of curating a high-quality media diet across many different channels (newsletters, podcasts, Youtube, BookTok, etc) means that the truly outstanding book titles will bubble up time and time again. The recurring reminders are also a good signal to bump it up in my reading priority. I usually resist setting timelines to read books (creates more unnecessary pressure), with the one exception: if a work is particularly resonant in the cultural zeitgeist at that time, I'll start it then. It's fun to read contemporaneously so I can engage with the communal discussions and thinkpieces. 
+But if I miss or forget to capture a book title, I don't sweat it too much. The benefit of curating a high-quality media diet across many different channels (newsletters, podcasts, Youtube, BookTok, etc) means that the truly outstanding book titles will bubble up time and time again. 
+
+The recurring reminders are also a good signal to bump it up in my reading priority. I usually resist setting timelines to read books (creates more unnecessary pressure), with the one exception: if a work is particularly resonant in the cultural zeitgeist at that time, I'll start it then. It's fun to read contemporaneously so I can engage with the communal discussions and thinkpieces. 
 
 Some recent releases which generated a ton of buzz, encouraging timely reading:
 - 2025: [Perfection](https://bradymp.substack.com/p/review-vincenzo-latronicos-perfection) & [The Tainted Cup](https://global.penguinrandomhouse.com/announcements/the-2025-hugo-awards-the-tainted-cup-wins-best-novel/)
@@ -67,7 +76,9 @@ Some recent releases which generated a ton of buzz, encouraging timely reading:
 *Even Amazon UK is getting in on the [Flesh](https://amzn.to/4jzeSml) hype.*
 <br />
 
-Sometimes older works from the literary canon re-emerge into the zeitgest as well. [In Search of Lost Time](https://amzn.to/4qLiWSK) by Marcel Proust and [Middlemarch](https://amzn.to/4qd0GBX) by George Eliot are two other classics [mentioned](https://nabeelqu.substack.com/p/on-reading-prousts-in-search-of-lost) [a](https://www.blackbirdspyplane.com/p/this-life-gives-you-nothing) [lot](https://petya.substack.com/p/issue-105-why-is-everybody-reading) in my content catalog, so they are strong contenders for my 2026 reading list.
+Sometimes older works from the literary canon re-emerge into the zeitgest as well. [In Search of Lost Time](https://amzn.to/4qLiWSK) by Marcel Proust and [Middlemarch](https://amzn.to/4qd0GBX) by George Eliot are two other classics [mentioned](https://nabeelqu.substack.com/p/on-reading-prousts-in-search-of-lost) [quite](https://www.blackbirdspyplane.com/p/this-life-gives-you-nothing) [regularly](https://petya.substack.com/p/issue-105-why-is-everybody-reading) in my content catalog, so they are strong contenders for my 2026 reading list.
+
+## *…on actively searching for books*
 
 Beyond a passive book pipeline, I regularly seek out new books as well. I very much subscribe to Celine Nguyen's idea of [research as leisure activity](https://www.personalcanon.com/p/research-as-leisure-activity):
 
@@ -111,7 +122,7 @@ Everyone has idiosyncrasies when it comes to their daily habits and routines, an
 I typically have several books in progress, one for each form factor:
 - **Audiobook**: Used for commutes, household chores, and walking the dog. I can only really ingest nonfiction books in audio form because I'm multi-tasking and only half paying attention. Typically, I am listening to a book about science or technology.
 - **Ebook**: The default mode of reading, extremely convenient to access any time I have some downtime. I like to have something on hand that can fill any amount of time, from dedicated hours during a weekend to short 10-minute gaps between one activity and the next. I usually will be reading fiction, to balance out the content with nonfiction audiobooks. If I'm re-reading a book, such as refreshing myself on a previously-read series ahead of the next release, I'll use the Kindle plus audible sync to finish faster.
-- **Physical book**: A mix of fiction and nonfiction, depending on what I've acquired at the bookshop. I have small stacks of books scattered throughout the house, various ongoing research topics to return to when it suits me. Sometimes older or out of print books are only available in physical form. I also have found certain kinds of fiction very difficult to read digitally: epistolary writing and experimental literature simply work better for my brain if I can physically hold it. I also always have one fiction novel by my bedside to wind down for sleep.
+- **Physical book**: A mix of fiction and nonfiction, depending on what I've acquired at the bookshop. I have small stacks of books scattered throughout the house, various ongoing research topics to return to when it suits me. Sometimes older or out of print books are only available in physical form. I also have found certain kinds of fiction very difficult to read digitally: [epistolary writing](https://amzn.to/4sDGgUk) and experimental literature simply work better for my brain if I can physically hold it. I also always have one fiction novel by my bedside to wind down for sleep.
 
 I do most of my eBook reading on my phone in the [Kindle app](https://apps.apple.com/us/app/amazon-kindle/id302584613), of course. I've been trying to switch to using my iPad at home, mostly because I think I'm developing a mild carpal tunnel by holding my phone in a demented claw grip for hours on end. I also own a separate e-ink reader (the [Boox Palma](https://shop.boox.com/products/palma)!) which is a joy to read on, especially when I want to avoid the endless distraction of smartphone screens.
 
@@ -124,14 +135,14 @@ But if was up to me, the best places to read are:
 - Sprawled on the grassy slopes of a beautiful park at golden hour, in late summer when the hottest days are over, with my dog nosing around me
 
 ![favorite-reading-spots](/assets/img/posts/reading-habit/favorite-reading-spots.png)
-*Our living room, a local coffee spot, and the dog at the park.*
+*Our living room, a local coffee spot, and hanging out with the dog at the park.*
 <br />
 
 ## Record-keeping
 
 Over the years, I've cobbled together and invented much of the record-keeping for my reading habit. 
 
-I've been tracking my completed books using [Airtable](https://airtable.com/) since 2016. I think any spreadsheet app would work just as well, and eventually I might migrate if they ever change their pricing plan to start charging me a monthly fee. Airtable does have some nice-to-have features like [form integrations](https://www.google.com/search?q=airtable+form&rlz=1C5CHFA_enUS1077US1080&oq=airtable+form&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg90gEIMTE4OWowajGoAgCwAgA&sourceid=chrome&ie=UTF-8) for my annual book gifting but it's not crucial to have it consolidated into a single system. I don't use Goodreads or [StoryGraph](https://thestorygraph.com/) because I simply don't need any of the social features with my own custom discovery pipeline.
+I've been tracking my completed books using [Airtable](https://airtable.com/) since 2016. I think any spreadsheet app would work just as well, and eventually I might migrate if they ever change their pricing plan to start charging me a monthly fee. Airtable does have some nice-to-have features like [form integrations](https://www.google.com/search?q=airtable+form&rlz=1C5CHFA_enUS1077US1080&oq=airtable+form&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg90gEIMTE4OWowajGoAgCwAgA&sourceid=chrome&ie=UTF-8) for my annual book gifting but it's not crucial to have it consolidated into a single system. I don't use [Goodreads](https://www.goodreads.com/) or [StoryGraph](https://thestorygraph.com/) because I simply don't need any of the social features with my own custom discovery pipeline.
 
 I currently have [361 books tracked](https://airtable.com/appKTZvvs0ZwwSrdX/shrG6WTap8zF1ZfOV) in a database. For each book, I simply record the following:
 - Title
@@ -142,7 +153,7 @@ I currently have [361 books tracked](https://airtable.com/appKTZvvs0ZwwSrdX/shrG
 - Date completed
 - Year completed
 
-I used to also write down personal notes and other attributes, too, but I found that I never went back to look at those details. Doing [yearly reflections](/blog/2023/01/16/holiday-books/) means that I still retain full knowledge of the books. For previous years, I can always consult my [past write-ups](/blog/2025/12/14/holiday-book-list/) if I need a reminder of my top book picks.
+I used to also write down personal notes and other attributes, too, but I found that I never went back to look at those details. And since I do my [holiday book lists](/blog/2023/01/16/holiday-books/) every year, it’s not so long that I’ve forgotten the crucial parts of the books. For past years, I can always consult my [past write-ups](/blog/2025/12/14/holiday-book-list/) if I need a reminder of my top book picks.
 
 I don't track books I did not finish (DNF) for a few reasons: 
 1. It adds extra work when I am only focused on books I plan to actively recommend
@@ -165,6 +176,10 @@ Instead, I've built this elegant (and free!) workflow:
 
 For Kindle and Audible, I use the [highlights](https://read.amazon.com/notebook) and [clips](https://help.audible.co.uk/s/article/manage-clips-bookmarks?language=en_GB) features in the apps. For physical books, I use the [Highlighted](https://apps.apple.com/us/app/highlighted-image-to-text/id1480216009) iOS app which uses OCR to easily scan pages and save them as text quotes.
 
+![highlighted-app](/assets/img/posts/reading-habit/highlighted-app.png)
+*The app also provides a nice overview of the physical books I've recently read and highlighted.*
+<br />
+
 So I built a Chrome extension called [Recite](https://chromewebstore.google.com/detail/recite/jpngepoglfflfacfcjfodbgnmhejlaoa?hl=en&authuser=0&pli=1) which uses a [simple Google spreadsheet to display a saved quote](/blog/2023/04/02/recite-extension/) on each new tab page. It's a really low effort way to see quotes from books I've read, and I always get a small frisson of delight when I see a great quote from a book I haven't read in many years. Since building the extension in 2023, I've already accumulated 600+ quotations and highlights using this system.
 
 ![recite-new-tab](/assets/img/posts/reading-habit/recite-new-tab.png)
@@ -172,9 +187,9 @@ So I built a Chrome extension called [Recite](https://chromewebstore.google.com/
 
 <hr class="section-divider" />
 
-Hope you've enjoyed this braindump of my reading practice. I'd love to hear about what works for you too, so shoot me a note at <a href="mailto: hello@vivqu.com" target="_blank">hello@vivqu.com</a>.
+I hope you've enjoyed this braindump of my reading practice. I'd love to hear about what works for you too, so shoot me a note at <a href="mailto: hello@vivqu.com" target="_blank">hello@vivqu.com</a>.
 
-I'll leave you with these great words from [Blackbird Spyplane](https://www.blackbirdspyplane.com/p/this-life-gives-you-nothing):
+I'll end with these great words from [Blackbird Spyplane](https://www.blackbirdspyplane.com/p/this-life-gives-you-nothing):
 
 > **Our appetite for life is** **so big that living just one life doesn’t always feel like enough.** We want to know what other people’s lives are like, and we want other people to live some of our lives, too.
 >
@@ -182,4 +197,4 @@ I'll leave you with these great words from [Blackbird Spyplane](https://www.blac
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 1/12/2026. v1 is 2,969 words and took 8 hours to write and edit.</footer>
+<footer>This article was last updated on 1/12/2026. v1 is 3,025 words and took 8 hours to write and edit.</footer>
