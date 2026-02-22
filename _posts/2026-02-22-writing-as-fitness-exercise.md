@@ -13,7 +13,7 @@ date: 2026-02-22 16:30:00
 _This is the first-part on [writing as necessary friction](/blog/2026/02/22/writing-as-necessary-friction/)._
 
 <img class="banner-image" src="/assets/img/posts/writing-as-necessity/balustrade-oudry.jpg" />
-<em>Jean-Baptiste Oudry (courtesy of <a href="https://www.getty.edu/art/collection/object/107RTK" target="_blank">Getty Open Content</a>)</em>
+<em>Jean-Baptiste Oudry (from <a href="https://www.getty.edu/art/collection/object/107RTK" target="_blank">Getty Open Content</a>)</em>
 <br />
 
 It makes sense that many writers, when faced with the existential dread of generative AI, return to the same metaphor: that the nature of writing is [the](https://beej.us/guide/bglcs/html/split/use-of-ai.html) [same](https://www.dbreunig.com/2025/12/27/why-i-write.html) [as](https://danielmiessler.com/blog/keep-the-robots-out-of-the-gym) fitness exercise.
@@ -55,6 +55,9 @@ There are definitely some useful applications that might be included here and th
 > In other words, instruments can surprise you with what they offer, but they are not automatic. In the end, they require a touch. You use a tool, but you _play_ an instrument. It’s a more expansive way of doing, and the doing of it all is important, because that’s where you develop the instincts for excellence. There is no purpose to better machines if they do not also produce better humans.
 
 At one point, even word processors were suspected of damaging the creative process of writing. It's hard to remember the past mindsets of people experiencing the technological change that has become so normalized to us.  Now it seems quaint, almost cute, that we had those kinds of fears.
+
+<img src="/assets/img/posts/writing-as-necessity/computer-bus.png" />
+<em>Computer bus Heiloo, 1985 (from <a href="https://www.rijksmuseum.nl/en/collection/object/Computerbus-Heiloo--7118e03e465323fa7a1ed66089dd1f99" target="_blank">Rijksmuseum</a>)</em>
 
 John Hersey [gave an interview to The Paris Review](https://www.theparisreview.org/interviews/2756/the-art-of-fiction-no-92-john-hersey) in 1986, revealing how the computer dramatically improved the tedious manual labor of revision, 
 

@@ -11,7 +11,7 @@ date: 2026-02-22 12:30:00
 ---
 
 <img class="banner-image" src="/assets/img/posts/writing-as-necessity/van-tromp-turner.jpg" />
-<em>Joseph Mallord William Turner (courtesy of <a href="https://www.getty.edu/art/collection/object/103RK1" target="_blank">Getty Open Content</a>)</em>
+<em>Joseph Mallord William Turner (from <a href="https://www.getty.edu/art/collection/object/103RK1" target="_blank">Getty Open Content</a>)</em>
 <br />
 
 When I first sit down to write, the words don’t come easily at all. It feels like pushing through mental sludge, the gears in my head turning with great reluctance. I can have a clear topic or strong framing in mind, sometimes even with hours-of-related-reading-produced research notes, and still there is resistance to getting the sentences out.
