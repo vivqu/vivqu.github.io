@@ -167,6 +167,10 @@ img[alt="celebration-map"] {
   width: 550px;
 }
 
+img.banner-image {
+  max-width: 100%;
+}
+
 @media only screen and (max-width: 590px) {
   img[alt="maps-notification"] {
     max-width: 250px;

@@ -5,14 +5,16 @@ published: true
 source: false
 seo_description: "writing reading philosophy"
 tags: writing life
-image: assets/img/posts/reading-habit/favorite-reading-spots.png
+image: assets/img/posts/writing-as-necessity/balustrade-oudry.jpg
 read_time: 6 min
 date: 2026-02-22 16:30:00
 ---
 
 _This is the first-part on [writing as necessary friction](/blog/2026/02/22/writing-as-necessary-friction/)._
 
-<hr class="section-divider" />
+<img class="banner-image" src="/assets/img/posts/writing-as-necessity/balustrade-oudry.jpg" />
+<em>Jean-Baptiste Oudry (courtesy of <a href="https://www.getty.edu/art/collection/object/107RTK" target="_blank">Getty Open Content</a>)</em>
+<br />
 
 It makes sense that many writers, when faced with the existential dread of generative AI, return to the same metaphor: that the nature of writing is [the](https://beej.us/guide/bglcs/html/split/use-of-ai.html) [same](https://www.dbreunig.com/2025/12/27/why-i-write.html) [as](https://danielmiessler.com/blog/keep-the-robots-out-of-the-gym) fitness exercise.
 
