@@ -25,6 +25,8 @@
 
 ## Blog Posts
 
+- [Writing as necessary friction](https://vivqu.com/blog/2026/02/22/writing-as-necessary-friction/): Exploring the intrinsic motivations for writing in an age of AI-generated content
+- [Writing as fitness exercise](https://vivqu.com/blog/2026/02/22/writing-as-fitness-exercise/): How writing trains the mind to think, part one of the writing as necessary friction series
 - [My reading habit](https://vivqu.com/blog/2026/01/12/reading-habit/): My process of discovering, reading, and recording books
 - [Holiday book list](https://vivqu.com/blog/2025/12/14/holiday-book-list/): Annual reading recommendations
 - [My mobile vibe coding setup](https://vivqu.com/blog/2025/11/30/vibe-coding-setup/): Building a home-cooked mobile app with Claude Code and SwiftUI

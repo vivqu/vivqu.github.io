@@ -3,6 +3,7 @@ title: "My mobile vibe coding setup"
 subtitle: "Building a home-cooked mobile app"
 published: true
 source: false
+best_of: true
 seo_description: "llms vibe-coding mobile-development"
 tags: tech work
 image: assets/img/posts/mobile-coding-agents/agent-setup.png
