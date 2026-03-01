@@ -10,7 +10,7 @@ read_time: 6 min
 date: 2026-02-22 16:30:00
 ---
 
-_This is the first-part on [writing as necessary friction](/blog/2026/02/22/writing-as-necessary-friction/)._
+_This is the first part on [writing as necessary friction](/blog/2026/02/22/writing-as-necessary-friction/)._
 
 <img class="banner-image" src="/assets/img/posts/writing-as-necessity/balustrade-oudry.jpg" />
 <em>Jean-Baptiste Oudry (from <a href="https://www.getty.edu/art/collection/object/107RTK" target="_blank">Getty Open Content</a>)</em>
@@ -70,6 +70,14 @@ John Hersey [gave an interview to The Paris Review](https://www.theparisreview.o
 The lesson here is to carefully tend the skills that can work with and _through_ the instruments, whether the instrument is pen and paper, word processors, or even generative AI. Writing provides a mental strength-training that cannot be captured through other mediums. And the painful repetition and effort of crafting an essay does add up to something greater than the sum of its parts, just like a heart-wrenching musical performance is more than just the instrument and the individual notes played one after another.
 
 It surely says something that writing not only evolved multiple times but has survived through all subsequent technological revolutions. It will survive this one too.
+
+
+<hr class="section-divider" />
+
+In the next part, we explore [writing as synchronizing with reality](/blog/2026/03/01/writing-as-synchronizing-reality/). 
+
+<br />
+
 
 <hr class="section-divider" />
 
