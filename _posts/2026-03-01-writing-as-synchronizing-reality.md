@@ -4,7 +4,7 @@ subtitle: "Creating a perceptual shift"
 published: true
 source: false
 seo_description: "writing reading philosophy"
-tags: writing tech work life
+tags: writing life
 image: assets/img/posts/writing-as-necessity/van-tromp-turner.jpg
 read_time: 7 min
 ---
