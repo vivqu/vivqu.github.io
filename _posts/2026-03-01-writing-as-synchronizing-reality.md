@@ -81,4 +81,4 @@ Writing helps me better perceive the world around me. And the difficulty and tim
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 03/01/2026. v1 is 1,606 words and took 4.5 hours to write and edit.</footer>
+<footer>This article was last updated on 03/01/2026. v1 is 1,606 words and took 6.0 hours to write and edit.</footer>
