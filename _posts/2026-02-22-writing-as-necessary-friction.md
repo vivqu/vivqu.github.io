@@ -29,7 +29,7 @@ That's why intrinsic motivation is essential for writing. It's getting harder to
 There are four different kinds of drivers<sup><a href="#fn2" id="ref2">2</a></sup> for me:
 - writing as [fitness exercise](/blog/2026/02/22/writing-as-fitness-exercise/)
 - writing as [synchronizing with reality](/blog/2026/03/01/writing-as-synchronizing-reality/)
-- writing as theory-building
+- writing as [theory-building](/blog/2026/03/25/writing-as-theory-building/)
 - writing as aliveness
 
 Let's explore what gets me to torture myself with the act of writing, and why its actually a necessary friction.
@@ -48,4 +48,4 @@ Head to the first part of the series — [writing as fitness exercise](/blog/202
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 2/22/2026. v1 is 1,495 words and took 4.5 hours to write and edit.</footer>
+<footer>This article was last updated on 3/25/2026. v1 is 1,495 words and took 4.5 hours to write and edit.</footer>
