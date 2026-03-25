@@ -174,4 +174,4 @@ If you don't believe me, try this yourself. Come back later in a week and try ou
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 03/25/2026. v1 is 3,831 words and took 6.0 hours to write and edit.</footer>
+<footer>This article was last updated on 03/25/2026. v1 is 3,870 words and took 6.5 hours to write and edit.</footer>
