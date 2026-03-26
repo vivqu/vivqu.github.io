@@ -69,7 +69,7 @@ Given how subjective and intuitive the nature of theory-building is, it makes se
 
 Let's now return to writing. Even though theoretical understanding is impossible to directly transfer, the quality of communication does dramatically affect how well others are able to grasp the knowledge.
 
-Naur's paper identifies metaphors are an especially effective way to align people's mental models, especially across increasingly large groups of people:
+Naur's paper identifies metaphors as an especially effective way to align people's mental models, especially across increasingly large groups of people:
 
 > The value of a good metaphor increases with the number of designers. The closer each person's guess is "close" to the other people's guesses, the greater the resulting consistency in the final system design. \[...\] An appropriate, shared metaphor lets a person guess accurately where someone else on the team just added code, and how to fit her new piece in with it.
 
