@@ -9,6 +9,11 @@ image: assets/img/posts/celebration-sunshine/gardener-seurat.jpg
 read_time: 13 min
 ---
 
+<br />
+<footnote>This is my third year joining <a href="https://www.aprilcools.club/" target="_blank">April Cools' Club</a> where folks submit writing that's genuine and atypical. In this one I put on my amateur sociologist hat and go overboard in analyzing Wikipedia and Reddit data. For the past two years, check out <a href="/blog/2025/04/01/paris-of-dreams/">Paris syndrome</a> and <a href="/blog/2024/04/01/creami/">the history of the Ninja Creami</a>.</footnote>
+<br />
+
+
 <img class="banner-image" src="/assets/img/posts/celebration-sunshine/gardener-seurat.jpg" />
 <em>"The Gardener" by Georges Seurat (from <a href="https://www.metmuseum.org/art/collection/search/437656" target="_blank">The Met Collection</a>)</em>
 <br />
@@ -253,4 +258,4 @@ Let's celebrate the sunshine!
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 04/01/2026. v1 is 2,957 words and took 6.75 hours to write and edit.</footer>
+<footer>This article was last updated on 04/01/2026. v1 is 3,009 words and took 6.75 hours to write and edit.</footer>
