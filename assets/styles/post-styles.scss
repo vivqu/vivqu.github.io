@@ -213,7 +213,7 @@ img.banner-image {
 }
 
 footer {
-  font-family: 'StandardBook';
+  font-family: 'iAWriterQuattroS';
   color: $secondary-color;
   font-size: $footer-size;
 }
@@ -229,6 +229,7 @@ footnote {
 }
 
 code {
+  font-family: 'GeistMono', monospace;
   font-size: 14px;
 }
 
@@ -249,6 +250,12 @@ a > code {
   word-wrap: break-word;
 }
 
+.post-table,
+.post-table th,
+.post-table td {
+  font-family: 'iAWriterQuattroS', sans-serif;
+}
+
 .post-table {
   max-width: 90%;
   margin-top: 20px;
@@ -261,7 +268,7 @@ a > code {
 }
 
 .post-table > thead > tr > th {
-  padding: 8px;
+  padding: 8px 10px;
   background-color: $post-table-title-color;
   color: #fff;
   border: 1px solid $post-table-border-color;
@@ -269,7 +276,7 @@ a > code {
 }
 
 .post-table > tbody > tr > td {
-  padding: 8px;
+  padding: 8px 10px;
   background-color: $post-table-bg-color;
   border: 1px solid $post-table-border-color;
   text-align: center;

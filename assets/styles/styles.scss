@@ -13,6 +13,7 @@
 }
 
 body {
+  font-family: 'iAWriterQuattroS', sans-serif;
   font-size: $text-size;
 }
 
@@ -21,7 +22,7 @@ h2,
 h3,
 h4 {
   font-weight: normal !important;
-  font-family: 'StandardBook', sans-serif;
+  font-family: 'iAWriterQuattroS', sans-serif;
 }
 
 h1 {
@@ -41,7 +42,7 @@ h4 {
 p,
 ol,
 ul {
-  font-family: 'StandardBook', sans-serif;
+  font-family: 'iAWriterQuattroS', sans-serif;
   line-height: $line-height;
 }
 
@@ -64,6 +65,7 @@ a {
   color: $text-color;
   text-decoration: underline;
   text-decoration-color: $link-color;
+  text-underline-offset: 3px;
 }
 
 a:hover {
@@ -74,6 +76,7 @@ blockquote {
   color: $blockquote-color;
   border-left: 2px solid $blockquote-border-color;
   padding-left: 16px;
+  font-size: 0.95em;
 }
 
 .article {
@@ -206,14 +209,14 @@ h2.book-details-subtitle {
 
 .project-subtitle {
   color: $subtitle-color;
-  font-family: 'StandardBook', sans-serif;
+  font-family: 'iAWriterQuattroS', sans-serif;
   font-size: $project-subtitle-size;
 }
 
 .post-subtitle,
 .post-date {
   color: $subtitle-color;
-  font-family: 'StandardBook', sans-serif;
+  font-family: 'iAWriterQuattroS', sans-serif;
 }
 
 .post-date {
@@ -297,7 +300,7 @@ nav.masthead {
 
 nav > p {
   text-align: left;
-  font-family: 'StandardBook', sans-serif;
+  font-family: 'iAWriterQuattroS', sans-serif;
 }
 
 .masthead-links {
@@ -430,7 +433,7 @@ nav > p {
 }
 
 .emailFooterText {
-  font-family: 'StandardBook', sans-serif;
+  font-family: 'iAWriterQuattroS', sans-serif;
   font-size: $email-footer-size;
 }
 
@@ -444,7 +447,7 @@ form-control:focus {
 .footerText {
   text-align: center;
   width: 100%;
-  font-family: 'StandardBook', sans-serif; 
+  font-family: 'iAWriterQuattroS', sans-serif; 
   color: $footer-text-color;
   padding-bottom: 30px;
 }
@@ -479,7 +482,7 @@ hr.section-divider {
 hr.section-divider:before {
   --x-height-multiplier: 0.342;
   --baseline-multiplier: 0.22;
-  font-family: 'StandardBook', sans-serif;
+  font-family: 'iAWriterQuattroS', sans-serif;
   font-weight: 400;
   font-style: italic;
   font-size: $section-divider-font-size;
@@ -492,7 +495,7 @@ hr.section-divider:before {
 }
 
 .post-navigation {
-  font-family: 'StandardBook', sans-serif;
+  font-family: 'iAWriterQuattroS', sans-serif;
   font-size: $post-nav-size;
   display: flex;
   width: 100%;
