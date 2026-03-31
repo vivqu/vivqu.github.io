@@ -236,7 +236,7 @@ And the British don’t just collectively plan more upcoming sunny vacation trip
 
 So after all this data and exploration, I've convinced myself that it's actually a complex combination of geographic realities and cultural forces that create the mass celebration of sunshine. This city, living through unrelenting greyness for six months and seeing no escape to sunnier southern climes without leaving the country entirely, explodes into rapture when spring arrives. It's a bewildering and beautiful cultural phenomenon.
 
-As a final proof point, I pulled all the 2026 posts so far in the four major city subreddits to compare the sentiments. There were almost 4x the number of posts in r/london related to the coming of spring. Park visits, beer garden plans, and pure declarations of joy for the beautiful weather fill the posts.
+As a final proof point, I pulled all the 2026 posts so far in the four major city subreddits to compare the sentiments. There were almost 4x the number of posts in [r/london](https://www.reddit.com/r/london/) related to the coming of spring. Park visits, beer garden plans, and pure declarations of joy for the beautiful weather fill the posts.
 
 {:.post-table}
 
