@@ -117,7 +117,7 @@ Clicking a tag in the legend zooms to that cluster and fades unrelated nodes. Cl
 ### Tooltip improvements
 
 - [x] Show full date instead of year only — formatted with `toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })`
-- [ ] Add a `blurb` field to `reading.yml` entries: a 1-sentence description of the article — display it in the tooltip below the author/date line, and include it in `graph.json`
+- [x] Add a `blurb` field to `reading.yml` entries: a 1-sentence description of the article — display it in the tooltip below the author/date line, and include it in `graph.json`
 
 ### Data cleanup
 

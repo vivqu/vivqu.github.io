@@ -233,7 +233,9 @@ exclude_nav: true
           : '';
         const tagsHtml = (d.tags || []).length
           ? `<br><span style="color:#888">${d.tags.join(', ')}</span>` : '';
-        tooltip.innerHTML = `<strong>${esc(d.label)}</strong><br>${esc(d.author)}${dateStr ? ' · ' + dateStr : ''}${tagsHtml}`;
+        const blurbHtml = d.blurb
+          ? `<br><span style="color:#aaa;font-style:italic">${esc(d.blurb)}</span>` : '';
+        tooltip.innerHTML = `<strong>${esc(d.label)}</strong><br>${esc(d.author)}${dateStr ? ' · ' + dateStr : ''}${tagsHtml}${blurbHtml}`;
         tooltip.style.display = 'block';
         positionTooltip(event);
       })

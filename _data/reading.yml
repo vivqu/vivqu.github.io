@@ -14,6 +14,7 @@
   domain: timdettmers.com
   tags: [forecasting, skepticism]
   date: "2025-12-15"
+  blurb: "Some compelling points on physical computing constraints limiting the ceiling of AI capabilities."
   refs: []
 
 - title: "What If? AI in 2026 and Beyond"
@@ -22,7 +23,8 @@
   domain: oreilly.com
   tags: [forecasting]
   date: "2025-12-08"
-  refs: []
+  blurb: "Analyzing market dynamics between the big frontier labs and projecting various outcomes."
+  refs: ["https://www.normaltech.ai/p/ai-as-normal-technology"]
 
 - title: "The Useful Idiots of AI Doomsaying"
   url: "https://www.theatlantic.com/books/archive/2025/09/what-ais-doomers-and-utopians-have-in-common/684270/"
@@ -30,6 +32,7 @@
   domain: theatlantic.com
   tags: [forecasting, skepticism]
   date: "2025-09-19"
+  blurb: "A skeptic's analysis of Yudowsky's _If Anyone Builds It, Everyone Dies_ book."
   refs: []
 
 - title: "Welcome to a Multidimensional Economic Disaster"
@@ -38,6 +41,7 @@
   domain: theatlantic.com
   tags: [forecasting, skepticism, economics]
   date: "2026-03-26"
+  blurb: "Overview of the polycrisis linking the war with Iran to AI companies to the entire country's economy."
   refs: []
 
 - title: "Coders after AI"
@@ -46,6 +50,7 @@
   domain: anildash.com
   tags: [career]
   date: "2026-03-13"
+  blurb: "A vision for the way forward for software developers in the age of AI."
   refs: []
 
 - title: "The fate of 'small' open source"
@@ -54,6 +59,7 @@
   domain: nolanlawson.com
   tags: [open-source, frameworks]
   date: "2025-11-16"
+  blurb: "Is small open source dead? Big, inventive, and niche projects might still be safe."
   refs: []
 
 - title: "dead framework theory"
@@ -62,6 +68,7 @@
   domain: aifoc.us
   tags: [open-source, frameworks]
   date: "2025-10-12"
+  blurb: "Framework success now depends on distribution by and through LLMs. Focus on building net new capabilities."
   refs: []
 
 - title: "AGI Is Not a Milestone"
@@ -70,6 +77,7 @@
   domain: normaltech.ai
   tags: [forecasting, skepticism]
   date: "2025-05-01"
+  blurb: "AGI is an unclear threshold and subsequent innovation/diffusion will only happen at human speeds."
   refs: ["https://www.normaltech.ai/p/ai-as-normal-technology"]
 
 - title: "AI as Normal Technology"
@@ -78,6 +86,7 @@
   domain: normaltech.ai
   tags: [forecasting, skepticism]
   date: "2025-04-15"
+  blurb: "Economic benefits of AI will be gradual. Adoption of advanced AI will be limited by organization integrating it as 'normal' technology."
   refs: []
 
 - title: "No AGI in Sight: What This Means for LLMs"
@@ -86,6 +95,7 @@
   domain: kennethwolters.com
   tags: [forecasting, skepticism]
   date: "2025-08-12"
+  blurb: "AGI is not possible with our current techniques, we have reached diminishing returns with current model architecture and training."
   refs: []
 
 - title: "How Well Did Superforecasters and AI Predict?"
@@ -94,6 +104,7 @@
   domain: forecastingresearch.substack.com
   tags: [forecasting]
   date: "2026-02-19"
+  blurb: "Breakdown of how well superforecasters performed at predicting LLM innovation gains in molecular biology."
   refs: []
 
 - title: "Could AI Slow Science?"
@@ -102,6 +113,7 @@
   domain: normaltech.ai
   tags: [forecasting]
   date: "2025-07-16"
+  blurb: "Concerns on the impact of AI on scientific institutions and overall progress."
   refs: ["https://www.normaltech.ai/p/ai-as-normal-technology"]
 
 - title: "2023"
@@ -110,6 +122,7 @@
   domain: hyperdimensional.co
   tags: [forecasting, skepticism]
   date: "2026-03-25"
+  blurb: "Thoughtful viewpoint which strikes a balance between boundless AI optimism and doomerism."
   refs: ["https://www.normaltech.ai/p/ai-as-normal-technology"]
 
 - title: "Tailwind CSS: add llms.txt endpoint for LLM-optimized documentation"
@@ -118,6 +131,7 @@
   domain: github.com
   tags: [open-source]
   date: "2025-11-18"
+  blurb: "Discussion on the impact of AI coding agents on Tailwind's economics."  
   refs: []
 
 - title: "Tldraw: Move tests to closed source repo"
@@ -126,6 +140,7 @@
   domain: github.com
   tags: [open-source]
   date: "2026-02-25"
+  blurb: "Tldraw (jokingly) proposes moves its test suite to a private repo to prevent AI copycat frameworks."
   refs: []
 
 - title: "The Claude Code Source Leak: fake tools, frustration regexes, undercover mode, and more"
@@ -134,6 +149,7 @@
   domain: alex000kim.com
   tags: [agent-harness, open-source]
   date: "2026-03-31"
+  blurb: "Posits that the worst impacts of the source code leak was losing strategic advantage against competition."  
   refs: []
 
 - title: "Reading leaked Claude Code source code"
@@ -142,4 +158,5 @@
   domain: lr0.org
   tags: [agent-harness, open-source]
   date: "2026-03-31"
+  blurb: "Interesting technical insights from the leaked Claude Code source code."
   refs: ["https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/"]

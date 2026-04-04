@@ -6,7 +6,7 @@ layout: null
 {
   "nodes": [
 {% for article in articles %}
-    { "id": {{ article.url | jsonify }}, "type": "article", "label": {{ article.title | jsonify }}, "author": {{ article.author | jsonify }}, "tags": {{ article.tags | jsonify }}, "date": {{ article.date | jsonify }}, "self": {% if article.domain == "self" %}true{% else %}false{% endif %} }{% unless forloop.last %},{% endunless %}
+    { "id": {{ article.url | jsonify }}, "type": "article", "label": {{ article.title | jsonify }}, "author": {{ article.author | jsonify }}, "tags": {{ article.tags | jsonify }}, "date": {{ article.date | jsonify }}, "blurb": {{ article.blurb | jsonify }}, "self": {% if article.domain == "self" %}true{% else %}false{% endif %} }{% unless forloop.last %},{% endunless %}
 
 {% endfor %}
   ],
