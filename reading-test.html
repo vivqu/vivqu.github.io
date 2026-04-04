@@ -34,11 +34,25 @@ data_file: test_graph
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script>
 (function () {
+  const TEST_MODE   = new URLSearchParams(location.search).get('testmode') === '1';
   const BG          = '#14141f';
   const ARTICLE_COL = '#7c6edb';
   const OWN_COL     = '#f0c060';
   const TAG_PALETTE = ['#b06edb','#6eabd8','#6ed8a4','#d8c76e','#d87a6e','#6e8fd8','#d86eaa','#8bd86e'];
   const CLUSTER_PAD = 38;
+
+  const TEST_COLORS = {
+    'subcluster':        '#7c6edb',
+    'supercluster-only': '#e05555',
+    'dual-subcluster':   '#e08020',
+    'bridge':            '#c040c0',
+    'free':              '#40c0e0',
+  };
+  // Stroke overlay for own posts in non-subcluster positions
+  const TEST_OWN_STROKE = {
+    'supercluster-only': '#e05555',
+    'free':              '#40c0e0',
+  };
 
   // Backlink-based radius scale: [0 refs, 1, 2–3, 4–6, 7+] → radius px
   const rScale = d3.scaleThreshold([1, 2, 4, 7], [6, 8, 11, 15, 20]);
@@ -216,7 +230,12 @@ data_file: test_graph
 
     nodeG.append('circle')
       .attr('r',    d => nodeRadius(d))
-      .attr('fill', d => nodeColor(d));
+      .attr('fill', d => {
+        if (!TEST_MODE) return nodeColor(d);
+        return d.self ? OWN_COL : (TEST_COLORS[d.testCategory] || ARTICLE_COL);
+      })
+      .attr('stroke', d => TEST_MODE && d.self ? (TEST_OWN_STROKE[d.testCategory] || null) : null)
+      .attr('stroke-width', d => TEST_MODE && d.self && TEST_OWN_STROKE[d.testCategory] ? 2 : null);
 
     nodeG.append('text')
       .text(d => d.label)

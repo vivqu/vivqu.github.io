@@ -3,10 +3,13 @@ layout: null
 ---
 {% assign articles = site.data.test_graph %}
 {% assign article_urls = articles | map: "url" | join: "|||" %}
+{% assign SUPERCLUSTERS = "tech,science,society" | split: "," %}
+{% assign SUBCLUSTERS = "frontend,backend,biology,physics,politics" | split: "," %}
 {
   "nodes": [
 {% for article in articles %}
-    { "id": {{ article.url | jsonify }}, "type": "article", "label": {{ article.title | jsonify }}, "author": {{ article.author | jsonify }}, "tags": {{ article.tags | jsonify }}, "date": {{ article.date | jsonify }}, "blurb": {{ article.blurb | jsonify }}, "self": {% if article.domain == "self" %}true{% else %}false{% endif %} }{% unless forloop.last %},{% endunless %}
+{% assign atags = article.tags %}{% assign sc = 0 %}{% assign sub = 0 %}{% for tag in atags %}{% if SUPERCLUSTERS contains tag %}{% assign sc = sc | plus: 1 %}{% endif %}{% if SUBCLUSTERS contains tag %}{% assign sub = sub | plus: 1 %}{% endif %}{% endfor %}{% if atags.size == 0 %}{% assign tc = "free" %}{% elsif sc >= 2 %}{% assign tc = "bridge" %}{% elsif sub >= 2 %}{% assign tc = "dual-subcluster" %}{% elsif sc == 1 and sub == 0 %}{% assign tc = "supercluster-only" %}{% elsif sub >= 1 %}{% assign tc = "subcluster" %}{% else %}{% assign tc = "free" %}{% endif %}
+    { "id": {{ article.url | jsonify }}, "type": "article", "label": {{ article.title | jsonify }}, "author": {{ article.author | jsonify }}, "tags": {{ article.tags | jsonify }}, "date": {{ article.date | jsonify }}, "blurb": {{ article.blurb | jsonify }}, "self": {% if article.domain == "self" %}true{% else %}false{% endif %}, "testCategory": {{ tc | jsonify }} }{% unless forloop.last %},{% endunless %}
 
 {% endfor %}
   ],

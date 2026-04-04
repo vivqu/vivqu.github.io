@@ -479,17 +479,21 @@ Complete these in order before making any further cluster layout changes.
 
 ### 4. Node classification
 
-- [ ] Add `classifyNode(d, tagMeta)` function to the graph JS — runs once after JSON parse, before simulation starts
-  - Input: a node `d` and a `tagMeta` map of `{ [tag]: { isSuper, isSub, parent } }` derived from cluster circle containment (the containment check already runs each tick — extract its result once at settle or on first tick)
-  - Returns one of: `'subcluster'`, `'supercluster-only'`, `'dual-subcluster'`, `'bridge'`, `'free'`, `'own-post'`
-  - Classification logic is defined in the Classification Logic section above
-- [ ] Precompute `d.testCategory` on each node so it doesn't re-run per-frame
+- [x] Bake `testCategory` into each node at build time in `reading/test-graph.json` (Liquid)
+  - Hardcoded tag hierarchy in the template: superclusters = `tech, science, society`; subclusters = `frontend, backend, biology, physics, politics`
+  - Classification logic runs per-article in Liquid: counts supercluster and subcluster tag matches, assigns one of `subcluster`, `supercluster-only`, `dual-subcluster`, `bridge`, `free`, `own-post`
+  - Result emitted as `"testCategory"` field on each node in the JSON
+  - No runtime JS inference needed — graph JS just reads `d.testCategory` directly
+  - Verified counts match test plan: 47 subcluster, 22 supercluster-only, 8 dual-subcluster, 12 bridge, 7 free, 3 own-post (99 total)
 
 ### 5. Test mode node colors
 
-- [ ] Wrap node fill color assignment in `if (TEST_MODE)` check
-- [ ] Use `TEST_COLORS[d.testCategory]` map from the Node Fill Colors table
-- [ ] Own posts: keep gold fill; add category-colored stroke ring (e.g. red stroke if `supercluster-only`, cyan stroke if `free`)
+- [x] Added `const TEST_MODE = new URLSearchParams(location.search).get('testmode') === '1'`
+- [x] `TEST_COLORS` map keyed by `testCategory` (read from JSON, no runtime inference)
+- [x] Node fill: `d.self ? OWN_COL : TEST_COLORS[d.testCategory]` when `TEST_MODE`; production `nodeColor(d)` otherwise
+- [x] Own posts: gold fill + `TEST_OWN_STROKE` colored stroke (red for `supercluster-only`, cyan for `free`, none for `subcluster`)
+- [x] Also updated `test-graph.json` Liquid: removed `own-post` from classification so `testCategory` always reflects positional category; `d.self` flag handles gold fill separately
+- [x] Verified: all 99 nodes render with correct colors (47 purple, 22 red, 8 orange, 12 magenta, 7 cyan, 3 gold)
 
 ### 6. Test mode ref link colors
 
