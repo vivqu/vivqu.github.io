@@ -12,6 +12,14 @@ bundle install
 jbundle
 ```
 
+## Testing
+
+Use `playwright-cli` for browser-based testing. Save screenshots to `.screenshot-tests/` (gitignored):
+
+```bash
+playwright-cli screenshot --filename=.screenshot-tests/page.png
+```
+
 ## Architecture
 
 This is a **Jekyll 3.9** static site deployed to GitHub Pages at vivqu.com.

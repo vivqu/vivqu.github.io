@@ -5,3 +5,7 @@ _site/
 Gemfile.lock
 .DS_Store
 */.DS_Store
+
+# Playwright files
+.playwright-cli/
+.screenshot-tests/
