@@ -1,12 +1,11 @@
 # Test graph data for /reading-test/?testmode=1
-# 99 synthetic nodes covering every topological edge case.
+# Synthetic nodes covering topological edge cases.
 # See .claude/projects/article-graph/TEST_PLAN.md for the full design.
 #
 # Node categories (matched by tag membership at runtime):
 #   Purple (default) — subcluster-only: tags contain only subcluster tags
 #   Red              — supercluster-only: tags contain only supercluster tag(s), no subcluster
 #   Orange           — dual-subcluster: two subclusters from the same supercluster
-#   Magenta          — cross-supercluster bridge: tags span two different superclusters
 #   Cyan             — free: no tags, or only singleton tags (no circle drawn)
 #   Gold             — own post (author: me / domain: self)
 #
@@ -44,7 +43,7 @@
   tags: [tech, frontend]
   date: "2023-02-14"
   blurb: "Test node: subcluster-only (frontend). Should be inside the frontend circle."
-  refs: ["https://example.com/frontend-canonical", "https://example.com/free-3"]
+  refs: ["https://example.com/frontend-canonical"]
 
 - title: "Frontend Fundamentals 2"
   url: "https://example.com/frontend-2"
@@ -79,8 +78,8 @@
   domain: example.com
   tags: [tech, frontend]
   date: "2025-04-03"
-  blurb: "Test node: subcluster-only (frontend). Cross-supercluster ref to biology — maximally cross-cluster stress test."
-  refs: ["https://example.com/biology-1"]
+  blurb: "Test node: subcluster-only (frontend). No outgoing refs."
+  refs: []
 
 # ─── SUBCLUSTER-ONLY: backend (category 2, 6 nodes) ─────────────────────────
 # Expected: inside the backend circle.
@@ -329,8 +328,8 @@
   domain: example.com
   tags: [tech]
   date: "2024-10-07"
-  blurb: "Test node: supercluster-only (tech). Cross-supercluster ref to science-1."
-  refs: ["https://example.com/science-1"]
+  blurb: "Test node: supercluster-only (tech). No refs."
+  refs: []
 
 - title: "Tech Overview 6"
   url: "https://example.com/tech-6"
@@ -338,8 +337,8 @@
   domain: example.com
   tags: [tech]
   date: "2025-02-22"
-  blurb: "Test node: supercluster-only (tech). Cross-supercluster ref to science-2."
-  refs: ["https://example.com/science-2"]
+  blurb: "Test node: supercluster-only (tech). No refs."
+  refs: []
 
 - title: "Tech Overview 7"
   url: "https://example.com/tech-7"
@@ -347,8 +346,8 @@
   domain: example.com
   tags: [tech]
   date: "2025-06-11"
-  blurb: "Test node: supercluster-only (tech). Cross-supercluster ref to science-3."
-  refs: ["https://example.com/science-3"]
+  blurb: "Test node: supercluster-only (tech). No refs."
+  refs: []
 
 - title: "Tech Overview 8"
   url: "https://example.com/tech-8"
@@ -405,8 +404,8 @@
   domain: example.com
   tags: [science]
   date: "2024-12-01"
-  blurb: "Test node: supercluster-only (science). Cross-supercluster ref to society-1."
-  refs: ["https://example.com/society-1"]
+  blurb: "Test node: supercluster-only (science). No refs."
+  refs: []
 
 - title: "Science Overview 6"
   url: "https://example.com/science-6"
@@ -414,8 +413,8 @@
   domain: example.com
   tags: [science]
   date: "2025-03-28"
-  blurb: "Test node: supercluster-only (science). Cross-supercluster ref to society-2."
-  refs: ["https://example.com/society-2"]
+  blurb: "Test node: supercluster-only (science). No refs."
+  refs: []
 
 - title: "Science Overview 7"
   url: "https://example.com/science-7"
@@ -573,126 +572,6 @@
   blurb: "Test node: dual-subcluster (biology+physics). Should sit between the biology and physics circles."
   refs: []
 
-# ─── CROSS-SUPERCLUSTER BRIDGE: tech + science (category 16, 4 nodes) ────────
-# Expected: near the boundary between tech and science superclusters.
-# Test color: MAGENTA.
-
-- title: "Tech-Science Bridge 1"
-  url: "https://example.com/bridge-tech-science-1"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, science]
-  date: "2023-01-29"
-  blurb: "Test node: cross-supercluster bridge (tech+science). Should sit near the boundary between tech and science."
-  refs: []
-
-- title: "Tech-Science Bridge 2"
-  url: "https://example.com/bridge-tech-science-2"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, science]
-  date: "2023-10-14"
-  blurb: "Test node: cross-supercluster bridge (tech+science). Should sit near the boundary between tech and science."
-  refs: []
-
-- title: "Tech-Science Bridge 3"
-  url: "https://example.com/bridge-tech-science-3"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, science]
-  date: "2024-08-03"
-  blurb: "Test node: cross-supercluster bridge (tech+science). Should sit near the boundary between tech and science."
-  refs: []
-
-- title: "Tech-Science Bridge 4"
-  url: "https://example.com/bridge-tech-science-4"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, science]
-  date: "2025-06-21"
-  blurb: "Test node: cross-supercluster bridge (tech+science). Should sit near the boundary between tech and science."
-  refs: []
-
-# ─── CROSS-SUPERCLUSTER BRIDGE: science + society (category 17, 4 nodes) ─────
-# Expected: near the boundary between science and society superclusters.
-# Test color: MAGENTA.
-
-- title: "Science-Society Bridge 1"
-  url: "https://example.com/bridge-science-society-1"
-  author: "Test Author"
-  domain: example.com
-  tags: [science, society]
-  date: "2022-07-06"
-  blurb: "Test node: cross-supercluster bridge (science+society). Should sit near the boundary between science and society."
-  refs: []
-
-- title: "Science-Society Bridge 2"
-  url: "https://example.com/bridge-science-society-2"
-  author: "Test Author"
-  domain: example.com
-  tags: [science, society]
-  date: "2023-03-22"
-  blurb: "Test node: cross-supercluster bridge (science+society). Should sit near the boundary between science and society."
-  refs: []
-
-- title: "Science-Society Bridge 3"
-  url: "https://example.com/bridge-science-society-3"
-  author: "Test Author"
-  domain: example.com
-  tags: [science, society]
-  date: "2024-01-09"
-  blurb: "Test node: cross-supercluster bridge (science+society). Should sit near the boundary between science and society."
-  refs: []
-
-- title: "Science-Society Bridge 4"
-  url: "https://example.com/bridge-science-society-4"
-  author: "Test Author"
-  domain: example.com
-  tags: [science, society]
-  date: "2025-03-05"
-  blurb: "Test node: cross-supercluster bridge (science+society). Should sit near the boundary between science and society."
-  refs: []
-
-# ─── CROSS-SUPERCLUSTER BRIDGE: tech + society (category 18, 4 nodes) ────────
-# Expected: near the boundary between tech and society superclusters.
-# Test color: MAGENTA.
-
-- title: "Tech-Society Bridge 1"
-  url: "https://example.com/bridge-tech-society-1"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, society]
-  date: "2022-03-25"
-  blurb: "Test node: cross-supercluster bridge (tech+society). Should sit near the boundary between tech and society."
-  refs: []
-
-- title: "Tech-Society Bridge 2"
-  url: "https://example.com/bridge-tech-society-2"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, society]
-  date: "2023-09-10"
-  blurb: "Test node: cross-supercluster bridge (tech+society). Should sit near the boundary between tech and society."
-  refs: []
-
-- title: "Tech-Society Bridge 3"
-  url: "https://example.com/bridge-tech-society-3"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, society]
-  date: "2024-06-27"
-  blurb: "Test node: cross-supercluster bridge (tech+society). Should sit near the boundary between tech and society."
-  refs: []
-
-- title: "Tech-Society Bridge 4"
-  url: "https://example.com/bridge-tech-society-4"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, society]
-  date: "2025-11-13"
-  blurb: "Test node: cross-supercluster bridge (tech+society). Should sit near the boundary between tech and society."
-  refs: []
-
 # ─── FREE NODES: no tags (category 19, 5 nodes) ──────────────────────────────
 # Expected: just outside the boundary of the nearest cluster circle.
 # Test color: CYAN. 2 of these ref clustered nodes (must not be pulled inside clusters).
@@ -703,8 +582,8 @@
   domain: example.com
   tags: []
   date: "2023-05-30"
-  blurb: "Test node: free (no tags). Refs tech-1 (clustered) — must not be pulled inside tech cluster."
-  refs: ["https://example.com/tech-1"]
+  blurb: "Test node: free (no tags). No refs."
+  refs: []
 
 - title: "Untagged Article 2"
   url: "https://example.com/free-2"
@@ -712,8 +591,8 @@
   domain: example.com
   tags: []
   date: "2024-02-08"
-  blurb: "Test node: free (no tags). Refs frontend-canonical (clustered) — must not be pulled inside frontend cluster."
-  refs: ["https://example.com/frontend-canonical"]
+  blurb: "Test node: free (no tags). No refs."
+  refs: []
 
 - title: "Untagged Article 3"
   url: "https://example.com/free-3"

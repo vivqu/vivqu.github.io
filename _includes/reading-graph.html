@@ -30,7 +30,6 @@
     'subcluster':        '#7c6edb',
     'supercluster-only': '#e05555',
     'dual-subcluster':   '#e08020',
-    'bridge':            '#c040c0',
     'free':              '#40c0e0',
   };
   // Stroke overlay for own posts in non-subcluster positions
@@ -45,7 +44,7 @@
   const ARTICLE_COL = '#7c6edb';
   const OWN_COL     = '#f0c060';
   const TAG_PALETTE = ['#b06edb','#6eabd8','#6ed8a4','#d8c76e','#d87a6e','#6e8fd8','#d86eaa','#8bd86e'];
-  const CLUSTER_PAD = 38;
+  const CLUSTER_PAD = 20;
 
   // Backlink-based radius scale: [0 refs, 1, 2–3, 4–6, 7+] → radius px
   const rScale = d3.scaleThreshold([1, 2, 4, 7], [6, 8, 11, 15, 20]);
@@ -77,14 +76,19 @@
 
   // Read dimensions after the SVG is in the DOM so layout is settled
   const { width: W, height: H } = svg.node().getBoundingClientRect();
+  // Virtual simulation canvas — 2x the viewport so superclusters have room to spread.
+  // The initial 0.5x zoom fits the entire VW×VH space into the W×H viewport.
+  const VW = W * 2, VH = H * 2;
 
   const g = svg.append('g');
 
   const zoom = d3.zoom()
-    .scaleExtent([0.2, 4])
-    .translateExtent([[0, 0], [W, H]])
+    .scaleExtent([0.1, 4])
     .on('zoom', e => g.attr('transform', e.transform));
   svg.call(zoom);
+  // Show virtual canvas centered in viewport at initial zoom
+  const INIT_ZOOM = 0.65;
+  svg.call(zoom.transform, d3.zoomIdentity.translate(W / 2, H / 2).scale(INIT_ZOOM).translate(-VW / 2, -VH / 2));
 
   document.getElementById('zoom-in').addEventListener('click', () =>
     svg.transition().duration(300).call(zoom.scaleBy, 1.4));
@@ -143,10 +147,10 @@
       });
     });
 
-    {% if include.test_mode %}
     // A tag is a supercluster if its node set is a superset of another tag's node set.
-    // This mirrors the production data model where subcluster nodes carry both parent + subcluster tags.
-    const SUPER_TAGS = (() => {
+    // Used to give subcluster tags a stronger centroid pull than supercluster tags,
+    // so nodes with both [parent, subcluster] tags settle inside the subcluster circle.
+    const superTagSet = (() => {
       const s = new Set();
       const nodeIdSets = {};
       tags.forEach(t => { nodeIdSets[t] = new Set((tagGroups[t] || []).map(n => n.id)); });
@@ -159,15 +163,26 @@
       });
       return s;
     })();
+    {% if include.test_mode %}
+    const SUPER_TAGS = superTagSet;
     {% endif %}
 
-    // Seed all nodes near center, grouped loosely by primary tag
+    // Seed nodes by supercluster in the virtual canvas (VW×VH).
+    // Each supercluster gets a distinct region so simulation starts separated.
+    const superTagList = [...superTagSet];
+    const superSeedPos = {};
+    superTagList.forEach((st, i) => {
+      const angle = (i / superTagList.length) * 2 * Math.PI - Math.PI / 2;
+      superSeedPos[st] = {
+        x: VW / 2 + Math.cos(angle) * VW * 0.22,
+        y: VH / 2 + Math.sin(angle) * VH * 0.22,
+      };
+    });
     nodes.forEach(n => {
-      const primaryTag = (n.tags || [])[0];
-      const tagIdx = primaryTag ? tags.indexOf(primaryTag) : -1;
-      const angle = tagIdx >= 0 ? (tagIdx / tags.length) * 2 * Math.PI - Math.PI / 2 : Math.random() * 2 * Math.PI;
-      n.x = W / 2 + Math.cos(angle) * 50 + (Math.random() - 0.5) * 20;
-      n.y = H / 2 + Math.sin(angle) * 50 + (Math.random() - 0.5) * 20;
+      const superTag = (n.tags || []).find(t => superTagSet.has(t));
+      const seed = superTag ? superSeedPos[superTag] : { x: VW / 2, y: VH / 2 };
+      n.x = seed.x + (Math.random() - 0.5) * 80;
+      n.y = seed.y + (Math.random() - 0.5) * 80;
     });
 
     const clusterCircle = {};
@@ -176,11 +191,24 @@
       const centroids = {};
       Object.entries(tagGroups).forEach(([t, ns]) => {
         if (ns.length < 2) return;
-        centroids[t] = { cx: d3.mean(ns, d => d.x), cy: d3.mean(ns, d => d.y) };
+        // For subclusters: use only "pure" members (not in any sibling subcluster)
+        // so the centroid stays in the non-overlapping region of the subcluster.
+        // Dual-subcluster nodes (e.g. fullstack) are pulled by both centroids equally
+        // and settle naturally at the intersection.
+        let centroidNodes = ns;
+        if (!superTagSet.has(t)) {
+          const pureMembers = ns.filter(n =>
+            !(n.tags || []).some(sib => sib !== t && !superTagSet.has(sib) && (tagGroups[sib] || []).length >= 2)
+          );
+          if (pureMembers.length > 0) centroidNodes = pureMembers;
+        }
+        centroids[t] = { cx: d3.mean(centroidNodes, d => d.x), cy: d3.mean(centroidNodes, d => d.y) };
       });
 
       nodes.forEach(n => {
         const nodeTags = new Set(n.tags || []);
+        // Free nodes (belong to no cluster) are handled exclusively by freeNodeForce
+        const isFreeNode = !(n.tags || []).some(t => clusterCircle[t]);
 
         Object.entries(centroids).forEach(([t, { cx, cy }]) => {
           const dx = n.x - cx;
@@ -188,9 +216,12 @@
           const dist = Math.sqrt(dx * dx + dy * dy) || 1;
 
           if (nodeTags.has(t)) {
-            n.vx -= dx * alpha * 0.08;
-            n.vy -= dy * alpha * 0.08;
-          } else {
+            // Subcluster tags get a stronger pull than supercluster tags so nodes
+            // settle inside the subcluster circle, not the outer supercluster ring.
+            const strength = superTagSet.has(t) ? 0.06 : 0.16;
+            n.vx -= dx * alpha * strength;
+            n.vy -= dy * alpha * strength;
+          } else if (!isFreeNode) {
             const circle = clusterCircle[t];
             if (!circle) return;
             const pushRadius = circle.r + 6 + 50;
@@ -210,9 +241,9 @@
         const ns = tagGroups[tag];
         if (!ns || ns.length < 2) return;
         const leftExcess   = pad - (cx - r);
-        const rightExcess  = (cx + r) - (W - pad);
+        const rightExcess  = (cx + r) - (VW - pad);
         const topExcess    = pad - (cy - r);
-        const bottomExcess = (cy + r) - (H - pad);
+        const bottomExcess = (cy + r) - (VH - pad);
         const s = alpha * 0.9;
         ns.forEach(n => {
           if (leftExcess   > 0) n.vx += leftExcess   * s;
@@ -223,14 +254,140 @@
       });
     }
 
+    // Fix 4: push sibling subcluster circles apart (those sharing a supercluster parent).
+    // Subclusters that share nodes are a Venn diagram — overlap is intentional, skip them.
+    // Subclusters with no shared nodes must not overlap at all.
+    function subclusterSeparationForce(alpha) {
+      const subTags = Object.keys(clusterCircle).filter(t => !superTagSet.has(t));
+      const superNodeSets = {};
+      superTagSet.forEach(st => {
+        superNodeSets[st] = new Set((tagGroups[st] || []).map(n => n.id));
+      });
+      for (let i = 0; i < subTags.length; i++) {
+        for (let j = i + 1; j < subTags.length; j++) {
+          const tA = subTags[i], tB = subTags[j];
+          const nodesA = tagGroups[tA] || [];
+          const nodesB = tagGroups[tB] || [];
+          const idsA = new Set(nodesA.map(n => n.id));
+          // Skip if they share any nodes — Venn overlap is intentional
+          if (nodesB.some(n => idsA.has(n.id))) continue;
+          // Only separate sibling subclusters (same supercluster parent)
+          const nodeIdsA = nodesA.map(n => n.id);
+          const nodeIdsB = nodesB.map(n => n.id);
+          const sharedSuper = [...superTagSet].some(st => {
+            const s = superNodeSets[st];
+            return nodeIdsA.every(id => s.has(id)) && nodeIdsB.every(id => s.has(id));
+          });
+          if (!sharedSuper) continue;
+          const cA = clusterCircle[tA], cB = clusterCircle[tB];
+          const dx = cB.cx - cA.cx, dy = cB.cy - cA.cy;
+          const dist = Math.hypot(dx, dy) || 1;
+          const overlap = (cA.r + cB.r + 20) - dist;
+          if (overlap > 0) {
+            const nx = dx / dist, ny = dy / dist;
+            const push = overlap * 0.5 * alpha;
+            nodesA.forEach(n => { n.vx -= nx * push; n.vy -= ny * push; });
+            nodesB.forEach(n => { n.vx += nx * push; n.vy += ny * push; });
+          }
+        }
+      }
+    }
+
+    // Fix 5: attract superclusters toward each other, with a repulsion floor so they don't overlap
+    function superclusterProximityForce(alpha) {
+      const superTags = Object.keys(clusterCircle).filter(t => superTagSet.has(t));
+      for (let i = 0; i < superTags.length; i++) {
+        for (let j = i + 1; j < superTags.length; j++) {
+          const tA = superTags[i], tB = superTags[j];
+          const cA = clusterCircle[tA], cB = clusterCircle[tB];
+          const dx = cB.cx - cA.cx, dy = cB.cy - cA.cy;
+          const dist = Math.hypot(dx, dy) || 1;
+          const minDist = cA.r + cB.r + 20;
+          const nx = dx / dist, ny = dy / dist;
+          if (dist > minDist) {
+            // Mild attraction — keep superclusters from drifting off screen
+            const pull = (dist - minDist) * 0.008 * alpha;
+            (tagGroups[tA] || []).forEach(n => { n.vx += nx * pull; n.vy += ny * pull; });
+            (tagGroups[tB] || []).forEach(n => { n.vx -= nx * pull; n.vy -= ny * pull; });
+          } else {
+            // Strong proportional repulsion when overlapping
+            const overlap = minDist - dist;
+            const push = (overlap / minDist) * alpha * 12.0;
+            (tagGroups[tA] || []).forEach(n => { n.vx -= nx * push; n.vy -= ny * push; });
+            (tagGroups[tB] || []).forEach(n => { n.vx += nx * push; n.vy += ny * push; });
+          }
+        }
+      }
+    }
+
+    // Fix 6: pull supercluster-only nodes to the outer ring, clearing all subcluster circles
+    function ringOrbitalForce(alpha) {
+      nodes.forEach(n => {
+        const tags = n.tags || [];
+        const hasSuperTag = tags.some(t => superTagSet.has(t) && clusterCircle[t]);
+        const hasSubCircle = tags.some(t => !superTagSet.has(t) && clusterCircle[t]);
+        if (!hasSuperTag || hasSubCircle) return;
+        const superTag = tags.find(t => superTagSet.has(t) && clusterCircle[t]);
+        const { cx, cy, r } = clusterCircle[superTag];
+        const dx = n.x - cx, dy = n.y - cy;
+        const currentR = Math.hypot(dx, dy) || 1;
+
+        // Compute the minimum radius that clears all subclusters within this supercluster
+        const superNodeSet = new Set((tagGroups[superTag] || []).map(nd => nd.id));
+        let minClearR = 0;
+        Object.entries(clusterCircle).forEach(([subTag, sc]) => {
+          if (superTagSet.has(subTag)) return;
+          const subNodes = tagGroups[subTag] || [];
+          if (!subNodes.every(nd => superNodeSet.has(nd.id))) return;
+          const scDist = Math.hypot(sc.cx - cx, sc.cy - cy);
+          minClearR = Math.max(minClearR, scDist + sc.r + 50);
+        });
+        const targetR = Math.max(minClearR, 0.82 * r);
+
+        const pull = (currentR - targetR) * 0.10 * alpha;
+        n.vx -= (dx / currentR) * pull;
+        n.vy -= (dy / currentR) * pull;
+      });
+    }
+
+    // Fix 7: pull free nodes (no cluster circle for any of their tags) just outside the nearest cluster
+    function freeNodeForce(alpha) {
+      if (Object.keys(clusterCircle).length === 0) return;
+      nodes.forEach(n => {
+        const isFree = !(n.tags || []).some(t => clusterCircle[t]);
+        if (!isFree) return;
+        let nearestCircle = null, nearestDist = Infinity;
+        Object.values(clusterCircle).forEach(c => {
+          const d = Math.hypot(n.x - c.cx, n.y - c.cy);
+          if (d < nearestDist) { nearestDist = d; nearestCircle = c; }
+        });
+        if (!nearestCircle || nearestDist === 0) return;
+        const targetDist = nearestCircle.r + 40;
+        const pull = (nearestDist - targetDist) * 0.08 * alpha;
+        n.vx -= (n.x - nearestCircle.cx) / nearestDist * pull;
+        n.vy -= (n.y - nearestCircle.cy) / nearestDist * pull;
+      });
+    }
+
     const sim = d3.forceSimulation(nodes)
-      .force('link',         d3.forceLink(refLinks).id(d => d.id).distance(60).strength(0.8))
-      .force('charge',       d3.forceManyBody().strength(-80))
-      .force('collide',      d3.forceCollide(d => nodeRadius(d) + 8))
-      .force('center',       d3.forceCenter(W / 2, H / 2).strength(0.15))
-      .force('cluster',      () => sim && clusterForce(sim.alpha()))
-      .force('clusterBound', () => sim && clusterBoundaryForce(sim.alpha()))
-      .alphaDecay(0.03)
+      .force('link',           d3.forceLink(refLinks).id(d => d.id).distance(40).strength(0.2))
+      .force('charge',         d3.forceManyBody().strength(-35))
+      .force('collide',        d3.forceCollide(d => nodeRadius(d) + 8))
+      .force('x',              d3.forceX(d => {
+                                 const st = (d.tags || []).find(t => superTagSet.has(t));
+                                 return superSeedPos[st] ? superSeedPos[st].x : VW / 2;
+                               }).strength(d => (d.tags || []).some(t => superTagSet.has(t)) ? 0.025 : 0))
+      .force('y',              d3.forceY(d => {
+                                 const st = (d.tags || []).find(t => superTagSet.has(t));
+                                 return superSeedPos[st] ? superSeedPos[st].y : VH / 2;
+                               }).strength(d => (d.tags || []).some(t => superTagSet.has(t)) ? 0.025 : 0))
+      .force('cluster',        () => sim && clusterForce(sim.alpha()))
+      .force('clusterBound',   () => sim && clusterBoundaryForce(sim.alpha()))
+      .force('subSeparation',  () => sim && subclusterSeparationForce(sim.alpha()))
+      .force('superProximity', () => sim && superclusterProximityForce(sim.alpha()))
+      .force('ringOrbital',    () => sim && ringOrbitalForce(sim.alpha()))
+      .force('freeNode',       () => sim && freeNodeForce(sim.alpha()))
+      .alphaDecay(0.015)
       .velocityDecay(0.45);
 
     // Layers (back to front)
@@ -334,7 +491,7 @@
           const allInside = tagGroups[inner.tag].every(n => outerSet.has(n.id));
           if (allInside) {
             const dist = Math.sqrt((inner.cx - outer.cx) ** 2 + (inner.cy - outer.cy) ** 2);
-            const needed = dist + inner.r + 16;
+            const needed = dist + inner.r + 20;
             if (needed > outer.r) outer.r = needed;
           }
         });
@@ -368,8 +525,8 @@
     sim.on('tick', () => {
       nodes.forEach(n => {
         const r = nodeRadius(n);
-        n.x = Math.max(r + 4, Math.min(W - r - 4, n.x));
-        n.y = Math.max(r + 4, Math.min(H - r - 4, n.y));
+        n.x = Math.max(r + 4, Math.min(VW - r - 4, n.x));
+        n.y = Math.max(r + 4, Math.min(VH - r - 4, n.y));
       });
 
       refLines
