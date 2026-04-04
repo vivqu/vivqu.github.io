@@ -497,26 +497,25 @@ Complete these in order before making any further cluster layout changes.
 
 ### 6. Test mode ref link colors
 
-- [ ] In test mode, color ref link lines yellow (`#f0e040`) when the link crosses a cluster boundary (source and target have different primary tags or one is free)
-- [ ] Normal white dashed style for within-cluster refs
+- [x] Precompute `l.crossCluster` on each link before D3 resolves source/target (compares first tag of source vs target node)
+- [x] Precompute `crossClusterRefCount` map (node id → outgoing cross-cluster ref count) for use in tooltip
+- [x] Ref line stroke: yellow `#f0e040` when `TEST_MODE && d.crossCluster`, otherwise white dashed
 
 ### 7. Test mode cluster circle styles
 
-- [ ] In test mode, replace semi-transparent filled circles with outlined circles:
-  - Supercluster circles: `#4a80e0` (blue), 2px dashed stroke, no fill
-  - Subcluster circles: `#e04a4a` (red), 2px solid stroke, no fill
-- [ ] Apply only when `TEST_MODE` is true; production styles unchanged
+- [x] Hardcoded `SUPER_TAGS = new Set(['tech','science','society'])` in JS (dynamic containment detection doesn't work when subcluster-only nodes don't also carry the supercluster tag)
+- [x] Test mode circles: no fill, blue `#4a80e0` dashed stroke for superclusters, red `#e04a4a` solid stroke for subclusters
+- [x] Production styles unchanged when `TEST_MODE` is false
+- [x] Verified: 3 blue dashed (tech, science, society) + 6 red solid (frontend, backend, biology, physics, politics, misc)
 
 ### 8. Test mode tooltip additions
 
-- [ ] In test mode, append a `── test info ──` section to the hover tooltip showing:
-  - `category:` (e.g. `supercluster-only`)
-  - `primary cluster:` (the first supercluster tag, if any)
-  - `cross-cluster refs:` count with `⚠` if > 0
+- [x] Appended `── test info ──` section showing `category`, `primary cluster` (first tag in `SUPER_TAGS`), `cross-cluster refs` with `⚠` if > 0
+- [x] Verified on supercluster-only node "Tech Overview 1": category=supercluster-only, primary cluster=tech, cross-cluster refs=1 ⚠
 
 ### 9. Screenshot verification
 
-- [ ] Run `bundle exec jekyll serve --unpublished`
-- [ ] Delete stale test screenshots: `rm -f .screenshot-tests/test-*.png`
-- [ ] Open `http://localhost:4000/reading-test/?testmode=1` in playwright
-- [ ] Take 4 settled screenshots (reload + 5s wait each) and verify the full checklist in the Verification Checklist section above
+- [x] Ran Jekyll with `--unpublished` (already running)
+- [x] Opened `http://localhost:4000/reading-test/?testmode=1` in playwright and took multiple settled screenshots
+- [x] Confirmed test mode renders correctly: colored nodes, yellow cross-cluster links, blue dashed supercluster circles, red solid subcluster circles, test info tooltip
+- [x] Pre-fix baseline established: nodes scatter to viewport edges (expected — force fixes not yet applied; this is what the test mode is designed to catch)

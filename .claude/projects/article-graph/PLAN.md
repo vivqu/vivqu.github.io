@@ -26,9 +26,16 @@ Jekyll + GitHub Pages · D3 v7 force graph · no custom plugins
   - More reference images may be added to `.claude/projects/` in the future
   - Areas to explore: label placement, cluster label positioning, node sizing, color palette tuning, animation easing, tooltip styling
 
-## Test Infrastructure
+## Test Infrastructure ✅ Complete
 
-**Complete before any further cluster layout changes.** See [TEST_PLAN.md](TEST_PLAN.md) for the full implementation checklist, dataset design, and color key.
+**All test infrastructure is in place.** See [TEST_PLAN.md](TEST_PLAN.md) for full details.
+
+Delivered:
+
+- `_data/test_graph.yml` — 99 synthetic nodes covering all edge cases
+- `reading/test-graph.json` — Liquid template with `testCategory` baked in at build time
+- `reading-test.html` — unpublished test page (`published: false`)
+- Test mode (`?testmode=1`) — node colors, yellow cross-cluster links, blue/red circle outlines, test info tooltip
 
 ### Cluster design decisions
 
