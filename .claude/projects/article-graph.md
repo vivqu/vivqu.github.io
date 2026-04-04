@@ -23,11 +23,31 @@ Jekyll + GitHub Pages · D3 v7 force graph · no custom plugins
 
 Workflow 1 - Verifying the page loads and UI renders
 
-- Open <http://localhost:4000/> to load the blog. If it cannot load, notify the user that they need to run the jekyll bundler.
-- Verify that Reading is in the left navigation bar. Click on the Reading tab.
-- On the reading page, make sure the UI looks like the intended spec.
+Use `playwright-cli` to take screenshots (saved to `.screenshot-tests/`, which is gitignored).
+
+If the site is not running at <http://localhost:4000/>, notify the user that they need to run `jbundle`.
+
+First, delete any stale screenshots from previous runs:
+
+```bash
+rm -f .screenshot-tests/article-graph-*.png
+```
+
+```bash
+# Screenshot the homepage to verify the nav link appears
+playwright-cli screenshot --url http://localhost:4000/ --filename .screenshot-tests/article-graph-home-nav.png
+
+# Screenshot the reading page to verify title, subtitle, and graph render
+playwright-cli screenshot --url http://localhost:4000/reading --filename .screenshot-tests/article-graph-reading-page.png
+```
+
+Verify in the screenshots:
+
+- "Reading" link is visible in the left navigation bar between "books" and "subscribe"
+- Reading page shows:
   - Title: Reading
   - Subtitle: an interactive map of articles and essays I've found worth reading, connected by domain and cross-references
+  - D3 graph SVG is rendered with nodes visible
 
 ---
 
