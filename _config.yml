@@ -9,7 +9,6 @@ author:
   twitter: vivqu
   
 plugins:
-  - jekyll-octicons
   - jekyll-feed
   - jekyll-last-modified-at
 

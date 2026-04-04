@@ -10,8 +10,7 @@
         <div class="f4 {% if site.style == 'dark' %}text-white{% endif %}">
           {% unless page.exclude_nav %}
           <p class="f5"><a href="{{ site.url }}{{ site.baseurl | append:'/' }}"
-              class="d-flex flex-items-center {% if site.style == 'dark' %}text-white{% endif %}">{% octicon
-              chevron-left height:16 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Home %}Home</a>
+              class="{% if site.style == 'dark' %}text-white{% endif %}">« Home</a>
           </p>
           {% endunless %}
           {% if page.hide_title == true %}
