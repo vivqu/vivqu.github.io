@@ -48,13 +48,18 @@ The `reading.html` layout uses `d-md-flex` (Primer flex at ≥768px), so below 7
 
 ### Cluster layout
 
-Use the [clustered bubbles](https://observablehq.com/@d3/clustered-bubbles) approach for nodes that belong to a tag cluster:
+> **See [article-graph-force-changes.md](.claude/projects/article-graph-force-changes.md)** for the full analysis of what was attempted, why it failed, and the concrete next steps.
 
-- [ ] Replace `forceCenter` with `forceX(width/2).strength(0.01)` + `forceY(height/2).strength(0.01)`
-- [ ] Add custom `forceCluster` that computes per-group centroids each tick and pulls nodes toward them with `strength = 0.2`
-- [ ] Replace `d3.forceCollide` with a custom quadtree-based collide force: `padding1 = 2` within same group, `padding2 = 6` across groups
+Current known issues:
 
-> **Note:** A cluster-to-centroid repulsion approach was attempted and reverted. The core problem: nodes with ref links to nodes inside a sub-cluster (e.g. a `forecasting`-only node referencing an `AI as Normal Technology` node that sits inside the `skepticism` sub-circle) are pulled into the wrong cluster by `forceLink`. No purely force-based approach could reliably overcome this without destabilizing the simulation. The quadtree collide approach above (which operates at node-pair level) is the right next attempt.
+- `forecasting`-only nodes (e.g. "Could AI Slow Science?") drift inside the `skepticism` sub-circle because `forceLink` (~16 units) overpowers the cluster push (~3 units)
+- `open-source`-only nodes (Tailwind, Tldraw) drift between the `frameworks` and `agent-harness` sub-circles for the same reason
+
+Proposed fix (details in the linked plan):
+
+- [ ] Weaken `forceLink`: `distance(60).strength(0.8)` → `distance(120).strength(0.3)`
+- [ ] Replace `forceCenter` with `forceX(W/2).strength(0.02)` + `forceY(H/2).strength(0.02)`
+- [ ] Strengthen centroid pull in `clusterForce`: `0.08` → `0.20` for primary tag, `0.08` for secondary
 
 ### Unclustered nodes layout
 
