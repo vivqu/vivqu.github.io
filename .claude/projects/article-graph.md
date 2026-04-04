@@ -4,7 +4,9 @@ Jekyll + GitHub Pages · D3 v7 force graph · no custom plugins
 
 ## Implementation Plan
 
-- [ ] **Step 1 — Page scaffold**: Create `reading.html` at repo root with Jekyll front matter, layout, and placeholder content. Page lives at `/reading`.
+- [x] **Step 1 — Page scaffold**: Create `reading.html` at repo root with Jekyll front matter, layout, and placeholder content. Page lives at `/reading`.
+  - Title and subtitle rendered in `_layouts/reading.html`, not the page body (Liquid only processes reliably in layouts).
+  - Subtitle copy (hardcoded in layout, do not change): *"an interactive map of articles and essays I've found worth reading, connected by domain and cross-references"*
 - [ ] **Step 2 — Nav link**: Add "reading" link to `_includes/masthead.html` between "books" and "subscribe".
 - [ ] **Step 3 — Sample data**: Create `_data/reading.yml` with ~10–15 representative articles covering a few domains and tags, including a few `refs` cross-links and at least one own post (`domain: self`).
 - [ ] **Step 4 — graph.json template**: Create `reading-graph.json` (Liquid template) at repo root. Emits nodes and links from `_data/reading.yml`. Rendered to `/reading-graph.json` at build time.
@@ -16,6 +18,16 @@ Jekyll + GitHub Pages · D3 v7 force graph · no custom plugins
   - Hover tooltip
   - Clickable article nodes (open in new tab)
 - [ ] **Step 6 — Force tuning**: Verify simulation params (link distance, charge, collision, center force) look good with real data; adjust as needed.
+
+## Verification Steps
+
+Workflow 1 - Verifying the page loads and UI renders
+
+- Open <http://localhost:4000/> to load the blog. If it cannot load, notify the user that they need to run the jekyll bundler.
+- Verify that Reading is in the left navigation bar. Click on the Reading tab.
+- On the reading page, make sure the UI looks like the intended spec.
+  - Title: Reading
+  - Subtitle: an interactive map of articles and essays I've found worth reading, connected by domain and cross-references
 
 ---
 
@@ -45,7 +57,7 @@ Flat list, one entry per article.
   refs: ["https://arxiv.org/abs/1706.03762"]  # cross-references to other articles by URL
 ```
 
-2. Graph data — reading-graph.json
+1. Graph data — reading-graph.json
 
 Liquid template at repo root, rendered to /reading-graph.json at build time. No Ruby plugin — works on vanilla GitHub Pages.
 
@@ -71,7 +83,7 @@ Emit one link per entry in refs → target article URL (type: "ref"); skip if ta
 }
 ```
 
-3. Visualisation — reading.html
+1. Visualisation — reading.html
 
 Jekyll page at /reading. Fetches /reading-graph.json, renders with D3 v7 (cdnjs CDN) on an SVG element.
 
@@ -96,14 +108,14 @@ Tag clusters — convex hull overlay (SVG `<path>`, rendered behind nodes):
 
 Article nodes are clickable links — open url in new tab
 
-4. Force simulation params
+1. Force simulation params
 
 - Link distance 80px, strength 0.5
 - Charge strength −200
 - Collision radius = node radius + 10
 - Center force to canvas midpoint
 
-5. Constraints
+1. Constraints
 
 No Ruby plugins — must build on vanilla GitHub Pages
 
