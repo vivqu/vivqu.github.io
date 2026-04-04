@@ -2,42 +2,17 @@
 layout: null
 ---
 {% assign articles = site.data.reading %}
-{% comment %}Build unique domain list{% endcomment %}
-{% assign domain_names = "" %}
-{% for article in articles %}
-  {% unless domain_names contains article.domain %}
-    {% if domain_names == "" %}{% assign domain_names = article.domain %}{% else %}{% assign domain_names = domain_names | append: "," | append: article.domain %}{% endif %}
-  {% endunless %}
-{% endfor %}
-{% assign domains = domain_names | split: "," %}
+{% assign article_urls = articles | map: "url" | join: "|||" %}
 {
   "nodes": [
 {% for article in articles %}
-    {
-      "id": {{ article.url | jsonify }},
-      "type": "article",
-      "label": {{ article.title | jsonify }},
-      "author": {{ article.author | jsonify }},
-      "domain": {{ article.domain | jsonify }},
-      "tags": {{ article.tags | jsonify }},
-      "date": {{ article.date | jsonify }},
-      "self": {% if article.domain == "self" %}true{% else %}false{% endif %}
-    },
-{% endfor %}
-{% for domain in domains %}
-    {% assign cnt = 0 %}{% for a in articles %}{% if a.domain == domain %}{% assign cnt = cnt | plus: 1 %}{% endif %}{% endfor %}
-    { "id": {{ domain | prepend: "domain:" | jsonify }}, "type": "domain", "label": {{ domain | jsonify }}, "count": {{ cnt }} }{% unless forloop.last %},{% endunless %}
+    { "id": {{ article.url | jsonify }}, "type": "article", "label": {{ article.title | jsonify }}, "author": {{ article.author | jsonify }}, "tags": {{ article.tags | jsonify }}, "date": {{ article.date | jsonify }}, "self": {% if article.domain == "self" %}true{% else %}false{% endif %} }{% unless forloop.last %},{% endunless %}
 
 {% endfor %}
   ],
   "links": [
-{% assign article_urls = articles | map: "url" | join: "|||" %}
-{% for article in articles %}
-    { "source": {{ article.url | jsonify }}, "target": {{ article.domain | prepend: "domain:" | jsonify }}, "type": "domain" }{% unless forloop.last %},{% endunless %}
+{% assign is_first_link = true %}{% for article in articles %}{% for ref in article.refs %}{% if article_urls contains ref %}{% unless is_first_link %},{% endunless %}
+    { "source": {{ article.url | jsonify }}, "target": {{ ref | jsonify }}, "type": "ref" }{% assign is_first_link = false %}{% endif %}{% endfor %}{% endfor %}
 
-{% endfor %}
-{% for article in articles %}{% for ref in article.refs %}{% if article_urls contains ref %}
-    ,{ "source": {{ article.url | jsonify }}, "target": {{ ref | jsonify }}, "type": "ref" }
-{% endif %}{% endfor %}{% endfor %}
   ]
 }

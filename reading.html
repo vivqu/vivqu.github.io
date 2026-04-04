@@ -7,7 +7,12 @@ permalink: /reading
 exclude_nav: true
 ---
 
-<div id="graph-container" style="width: 100%; height: calc(100vh - 180px); position: relative;"></div>
+<div id="graph-container" style="width: 100%; height: calc(100vh - 180px); position: relative;">
+  <div style="position: absolute; top: 12px; right: 12px; z-index: 10; display: flex; flex-direction: column; gap: 4px;">
+    <button id="zoom-in"  style="width:40px;height:40px;background:#1e1e2e;border:1px solid #3a3a5c;color:#ccc;font-size:22px;cursor:pointer;border-radius:4px;line-height:1;padding:0">+</button>
+    <button id="zoom-out" style="width:40px;height:40px;background:#1e1e2e;border:1px solid #3a3a5c;color:#ccc;font-size:22px;cursor:pointer;border-radius:4px;line-height:1;padding:0">−</button>
+  </div>
+</div>
 
 <div id="graph-tooltip" style="
   position: fixed;
@@ -31,22 +36,51 @@ exclude_nav: true
   const ARTICLE_COL = '#7c6edb';
   const OWN_COL     = '#f0c060';
   const TAG_PALETTE = ['#b06edb','#6eabd8','#6ed8a4','#d8c76e','#d87a6e','#6e8fd8','#d86eaa','#8bd86e'];
-  const ARTICLE_R   = 6;
-  const CLUSTER_PAD = 38; // extra radius beyond outermost node
+  const CLUSTER_PAD = 38;
+
+  // Backlink-based radius scale: [0 refs, 1, 2–3, 4–6, 7+] → radius px
+  const rScale = d3.scaleThreshold([1, 2, 4, 7], [6, 8, 11, 15, 20]);
+
+  // Age-based color scale: saturation + lightness both vary for max perceptual distinction.
+  // Low-saturation grays look identical unless lightness also shifts.
+  const AGE_THRESHOLDS = [1, 3, 6, 12, 24];
+  const SAT_FACTORS    = [1.0,  0.80, 0.58, 0.36, 0.12, 0.04];
+  const LIT_FACTORS    = [0.56, 0.62, 0.64, 0.64, 0.53, 0.44];
+  const ageSatScale    = d3.scaleThreshold(AGE_THRESHOLDS, SAT_FACTORS);
+  const ageLitScale    = d3.scaleThreshold(AGE_THRESHOLDS, LIT_FACTORS);
+
+  function nodeColor(d) {
+    if (d.self) return OWN_COL;
+    if (!d.date) return ARTICLE_COL;
+    const ageMonths = (Date.now() - new Date(d.date).getTime()) / (1000 * 60 * 60 * 24 * 30.44);
+    const c = d3.hsl(ARTICLE_COL);
+    c.s = ageSatScale(ageMonths);
+    c.l = ageLitScale(ageMonths);
+    return c.formatHex();
+  }
 
   const container = document.getElementById('graph-container');
   const tooltip   = document.getElementById('graph-tooltip');
-  const W = container.clientWidth;
-  const H = container.clientHeight;
 
   const svg = d3.select(container).append('svg')
-    .attr('width', W).attr('height', H)
+    .attr('width', '100%').attr('height', '100%')
     .style('background', BG).style('display', 'block');
+
+  // Read dimensions after the SVG is in the DOM so layout is settled
+  const { width: W, height: H } = svg.node().getBoundingClientRect();
 
   const g = svg.append('g');
 
-  svg.call(d3.zoom().scaleExtent([0.2, 4])
-    .on('zoom', e => g.attr('transform', e.transform)));
+  const zoom = d3.zoom()
+    .scaleExtent([0.2, 4])
+    .translateExtent([[0, 0], [W, H]])
+    .on('zoom', e => g.attr('transform', e.transform));
+  svg.call(zoom);
+
+  document.getElementById('zoom-in').addEventListener('click', () =>
+    svg.transition().duration(300).call(zoom.scaleBy, 1.4));
+  document.getElementById('zoom-out').addEventListener('click', () =>
+    svg.transition().duration(300).call(zoom.scaleBy, 0.7));
 
   fetch('/reading/graph.json')
     .then(r => r.json())
@@ -56,12 +90,18 @@ exclude_nav: true
     });
 
   function render(data) {
-    // Only article nodes — drop domain nodes/links
     const nodes = data.nodes.filter(n => n.type === 'article').map(d => ({ ...d }));
     const nodeById = new Map(nodes.map(n => [n.id, n]));
     const refLinks = data.links
       .filter(l => l.type === 'ref' && nodeById.has(l.source) && nodeById.has(l.target))
       .map(d => ({ ...d }));
+
+    // Backlink counts (source/target still strings before D3 resolves them)
+    const backlinkCount = new Map();
+    refLinks.forEach(l => {
+      backlinkCount.set(l.target, (backlinkCount.get(l.target) || 0) + 1);
+    });
+    function nodeRadius(d) { return rScale(backlinkCount.get(d.id) || 0); }
 
     // Tag color map
     const tagSet = new Set();
@@ -87,14 +127,9 @@ exclude_nav: true
       n.y = H / 2 + Math.sin(angle) * 50 + (Math.random() - 0.5) * 20;
     });
 
-    // Precompute cluster circle radius per tag (updated each tick)
-    const clusterCircle = {}; // tag -> { cx, cy, r }
+    const clusterCircle = {};
 
-    // Clustering forces:
-    // 1. Pull nodes toward the centroid of clusters they belong to
-    // 2. Push nodes away from cluster circles they do NOT belong to
     function clusterForce(alpha) {
-      // Recompute cluster centroids
       const centroids = {};
       Object.entries(tagGroups).forEach(([t, ns]) => {
         if (ns.length < 2) return;
@@ -110,14 +145,12 @@ exclude_nav: true
           const dist = Math.sqrt(dx * dx + dy * dy) || 1;
 
           if (nodeTags.has(t)) {
-            // Pull toward centroid
             n.vx -= dx * alpha * 0.08;
             n.vy -= dy * alpha * 0.08;
           } else {
-            // Push away from cluster circle boundary + padding
             const circle = clusterCircle[t];
             if (!circle) return;
-            const pushRadius = circle.r + ARTICLE_R + 50;
+            const pushRadius = circle.r + 6 + 50;
             if (dist < pushRadius) {
               const force = ((pushRadius - dist) / pushRadius) * alpha * 0.6;
               n.vx += (dx / dist) * force * pushRadius;
@@ -128,7 +161,6 @@ exclude_nav: true
       });
     }
 
-    // Push cluster members inward if their cluster circle overflows the viewport
     function clusterBoundaryForce(alpha) {
       const pad = 24;
       Object.entries(clusterCircle).forEach(([tag, { cx, cy, r }]) => {
@@ -148,11 +180,10 @@ exclude_nav: true
       });
     }
 
-    // Simulation — faster decay so it settles quickly
     const sim = d3.forceSimulation(nodes)
       .force('link',         d3.forceLink(refLinks).id(d => d.id).distance(60).strength(0.8))
       .force('charge',       d3.forceManyBody().strength(-80))
-      .force('collide',      d3.forceCollide(ARTICLE_R + 8))
+      .force('collide',      d3.forceCollide(d => nodeRadius(d) + 8))
       .force('center',       d3.forceCenter(W / 2, H / 2).strength(0.15))
       .force('cluster',      () => sim && clusterForce(sim.alpha()))
       .force('clusterBound', () => sim && clusterBoundaryForce(sim.alpha()))
@@ -165,7 +196,6 @@ exclude_nav: true
     const refLinkLayer      = g.append('g');
     const nodeLayer         = g.append('g');
 
-    // Ref links
     const refLines = refLinkLayer.selectAll('line')
       .data(refLinks)
       .join('line')
@@ -173,7 +203,6 @@ exclude_nav: true
       .attr('stroke-width', 1.5)
       .attr('stroke-dasharray', '5 3');
 
-    // Node groups
     const nodeG = nodeLayer.selectAll('g')
       .data(nodes)
       .join('g')
@@ -184,27 +213,27 @@ exclude_nav: true
         .on('end',   (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }));
 
     nodeG.append('circle')
-      .attr('r', ARTICLE_R)
-      .attr('fill', d => d.self ? OWN_COL : ARTICLE_COL);
+      .attr('r',    d => nodeRadius(d))
+      .attr('fill', d => nodeColor(d));
 
-    // Article labels — shown on hover
     nodeG.append('text')
       .text(d => d.label)
-      .attr('dy', ARTICLE_R + 13)
+      .attr('dy', d => nodeRadius(d) + 13)
       .attr('text-anchor', 'middle')
       .attr('fill', '#ccc')
       .attr('font-size', '10px')
       .style('pointer-events', 'none')
       .style('opacity', 0);
 
-    // Events
     nodeG
       .on('mouseenter', function (event, d) {
         d3.select(this).select('text').style('opacity', 1);
-        const year     = d.date ? d.date.slice(0, 4) : '';
+        const dateStr = d.date
+          ? new Date(d.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+          : '';
         const tagsHtml = (d.tags || []).length
           ? `<br><span style="color:#888">${d.tags.join(', ')}</span>` : '';
-        tooltip.innerHTML = `<strong>${esc(d.label)}</strong><br>${esc(d.author)}${year ? ' · ' + year : ''}${tagsHtml}`;
+        tooltip.innerHTML = `<strong>${esc(d.label)}</strong><br>${esc(d.author)}${dateStr ? ' · ' + dateStr : ''}${tagsHtml}`;
         tooltip.style.display = 'block';
         positionTooltip(event);
       })
@@ -220,19 +249,16 @@ exclude_nav: true
       tooltip.style.top  = Math.max(event.clientY - 32, 8) + 'px';
     }
 
-    // Cluster circles update
     function updateClusters() {
       const clusterData = Object.entries(tagGroups)
         .filter(([, ns]) => ns.length >= 2 && ns[0].x != null)
         .map(([tag, ns]) => {
           const cx = d3.mean(ns, n => n.x);
           const cy = d3.mean(ns, n => n.y);
-          const r  = d3.max(ns, n => Math.sqrt((n.x - cx) ** 2 + (n.y - cy) ** 2)) + ARTICLE_R + CLUSTER_PAD;
+          const r  = d3.max(ns, n => Math.sqrt((n.x - cx) ** 2 + (n.y - cy) ** 2) + nodeRadius(n)) + CLUSTER_PAD;
           return { tag, cx, cy, r };
         });
 
-      // Expand outer circles to fully encompass any inner cluster circles whose
-      // members are a strict subset of the outer tag's members
       const outerNodeSets = new Map(
         clusterData.map(d => [d.tag, new Set(tagGroups[d.tag].map(n => n.id))])
       );
@@ -243,13 +269,12 @@ exclude_nav: true
           const allInside = tagGroups[inner.tag].every(n => outerSet.has(n.id));
           if (allInside) {
             const dist = Math.sqrt((inner.cx - outer.cx) ** 2 + (inner.cy - outer.cy) ** 2);
-            const needed = dist + inner.r + 16; // 16px gap inside outer boundary
+            const needed = dist + inner.r + 16;
             if (needed > outer.r) outer.r = needed;
           }
         });
       });
 
-      // Write back for force to read
       clusterData.forEach(d => { clusterCircle[d.tag] = { cx: d.cx, cy: d.cy, r: d.r }; });
 
       clusterLayer.selectAll('circle')
@@ -265,22 +290,20 @@ exclude_nav: true
       clusterLabelLayer.selectAll('text')
         .data(clusterData, d => d.tag)
         .join('text')
-        .attr('fill',         d => tagColor[d.tag])
-        .attr('font-size',    '11px')
-        .attr('text-anchor',  'middle')
+        .attr('fill',        d => tagColor[d.tag])
+        .attr('font-size',   '11px')
+        .attr('text-anchor', 'middle')
         .style('pointer-events', 'none')
         .text(d => d.tag)
         .attr('x', d => d.cx)
         .attr('y', d => d.cy + d.r - 8);
     }
 
-    // Tick
     sim.on('tick', () => {
-      // Clamp nodes within SVG bounds
-      const pad = ARTICLE_R + 4;
       nodes.forEach(n => {
-        n.x = Math.max(pad, Math.min(W - pad, n.x));
-        n.y = Math.max(pad, Math.min(H - pad, n.y));
+        const r = nodeRadius(n);
+        n.x = Math.max(r + 4, Math.min(W - r - 4, n.x));
+        n.y = Math.max(r + 4, Math.min(H - r - 4, n.y));
       });
 
       refLines
@@ -288,6 +311,48 @@ exclude_nav: true
         .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
       nodeG.attr('transform', d => `translate(${d.x},${d.y})`);
       updateClusters();
+    });
+
+    buildAgeLegend();
+  }
+
+  function buildAgeLegend() {
+    const labels  = ['< 1mo', '1–3mo', '3–6mo', '6–12mo', '1–2yr', '2yr+'];
+    const swatchW = 16, swatchH = 12, gap = 5;
+    const legendW = 88;
+    const legendH = 14 + labels.length * (swatchH + gap);
+
+    const legend = d3.select(container).append('svg')
+      .attr('width', legendW)
+      .attr('height', legendH)
+      .style('position', 'absolute')
+      .style('bottom', '16px')
+      .style('left', '16px')
+      .style('pointer-events', 'none');
+
+    legend.append('text')
+      .text('Article age')
+      .attr('x', 0).attr('y', 10)
+      .attr('fill', '#888')
+      .attr('font-size', '10px');
+
+    labels.forEach((label, i) => {
+      const c = d3.hsl(ARTICLE_COL);
+      c.s = SAT_FACTORS[i];
+      c.l = LIT_FACTORS[i];
+      const y = 16 + i * (swatchH + gap);
+
+      legend.append('rect')
+        .attr('x', 0).attr('y', y)
+        .attr('width', swatchW).attr('height', swatchH)
+        .attr('rx', 2)
+        .attr('fill', c.formatHex());
+
+      legend.append('text')
+        .text(label)
+        .attr('x', swatchW + 5).attr('y', y + swatchH - 1)
+        .attr('fill', '#888')
+        .attr('font-size', '10px');
     });
   }
 

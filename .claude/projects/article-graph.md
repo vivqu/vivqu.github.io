@@ -22,6 +22,7 @@ Jekyll + GitHub Pages · D3 v7 force graph · no custom plugins
 - [x] **Step 6 — Force tuning**: Verified simulation params; adjusted charge, collide, center force strength, alpha/velocity decay for stable layout.
 - [x] **Step 7 — Visual refinement**: Research D3 graph options and refine the output to better match the target aesthetic.
   - Reference image: [article-graph-visualization.png](.claude/projects/article-graph-visualization.png) — shows the desired look: tight circular clusters with clear overlap zones for shared tags, generous spacing between unrelated clusters, loose untagged nodes scattered freely outside
+  - Reference image: [article-graph-multi-cluster.png](.claude/projects/article-graph-multi-cluster.png) — shows the multi-cluster layout: large outer circles contain smaller sub-cluster circles for shared-tag subsets; non-sharing clusters are fully separated with clear whitespace between them; nodes may appear outside all clusters (truly untagged or single-article tags)
   - More reference images may be added to `.claude/projects/` in the future
   - Areas to explore: label placement, cluster label positioning, node sizing, color palette tuning, animation easing, tooltip styling
 
@@ -53,6 +54,8 @@ Use the [clustered bubbles](https://observablehq.com/@d3/clustered-bubbles) appr
 - [ ] Add custom `forceCluster` that computes per-group centroids each tick and pulls nodes toward them with `strength = 0.2`
 - [ ] Replace `d3.forceCollide` with a custom quadtree-based collide force: `padding1 = 2` within same group, `padding2 = 6` across groups
 
+> **Note:** A cluster-to-centroid repulsion approach was attempted and reverted. The core problem: nodes with ref links to nodes inside a sub-cluster (e.g. a `forecasting`-only node referencing an `AI as Normal Technology` node that sits inside the `skepticism` sub-circle) are pulled into the wrong cluster by `forceLink`. No purely force-based approach could reliably overcome this without destabilizing the simulation. The quadtree collide approach above (which operates at node-pair level) is the right next attempt.
+
 ### Unclustered nodes layout
 
 Use the [disjoint force-directed graph](https://observablehq.com/@d3/disjoint-force-directed-graph/2) approach for nodes with no tag (or tags that have only one article):
@@ -71,30 +74,30 @@ Use the [disjoint force-directed graph](https://observablehq.com/@d3/disjoint-fo
 | 4–6       | 15                  |
 | 7+        | 20                  |
 
-- [ ] Precompute a `backlinkCount` map from `refLinks` (count how many times each node `id` appears as a `target`)
-- [ ] Define `d3.scaleThreshold([1, 2, 4, 7], [6, 8, 11, 15, 20])` and apply to node circle `r`
-- [ ] Update `forceCollide` radius fn to use the same scale so larger nodes don't overlap
+- [x] Precompute a `backlinkCount` map from `refLinks` (count how many times each node `id` appears as a `target`)
+- [x] Define `d3.scaleThreshold([1, 2, 4, 7], [6, 8, 11, 15, 20])` and apply to node circle `r`
+- [x] Update `forceCollide` radius fn to use the same scale so larger nodes don't overlap
 
-**Age-based color desaturation** — use `d3.hsl` to blend the node's base color toward grey based on article age. Apply to the article fill color only (not own-post gold):
+**Age-based color desaturation** — use `d3.hsl` to blend the node's base color toward grey based on article age. Apply to the article fill color only (not own-post gold). Final values differ from original spec after visual tuning — saturation and lightness both vary for perceptual distinction at low saturation levels:
 
-| Age          | Saturation        |
-|--------------|-------------------|
-| < 1 month    | 100% (full color) |
-| 1–2 months   | 80%               |
-| 3–6 months   | 55%               |
-| 6–12 months  | 30%               |
-| 12–24 months | 15% (near-grey)   |
-| 24+ months   | 8% (almost grey)  |
+| Age          | Saturation | Lightness |
+|--------------|------------|-----------|
+| < 1 month    | 1.00       | 0.56      |
+| 1–3 months   | 0.80       | 0.62      |
+| 3–6 months   | 0.58       | 0.64      |
+| 6–12 months  | 0.36       | 0.64      |
+| 12–24 months | 0.12       | 0.53      |
+| 24+ months   | 0.04       | 0.44      |
 
-- [ ] Compute `ageMonths` from `d.date` relative to today at render time
-- [ ] Define a `d3.scaleThreshold([1, 3, 6, 12, 24], [1.0, 0.8, 0.55, 0.3, 0.15, 0.08])` saturation multiplier
-- [ ] Apply via `d3.hsl(baseColor)` — multiply `.s` by the factor, convert back to hex string
+- [x] Compute `ageMonths` from `d.date` relative to today at render time
+- [x] Define `d3.scaleThreshold` for both saturation and lightness, set absolutely (not as multipliers)
+- [x] Apply via `d3.hsl(baseColor)`, setting `.s` and `.l` directly, convert back to hex string
 
 ### Viewport controls
 
-- [ ] **Lock pan to content bounds** — call `zoom.translateExtent([[0, 0], [W, H]])` so panning cannot go beyond the SVG dimensions; no dead empty space
-- [ ] **+/- zoom buttons** — add two buttons absolutely positioned in the top-right corner of `#graph-container`; wire each to `svg.transition().duration(300).call(zoom.scaleBy, 1.4)` / `zoom.scaleBy(0.7)`; keep `scaleExtent([0.2, 4])` as the clamp; on touch devices pinch-to-zoom works natively but buttons should remain with ≥44px tap targets
-- [ ] **Age color legend** — add a small threshold legend (ref: [d3 color legend](https://observablehq.com/@d3/color-legend)) overlaid in the bottom-left corner of the container. Build a `d3.scaleThreshold` mapping the same month thresholds to the desaturated color stops, render discrete color rectangles + axis tick labels via `d3.axisBottom`. Labels should read e.g. "1mo", "3mo", "6mo", "1yr", "2yr+". Title: "Article age".
+- [x] **Lock pan to content bounds** — call `zoom.translateExtent([[0, 0], [W, H]])` so panning cannot go beyond the SVG dimensions; no dead empty space
+- [x] **+/- zoom buttons** — add two buttons absolutely positioned in the top-right corner of `#graph-container`; wire each to `svg.transition().duration(300).call(zoom.scaleBy, 1.4)` / `zoom.scaleBy(0.7)`; keep `scaleExtent([0.2, 4])` as the clamp; on touch devices pinch-to-zoom works natively but buttons should remain with ≥44px tap targets
+- [x] **Age color legend** — discrete color swatches + labels overlaid in the bottom-left corner of the container; built as an absolutely-positioned SVG appended to `#graph-container`; labels read "< 1mo", "1–3mo", "3–6mo", "6–12mo", "1–2yr", "2yr+"; title: "Article age"
 
 ### Legend cluster focus (Pattern C — zoom + fade)
 
@@ -108,21 +111,19 @@ Clicking a tag in the legend zooms to that cluster and fades unrelated nodes. Cl
 
 ### Tooltip improvements
 
-- [ ] Show full date instead of year only — `date` is already `YYYY-MM-DD` in the YAML, just change the JS display from `d.date.slice(0, 4)` to a formatted full date
+- [x] Show full date instead of year only — formatted with `toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })`
 - [ ] Add a `blurb` field to `reading.yml` entries: a 1-sentence description of the article — display it in the tooltip below the author/date line, and include it in `graph.json`
 
 ### Data cleanup
 
 The domain nodes and domain links in `reading/graph.json` are generated but immediately filtered out by the JS — they're dead weight. The `domain` field on article nodes is also unused.
 
-- [ ] Remove `domain` field from article nodes in `graph.json`
-- [ ] Remove domain node generation block (the `{% for domain in domains %}` loop)
-- [ ] Remove domain link generation block (the `source → domain:` links)
-- [ ] Remove the `domain_names` dedup string build at the top of the template (no longer needed)
+- [x] Remove `domain` field from article nodes in `graph.json`
+- [x] Remove domain node generation block (the `{% for domain in domains %}` loop)
+- [x] Remove domain link generation block (the `source → domain:` links)
+- [x] Remove the `domain_names` dedup string build at the top of the template (no longer needed)
 
 ## Verification Steps
-
-Workflow 1 - Verifying the page loads and UI renders
 
 Use `playwright-cli` to take screenshots (saved to `.screenshot-tests/`, which is gitignored).
 
@@ -133,6 +134,8 @@ First, delete any stale screenshots from previous runs:
 ```bash
 rm -f .screenshot-tests/article-graph-*.png
 ```
+
+### Workflow 1 — Page load and static UI
 
 ```bash
 # Screenshot the homepage to verify the nav link appears
@@ -149,6 +152,48 @@ Verify in the screenshots:
   - Title: Reading
   - Subtitle: an interactive map of articles and essays I've found worth reading, connected by domain and cross-references
   - D3 graph SVG is rendered with nodes visible
+
+### Workflow 2 — Settled graph layout (run 3–4 times)
+
+The force simulation uses random initial positions, so the final layout differs each run. Take multiple settled screenshots and review them all — look for consistent cluster separation and no runaway nodes, not pixel-perfect reproduction.
+
+Use `playwright-cli open` (not `--url`) so you can reload the page between runs without reopening the browser:
+
+```bash
+playwright-cli open http://localhost:4000/reading/
+playwright-cli resize 1400 900
+```
+
+Then repeat the following block **3–4 times**, incrementing the filename suffix each time:
+
+```bash
+# Reload to get a fresh simulation run
+playwright-cli reload
+# Wait ~5s for the simulation to settle, then screenshot
+sleep 5 && playwright-cli screenshot --filename .screenshot-tests/article-graph-settled-1.png
+
+# Run 2
+playwright-cli reload
+sleep 5 && playwright-cli screenshot --filename .screenshot-tests/article-graph-settled-2.png
+
+# Run 3
+playwright-cli reload
+sleep 5 && playwright-cli screenshot --filename .screenshot-tests/article-graph-settled-3.png
+
+# Run 4
+playwright-cli reload
+sleep 5 && playwright-cli screenshot --filename .screenshot-tests/article-graph-settled-4.png
+```
+
+Verify across all runs:
+
+- Cluster circles are visible with correct tag labels
+- Nodes stay within the SVG bounds (no clipping at edges)
+- Ref links (dashed lines) connect the correct nodes
+- Age color legend is visible in the bottom-left corner
+- Zoom +/− buttons are visible in the top-right corner
+- No node groups escape to a corner or collapse into a single pile
+- Isolated nodes (single-tag articles with no cluster) float near the center, not off in a corner
 
 ---
 
