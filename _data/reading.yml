@@ -1,0 +1,33 @@
+# Reading list for the interactive graph at /reading
+# Fields:
+#   title:  article title
+#   url:    full URL for external articles; relative path (e.g. /blog/...) for own posts
+#   author: author name(s) or "me" for my own posts
+#   domain: bare hostname, no www (e.g. "paulgraham.com"); use "self" for own posts
+#   tags:   list of topic tags — shared tags create hull clusters on the graph
+#   date:   full publication date (YYYY-MM-DD); year is inferred from this for display
+#   refs:   list of URLs of OTHER articles in this list that this article references
+
+- title: "Why AGI Will Not Happen"
+  url: "https://timdettmers.com/2025/12/10/why-agi-will-not-happen/"
+  author: "Tim Dettmers"
+  domain: timdettmers.com
+  tags: [forecasting, skepticism]
+  date: "2025-12-15"
+  refs: []
+
+- title: "What If? AI in 2026 and Beyond"
+  url: "https://www.oreilly.com/radar/what-if-ai-in-2026-and-beyond/?ref=sentiers.media"
+  author: "Tim O'Reilly and Mike Loukides"
+  domain: oreilly.com
+  tags: [forecasting]
+  date: "2025-12-08"
+  refs: []
+
+- title: "The Useful Idiots of AI Doomsaying"
+  url: "https://www.theatlantic.com/books/archive/2025/09/what-ais-doomers-and-utopians-have-in-common/684270/"
+  author: "Adam Becker"
+  domain: theatlantic.com
+  tags: [forecasting, skepticism]
+  date: "2025-09-19"
+  refs: []

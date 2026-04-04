@@ -65,7 +65,7 @@ Flat list, one entry per article.
   author: Vaswani et al.
   domain: arxiv.org          # must be consistent, no <www>.
   tags: [transformers, ml]
-  year: 2017
+  date: "2017-06-12"         # full publication date (YYYY-MM-DD); year is inferred from this
   refs: []                   # URLs of other articles in this list that this article references
 
 - title: "My notes on scaling"
@@ -73,7 +73,7 @@ Flat list, one entry per article.
   author: me
   domain: self              # sentinel for own posts
   tags: [scaling, notes]
-  year: 2024
+  date: "2024-03-15"
   refs: ["https://arxiv.org/abs/1706.03762"]  # cross-references to other articles by URL
 ```
 
@@ -93,7 +93,7 @@ Emit one link per entry in refs → target article URL (type: "ref"); skip if ta
 // output shape
 {
   "nodes": [
-    { "id": "https://arxiv.org/...", "type": "article", "label": ..., "author": ..., "domain": ..., "tags": [...], "year": ..., "self": false },
+    { "id": "https://arxiv.org/...", "type": "article", "label": ..., "author": ..., "domain": ..., "tags": [...], "date": ..., "self": false },
     { "id": "domain:arxiv.org",     "type": "domain", "label": "arxiv.org", "count": 3 }
   ],
   "links": [
@@ -114,7 +114,7 @@ Jekyll page at /reading. Fetches /reading-graph.json, renders with D3 v7 (cdnjs 
 - Domain links — thin, low-opacity white lines
 - Ref links — dashed, slightly brighter lines to visually distinguish cross-article references from domain edges
 - Domain labels always visible; article labels visible on zoom or hover
-- Hover tooltip — title, author, year, tags for articles; name + count for domains
+- Hover tooltip — title, author, date, tags for articles; name + count for domains
 - Drag nodes, scroll to zoom, pan
 
 Tag clusters — convex hull overlay (SVG `<path>`, rendered behind nodes):
