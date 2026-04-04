@@ -178,11 +178,30 @@
         y: VH / 2 + Math.sin(angle) * VH * 0.22,
       };
     });
+
+    // Per-subcluster seed angle within each supercluster — break initial symmetry so
+    // the subcluster separation force has a non-zero direction vector from tick 1.
+    const subSeedAngle = {};
+    superTagList.forEach(st => {
+      const superNodeIds = new Set((tagGroups[st] || []).map(n => n.id));
+      const subTagsForSuper = Object.keys(tagGroups).filter(t =>
+        !superTagSet.has(t) &&
+        (tagGroups[t] || []).length >= 2 &&
+        (tagGroups[t] || []).every(n => superNodeIds.has(n.id))
+      );
+      subTagsForSuper.forEach((subTag, i) => {
+        subSeedAngle[subTag] = (i / Math.max(subTagsForSuper.length, 1)) * 2 * Math.PI;
+      });
+    });
+
     nodes.forEach(n => {
       const superTag = (n.tags || []).find(t => superTagSet.has(t));
       const seed = superTag ? superSeedPos[superTag] : { x: VW / 2, y: VH / 2 };
-      n.x = seed.x + (Math.random() - 0.5) * 80;
-      n.y = seed.y + (Math.random() - 0.5) * 80;
+      const subTag = (n.tags || []).find(t => subSeedAngle[t] !== undefined);
+      const angle = subTag !== undefined ? subSeedAngle[subTag] : Math.random() * 2 * Math.PI;
+      const spreadR = subTag !== undefined ? 60 : 40;
+      n.x = seed.x + Math.cos(angle) * spreadR + (Math.random() - 0.5) * 30;
+      n.y = seed.y + Math.sin(angle) * spreadR + (Math.random() - 0.5) * 30;
     });
 
     const clusterCircle = {};
@@ -218,15 +237,15 @@
           if (nodeTags.has(t)) {
             // Subcluster tags get a stronger pull than supercluster tags so nodes
             // settle inside the subcluster circle, not the outer supercluster ring.
-            const strength = superTagSet.has(t) ? 0.06 : 0.16;
+            const strength = superTagSet.has(t) ? 0.06 : 0.15;
             n.vx -= dx * alpha * strength;
             n.vy -= dy * alpha * strength;
           } else if (!isFreeNode) {
             const circle = clusterCircle[t];
             if (!circle) return;
-            const pushRadius = circle.r + 6 + 50;
+            const pushRadius = circle.r + 56;
             if (dist < pushRadius) {
-              const force = ((pushRadius - dist) / pushRadius) * alpha * 0.6;
+              const force = ((pushRadius - dist) / pushRadius) * alpha * 0.8;
               n.vx += (dx / dist) * force;
               n.vy += (dy / dist) * force;
             }
@@ -350,6 +369,46 @@
       });
     }
 
+    // Push single-subcluster nodes out of sibling subcluster circles.
+    // When two subclusters share nodes (Venn diagram), their circles overlap intentionally —
+    // but single-subcluster nodes (purple) must stay in the non-overlapping region.
+    // This boundary exclusion force is stronger and more direct than soft repulsion.
+    function singleSubclusterBoundaryForce(alpha) {
+      // Build supercluster → child subTags map (tags that have circles)
+      const superToSubTags = {};
+      superTagSet.forEach(st => {
+        const superNodeIds = new Set((tagGroups[st] || []).map(n => n.id));
+        superToSubTags[st] = Object.keys(clusterCircle).filter(t =>
+          !superTagSet.has(t) &&
+          (tagGroups[t] || []).every(n => superNodeIds.has(n.id))
+        );
+      });
+
+      nodes.forEach(n => {
+        const mySubTags = (n.tags || []).filter(t => !superTagSet.has(t) && clusterCircle[t]);
+        if (mySubTags.length !== 1) return;  // only single-subcluster nodes
+        const mySubTag = mySubTags[0];
+        const superTag = (n.tags || []).find(t => superTagSet.has(t));
+        if (!superTag) return;
+        const siblings = (superToSubTags[superTag] || []).filter(t => t !== mySubTag);
+
+        siblings.forEach(sibTag => {
+          const sib = clusterCircle[sibTag];
+          if (!sib) return;
+          const dx = n.x - sib.cx, dy = n.y - sib.cy;
+          const dist = Math.hypot(dx, dy) || 1;
+          // Push out of sibling circle with a buffer zone so nodes don't hug the boundary
+          const boundary = sib.r + 12;
+          if (dist < boundary) {
+            const penetration = boundary - dist;
+            const force = penetration * 2.5 * alpha;
+            n.vx += (dx / dist) * force;
+            n.vy += (dy / dist) * force;
+          }
+        });
+      });
+    }
+
     // Fix 7: pull free nodes (no cluster circle for any of their tags) just outside the nearest cluster
     function freeNodeForce(alpha) {
       if (Object.keys(clusterCircle).length === 0) return;
@@ -370,7 +429,7 @@
     }
 
     const sim = d3.forceSimulation(nodes)
-      .force('link',           d3.forceLink(refLinks).id(d => d.id).distance(40).strength(0.2))
+      .force('link',           d3.forceLink(refLinks).id(d => d.id).distance(40).strength(0.08))
       .force('charge',         d3.forceManyBody().strength(-35))
       .force('collide',        d3.forceCollide(d => nodeRadius(d) + 8))
       .force('x',              d3.forceX(d => {
@@ -386,6 +445,7 @@
       .force('subSeparation',  () => sim && subclusterSeparationForce(sim.alpha()))
       .force('superProximity', () => sim && superclusterProximityForce(sim.alpha()))
       .force('ringOrbital',    () => sim && ringOrbitalForce(sim.alpha()))
+      .force('singleBoundary', () => sim && singleSubclusterBoundaryForce(sim.alpha()))
       .force('freeNode',       () => sim && freeNodeForce(sim.alpha()))
       .alphaDecay(0.015)
       .velocityDecay(0.45);
