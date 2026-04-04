@@ -10,14 +10,20 @@ Jekyll + GitHub Pages · D3 v7 force graph · no custom plugins
 - [x] **Step 2 — Nav link**: Add "reading" link to `_includes/masthead.html` between "books" and "subscribe".
 - [x] **Step 3 — Sample data**: Create `_data/reading.yml` with ~10–15 representative articles covering a few domains and tags, including a few `refs` cross-links and at least one own post (`domain: self`).
 - [x] **Step 4 — graph.json template**: Create `reading/graph.json` (Liquid template). Emits nodes and links from `_data/reading.yml`. Rendered to `/reading/graph.json` at build time.
-- [ ] **Step 5 — D3 graph**: Build the full visualisation inside `reading.html`:
+- [x] **Step 5 — D3 graph**: Build the full visualisation inside `reading.html`:
   - SVG element with dark background, zoom/pan, drag
-  - Domain link edges (thin, low-opacity) and ref link edges (dashed, brighter)
-  - Article nodes (purple / gold for own posts) and domain nodes (teal / orange at 3+)
-  - Convex hull overlays per tag, recomputed each tick
-  - Hover tooltip
+  - Ref link edges only (dashed, semi-transparent white) — domain nodes removed as visual noise
+  - Article nodes only: purple `#7c6edb`, gold `#f0c060` for own posts
+  - Circular cluster overlays per tag (not convex hulls): filled semi-transparent circle per tag, recomputed each tick
+  - Outer circles expand to fully contain any inner sub-cluster circles (e.g. `forecasting` contains `skepticism`)
+  - Clustering force pulls nodes toward their tag centroids; repulsion force pushes non-member nodes outside cluster boundary + 50px buffer
+  - Hover tooltip (title, author, year, tags); article labels visible on hover
   - Clickable article nodes (open in new tab)
-- [ ] **Step 6 — Force tuning**: Verify simulation params (link distance, charge, collision, center force) look good with real data; adjust as needed.
+- [x] **Step 6 — Force tuning**: Verified simulation params; adjusted charge, collide, center force strength, alpha/velocity decay for stable layout.
+- [ ] **Step 7 — Visual refinement**: Research D3 graph options and refine the output to better match the target aesthetic.
+  - Reference image: [article-graph-visualization.png](.claude/projects/article-graph-visualization.png) — shows the desired look: tight circular clusters with clear overlap zones for shared tags, generous spacing between unrelated clusters, loose untagged nodes scattered freely outside
+  - More reference images may be added to `.claude/projects/` in the future
+  - Areas to explore: label placement, cluster label positioning, node sizing, color palette tuning, animation easing, tooltip styling
 
 ## Verification Steps
 

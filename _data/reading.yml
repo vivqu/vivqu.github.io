@@ -102,7 +102,7 @@
   domain: normaltech.ai
   tags: [forecasting]
   date: "2025-07-16"
-  refs: []
+  refs: ["https://www.normaltech.ai/p/ai-as-normal-technology"]
 
 - title: "2023"
   url: "https://www.hyperdimensional.co/p/2023"
@@ -112,3 +112,34 @@
   date: "2026-03-25"
   refs: ["https://www.normaltech.ai/p/ai-as-normal-technology"]
 
+- title: "Tailwind CSS: add llms.txt endpoint for LLM-optimized documentation"
+  url: "https://github.com/tailwindlabs/tailwindcss.com/pull/2388"
+  author: "Tailwind Labs"
+  domain: github.com
+  tags: [open-source]
+  date: "2025-11-18"
+  refs: []
+
+- title: "Tldraw: Move tests to closed source repo"
+  url: "https://github.com/tldraw/tldraw/issues/8082"
+  author: "tldraw"
+  domain: github.com
+  tags: [open-source]
+  date: "2026-02-25"
+  refs: []
+
+- title: "The Claude Code Source Leak: fake tools, frustration regexes, undercover mode, and more"
+  url: "https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/"
+  author: "Alex Kim"
+  domain: alex000kim.com
+  tags: [agent-harness, open-source]
+  date: "2026-03-31"
+  refs: []
+
+- title: "Reading leaked Claude Code source code"
+  url: "https://lr0.org/blog/p/claude-code-source/?&aid=recgjCmoUY17o8Fsm&_bhlid=ca73afa2934111f4ea381a845f7852f047bfe3a0"
+  author: "Sergei Parajanov"
+  domain: lr0.org
+  tags: [agent-harness, open-source]
+  date: "2026-03-31"
+  refs: ["https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/"]

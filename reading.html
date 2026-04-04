@@ -7,8 +7,264 @@ permalink: /reading
 exclude_nav: true
 ---
 
-<div id="graph-container" style="width: 100%; height: calc(100vh - 180px); position: relative;">
-  <div class="mx-auto" style="max-width: 700px;">
-    <p style="color: #6a737d;">Graph loading…</p>
-  </div>
-</div>
+<div id="graph-container" style="width: 100%; height: calc(100vh - 180px); position: relative;"></div>
+
+<div id="graph-tooltip" style="
+  position: fixed;
+  pointer-events: none;
+  display: none;
+  background: #1e1e2e;
+  border: 1px solid #3a3a5c;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #ddd;
+  max-width: 240px;
+  z-index: 100;
+  line-height: 1.6;
+"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+(function () {
+  const BG          = '#14141f';
+  const ARTICLE_COL = '#7c6edb';
+  const OWN_COL     = '#f0c060';
+  const TAG_PALETTE = ['#b06edb','#6eabd8','#6ed8a4','#d8c76e','#d87a6e','#6e8fd8','#d86eaa','#8bd86e'];
+  const ARTICLE_R   = 6;
+  const CLUSTER_PAD = 38; // extra radius beyond outermost node
+
+  const container = document.getElementById('graph-container');
+  const tooltip   = document.getElementById('graph-tooltip');
+  const W = container.clientWidth;
+  const H = container.clientHeight;
+
+  const svg = d3.select(container).append('svg')
+    .attr('width', W).attr('height', H)
+    .style('background', BG).style('display', 'block');
+
+  const g = svg.append('g');
+
+  svg.call(d3.zoom().scaleExtent([0.2, 4])
+    .on('zoom', e => g.attr('transform', e.transform)));
+
+  fetch('/reading/graph.json')
+    .then(r => r.json())
+    .then(render)
+    .catch(() => {
+      container.innerHTML = '<p style="color:#666;padding:24px">Could not load graph data.</p>';
+    });
+
+  function render(data) {
+    // Only article nodes — drop domain nodes/links
+    const nodes = data.nodes.filter(n => n.type === 'article').map(d => ({ ...d }));
+    const nodeById = new Map(nodes.map(n => [n.id, n]));
+    const refLinks = data.links
+      .filter(l => l.type === 'ref' && nodeById.has(l.source) && nodeById.has(l.target))
+      .map(d => ({ ...d }));
+
+    // Tag color map
+    const tagSet = new Set();
+    nodes.forEach(n => (n.tags || []).forEach(t => tagSet.add(t)));
+    const tags = Array.from(tagSet);
+    const tagColor = {};
+    tags.forEach((t, i) => { tagColor[t] = TAG_PALETTE[i % TAG_PALETTE.length]; });
+
+    // Group nodes by tag
+    const tagGroups = {};
+    nodes.forEach(n => {
+      (n.tags || []).forEach(t => {
+        (tagGroups[t] || (tagGroups[t] = [])).push(n);
+      });
+    });
+
+    // Seed all nodes near center, grouped loosely by primary tag
+    nodes.forEach(n => {
+      const primaryTag = (n.tags || [])[0];
+      const tagIdx = primaryTag ? tags.indexOf(primaryTag) : -1;
+      const angle = tagIdx >= 0 ? (tagIdx / tags.length) * 2 * Math.PI - Math.PI / 2 : Math.random() * 2 * Math.PI;
+      n.x = W / 2 + Math.cos(angle) * 50 + (Math.random() - 0.5) * 20;
+      n.y = H / 2 + Math.sin(angle) * 50 + (Math.random() - 0.5) * 20;
+    });
+
+    // Precompute cluster circle radius per tag (updated each tick)
+    const clusterCircle = {}; // tag -> { cx, cy, r }
+
+    // Clustering forces:
+    // 1. Pull nodes toward the centroid of clusters they belong to
+    // 2. Push nodes away from cluster circles they do NOT belong to
+    function clusterForce(alpha) {
+      // Recompute cluster centroids
+      const centroids = {};
+      Object.entries(tagGroups).forEach(([t, ns]) => {
+        if (ns.length < 2) return;
+        centroids[t] = { cx: d3.mean(ns, d => d.x), cy: d3.mean(ns, d => d.y) };
+      });
+
+      nodes.forEach(n => {
+        const nodeTags = new Set(n.tags || []);
+
+        Object.entries(centroids).forEach(([t, { cx, cy }]) => {
+          const dx = n.x - cx;
+          const dy = n.y - cy;
+          const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+
+          if (nodeTags.has(t)) {
+            // Pull toward centroid
+            n.vx -= dx * alpha * 0.08;
+            n.vy -= dy * alpha * 0.08;
+          } else {
+            // Push away from cluster circle boundary + padding
+            const circle = clusterCircle[t];
+            if (!circle) return;
+            const pushRadius = circle.r + ARTICLE_R + 50;
+            if (dist < pushRadius) {
+              const force = ((pushRadius - dist) / pushRadius) * alpha * 0.6;
+              n.vx += (dx / dist) * force * pushRadius;
+              n.vy += (dy / dist) * force * pushRadius;
+            }
+          }
+        });
+      });
+    }
+
+    // Simulation — faster decay so it settles quickly
+    const sim = d3.forceSimulation(nodes)
+      .force('link',    d3.forceLink(refLinks).id(d => d.id).distance(60).strength(0.8))
+      .force('charge',  d3.forceManyBody().strength(-80))
+      .force('collide', d3.forceCollide(ARTICLE_R + 8))
+      .force('center',  d3.forceCenter(W / 2, H / 2).strength(0.15))
+      .force('cluster', () => sim && clusterForce(sim.alpha()))
+      .alphaDecay(0.03)
+      .velocityDecay(0.45);
+
+    // Layers (back to front)
+    const clusterLayer      = g.append('g');
+    const clusterLabelLayer = g.append('g');
+    const refLinkLayer      = g.append('g');
+    const nodeLayer         = g.append('g');
+
+    // Ref links
+    const refLines = refLinkLayer.selectAll('line')
+      .data(refLinks)
+      .join('line')
+      .attr('stroke', 'rgba(255,255,255,0.5)')
+      .attr('stroke-width', 1.5)
+      .attr('stroke-dasharray', '5 3');
+
+    // Node groups
+    const nodeG = nodeLayer.selectAll('g')
+      .data(nodes)
+      .join('g')
+      .style('cursor', 'pointer')
+      .call(d3.drag()
+        .on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+        .on('drag',  (e, d) => { d.fx = e.x; d.fy = e.y; })
+        .on('end',   (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+    nodeG.append('circle')
+      .attr('r', ARTICLE_R)
+      .attr('fill', d => d.self ? OWN_COL : ARTICLE_COL);
+
+    // Article labels — shown on hover
+    nodeG.append('text')
+      .text(d => d.label)
+      .attr('dy', ARTICLE_R + 13)
+      .attr('text-anchor', 'middle')
+      .attr('fill', '#ccc')
+      .attr('font-size', '10px')
+      .style('pointer-events', 'none')
+      .style('opacity', 0);
+
+    // Events
+    nodeG
+      .on('mouseenter', function (event, d) {
+        d3.select(this).select('text').style('opacity', 1);
+        const year     = d.date ? d.date.slice(0, 4) : '';
+        const tagsHtml = (d.tags || []).length
+          ? `<br><span style="color:#888">${d.tags.join(', ')}</span>` : '';
+        tooltip.innerHTML = `<strong>${esc(d.label)}</strong><br>${esc(d.author)}${year ? ' · ' + year : ''}${tagsHtml}`;
+        tooltip.style.display = 'block';
+        positionTooltip(event);
+      })
+      .on('mousemove', positionTooltip)
+      .on('mouseleave', function () {
+        d3.select(this).select('text').style('opacity', 0);
+        tooltip.style.display = 'none';
+      })
+      .on('click', (event, d) => window.open(d.id, '_blank'));
+
+    function positionTooltip(event) {
+      tooltip.style.left = Math.min(event.clientX + 14, window.innerWidth - 260) + 'px';
+      tooltip.style.top  = Math.max(event.clientY - 32, 8) + 'px';
+    }
+
+    // Cluster circles update
+    function updateClusters() {
+      const clusterData = Object.entries(tagGroups)
+        .filter(([, ns]) => ns.length >= 2 && ns[0].x != null)
+        .map(([tag, ns]) => {
+          const cx = d3.mean(ns, n => n.x);
+          const cy = d3.mean(ns, n => n.y);
+          const r  = d3.max(ns, n => Math.sqrt((n.x - cx) ** 2 + (n.y - cy) ** 2)) + ARTICLE_R + CLUSTER_PAD;
+          return { tag, cx, cy, r };
+        });
+
+      // Expand outer circles to fully encompass any inner cluster circles whose
+      // members are a strict subset of the outer tag's members
+      const outerNodeSets = new Map(
+        clusterData.map(d => [d.tag, new Set(tagGroups[d.tag].map(n => n.id))])
+      );
+      clusterData.forEach(outer => {
+        clusterData.forEach(inner => {
+          if (inner.tag === outer.tag) return;
+          const outerSet = outerNodeSets.get(outer.tag);
+          const allInside = tagGroups[inner.tag].every(n => outerSet.has(n.id));
+          if (allInside) {
+            const dist = Math.sqrt((inner.cx - outer.cx) ** 2 + (inner.cy - outer.cy) ** 2);
+            const needed = dist + inner.r + 16; // 16px gap inside outer boundary
+            if (needed > outer.r) outer.r = needed;
+          }
+        });
+      });
+
+      // Write back for force to read
+      clusterData.forEach(d => { clusterCircle[d.tag] = { cx: d.cx, cy: d.cy, r: d.r }; });
+
+      clusterLayer.selectAll('circle')
+        .data(clusterData, d => d.tag)
+        .join('circle')
+        .attr('fill',         d => tagColor[d.tag] + '18')
+        .attr('stroke',       d => tagColor[d.tag] + '60')
+        .attr('stroke-width', 1.5)
+        .attr('cx', d => d.cx)
+        .attr('cy', d => d.cy)
+        .attr('r',  d => d.r);
+
+      clusterLabelLayer.selectAll('text')
+        .data(clusterData, d => d.tag)
+        .join('text')
+        .attr('fill',         d => tagColor[d.tag])
+        .attr('font-size',    '11px')
+        .attr('text-anchor',  'middle')
+        .style('pointer-events', 'none')
+        .text(d => d.tag)
+        .attr('x', d => d.cx)
+        .attr('y', d => d.cy + d.r - 8);
+    }
+
+    // Tick
+    sim.on('tick', () => {
+      refLines
+        .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+        .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+      nodeG.attr('transform', d => `translate(${d.x},${d.y})`);
+      updateClusters();
+    });
+  }
+
+  function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+})();
+</script>
