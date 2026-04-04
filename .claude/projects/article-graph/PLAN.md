@@ -26,6 +26,39 @@ Jekyll + GitHub Pages · D3 v7 force graph · no custom plugins
   - More reference images may be added to `.claude/projects/` in the future
   - Areas to explore: label placement, cluster label positioning, node sizing, color palette tuning, animation easing, tooltip styling
 
+## Test Infrastructure
+
+**Complete before any further cluster layout changes.** See [TEST_PLAN.md](TEST_PLAN.md) for the full implementation checklist, dataset design, and color key.
+
+### Cluster design decisions
+
+- **Max 1 level of subclusters** — hierarchy is `supercluster → subcluster` only; no sub-sub-clusters. A subcluster tag cannot simultaneously act as a supercluster.
+- **Supercluster detection is geometric** — a tag is a supercluster when its computed circle fully contains at least one other tag's circle. Containment is checked after each simulation tick.
+- **Superclusters should not visually overlap** — the force changes push them apart with a minimum gap. Bridge nodes (tagged with two supercluster-level tags) may sit between circles but circles themselves should not intersect.
+- **Minimum 2 articles to draw a circle** — a tag with only 1 article is treated as a free node (no cluster circle drawn, no centroid pull).
+- **Ref links can cross any boundary** — a link may connect nodes in different subclusters, different superclusters, or between free and clustered nodes. Forces must maintain correct node placement regardless.
+
+### How to enable test mode
+
+```bash
+bundle exec jekyll serve --unpublished   # makes reading-test.html accessible
+# visit: http://localhost:4000/reading-test/?testmode=1
+```
+
+`reading-test.html` has `published: false` — Jekyll excludes it from production builds entirely. GitHub Pages never sees it. Test mode (`?testmode=1`) only changes colors and tooltips; no force parameters change.
+
+| Test color | Category | Expected position |
+| --- | --- | --- |
+| Red fill | Supercluster-only node | Outer ring of supercluster, NOT inside any subcluster |
+| Orange fill | Dual-subcluster node | Between two sibling subcluster circles |
+| Magenta fill | Cross-supercluster bridge | Near boundary between two superclusters |
+| Cyan fill | Free node (no tags / singleton tag) | Just outside nearest cluster circle |
+| Yellow stroke | Node with cross-cluster ref link | Marks nodes actively pulled across boundaries |
+| Blue dashed circle | Supercluster boundary | Should not overlap another blue circle |
+| Red solid circle | Subcluster boundary | Should not overlap a sibling red circle |
+
+---
+
 ## Visual Refinement Plan
 
 Checklist of targeted changes based on research. Add items here as we identify specific things to improve.
@@ -49,6 +82,7 @@ The `reading.html` layout uses `d-md-flex` (Primer flex at ≥768px), so below 7
 ### Cluster layout
 
 > **See [force-changes.md](force-changes.md)** for the full analysis of what was attempted, why it failed, and the concrete next steps.
+> **See [TEST_PLAN.md](TEST_PLAN.md)** for the test dataset design (`test_graph.yml`, 103 nodes) and test mode color coding (`?testmode=1`) used to verify the force changes.
 
 Current known issues:
 
