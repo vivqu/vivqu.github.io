@@ -1,0 +1,18 @@
+---
+layout: null
+---
+{% assign articles = site.data.test_graph %}
+{% assign article_urls = articles | map: "url" | join: "|||" %}
+{
+  "nodes": [
+{% for article in articles %}
+    { "id": {{ article.url | jsonify }}, "type": "article", "label": {{ article.title | jsonify }}, "author": {{ article.author | jsonify }}, "tags": {{ article.tags | jsonify }}, "date": {{ article.date | jsonify }}, "blurb": {{ article.blurb | jsonify }}, "self": {% if article.domain == "self" %}true{% else %}false{% endif %} }{% unless forloop.last %},{% endunless %}
+
+{% endfor %}
+  ],
+  "links": [
+{% assign is_first_link = true %}{% for article in articles %}{% for ref in article.refs %}{% if article_urls contains ref %}{% unless is_first_link %},{% endunless %}
+    { "source": {{ article.url | jsonify }}, "target": {{ ref | jsonify }}, "type": "ref" }{% assign is_first_link = false %}{% endif %}{% endfor %}{% endfor %}
+
+  ]
+}

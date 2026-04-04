@@ -459,15 +459,15 @@ Complete these in order before making any further cluster layout changes.
 
 ### 1. Test dataset
 
-- [ ] Create `_data/test_graph.yml` with all 99 nodes per the edge case matrix above
-  - [ ] All 23 node categories represented (supercluster-only, dual-subcluster, bridge, free, own-post variants, etc.)
-  - [ ] Ref link topology from the "Ref Link Topology" section: within-subcluster, cross-subcluster, supercluster-only → subcluster (primary stress case), cross-supercluster, free node refs
-  - [ ] 1 high-backlink node (≥7 inbound refs) to test radius scaling
-  - [ ] Date range spanning 2022–2026 to exercise the age desaturation scale
+- [x] Create `_data/test_graph.yml` with all 99 nodes per the edge case matrix above
+  - [x] All 23 node categories represented (supercluster-only, dual-subcluster, bridge, free, own-post variants, etc.)
+  - [x] Ref link topology from the "Ref Link Topology" section: within-subcluster, cross-subcluster, supercluster-only → subcluster (primary stress case), cross-supercluster, free node refs
+  - [x] 1 high-backlink node (≥7 inbound refs) to test radius scaling
+  - [x] Date range spanning 2022–2026 to exercise the age desaturation scale
 
 ### 2. Test data template
 
-- [ ] Create `reading/test-graph.json` — Liquid template identical to `reading/graph.json` but with `{% assign articles = site.data.test_graph %}` hardcoded at the top (no `data_file` indirection needed here)
+- [x] Create `reading/test-graph.json` — Liquid template identical to `reading/graph.json` but with `{% assign articles = site.data.test_graph %}` hardcoded at the top (no `data_file` indirection needed here)
 
 ### 3. Test page
 
