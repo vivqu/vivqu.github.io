@@ -21,8 +21,8 @@ Jekyll + GitHub Pages · D3 v7 force graph · no custom plugins
   - Clickable article nodes (open in new tab)
 - [x] **Step 6 — Force tuning**: Verified simulation params; adjusted charge, collide, center force strength, alpha/velocity decay for stable layout.
 - [x] **Step 7 — Visual refinement**: Research D3 graph options and refine the output to better match the target aesthetic.
-  - Reference image: [article-graph-visualization.png](.claude/projects/article-graph-visualization.png) — shows the desired look: tight circular clusters with clear overlap zones for shared tags, generous spacing between unrelated clusters, loose untagged nodes scattered freely outside
-  - Reference image: [article-graph-multi-cluster.png](.claude/projects/article-graph-multi-cluster.png) — shows the multi-cluster layout: large outer circles contain smaller sub-cluster circles for shared-tag subsets; non-sharing clusters are fully separated with clear whitespace between them; nodes may appear outside all clusters (truly untagged or single-article tags)
+  - Reference image: [graph-visualization.png](graph-visualization.png) — shows the desired look: tight circular clusters with clear overlap zones for shared tags, generous spacing between unrelated clusters, loose untagged nodes scattered freely outside
+  - Reference image: [multi-cluster.png](multi-cluster.png) — shows the multi-cluster layout: large outer circles contain smaller sub-cluster circles for shared-tag subsets; non-sharing clusters are fully separated with clear whitespace between them; nodes may appear outside all clusters (truly untagged or single-article tags)
   - More reference images may be added to `.claude/projects/` in the future
   - Areas to explore: label placement, cluster label positioning, node sizing, color palette tuning, animation easing, tooltip styling
 
@@ -48,7 +48,7 @@ The `reading.html` layout uses `d-md-flex` (Primer flex at ≥768px), so below 7
 
 ### Cluster layout
 
-> **See [article-graph-force-changes.md](.claude/projects/article-graph-force-changes.md)** for the full analysis of what was attempted, why it failed, and the concrete next steps.
+> **See [force-changes.md](force-changes.md)** for the full analysis of what was attempted, why it failed, and the concrete next steps.
 
 Current known issues:
 
