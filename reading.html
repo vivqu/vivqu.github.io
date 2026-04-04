@@ -128,13 +128,34 @@ exclude_nav: true
       });
     }
 
+    // Push cluster members inward if their cluster circle overflows the viewport
+    function clusterBoundaryForce(alpha) {
+      const pad = 24;
+      Object.entries(clusterCircle).forEach(([tag, { cx, cy, r }]) => {
+        const ns = tagGroups[tag];
+        if (!ns || ns.length < 2) return;
+        const leftExcess   = pad - (cx - r);
+        const rightExcess  = (cx + r) - (W - pad);
+        const topExcess    = pad - (cy - r);
+        const bottomExcess = (cy + r) - (H - pad);
+        const s = alpha * 0.9;
+        ns.forEach(n => {
+          if (leftExcess   > 0) n.vx += leftExcess   * s;
+          if (rightExcess  > 0) n.vx -= rightExcess  * s;
+          if (topExcess    > 0) n.vy += topExcess    * s;
+          if (bottomExcess > 0) n.vy -= bottomExcess * s;
+        });
+      });
+    }
+
     // Simulation — faster decay so it settles quickly
     const sim = d3.forceSimulation(nodes)
-      .force('link',    d3.forceLink(refLinks).id(d => d.id).distance(60).strength(0.8))
-      .force('charge',  d3.forceManyBody().strength(-80))
-      .force('collide', d3.forceCollide(ARTICLE_R + 8))
-      .force('center',  d3.forceCenter(W / 2, H / 2).strength(0.15))
-      .force('cluster', () => sim && clusterForce(sim.alpha()))
+      .force('link',         d3.forceLink(refLinks).id(d => d.id).distance(60).strength(0.8))
+      .force('charge',       d3.forceManyBody().strength(-80))
+      .force('collide',      d3.forceCollide(ARTICLE_R + 8))
+      .force('center',       d3.forceCenter(W / 2, H / 2).strength(0.15))
+      .force('cluster',      () => sim && clusterForce(sim.alpha()))
+      .force('clusterBound', () => sim && clusterBoundaryForce(sim.alpha()))
       .alphaDecay(0.03)
       .velocityDecay(0.45);
 
@@ -255,6 +276,13 @@ exclude_nav: true
 
     // Tick
     sim.on('tick', () => {
+      // Clamp nodes within SVG bounds
+      const pad = ARTICLE_R + 4;
+      nodes.forEach(n => {
+        n.x = Math.max(pad, Math.min(W - pad, n.x));
+        n.y = Math.max(pad, Math.min(H - pad, n.y));
+      });
+
       refLines
         .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
         .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
