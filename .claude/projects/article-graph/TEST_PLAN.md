@@ -471,7 +471,7 @@ Complete these in order before making any further cluster layout changes.
 
 ### 3. Test page
 
-- [ ] Create `reading-test.html` at repo root with:
+- [x] Create `reading-test.html` at repo root with:
   - `published: false` front matter
   - `data_file: test_graph` front matter
   - All other front matter identical to `reading.html`
