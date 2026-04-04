@@ -9,7 +9,7 @@ Jekyll + GitHub Pages · D3 v7 force graph · no custom plugins
   - Subtitle copy (hardcoded in layout, do not change): *"an interactive map of articles and essays I've found worth reading, connected by domain and cross-references"*
 - [x] **Step 2 — Nav link**: Add "reading" link to `_includes/masthead.html` between "books" and "subscribe".
 - [x] **Step 3 — Sample data**: Create `_data/reading.yml` with ~10–15 representative articles covering a few domains and tags, including a few `refs` cross-links and at least one own post (`domain: self`).
-- [ ] **Step 4 — graph.json template**: Create `reading-graph.json` (Liquid template) at repo root. Emits nodes and links from `_data/reading.yml`. Rendered to `/reading-graph.json` at build time.
+- [x] **Step 4 — graph.json template**: Create `reading/graph.json` (Liquid template). Emits nodes and links from `_data/reading.yml`. Rendered to `/reading/graph.json` at build time.
 - [ ] **Step 5 — D3 graph**: Build the full visualisation inside `reading.html`:
   - SVG element with dark background, zoom/pan, drag
   - Domain link edges (thin, low-opacity) and ref link edges (dashed, brighter)
@@ -79,7 +79,7 @@ Flat list, one entry per article.
 
 1. Graph data — reading-graph.json
 
-Liquid template at repo root, rendered to /reading-graph.json at build time. No Ruby plugin — works on vanilla GitHub Pages.
+Liquid template at repo root, rendered to /reading/graph.json at build time. No Ruby plugin — works on vanilla GitHub Pages.
 
 Emit one article node per entry (type: "article", includes all fields)
 
@@ -105,7 +105,7 @@ Emit one link per entry in refs → target article URL (type: "ref"); skip if ta
 
 1. Visualisation — reading.html
 
-Jekyll page at /reading. Fetches /reading-graph.json, renders with D3 v7 (cdnjs CDN) on an SVG element.
+Jekyll page at /reading. Fetches /reading/graph.json, renders with D3 v7 (cdnjs CDN) on an SVG element.
 
 - Dark background — #14141f
 - Article nodes — purple #7c6edb, fixed radius 6px
