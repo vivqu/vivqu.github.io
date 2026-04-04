@@ -39,6 +39,8 @@ Delivered:
 
 ### Cluster design decisions
 
+> **Data model correction (2026-04-04):** The original test data (`_data/test_graph.yml`) used incorrect tag structure — subcluster nodes had only `[subcluster]` tags instead of `[parent, subcluster]` like the production data. This caused the geometric supercluster detection to fail (the `tech` circle never contained the `frontend` circle because `frontend`-only nodes were not in `tagGroups['tech']`). Fixed by: (1) updating all subcluster node tags to include the parent (e.g. `[frontend]` → `[tech, frontend]`), (2) updating dual-subcluster tags (e.g. `[frontend, backend]` → `[tech, frontend, backend]`), (3) deleting the now-redundant categories 9–13, and (4) replacing the hardcoded `SUPER_TAGS` set in JS with dynamic computation from node membership supersets. All force changes that were made against the old data were reverted before restarting.
+
 - **Max 1 level of subclusters** — hierarchy is `supercluster → subcluster` only; no sub-sub-clusters. A subcluster tag cannot simultaneously act as a supercluster.
 - **Supercluster detection is geometric** — a tag is a supercluster when its computed circle fully contains at least one other tag's circle. Containment is checked after each simulation tick.
 - **Superclusters should not visually overlap** — the force changes push them apart with a minimum gap. Bridge nodes (tagged with two supercluster-level tags) may sit between circles but circles themselves should not intersect.

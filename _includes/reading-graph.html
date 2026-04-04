@@ -38,7 +38,7 @@
     'supercluster-only': '#e05555',
     'free':              '#40c0e0',
   };
-  const SUPER_TAGS = new Set(['tech', 'science', 'society']);
+  // SUPER_TAGS computed dynamically inside render() after tagGroups is built
   {% endif %}
 
   const BG          = '#14141f';
@@ -142,6 +142,24 @@
         (tagGroups[t] || (tagGroups[t] = [])).push(n);
       });
     });
+
+    {% if include.test_mode %}
+    // A tag is a supercluster if its node set is a superset of another tag's node set.
+    // This mirrors the production data model where subcluster nodes carry both parent + subcluster tags.
+    const SUPER_TAGS = (() => {
+      const s = new Set();
+      const nodeIdSets = {};
+      tags.forEach(t => { nodeIdSets[t] = new Set((tagGroups[t] || []).map(n => n.id)); });
+      tags.forEach(tA => {
+        if ((tagGroups[tA] || []).length < 2) return;
+        tags.forEach(tB => {
+          if (tA === tB || (tagGroups[tB] || []).length < 2) return;
+          if ([...nodeIdSets[tB]].every(id => nodeIdSets[tA].has(id))) s.add(tA);
+        });
+      });
+      return s;
+    })();
+    {% endif %}
 
     // Seed all nodes near center, grouped loosely by primary tag
     nodes.forEach(n => {

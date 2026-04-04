@@ -29,7 +29,7 @@
   url: "https://example.com/frontend-canonical"
   author: "Test Author"
   domain: example.com
-  tags: [frontend]
+  tags: [tech, frontend]
   date: "2022-03-10"
   blurb: "Test node: high-backlink hub (8 inbound refs). Should render at the largest radius. Inside frontend circle."
   refs: []
@@ -41,7 +41,7 @@
   url: "https://example.com/frontend-1"
   author: "Test Author"
   domain: example.com
-  tags: [frontend]
+  tags: [tech, frontend]
   date: "2023-02-14"
   blurb: "Test node: subcluster-only (frontend). Should be inside the frontend circle."
   refs: ["https://example.com/frontend-canonical", "https://example.com/free-3"]
@@ -50,7 +50,7 @@
   url: "https://example.com/frontend-2"
   author: "Test Author"
   domain: example.com
-  tags: [frontend]
+  tags: [tech, frontend]
   date: "2023-06-20"
   blurb: "Test node: subcluster-only (frontend). Should be inside the frontend circle."
   refs: ["https://example.com/frontend-canonical"]
@@ -59,7 +59,7 @@
   url: "https://example.com/frontend-3"
   author: "Test Author"
   domain: example.com
-  tags: [frontend]
+  tags: [tech, frontend]
   date: "2024-01-08"
   blurb: "Test node: subcluster-only (frontend). Should be inside the frontend circle."
   refs: ["https://example.com/frontend-canonical"]
@@ -68,7 +68,7 @@
   url: "https://example.com/frontend-4"
   author: "Test Author"
   domain: example.com
-  tags: [frontend]
+  tags: [tech, frontend]
   date: "2024-09-17"
   blurb: "Test node: subcluster-only (frontend). Cross-subcluster ref to backend. Should stay inside frontend circle despite the pull."
   refs: ["https://example.com/backend-1"]
@@ -77,7 +77,7 @@
   url: "https://example.com/frontend-5"
   author: "Test Author"
   domain: example.com
-  tags: [frontend]
+  tags: [tech, frontend]
   date: "2025-04-03"
   blurb: "Test node: subcluster-only (frontend). Cross-supercluster ref to biology — maximally cross-cluster stress test."
   refs: ["https://example.com/biology-1"]
@@ -89,7 +89,7 @@
   url: "https://example.com/backend-1"
   author: "Test Author"
   domain: example.com
-  tags: [backend]
+  tags: [tech, backend]
   date: "2022-07-22"
   blurb: "Test node: subcluster-only (backend). Should be inside the backend circle."
   refs: []
@@ -98,7 +98,7 @@
   url: "https://example.com/backend-2"
   author: "Test Author"
   domain: example.com
-  tags: [backend]
+  tags: [tech, backend]
   date: "2023-01-30"
   blurb: "Test node: subcluster-only (backend). Should be inside the backend circle."
   refs: []
@@ -107,7 +107,7 @@
   url: "https://example.com/backend-3"
   author: "Test Author"
   domain: example.com
-  tags: [backend]
+  tags: [tech, backend]
   date: "2023-08-12"
   blurb: "Test node: subcluster-only (backend). Should be inside the backend circle."
   refs: []
@@ -116,7 +116,7 @@
   url: "https://example.com/backend-4"
   author: "Test Author"
   domain: example.com
-  tags: [backend]
+  tags: [tech, backend]
   date: "2024-03-25"
   blurb: "Test node: subcluster-only (backend). Receives a cross-subcluster ref from frontend-4."
   refs: []
@@ -125,7 +125,7 @@
   url: "https://example.com/backend-5"
   author: "Test Author"
   domain: example.com
-  tags: [backend]
+  tags: [tech, backend]
   date: "2024-11-05"
   blurb: "Test node: subcluster-only (backend). Receives a cross-subcluster ref from frontend-5's chain."
   refs: []
@@ -134,7 +134,7 @@
   url: "https://example.com/backend-6"
   author: "Test Author"
   domain: example.com
-  tags: [backend]
+  tags: [tech, backend]
   date: "2025-07-14"
   blurb: "Test node: subcluster-only (backend). No outgoing refs."
   refs: []
@@ -146,7 +146,7 @@
   url: "https://example.com/biology-1"
   author: "Test Author"
   domain: example.com
-  tags: [biology]
+  tags: [science, biology]
   date: "2022-05-18"
   blurb: "Test node: subcluster-only (biology). Within-cluster ref chain start."
   refs: ["https://example.com/biology-2"]
@@ -155,7 +155,7 @@
   url: "https://example.com/biology-2"
   author: "Test Author"
   domain: example.com
-  tags: [biology]
+  tags: [science, biology]
   date: "2022-11-09"
   blurb: "Test node: subcluster-only (biology). Part of within-cluster ref chain."
   refs: ["https://example.com/biology-3"]
@@ -164,7 +164,7 @@
   url: "https://example.com/biology-3"
   author: "Test Author"
   domain: example.com
-  tags: [biology]
+  tags: [science, biology]
   date: "2023-04-27"
   blurb: "Test node: subcluster-only (biology). Part of within-cluster ref chain."
   refs: ["https://example.com/biology-4"]
@@ -173,7 +173,7 @@
   url: "https://example.com/biology-4"
   author: "Test Author"
   domain: example.com
-  tags: [biology]
+  tags: [science, biology]
   date: "2024-02-03"
   blurb: "Test node: subcluster-only (biology). Cross-subcluster ref to physics — should stay inside biology circle."
   refs: ["https://example.com/physics-1"]
@@ -182,7 +182,7 @@
   url: "https://example.com/biology-5"
   author: "Test Author"
   domain: example.com
-  tags: [biology]
+  tags: [science, biology]
   date: "2025-01-19"
   blurb: "Test node: subcluster-only (biology). Cross-subcluster ref to physics-2."
   refs: ["https://example.com/physics-2"]
@@ -194,7 +194,7 @@
   url: "https://example.com/physics-1"
   author: "Test Author"
   domain: example.com
-  tags: [physics]
+  tags: [science, physics]
   date: "2022-09-01"
   blurb: "Test node: subcluster-only (physics). Receives inbound cross-subcluster ref from biology-4."
   refs: []
@@ -203,7 +203,7 @@
   url: "https://example.com/physics-2"
   author: "Test Author"
   domain: example.com
-  tags: [physics]
+  tags: [science, physics]
   date: "2023-03-15"
   blurb: "Test node: subcluster-only (physics). Receives inbound cross-subcluster ref from biology-5."
   refs: []
@@ -212,7 +212,7 @@
   url: "https://example.com/physics-3"
   author: "Test Author"
   domain: example.com
-  tags: [physics]
+  tags: [science, physics]
   date: "2023-10-22"
   blurb: "Test node: subcluster-only (physics). No refs."
   refs: []
@@ -221,7 +221,7 @@
   url: "https://example.com/physics-4"
   author: "Test Author"
   domain: example.com
-  tags: [physics]
+  tags: [science, physics]
   date: "2024-06-08"
   blurb: "Test node: subcluster-only (physics). No refs."
   refs: []
@@ -230,7 +230,7 @@
   url: "https://example.com/physics-5"
   author: "Test Author"
   domain: example.com
-  tags: [physics]
+  tags: [science, physics]
   date: "2025-09-30"
   blurb: "Test node: subcluster-only (physics). No refs."
   refs: []
@@ -242,7 +242,7 @@
   url: "https://example.com/politics-1"
   author: "Test Author"
   domain: example.com
-  tags: [politics]
+  tags: [society, politics]
   date: "2022-12-05"
   blurb: "Test node: subcluster-only (politics). Receives inbound ref from society-only node."
   refs: []
@@ -251,7 +251,7 @@
   url: "https://example.com/politics-2"
   author: "Test Author"
   domain: example.com
-  tags: [politics]
+  tags: [society, politics]
   date: "2023-05-11"
   blurb: "Test node: subcluster-only (politics). Receives inbound ref from society-only node."
   refs: []
@@ -260,7 +260,7 @@
   url: "https://example.com/politics-3"
   author: "Test Author"
   domain: example.com
-  tags: [politics]
+  tags: [society, politics]
   date: "2024-01-23"
   blurb: "Test node: subcluster-only (politics). No refs."
   refs: []
@@ -269,7 +269,7 @@
   url: "https://example.com/politics-4"
   author: "Test Author"
   domain: example.com
-  tags: [politics]
+  tags: [society, politics]
   date: "2024-08-16"
   blurb: "Test node: subcluster-only (politics). No refs."
   refs: []
@@ -278,7 +278,7 @@
   url: "https://example.com/politics-5"
   author: "Test Author"
   domain: example.com
-  tags: [politics]
+  tags: [society, politics]
   date: "2025-11-02"
   blurb: "Test node: subcluster-only (politics). No refs."
   refs: []
@@ -493,201 +493,6 @@
   blurb: "Test node: supercluster-only (society). No refs."
   refs: []
 
-# ─── SUPERCLUSTER + SUBCLUSTER: tech + frontend (category 9, 4 nodes) ────────
-# Expected: inside the frontend circle (subcluster wins over supercluster).
-
-- title: "Tech and Frontend 1"
-  url: "https://example.com/tech-frontend-1"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, frontend]
-  date: "2023-03-19"
-  blurb: "Test node: supercluster+subcluster (tech+frontend). Subcluster should win — expect inside frontend circle."
-  refs: []
-
-- title: "Tech and Frontend 2"
-  url: "https://example.com/tech-frontend-2"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, frontend]
-  date: "2023-11-06"
-  blurb: "Test node: supercluster+subcluster (tech+frontend). Subcluster should win — expect inside frontend circle."
-  refs: []
-
-- title: "Tech and Frontend 3"
-  url: "https://example.com/tech-frontend-3"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, frontend]
-  date: "2024-07-22"
-  blurb: "Test node: supercluster+subcluster (tech+frontend). Subcluster should win — expect inside frontend circle."
-  refs: []
-
-- title: "Tech and Frontend 4"
-  url: "https://example.com/tech-frontend-4"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, frontend]
-  date: "2025-12-10"
-  blurb: "Test node: supercluster+subcluster (tech+frontend). Subcluster should win — expect inside frontend circle."
-  refs: []
-
-# ─── SUPERCLUSTER + SUBCLUSTER: tech + backend (category 10, 4 nodes) ────────
-# Expected: inside the backend circle (subcluster wins).
-
-- title: "Tech and Backend 1"
-  url: "https://example.com/tech-backend-1"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, backend]
-  date: "2022-08-13"
-  blurb: "Test node: supercluster+subcluster (tech+backend). Subcluster should win — expect inside backend circle."
-  refs: []
-
-- title: "Tech and Backend 2"
-  url: "https://example.com/tech-backend-2"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, backend]
-  date: "2023-04-01"
-  blurb: "Test node: supercluster+subcluster (tech+backend). Subcluster should win — expect inside backend circle."
-  refs: []
-
-- title: "Tech and Backend 3"
-  url: "https://example.com/tech-backend-3"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, backend]
-  date: "2024-09-08"
-  blurb: "Test node: supercluster+subcluster (tech+backend). Subcluster should win — expect inside backend circle."
-  refs: []
-
-- title: "Tech and Backend 4"
-  url: "https://example.com/tech-backend-4"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, backend]
-  date: "2026-03-14"
-  blurb: "Test node: supercluster+subcluster (tech+backend). Subcluster should win — expect inside backend circle."
-  refs: []
-
-# ─── SUPERCLUSTER + SUBCLUSTER: science + biology (category 11, 4 nodes) ─────
-# Expected: inside the biology circle.
-
-- title: "Science and Biology 1"
-  url: "https://example.com/science-biology-1"
-  author: "Test Author"
-  domain: example.com
-  tags: [science, biology]
-  date: "2023-01-16"
-  blurb: "Test node: supercluster+subcluster (science+biology). Expect inside biology circle."
-  refs: []
-
-- title: "Science and Biology 2"
-  url: "https://example.com/science-biology-2"
-  author: "Test Author"
-  domain: example.com
-  tags: [science, biology]
-  date: "2023-08-30"
-  blurb: "Test node: supercluster+subcluster (science+biology). Expect inside biology circle."
-  refs: []
-
-- title: "Science and Biology 3"
-  url: "https://example.com/science-biology-3"
-  author: "Test Author"
-  domain: example.com
-  tags: [science, biology]
-  date: "2024-04-12"
-  blurb: "Test node: supercluster+subcluster (science+biology). Expect inside biology circle."
-  refs: []
-
-- title: "Science and Biology 4"
-  url: "https://example.com/science-biology-4"
-  author: "Test Author"
-  domain: example.com
-  tags: [science, biology]
-  date: "2025-02-26"
-  blurb: "Test node: supercluster+subcluster (science+biology). Expect inside biology circle."
-  refs: []
-
-# ─── SUPERCLUSTER + SUBCLUSTER: science + physics (category 12, 4 nodes) ─────
-# Expected: inside the physics circle.
-
-- title: "Science and Physics 1"
-  url: "https://example.com/science-physics-1"
-  author: "Test Author"
-  domain: example.com
-  tags: [science, physics]
-  date: "2022-10-05"
-  blurb: "Test node: supercluster+subcluster (science+physics). Expect inside physics circle."
-  refs: []
-
-- title: "Science and Physics 2"
-  url: "https://example.com/science-physics-2"
-  author: "Test Author"
-  domain: example.com
-  tags: [science, physics]
-  date: "2023-06-14"
-  blurb: "Test node: supercluster+subcluster (science+physics). Expect inside physics circle."
-  refs: []
-
-- title: "Science and Physics 3"
-  url: "https://example.com/science-physics-3"
-  author: "Test Author"
-  domain: example.com
-  tags: [science, physics]
-  date: "2024-11-20"
-  blurb: "Test node: supercluster+subcluster (science+physics). Expect inside physics circle."
-  refs: []
-
-- title: "Science and Physics 4"
-  url: "https://example.com/science-physics-4"
-  author: "Test Author"
-  domain: example.com
-  tags: [science, physics]
-  date: "2025-07-08"
-  blurb: "Test node: supercluster+subcluster (science+physics). Expect inside physics circle."
-  refs: []
-
-# ─── SUPERCLUSTER + SUBCLUSTER: society + politics (category 13, 4 nodes) ────
-# Expected: inside the politics circle.
-
-- title: "Society and Politics 1"
-  url: "https://example.com/society-politics-1"
-  author: "Test Author"
-  domain: example.com
-  tags: [society, politics]
-  date: "2023-04-24"
-  blurb: "Test node: supercluster+subcluster (society+politics). Expect inside politics circle."
-  refs: []
-
-- title: "Society and Politics 2"
-  url: "https://example.com/society-politics-2"
-  author: "Test Author"
-  domain: example.com
-  tags: [society, politics]
-  date: "2024-02-17"
-  blurb: "Test node: supercluster+subcluster (society+politics). Expect inside politics circle."
-  refs: []
-
-- title: "Society and Politics 3"
-  url: "https://example.com/society-politics-3"
-  author: "Test Author"
-  domain: example.com
-  tags: [society, politics]
-  date: "2024-10-30"
-  blurb: "Test node: supercluster+subcluster (society+politics). Expect inside politics circle."
-  refs: []
-
-- title: "Society and Politics 4"
-  url: "https://example.com/society-politics-4"
-  author: "Test Author"
-  domain: example.com
-  tags: [society, politics]
-  date: "2025-09-12"
-  blurb: "Test node: supercluster+subcluster (society+politics). Expect inside politics circle."
-  refs: []
-
 # ─── DUAL-SUBCLUSTER: frontend + backend (category 14, 4 nodes) ──────────────
 # Expected: between the frontend and backend circles, inside the tech supercluster.
 # Test color: ORANGE. If orange nodes are fully inside one subcluster, centroid pull is unbalanced.
@@ -696,7 +501,7 @@
   url: "https://example.com/fullstack-1"
   author: "Test Author"
   domain: example.com
-  tags: [frontend, backend]
+  tags: [tech, frontend, backend]
   date: "2022-09-27"
   blurb: "Test node: dual-subcluster (frontend+backend). Should sit between the frontend and backend circles."
   refs: []
@@ -705,7 +510,7 @@
   url: "https://example.com/fullstack-2"
   author: "Test Author"
   domain: example.com
-  tags: [frontend, backend]
+  tags: [tech, frontend, backend]
   date: "2023-05-19"
   blurb: "Test node: dual-subcluster (frontend+backend). Should sit between the frontend and backend circles."
   refs: []
@@ -714,7 +519,7 @@
   url: "https://example.com/fullstack-3"
   author: "Test Author"
   domain: example.com
-  tags: [frontend, backend]
+  tags: [tech, frontend, backend]
   date: "2024-03-06"
   blurb: "Test node: dual-subcluster (frontend+backend). Should sit between the frontend and backend circles."
   refs: []
@@ -723,7 +528,7 @@
   url: "https://example.com/fullstack-4"
   author: "Test Author"
   domain: example.com
-  tags: [frontend, backend]
+  tags: [tech, frontend, backend]
   date: "2025-01-24"
   blurb: "Test node: dual-subcluster (frontend+backend). Should sit between the frontend and backend circles."
   refs: []
@@ -736,7 +541,7 @@
   url: "https://example.com/biophysics-1"
   author: "Test Author"
   domain: example.com
-  tags: [biology, physics]
+  tags: [science, biology, physics]
   date: "2022-11-14"
   blurb: "Test node: dual-subcluster (biology+physics). Should sit between the biology and physics circles."
   refs: []
@@ -745,7 +550,7 @@
   url: "https://example.com/biophysics-2"
   author: "Test Author"
   domain: example.com
-  tags: [biology, physics]
+  tags: [science, biology, physics]
   date: "2023-07-08"
   blurb: "Test node: dual-subcluster (biology+physics). Should sit between the biology and physics circles."
   refs: []
@@ -754,7 +559,7 @@
   url: "https://example.com/biophysics-3"
   author: "Test Author"
   domain: example.com
-  tags: [biology, physics]
+  tags: [science, biology, physics]
   date: "2024-05-01"
   blurb: "Test node: dual-subcluster (biology+physics). Should sit between the biology and physics circles."
   refs: []
@@ -763,7 +568,7 @@
   url: "https://example.com/biophysics-4"
   author: "Test Author"
   domain: example.com
-  tags: [biology, physics]
+  tags: [science, biology, physics]
   date: "2025-04-17"
   blurb: "Test node: dual-subcluster (biology+physics). Should sit between the biology and physics circles."
   refs: []
@@ -969,7 +774,7 @@
   url: "/blog/my-frontend-post"
   author: "me"
   domain: self
-  tags: [frontend]
+  tags: [tech, frontend]
   date: "2024-07-01"
   blurb: "Own post: subcluster (frontend). Gold fill, no extra stroke in test mode. Should be inside frontend circle."
   refs: []
