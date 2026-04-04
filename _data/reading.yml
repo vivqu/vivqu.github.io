@@ -31,3 +31,84 @@
   tags: [forecasting, skepticism]
   date: "2025-09-19"
   refs: []
+
+- title: "Welcome to a Multidimensional Economic Disaster"
+  url: "https://www.theatlantic.com/technology/2026/03/ai-boom-polycrisis/686559/?gift=nwn-guseqS6cY1kVeEKZAeB1EU9tGg8Uju7RCq6VZtk"
+  author: "Matteo Wong and Charlie Warzel"
+  domain: theatlantic.com
+  tags: [forecasting, skepticism, economics]
+  date: "2026-03-26"
+  refs: []
+
+- title: "Coders after AI"
+  url: "https://www.anildash.com/2026/03/13/coders-after-ai/"
+  author: "Anil Dash"
+  domain: anildash.com
+  tags: [career]
+  date: "2026-03-13"
+  refs: []
+
+- title: "The fate of 'small' open source"
+  url: "https://nolanlawson.com/2025/11/16/the-fate-of-small-open-source/"
+  author: "Nolan Lawson"
+  domain: nolanlawson.com
+  tags: [open-source, frameworks]
+  date: "2025-11-16"
+  refs: []
+
+- title: "dead framework theory"
+  url: "https://aifoc.us/dead-framework-theory/"
+  author: "Paul Kinlan"
+  domain: aifoc.us
+  tags: [open-source, frameworks]
+  date: "2025-10-12"
+  refs: []
+
+- title: "AGI Is Not a Milestone"
+  url: "https://www.normaltech.ai/p/agi-is-not-a-milestone"
+  author: "Sayash Kapoor and Arvind Narayanan"
+  domain: normaltech.ai
+  tags: [forecasting, skepticism]
+  date: "2025-05-01"
+  refs: ["https://www.normaltech.ai/p/ai-as-normal-technology"]
+
+- title: "AI as Normal Technology"
+  url: "https://www.normaltech.ai/p/ai-as-normal-technology"
+  author: "Arvind Narayanan and Sayash Kapoor"
+  domain: normaltech.ai
+  tags: [forecasting, skepticism]
+  date: "2025-04-15"
+  refs: []
+
+- title: "No AGI in Sight: What This Means for LLMs"
+  url: "https://kennethwolters.com/posts/no-agi/"
+  author: "Kenneth Wolters"
+  domain: kennethwolters.com
+  tags: [forecasting, skepticism]
+  date: "2025-08-12"
+  refs: []
+
+- title: "How Well Did Superforecasters and AI Predict?"
+  url: "https://open.substack.com/pub/forecastingresearch/p/how-well-did-superforecasters-and"
+  author: "Forecasting Research Institute"
+  domain: forecastingresearch.substack.com
+  tags: [forecasting]
+  date: "2026-02-19"
+  refs: []
+
+- title: "Could AI Slow Science?"
+  url: "https://www.normaltech.ai/p/could-ai-slow-science"
+  author: "Sayash Kapoor and Arvind Narayanan"
+  domain: normaltech.ai
+  tags: [forecasting]
+  date: "2025-07-16"
+  refs: []
+
+- title: "2023"
+  url: "https://www.hyperdimensional.co/p/2023"
+  author: "Dean W. Ball"
+  domain: hyperdimensional.co
+  tags: [forecasting, skepticism]
+  date: "2026-03-25"
+  refs: ["https://www.normaltech.ai/p/ai-as-normal-technology"]
+

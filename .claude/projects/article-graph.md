@@ -8,7 +8,7 @@ Jekyll + GitHub Pages · D3 v7 force graph · no custom plugins
   - Title and subtitle rendered in `_layouts/reading.html`, not the page body (Liquid only processes reliably in layouts).
   - Subtitle copy (hardcoded in layout, do not change): *"an interactive map of articles and essays I've found worth reading, connected by domain and cross-references"*
 - [x] **Step 2 — Nav link**: Add "reading" link to `_includes/masthead.html` between "books" and "subscribe".
-- [ ] **Step 3 — Sample data**: Create `_data/reading.yml` with ~10–15 representative articles covering a few domains and tags, including a few `refs` cross-links and at least one own post (`domain: self`).
+- [x] **Step 3 — Sample data**: Create `_data/reading.yml` with ~10–15 representative articles covering a few domains and tags, including a few `refs` cross-links and at least one own post (`domain: self`).
 - [ ] **Step 4 — graph.json template**: Create `reading-graph.json` (Liquid template) at repo root. Emits nodes and links from `_data/reading.yml`. Rendered to `/reading-graph.json` at build time.
 - [ ] **Step 5 — D3 graph**: Build the full visualisation inside `reading.html`:
   - SVG element with dark background, zoom/pan, drag
