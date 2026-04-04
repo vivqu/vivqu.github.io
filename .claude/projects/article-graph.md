@@ -20,10 +20,105 @@ Jekyll + GitHub Pages · D3 v7 force graph · no custom plugins
   - Hover tooltip (title, author, year, tags); article labels visible on hover
   - Clickable article nodes (open in new tab)
 - [x] **Step 6 — Force tuning**: Verified simulation params; adjusted charge, collide, center force strength, alpha/velocity decay for stable layout.
-- [ ] **Step 7 — Visual refinement**: Research D3 graph options and refine the output to better match the target aesthetic.
+- [x] **Step 7 — Visual refinement**: Research D3 graph options and refine the output to better match the target aesthetic.
   - Reference image: [article-graph-visualization.png](.claude/projects/article-graph-visualization.png) — shows the desired look: tight circular clusters with clear overlap zones for shared tags, generous spacing between unrelated clusters, loose untagged nodes scattered freely outside
   - More reference images may be added to `.claude/projects/` in the future
   - Areas to explore: label placement, cluster label positioning, node sizing, color palette tuning, animation easing, tooltip styling
+
+## Visual Refinement Plan
+
+Checklist of targeted changes based on research. Add items here as we identify specific things to improve.
+
+### Page formatting
+
+The site's key breakpoints (from `styles.scss`):
+
+- **≤ 767px** — sidebar stacks above content (no longer a side column), significantly reducing vertical space for the graph
+- **≤ 414px** — smallest phones
+
+The `reading.html` layout uses `d-md-flex` (Primer flex at ≥768px), so below 768px the sidebar becomes a top bar and the graph container height needs to account for that. The graph currently computes `H = container.clientHeight` at load time but may not re-measure correctly on mobile.
+
+- [ ] **Match content width** — the reading layout caps the header at `max-width: 700px` with consistent side margins; constrain `#graph-container` to the same width so the graph edges align with the page content rather than stretching full viewport width
+- [ ] **Graph height on mobile** — on ≤767px the graph container `calc(100vh - 180px)` offset should be increased to account for the stacked header/nav; measure actual header height dynamically at render time rather than using a hardcoded offset
+- [ ] **Tooltip positioning on mobile** — `event.clientX/Y` positioning can push tooltips off-screen on narrow viewports; clamp to viewport width on small screens (≤767px)
+- [ ] **Cluster label readability** — at small viewport widths the cluster label text (11px) may overlap; consider hiding labels below ≤414px or reducing font size
+- [ ] **Legend placement on mobile** — the bottom-left age color legend and top-right zoom buttons may collide with the graph content on narrow screens; stack or relocate them below ≤767px
+- [ ] **Verify simulation bounds** — `W` and `H` are computed once on load; on mobile after orientation change, they'll be stale — add a `ResizeObserver` or `resize` event listener to recompute and restart the simulation
+
+### Cluster layout
+
+Use the [clustered bubbles](https://observablehq.com/@d3/clustered-bubbles) approach for nodes that belong to a tag cluster:
+
+- [ ] Replace `forceCenter` with `forceX(width/2).strength(0.01)` + `forceY(height/2).strength(0.01)`
+- [ ] Add custom `forceCluster` that computes per-group centroids each tick and pulls nodes toward them with `strength = 0.2`
+- [ ] Replace `d3.forceCollide` with a custom quadtree-based collide force: `padding1 = 2` within same group, `padding2 = 6` across groups
+
+### Unclustered nodes layout
+
+Use the [disjoint force-directed graph](https://observablehq.com/@d3/disjoint-force-directed-graph/2) approach for nodes with no tag (or tags that have only one article):
+
+- [ ] Keep `forceX` + `forceY` (already added above) — this naturally prevents isolated/disjoint nodes from escaping the viewport, unlike `forceCenter`
+
+### Node visual encoding
+
+**Backlink-based sizing** — use `d3.scaleThreshold` to map inbound ref count to 5 radius classes. Thresholds are intentionally generous to stay meaningful as the dataset grows:
+
+| Backlinks | Radius              |
+|-----------|---------------------|
+| 0         | 6 (current default) |
+| 1         | 8                   |
+| 2–3       | 11                  |
+| 4–6       | 15                  |
+| 7+        | 20                  |
+
+- [ ] Precompute a `backlinkCount` map from `refLinks` (count how many times each node `id` appears as a `target`)
+- [ ] Define `d3.scaleThreshold([1, 2, 4, 7], [6, 8, 11, 15, 20])` and apply to node circle `r`
+- [ ] Update `forceCollide` radius fn to use the same scale so larger nodes don't overlap
+
+**Age-based color desaturation** — use `d3.hsl` to blend the node's base color toward grey based on article age. Apply to the article fill color only (not own-post gold):
+
+| Age          | Saturation        |
+|--------------|-------------------|
+| < 1 month    | 100% (full color) |
+| 1–2 months   | 80%               |
+| 3–6 months   | 55%               |
+| 6–12 months  | 30%               |
+| 12–24 months | 15% (near-grey)   |
+| 24+ months   | 8% (almost grey)  |
+
+- [ ] Compute `ageMonths` from `d.date` relative to today at render time
+- [ ] Define a `d3.scaleThreshold([1, 3, 6, 12, 24], [1.0, 0.8, 0.55, 0.3, 0.15, 0.08])` saturation multiplier
+- [ ] Apply via `d3.hsl(baseColor)` — multiply `.s` by the factor, convert back to hex string
+
+### Viewport controls
+
+- [ ] **Lock pan to content bounds** — call `zoom.translateExtent([[0, 0], [W, H]])` so panning cannot go beyond the SVG dimensions; no dead empty space
+- [ ] **+/- zoom buttons** — add two buttons absolutely positioned in the top-right corner of `#graph-container`; wire each to `svg.transition().duration(300).call(zoom.scaleBy, 1.4)` / `zoom.scaleBy(0.7)`; keep `scaleExtent([0.2, 4])` as the clamp; on touch devices pinch-to-zoom works natively but buttons should remain with ≥44px tap targets
+- [ ] **Age color legend** — add a small threshold legend (ref: [d3 color legend](https://observablehq.com/@d3/color-legend)) overlaid in the bottom-left corner of the container. Build a `d3.scaleThreshold` mapping the same month thresholds to the desaturated color stops, render discrete color rectangles + axis tick labels via `d3.axisBottom`. Labels should read e.g. "1mo", "3mo", "6mo", "1yr", "2yr+". Title: "Article age".
+
+### Legend cluster focus (Pattern C — zoom + fade)
+
+Clicking a tag in the legend zooms to that cluster and fades unrelated nodes. Clicking the active tag again (or the background) resets.
+
+- [ ] On legend tag click: compute zoom transform from `clusterCircle[tag]` — use `cx`, `cy`, `r` to derive translate + scale so the cluster fills ~70% of the viewport; apply via `svg.transition().duration(600).call(zoom.transform, transform)`
+- [ ] Simultaneously fade all nodes/links not belonging to the clicked tag to opacity `0.15` using `.transition().style("opacity", ...)`
+- [ ] Highlight the active cluster circle with a brighter stroke (e.g. `stroke-width: 2.5`, full opacity color)
+- [ ] Track active tag in a variable; clicking the same tag or the SVG background resets zoom to identity and restores all opacities
+- [ ] Style the active legend item distinctly (e.g. underline or filled background) so it's clear which cluster is focused
+
+### Tooltip improvements
+
+- [ ] Show full date instead of year only — `date` is already `YYYY-MM-DD` in the YAML, just change the JS display from `d.date.slice(0, 4)` to a formatted full date
+- [ ] Add a `blurb` field to `reading.yml` entries: a 1-sentence description of the article — display it in the tooltip below the author/date line, and include it in `graph.json`
+
+### Data cleanup
+
+The domain nodes and domain links in `reading/graph.json` are generated but immediately filtered out by the JS — they're dead weight. The `domain` field on article nodes is also unused.
+
+- [ ] Remove `domain` field from article nodes in `graph.json`
+- [ ] Remove domain node generation block (the `{% for domain in domains %}` loop)
+- [ ] Remove domain link generation block (the `source → domain:` links)
+- [ ] Remove the `domain_names` dedup string build at the top of the template (no longer needed)
 
 ## Verification Steps
 
