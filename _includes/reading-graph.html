@@ -196,8 +196,8 @@
             const pushRadius = circle.r + 6 + 50;
             if (dist < pushRadius) {
               const force = ((pushRadius - dist) / pushRadius) * alpha * 0.6;
-              n.vx += (dx / dist) * force * pushRadius;
-              n.vy += (dy / dist) * force * pushRadius;
+              n.vx += (dx / dist) * force;
+              n.vy += (dy / dist) * force;
             }
           }
         });

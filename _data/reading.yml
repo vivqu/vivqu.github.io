@@ -147,7 +147,7 @@
   url: "https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/"
   author: "Alex Kim"
   domain: alex000kim.com
-  tags: [agent-harness, open-source]
+  tags: [open-source, agent-harness]
   date: "2026-03-31"
   blurb: "Posits that the worst impacts of the source code leak was losing strategic advantage against competition."  
   refs: []
@@ -156,7 +156,7 @@
   url: "https://lr0.org/blog/p/claude-code-source/?&aid=recgjCmoUY17o8Fsm&_bhlid=ca73afa2934111f4ea381a845f7852f047bfe3a0"
   author: "Sergei Parajanov"
   domain: lr0.org
-  tags: [agent-harness, open-source]
+  tags: [open-source, agent-harness]
   date: "2026-03-31"
   blurb: "Interesting technical insights from the leaked Claude Code source code."
   refs: ["https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/"]
