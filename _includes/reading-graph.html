@@ -465,7 +465,7 @@
           if (!sib) return;
           const dx = n.x - sib.cx, dy = n.y - sib.cy;
           const dist = Math.hypot(dx, dy) || 1;
-          const boundary = sib.r + 12;
+          const boundary = sib.r + nodeRadius(n) + 12;
           if (dist < boundary) {
             const penetration = boundary - dist;
             const force = penetration * 3.0 * alpha;
