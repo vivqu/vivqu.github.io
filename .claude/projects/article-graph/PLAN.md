@@ -154,11 +154,14 @@ All known layout issues are resolved. The simulation uses the following force st
 
 ### Legend cluster focus (Pattern C — zoom + fade)
 
-Clicking a tag in the legend zooms to that cluster and fades unrelated nodes. Clicking the active tag again (or the background) resets.
+The legend lists only **superclusters** and **orphan clusters** (≥2 nodes, not a sub- or supercluster). Subclusters are not shown in the legend — they are navigable by zooming into their parent supercluster.
 
+Clicking a legend entry zooms to that cluster and fades unrelated nodes. Clicking the active entry again (or the background) resets.
+
+- [ ] Build the legend from only supercluster tags and orphan cluster tags — exclude subcluster tags entirely
 - [ ] On legend tag click: compute zoom transform from `clusterCircle[tag]` — use `cx`, `cy`, `r` to derive translate + scale so the cluster fills ~70% of the viewport; apply via `svg.transition().duration(600).call(zoom.transform, transform)`
-- [ ] Simultaneously fade all nodes/links not belonging to the clicked tag to opacity `0.15` using `.transition().style("opacity", ...)`
-- [ ] Highlight the active cluster circle with a brighter stroke (e.g. `stroke-width: 2.5`, full opacity color)
+- [ ] Simultaneously fade all nodes/links not belonging to the clicked supercluster or orphan cluster (and any of its subclusters, if a supercluster) to opacity `0.15` using `.transition().style("opacity", ...)`
+- [ ] Highlight the active cluster circle (and its subcluster circles, if a supercluster) with a brighter stroke (e.g. `stroke-width: 2.5`, full opacity color)
 - [ ] Track active tag in a variable; clicking the same tag or the SVG background resets zoom to identity and restores all opacities
 - [ ] Style the active legend item distinctly (e.g. underline or filled background) so it's clear which cluster is focused
 
