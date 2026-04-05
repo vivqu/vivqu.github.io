@@ -18,6 +18,10 @@
 #     physics  (subcluster B2)
 #   society    (supercluster C)  ← contains politics only
 #     politics (subcluster C1)
+#   culture    (supercluster D)  ← contains music + film + literature
+#     music      (subcluster D1)
+#     film       (subcluster D2)
+#     literature (subcluster D3)
 #   misc       (no circle — only 2 nodes)
 
 # ─── HIGH-BACKLINK HUB (category 1 — frontend, referenced by 8 other nodes) ──
@@ -492,7 +496,7 @@
   blurb: "Test node: supercluster-only (society). No refs."
   refs: []
 
-# ─── DUAL-SUBCLUSTER: frontend + backend (category 14, 4 nodes) ──────────────
+# ─── DUAL-SUBCLUSTER: frontend + backend (category 14, 1 node) ───────────────
 # Expected: between the frontend and backend circles, inside the tech supercluster.
 # Test color: ORANGE. If orange nodes are fully inside one subcluster, centroid pull is unbalanced.
 
@@ -505,32 +509,6 @@
   blurb: "Test node: dual-subcluster (frontend+backend). Should sit between the frontend and backend circles."
   refs: []
 
-- title: "Full Stack 2"
-  url: "https://example.com/fullstack-2"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, frontend, backend]
-  date: "2023-05-19"
-  blurb: "Test node: dual-subcluster (frontend+backend). Should sit between the frontend and backend circles."
-  refs: []
-
-- title: "Full Stack 3"
-  url: "https://example.com/fullstack-3"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, frontend, backend]
-  date: "2024-03-06"
-  blurb: "Test node: dual-subcluster (frontend+backend). Should sit between the frontend and backend circles."
-  refs: []
-
-- title: "Full Stack 4"
-  url: "https://example.com/fullstack-4"
-  author: "Test Author"
-  domain: example.com
-  tags: [tech, frontend, backend]
-  date: "2025-01-24"
-  blurb: "Test node: dual-subcluster (frontend+backend). Should sit between the frontend and backend circles."
-  refs: []
 
 # ─── DUAL-SUBCLUSTER: biology + physics (category 15, 4 nodes) ───────────────
 # Expected: between the biology and physics circles, inside the science supercluster.
@@ -641,6 +619,181 @@
   tags: [misc]
   date: "2025-08-04"
   blurb: "Test node: singleton-tag (misc). No circle drawn for misc — behaves like a free node."
+  refs: []
+
+# ─── SUBCLUSTER-ONLY: music (4 nodes) ───────────────────────────────────────
+# Expected: inside the music circle. No dual-subcluster nodes for this supercluster.
+
+- title: "Music Theory 1"
+  url: "https://example.com/music-1"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture, music]
+  date: "2022-04-10"
+  blurb: "Test node: subcluster-only (music). Should be inside the music circle."
+  refs: []
+
+- title: "Music Theory 2"
+  url: "https://example.com/music-2"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture, music]
+  date: "2023-01-22"
+  blurb: "Test node: subcluster-only (music). Should be inside the music circle."
+  refs: ["https://example.com/music-1"]
+
+- title: "Music Theory 3"
+  url: "https://example.com/music-3"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture, music]
+  date: "2024-06-14"
+  blurb: "Test node: subcluster-only (music). Should be inside the music circle."
+  refs: []
+
+- title: "Music Theory 4"
+  url: "https://example.com/music-4"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture, music]
+  date: "2025-02-28"
+  blurb: "Test node: subcluster-only (music). Should be inside the music circle."
+  refs: []
+
+# ─── SUBCLUSTER-ONLY: film (4 nodes) ────────────────────────────────────────
+# Expected: inside the film circle. No dual-subcluster nodes for this supercluster.
+
+- title: "Film Studies 1"
+  url: "https://example.com/film-1"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture, film]
+  date: "2022-08-03"
+  blurb: "Test node: subcluster-only (film). Should be inside the film circle."
+  refs: []
+
+- title: "Film Studies 2"
+  url: "https://example.com/film-2"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture, film]
+  date: "2023-04-17"
+  blurb: "Test node: subcluster-only (film). Should be inside the film circle."
+  refs: ["https://example.com/film-1"]
+
+- title: "Film Studies 3"
+  url: "https://example.com/film-3"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture, film]
+  date: "2024-09-09"
+  blurb: "Test node: subcluster-only (film). Should be inside the film circle."
+  refs: []
+
+- title: "Film Studies 4"
+  url: "https://example.com/film-4"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture, film]
+  date: "2025-07-20"
+  blurb: "Test node: subcluster-only (film). Should be inside the film circle."
+  refs: []
+
+# ─── SUBCLUSTER-ONLY: literature (4 nodes) ──────────────────────────────────
+# Expected: inside the literature circle. No dual-subcluster nodes for this supercluster.
+
+- title: "Literary Criticism 1"
+  url: "https://example.com/literature-1"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture, literature]
+  date: "2022-11-29"
+  blurb: "Test node: subcluster-only (literature). Should be inside the literature circle."
+  refs: []
+
+- title: "Literary Criticism 2"
+  url: "https://example.com/literature-2"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture, literature]
+  date: "2023-08-05"
+  blurb: "Test node: subcluster-only (literature). Should be inside the literature circle."
+  refs: ["https://example.com/literature-1"]
+
+- title: "Literary Criticism 3"
+  url: "https://example.com/literature-3"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture, literature]
+  date: "2024-04-21"
+  blurb: "Test node: subcluster-only (literature). Should be inside the literature circle."
+  refs: []
+
+- title: "Literary Criticism 4"
+  url: "https://example.com/literature-4"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture, literature]
+  date: "2025-10-12"
+  blurb: "Test node: subcluster-only (literature). Should be inside the literature circle."
+  refs: []
+
+# ─── SUPERCLUSTER-ONLY: culture (6 nodes) ────────────────────────────────────
+# Expected: outer ring of culture supercluster, NOT inside music, film, or literature circles.
+# Test color: RED.
+
+- title: "Culture Overview 1"
+  url: "https://example.com/culture-1"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture]
+  date: "2022-06-15"
+  blurb: "Test node: supercluster-only (culture). Refs music-1 — must NOT end up inside music circle."
+  refs: ["https://example.com/music-1"]
+
+- title: "Culture Overview 2"
+  url: "https://example.com/culture-2"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture]
+  date: "2023-02-28"
+  blurb: "Test node: supercluster-only (culture). Refs film-1 — must NOT end up inside film circle."
+  refs: ["https://example.com/film-1"]
+
+- title: "Culture Overview 3"
+  url: "https://example.com/culture-3"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture]
+  date: "2023-11-10"
+  blurb: "Test node: supercluster-only (culture). Refs literature-1 — must NOT end up inside literature circle."
+  refs: ["https://example.com/literature-1"]
+
+- title: "Culture Overview 4"
+  url: "https://example.com/culture-4"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture]
+  date: "2024-07-03"
+  blurb: "Test node: supercluster-only (culture). No refs."
+  refs: []
+
+- title: "Culture Overview 5"
+  url: "https://example.com/culture-5"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture]
+  date: "2025-03-19"
+  blurb: "Test node: supercluster-only (culture). No refs."
+  refs: []
+
+- title: "Culture Overview 6"
+  url: "https://example.com/culture-6"
+  author: "Test Author"
+  domain: example.com
+  tags: [culture]
+  date: "2026-01-07"
+  blurb: "Test node: supercluster-only (culture). No refs — pure outer-ring position test."
   refs: []
 
 # ─── OWN POSTS (categories 21-23, 3 nodes) ───────────────────────────────────

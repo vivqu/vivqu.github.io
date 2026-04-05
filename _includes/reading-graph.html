@@ -4,6 +4,16 @@
     <button id="zoom-in"  style="width:40px;height:40px;background:#1e1e2e;border:1px solid #3a3a5c;color:#ccc;font-size:22px;cursor:pointer;border-radius:4px;line-height:1;padding:0">+</button>
     <button id="zoom-out" style="width:40px;height:40px;background:#1e1e2e;border:1px solid #3a3a5c;color:#ccc;font-size:22px;cursor:pointer;border-radius:4px;line-height:1;padding:0">−</button>
   </div>
+  {% if include.test_mode %}
+  <div id="test-legend" style="display:none;position:absolute;bottom:16px;left:16px;z-index:10;background:#1e1e2e;border:1px solid #3a3a5c;border-radius:6px;padding:10px 14px;font-size:12px;color:#ccc;line-height:2;">
+    <div style="font-size:11px;color:#666;margin-bottom:4px;letter-spacing:0.05em;">TEST MODE — node colors</div>
+    <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#7c6edb;margin-right:8px;vertical-align:middle;"></span>subcluster</div>
+    <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e05555;margin-right:8px;vertical-align:middle;"></span>supercluster-only</div>
+    <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e08020;margin-right:8px;vertical-align:middle;"></span>dual-subcluster</div>
+    <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#40c0e0;margin-right:8px;vertical-align:middle;"></span>free</div>
+    <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f0c060;margin-right:8px;vertical-align:middle;"></span>own post</div>
+  </div>
+  {% endif %}
 </div>
 
 <div id="graph-tooltip" style="
@@ -26,6 +36,7 @@
 (function () {
   {% if include.test_mode %}
   const TEST_MODE   = new URLSearchParams(location.search).get('testmode') === '1';
+  if (TEST_MODE) { const el = document.getElementById('test-legend'); if (el) el.style.display = 'block'; }
   const TEST_COLORS = {
     'subcluster':        '#7c6edb',
     'supercluster-only': '#e05555',
@@ -76,9 +87,9 @@
 
   // Read dimensions after the SVG is in the DOM so layout is settled
   const { width: W, height: H } = svg.node().getBoundingClientRect();
-  // Virtual simulation canvas — 2x the viewport so superclusters have room to spread.
+  // Virtual simulation canvas — 1.5x the viewport so superclusters have room to spread.
   // The initial 0.5x zoom fits the entire VW×VH space into the W×H viewport.
-  const VW = W * 2, VH = H * 2;
+  const VW = W * 1.5, VH = H * 1.5;
 
   const g = svg.append('g');
 
@@ -87,7 +98,7 @@
     .on('zoom', e => g.attr('transform', e.transform));
   svg.call(zoom);
   // Show virtual canvas centered in viewport at initial zoom
-  const INIT_ZOOM = 0.65;
+  const INIT_ZOOM = 0.8;
   svg.call(zoom.transform, d3.zoomIdentity.translate(W / 2, H / 2).scale(INIT_ZOOM).translate(-VW / 2, -VH / 2));
 
   document.getElementById('zoom-in').addEventListener('click', () =>

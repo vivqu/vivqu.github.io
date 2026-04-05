@@ -3,8 +3,8 @@ layout: null
 ---
 {% assign articles = site.data.test_graph %}
 {% assign article_urls = articles | map: "url" | join: "|||" %}
-{% assign SUPERCLUSTERS = "tech,science,society" | split: "," %}
-{% assign SUBCLUSTERS = "frontend,backend,biology,physics,politics" | split: "," %}
+{% assign SUPERCLUSTERS = "tech,science,society,culture" | split: "," %}
+{% assign SUBCLUSTERS = "frontend,backend,biology,physics,politics,music,film,literature" | split: "," %}
 {
   "nodes": [
 {% for article in articles %}
