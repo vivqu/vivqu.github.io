@@ -179,6 +179,39 @@
     const SUPER_TAGS = superTagSet;
     {% endif %}
 
+    // A tag is a true subcluster if it's not a supercluster but all its nodes belong to some supercluster.
+    const subTagSet = new Set(
+      tags.filter(t => {
+        if (superTagSet.has(t)) return false;
+        if ((tagGroups[t] || []).length < 2) return false;
+        return [...superTagSet].some(st => {
+          const superIds = new Set((tagGroups[st] || []).map(n => n.id));
+          return (tagGroups[t] || []).every(n => superIds.has(n.id));
+        });
+      })
+    );
+
+    // Precompute link type for per-link force strength.
+    //   'sub-cross' — both ends in subclusters but different ones (minimal force)
+    //   'sub-free'  — one end is subcluster, other is free (stronger attraction)
+    //   'default'   — everything else
+    refLinks.forEach(l => {
+      const src = nodeById.get(typeof l.source === 'object' ? l.source.id : l.source);
+      const tgt = nodeById.get(typeof l.target === 'object' ? l.target.id : l.target);
+      const srcSubTags = (src?.tags || []).filter(t => subTagSet.has(t));
+      const tgtSubTags = (tgt?.tags || []).filter(t => subTagSet.has(t));
+      const srcIsFree  = !(src?.tags || []).some(t => superTagSet.has(t) || subTagSet.has(t));
+      const tgtIsFree  = !(tgt?.tags || []).some(t => superTagSet.has(t) || subTagSet.has(t));
+      if (srcSubTags.length > 0 && tgtSubTags.length > 0 &&
+          !srcSubTags.some(t => tgtSubTags.includes(t))) {
+        l.linkType = 'sub-cross';
+      } else if ((srcSubTags.length > 0 && tgtIsFree) || (tgtSubTags.length > 0 && srcIsFree)) {
+        l.linkType = 'sub-free';
+      } else {
+        l.linkType = 'default';
+      }
+    });
+
     // Seed nodes by supercluster in the virtual canvas (VW×VH).
     // Each supercluster gets a distinct region so simulation starts separated.
     const superTagList = [...superTagSet];
@@ -485,7 +518,11 @@
     }
 
     const sim = d3.forceSimulation(nodes)
-      .force('link',           d3.forceLink(refLinks).id(d => d.id).distance(40).strength(0.08))
+      .force('link',           d3.forceLink(refLinks).id(d => d.id).distance(40).strength(l => {
+                           if (l.linkType === 'sub-cross') return 0.01;
+                           if (l.linkType === 'sub-free')  return 0.10;
+                           return 0.08;
+                         }))
       .force('charge',         d3.forceManyBody().strength(-35))
       .force('collide',        d3.forceCollide(d => nodeRadius(d) + 8))
       .force('x',              d3.forceX(d => {
