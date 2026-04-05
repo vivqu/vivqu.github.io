@@ -55,7 +55,8 @@
   const ARTICLE_COL = '#7c6edb';
   const OWN_COL     = '#f0c060';
   const TAG_PALETTE = ['#b06edb','#6eabd8','#6ed8a4','#d8c76e','#d87a6e','#6e8fd8','#d86eaa','#8bd86e'];
-  const CLUSTER_PAD = 20;
+  const CLUSTER_PAD        = 20;
+  const LABEL_ZOOM_THRESHOLD = 1.5; // labels appear above this zoom level
 
   // Backlink-based radius scale: [0 refs, 1, 2–3, 4–6, 7+] → radius px
   const rScale = d3.scaleThreshold([1, 2, 4, 7], [6, 8, 11, 15, 20]);
@@ -99,6 +100,9 @@
   // clamped to a minimum so forces have enough room even on small screens.
   const MIN_VW = 950, MIN_VH = 700;
   let W, H, VW, VH, INIT_ZOOM;
+  let currentZoomK      = 0;    // current zoom scale; must be declared before zoom setup
+  let activeMemberIds   = null; // Set of node IDs in focused cluster; null when no focus
+  let runLabelOcclusion = null; // assigned by render(); invoked by zoom handler
   function readDimensions() {
     const rect = svg.node().getBoundingClientRect();
     W = rect.width; H = rect.height;
@@ -113,7 +117,11 @@
   const zoom = d3.zoom()
     .scaleExtent([0.1, 4])
     .translateExtent([[-VW, -VH], [2 * VW, 2 * VH]])
-    .on('zoom', e => g.attr('transform', e.transform));
+    .on('zoom', e => {
+      g.attr('transform', e.transform);
+      currentZoomK = e.transform.k;
+      if (runLabelOcclusion) runLabelOcclusion();
+    });
   svg.call(zoom);
   svg.call(zoom.transform, d3.zoomIdentity.translate(W / 2, H / 2).scale(INIT_ZOOM).translate(-VW / 2, -VH / 2));
 
@@ -583,6 +591,12 @@
 
       // Member node IDs for this cluster (supercluster tagGroups already includes subcluster nodes)
       const memberIds = new Set((tagGroups[tag] || []).map(n => n.id));
+      activeMemberIds = memberIds; // expose to zoom handler so labels show regardless of zoom level
+
+      // Interrupt any in-flight transitions before starting new ones
+      nodeG.interrupt();
+      refLines.interrupt();
+      svg.interrupt();
 
       nodeG.transition().duration(400)
         .style('opacity', d => memberIds.has(d.id) ? 1 : 0.12);
@@ -601,15 +615,27 @@
           d3.zoomIdentity.translate(W / 2 - circle.cx * scale, H / 2 - circle.cy * scale).scale(scale));
       }
 
+      // Force cluster circles to update immediately (sim may have already cooled)
+      updateClusters();
       updateLegendActiveState();
     }
 
     function resetFocus() {
       activeTag = null;
+      activeMemberIds = null;
+
+      // Interrupt any in-flight transitions before starting new ones
+      nodeG.interrupt();
+      refLines.interrupt();
+      svg.interrupt();
+
       nodeG.transition().duration(400).style('opacity', 1);
       refLines.transition().duration(400).style('opacity', 1);
       svg.transition().duration(600).call(zoom.transform,
         d3.zoomIdentity.translate(W / 2, H / 2).scale(INIT_ZOOM).translate(-VW / 2, -VH / 2));
+
+      // Force cluster circles back to default state immediately
+      updateClusters();
       updateLegendActiveState();
     }
 
@@ -659,6 +685,7 @@
     const clusterLabelLayer = g.append('g');
     const refLinkLayer      = g.append('g');
     const nodeLayer         = g.append('g');
+    const nodeLabelLayer    = g.append('g'); // above nodeLayer so labels are never obscured by circles
 
     const refLines = refLinkLayer.selectAll('line')
       .data(refLinks)
@@ -689,18 +716,37 @@
       .attr('fill', d => nodeColor(d));
       {% endif %}
 
-    nodeG.append('text')
-      .text(d => d.label)
-      .attr('dy', d => nodeRadius(d) + 13)
+    // Labels live in their own top layer so they're never occluded by node circles
+    const nodeLabels = nodeLabelLayer.selectAll('text')
+      .data(nodes)
+      .join('text')
+      .attr('class', 'node-label')
+      .text(d => d.label.length > 30 ? d.label.slice(0, 30) + '…' : d.label)
       .attr('text-anchor', 'middle')
       .attr('fill', '#ccc')
-      .attr('font-size', '10px')
+      .attr('font-size', '9px')
       .style('pointer-events', 'none')
       .style('opacity', 0);
 
+    // Fast lookup: node id → label DOM element
+    const labelById = new Map();
+    nodeLabels.each(function (d) { labelById.set(d.id, this); });
+
     nodeG
       .on('mouseenter', function (event, d) {
-        d3.select(this).select('text').style('opacity', 1);
+        const lbl = labelById.get(d.id);
+        if (lbl) {
+          d3.select(lbl).style('font-weight', 'bold').style('opacity', 1);
+          // Dim any other label whose bounding box overlaps the now-bold hovered label
+          const hr = lbl.getBoundingClientRect();
+          nodeLabels.each(function (ld) {
+            if (ld.id === d.id || parseFloat(this.style.opacity || 1) <= 0) return;
+            const r = this.getBoundingClientRect();
+            if (r.width === 0) return;
+            if (r.left < hr.right && r.right > hr.left && r.top < hr.bottom && r.bottom > hr.top)
+              this.style.opacity = '0.38';
+          });
+        }
         const dateStr = d.date
           ? new Date(d.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
           : '';
@@ -724,8 +770,10 @@
         positionTooltip(event);
       })
       .on('mousemove', positionTooltip)
-      .on('mouseleave', function () {
-        d3.select(this).select('text').style('opacity', 0);
+      .on('mouseleave', function (event, d) {
+        const lbl = labelById.get(d.id);
+        if (lbl) d3.select(lbl).style('font-weight', null);
+        if (runLabelOcclusion) runLabelOcclusion();
         tooltip.style.display = 'none';
       })
       .on('click', (event, d) => { event.stopPropagation(); window.open(d.id, '_blank'); });
@@ -791,6 +839,57 @@
         .attr('y', d => d.cy + d.r - 8);
     }
 
+    // ── Label occlusion ──────────────────────────────────────────────────
+    // Greedy algorithm: sort labels by priority (backlink count), show the
+    // highest-priority label that doesn't overlap any already-shown label.
+    // Runs on every zoom event and when focus state changes.
+    function occludeLabels() {
+      const showByZoom = currentZoomK >= LABEL_ZOOM_THRESHOLD;
+      const hasFocus   = activeMemberIds !== null;
+
+      // Collect candidates: labels eligible to be shown in current state
+      const candidates = [];
+      nodeLabels.each(function (d) {
+        const isCandidate = hasFocus ? activeMemberIds.has(d.id) : showByZoom;
+        if (!isCandidate) { this.style.opacity = '0'; return; }
+        candidates.push({ el: this, self: d.self, priority: d.self ? Infinity : (backlinkCount.get(d.id) || 0) });
+      });
+
+      if (candidates.length === 0) return;
+
+      // Higher backlink count → shown first → less likely to be occluded
+      candidates.sort((a, b) => b.priority - a.priority);
+
+      // Pre-seed occupied with cluster label bounding boxes so node labels
+      // that overlap a cluster label are dimmed. Only include cluster labels
+      // that are actually visible (opacity > 0.5 — skip faded/focused-away ones).
+      const occupied = [];
+      clusterLabelLayer.selectAll('text').each(function () {
+        if (this.style.display === 'none') return;
+        if (parseFloat(this.style.opacity ?? 1) < 0.5) return;
+        const r = this.getBoundingClientRect();
+        if (r.width > 0) occupied.push(r);
+      });
+
+      candidates.forEach(({ el, self }) => {
+        const r = el.getBoundingClientRect();
+        if (r.width === 0) { el.style.opacity = '0'; return; } // not yet laid out
+        if (self) {
+          // Own posts are never occluded — always shown, always block others
+          el.style.opacity = '1';
+          occupied.push(r);
+          return;
+        }
+        const overlaps = occupied.some(o =>
+          r.left < o.right && r.right > o.left && r.top < o.bottom && r.bottom > o.top
+        );
+        el.style.opacity = overlaps ? '0.38' : '1';
+        if (!overlaps) occupied.push(r);
+      });
+    }
+
+    runLabelOcclusion = occludeLabels;
+
     currentSim = sim;
     sim.on('tick', () => {
       const MAX_V = 25;
@@ -813,8 +912,11 @@
         .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
         .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
       nodeG.attr('transform', d => `translate(${d.x},${d.y})`);
+      nodeLabels.attr('x', d => d.x).attr('y', d => d.y + nodeRadius(d) + 12);
       updateClusters();
     });
+
+    sim.on('end', () => { occludeLabels(); });
 
     buildAgeLegend();
     buildClusterLegend();
@@ -935,6 +1037,8 @@
       updateContainerHeight();
       readDimensions();
       activeTag = null;
+      activeMemberIds = null;
+      runLabelOcclusion = null;
       zoom.translateExtent([[-VW, -VH], [2 * VW, 2 * VH]]);
       svg.call(zoom.transform, d3.zoomIdentity.translate(W / 2, H / 2).scale(INIT_ZOOM).translate(-VW / 2, -VH / 2));
       if (currentSim) { currentSim.stop(); currentSim = null; }
