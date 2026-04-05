@@ -56,7 +56,7 @@
   const OWN_COL     = '#f0c060';
   const TAG_PALETTE = ['#b06edb','#6eabd8','#6ed8a4','#d8c76e','#d87a6e','#6e8fd8','#d86eaa','#8bd86e'];
   const CLUSTER_PAD        = 20;
-  const LABEL_ZOOM_THRESHOLD = 1.5; // labels appear above this zoom level
+  const LABEL_ZOOM_THRESHOLD = 1.3; // labels appear above this zoom level
 
   // Backlink-based radius scale: [0 refs, 1, 2–3, 4–6, 7+] → radius px
   const rScale = d3.scaleThreshold([1, 2, 4, 7], [6, 8, 11, 15, 20]);
@@ -103,6 +103,7 @@
   let currentZoomK      = 0;    // current zoom scale; must be declared before zoom setup
   let activeMemberIds   = null; // Set of node IDs in focused cluster; null when no focus
   let runLabelOcclusion = null; // assigned by render(); invoked by zoom handler
+  let focusScale        = null; // zoom scale used when a cluster was focused
   function readDimensions() {
     const rect = svg.node().getBoundingClientRect();
     W = rect.width; H = rect.height;
@@ -610,7 +611,8 @@
       // Zoom so the cluster fills ~70% of the viewport
       const circle = clusterCircle[tag];
       if (circle) {
-        const scale = Math.max(0.3, Math.min(3, Math.min(W, H) * 0.7 / (2 * circle.r)));
+        const scale = Math.max(0.3, Math.min(2, Math.min(W, H) * 0.7 / (2 * circle.r)));
+        focusScale = scale;
         svg.transition().duration(600).call(zoom.transform,
           d3.zoomIdentity.translate(W / 2 - circle.cx * scale, H / 2 - circle.cy * scale).scale(scale));
       }
@@ -623,6 +625,7 @@
     function resetFocus() {
       activeTag = null;
       activeMemberIds = null;
+      focusScale = null;
 
       // Interrupt any in-flight transitions before starting new ones
       nodeG.interrupt();
@@ -686,6 +689,7 @@
     const refLinkLayer      = g.append('g');
     const nodeLayer         = g.append('g');
     const nodeLabelLayer    = g.append('g'); // above nodeLayer so labels are never obscured by circles
+    const hoverCircleLayer  = g.append('g').style('pointer-events', 'none'); // topmost: hovered circle duplicate
 
     const refLines = refLinkLayer.selectAll('line')
       .data(refLinks)
@@ -732,19 +736,36 @@
     const labelById = new Map();
     nodeLabels.each(function (d) { labelById.set(d.id, this); });
 
+    // Track which node is currently hovered for tick updates
+    let hoveredNode = null;
+
     nodeG
       .on('mouseenter', function (event, d) {
+        hoveredNode = d;
+        // Paint a duplicate circle in the topmost layer so it renders above all labels
+        hoverCircleLayer.selectAll('circle').remove();
+        const srcCircle = this.querySelector('circle');
+        hoverCircleLayer.append('circle')
+          .attr('r',    d3.select(srcCircle).attr('r'))
+          .attr('fill', d3.select(srcCircle).attr('fill'))
+          .attr('stroke',       d3.select(srcCircle).attr('stroke'))
+          .attr('stroke-width', d3.select(srcCircle).attr('stroke-width'))
+          .attr('cx', d.x)
+          .attr('cy', d.y);
         const lbl = labelById.get(d.id);
         if (lbl) {
+          d3.select(lbl).raise(); // bring label to front within nodeLabelLayer
           d3.select(lbl).style('font-weight', 'bold').style('opacity', 1);
-          // Dim any other label whose bounding box overlaps the now-bold hovered label
+          // Dim any other label that overlaps the hovered label OR the hovered circle
           const hr = lbl.getBoundingClientRect();
+          const cr = hoverCircleLayer.select('circle').node()?.getBoundingClientRect();
           nodeLabels.each(function (ld) {
             if (ld.id === d.id || parseFloat(this.style.opacity || 1) <= 0) return;
             const r = this.getBoundingClientRect();
             if (r.width === 0) return;
-            if (r.left < hr.right && r.right > hr.left && r.top < hr.bottom && r.bottom > hr.top)
-              this.style.opacity = '0.38';
+            const overlapsLabel  = r.left < hr.right && r.right > hr.left && r.top < hr.bottom && r.bottom > hr.top;
+            const overlapsCircle = cr && r.left < cr.right && r.right > cr.left && r.top < cr.bottom && r.bottom > cr.top;
+            if (overlapsLabel || overlapsCircle) this.style.opacity = '0.38';
           });
         }
         const dateStr = d.date
@@ -771,6 +792,8 @@
       })
       .on('mousemove', positionTooltip)
       .on('mouseleave', function (event, d) {
+        hoveredNode = null;
+        hoverCircleLayer.selectAll('circle').remove();
         const lbl = labelById.get(d.id);
         if (lbl) d3.select(lbl).style('font-weight', null);
         if (runLabelOcclusion) runLabelOcclusion();
@@ -847,6 +870,25 @@
       const showByZoom = currentZoomK >= LABEL_ZOOM_THRESHOLD;
       const hasFocus   = activeMemberIds !== null;
 
+      // Hard floor: hide all labels when zoomed out too far, even when focused.
+      // • Small cluster (focusScale > threshold, zoomed in a lot): fall back to the
+      //   default LABEL_ZOOM_THRESHOLD — labels hide as soon as zoom drops below it.
+      // • Large cluster (focusScale ≤ threshold, zoomed in less): show labels at the
+      //   auto-focus zoom, but hide after one zoom-out button click (×0.7).
+      //   Floor sits at focusScale×0.85, which is above the first-click landing point
+      //   (focusScale×0.7), so the first click always crosses below the floor.
+      // • No focus: 0 (candidates gated by LABEL_ZOOM_THRESHOLD in the loop below).
+      let labelFloor = 0;
+      if (hasFocus && focusScale !== null) {
+        labelFloor = focusScale > LABEL_ZOOM_THRESHOLD
+          ? LABEL_ZOOM_THRESHOLD          // small cluster: use default threshold
+          : focusScale * 0.85;            // large cluster: one-click tolerance
+      }
+      if (currentZoomK < labelFloor) {
+        nodeLabels.each(function () { this.style.opacity = '0'; });
+        return;
+      }
+
       // Collect candidates: labels eligible to be shown in current state
       const candidates = [];
       nodeLabels.each(function (d) {
@@ -913,6 +955,9 @@
         .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
       nodeG.attr('transform', d => `translate(${d.x},${d.y})`);
       nodeLabels.attr('x', d => d.x).attr('y', d => d.y + nodeRadius(d) + 12);
+      if (hoveredNode) {
+        hoverCircleLayer.select('circle').attr('cx', hoveredNode.x).attr('cy', hoveredNode.y);
+      }
       updateClusters();
     });
 
@@ -1038,6 +1083,7 @@
       readDimensions();
       activeTag = null;
       activeMemberIds = null;
+      focusScale = null;
       runLabelOcclusion = null;
       zoom.translateExtent([[-VW, -VH], [2 * VW, 2 * VH]]);
       svg.call(zoom.transform, d3.zoomIdentity.translate(W / 2, H / 2).scale(INIT_ZOOM).translate(-VW / 2, -VH / 2));
