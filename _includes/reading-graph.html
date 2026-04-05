@@ -324,9 +324,15 @@
       }
     }
 
-    // Fix 5: attract superclusters toward each other, with a repulsion floor so they don't overlap
+    // Fix 5: attract superclusters toward each other, with a repulsion floor so they don't overlap.
+    // Also repel orphan clusters (e.g. "misc") from all other cluster circles.
     function superclusterProximityForce(alpha) {
-      const superTags = Object.keys(clusterCircle).filter(t => superTagSet.has(t));
+      const superTags  = Object.keys(clusterCircle).filter(t => superTagSet.has(t));
+      const orphanTags = Object.keys(clusterCircle).filter(t => !superTagSet.has(t) &&
+        !superTags.some(st => (tagGroups[t] || []).every(n =>
+          (tagGroups[st] || []).some(sn => sn.id === n.id))));
+
+      // Supercluster ↔ supercluster: attract + repel
       for (let i = 0; i < superTags.length; i++) {
         for (let j = i + 1; j < superTags.length; j++) {
           const tA = superTags[i], tB = superTags[j];
@@ -336,12 +342,10 @@
           const minDist = cA.r + cB.r + 20;
           const nx = dx / dist, ny = dy / dist;
           if (dist > minDist) {
-            // Mild attraction — keep superclusters from drifting off screen
             const pull = (dist - minDist) * 0.008 * alpha;
             (tagGroups[tA] || []).forEach(n => { n.vx += nx * pull; n.vy += ny * pull; });
             (tagGroups[tB] || []).forEach(n => { n.vx -= nx * pull; n.vy -= ny * pull; });
           } else {
-            // Strong proportional repulsion when overlapping
             const overlap = minDist - dist;
             const push = (overlap / minDist) * alpha * 12.0;
             (tagGroups[tA] || []).forEach(n => { n.vx -= nx * push; n.vy -= ny * push; });
@@ -349,6 +353,24 @@
           }
         }
       }
+
+      // Orphan cluster ↔ all other circles: repel only
+      orphanTags.forEach(tO => {
+        const cO = clusterCircle[tO];
+        Object.keys(clusterCircle).forEach(tOther => {
+          if (tOther === tO) return;
+          const cOther = clusterCircle[tOther];
+          const dx = cO.cx - cOther.cx, dy = cO.cy - cOther.cy;
+          const dist = Math.hypot(dx, dy) || 1;
+          const minDist = cO.r + cOther.r + 30;
+          if (dist < minDist) {
+            const overlap = minDist - dist;
+            const push = (overlap / minDist) * alpha * 12.0;
+            const nx = dx / dist, ny = dy / dist;
+            (tagGroups[tO] || []).forEach(n => { n.vx += nx * push; n.vy += ny * push; });
+          }
+        });
+      });
     }
 
     // Fix 6: pull supercluster-only nodes to the outer ring, clearing all subcluster circles
