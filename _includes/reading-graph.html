@@ -420,22 +420,44 @@
       });
     }
 
-    // Fix 7: pull free nodes (no cluster circle for any of their tags) just outside the nearest cluster
+    // Fix 7: keep free nodes (no cluster tag) outside every cluster circle.
+    // Two-pass per node: (1) repel out of any circle the node is inside,
+    // (2) attract toward the nearest circle's edge so they park close by.
     function freeNodeForce(alpha) {
       if (Object.keys(clusterCircle).length === 0) return;
+      const margin = 40;
       nodes.forEach(n => {
         const isFree = !(n.tags || []).some(t => clusterCircle[t]);
         if (!isFree) return;
-        let nearestCircle = null, nearestDist = Infinity;
+
+        let nearestCircle = null, nearestEdgeDist = Infinity;
+
         Object.values(clusterCircle).forEach(c => {
-          const d = Math.hypot(n.x - c.cx, n.y - c.cy);
-          if (d < nearestDist) { nearestDist = d; nearestCircle = c; }
+          const dx = n.x - c.cx, dy = n.y - c.cy;
+          const dist = Math.hypot(dx, dy) || 1;
+          const edgeDist = dist - c.r; // negative = inside circle
+
+          // Track nearest circle edge for parking attraction
+          if (Math.abs(edgeDist - margin) < Math.abs(nearestEdgeDist - margin)) {
+            nearestEdgeDist = edgeDist;
+            nearestCircle = { ...c, dx, dy, dist };
+          }
+
+          // Repel from every circle the node is inside (with margin)
+          if (dist < c.r + margin) {
+            const overlap = (c.r + margin) - dist;
+            const strength = overlap * 0.12 * alpha;
+            n.vx += (dx / dist) * strength;
+            n.vy += (dy / dist) * strength;
+          }
         });
-        if (!nearestCircle || nearestDist === 0) return;
-        const targetDist = nearestCircle.r + 40;
-        const pull = (nearestDist - targetDist) * 0.08 * alpha;
-        n.vx -= (n.x - nearestCircle.cx) / nearestDist * pull;
-        n.vy -= (n.y - nearestCircle.cy) / nearestDist * pull;
+
+        // Gentle attraction toward parking spot just outside nearest circle
+        if (nearestCircle && nearestEdgeDist > margin + 20) {
+          const pull = (nearestEdgeDist - margin) * 0.04 * alpha;
+          n.vx -= (nearestCircle.dx / nearestCircle.dist) * pull;
+          n.vy -= (nearestCircle.dy / nearestCircle.dist) * pull;
+        }
       });
     }
 
