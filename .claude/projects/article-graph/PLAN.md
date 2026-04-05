@@ -6,7 +6,7 @@ Jekyll + GitHub Pages · D3 v7 force graph · no custom plugins
 
 - [x] **Step 1 — Page scaffold**: Create `reading.html` at repo root with Jekyll front matter, layout, and placeholder content. Page lives at `/reading`.
   - Title and subtitle rendered in `_layouts/reading.html`, not the page body (Liquid only processes reliably in layouts).
-  - Subtitle copy (hardcoded in layout, do not change): *"an interactive map of articles and essays I've found worth reading, connected by domain and cross-references"*
+  - Subtitle copy (hardcoded in layout, do not change): *"an interactive map of articles and essays I've found worth reading, clustered by topic and connected by references"*
 - [x] **Step 2 — Nav link**: Add "reading" link to `_includes/masthead.html` between "books" and "subscribe".
 - [x] **Step 3 — Sample data**: Create `_data/reading.yml` with ~10–15 representative articles covering a few domains and tags, including a few `refs` cross-links and at least one own post (`domain: self`).
 - [x] **Step 4 — graph.json template**: Create `reading/graph.json` (Liquid template). Emits nodes and links from `_data/reading.yml`. Rendered to `/reading/graph.json` at build time.
@@ -206,7 +206,7 @@ Verify in the screenshots:
 - "Reading" link is visible in the left navigation bar between "books" and "subscribe"
 - Reading page shows:
   - Title: Reading
-  - Subtitle: an interactive map of articles and essays I've found worth reading, connected by domain and cross-references
+  - Subtitle: an interactive map of articles and essays I've found worth reading, clustered by topic and connected by references
   - D3 graph SVG is rendered with nodes visible
 
 ### Workflow 2 — Settled graph layout (run 3–4 times)

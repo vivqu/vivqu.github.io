@@ -725,7 +725,11 @@
       .data(nodes)
       .join('text')
       .attr('class', 'node-label')
-      .text(d => d.label.length > 30 ? d.label.slice(0, 30) + '…' : d.label)
+      .text(d => {
+        if (d.label.length <= 32) return d.label;
+        const cut = d.label.lastIndexOf(' ', 32);
+        return (cut > 0 ? d.label.slice(0, cut) : d.label.slice(0, 32)) + '…';
+      })
       .attr('text-anchor', 'middle')
       .attr('fill', '#ccc')
       .attr('font-size', '9px')
