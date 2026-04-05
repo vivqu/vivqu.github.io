@@ -698,11 +698,20 @@
     }
 
     sim.on('tick', () => {
+      const MAX_V = 25;
       nodes.forEach(n => {
+        // Cap velocity to prevent explosion when nodes start far apart (e.g. a
+        // high-degree hub linked to nodes on the opposite side of the canvas).
+        // Without this, forceLink applies ~(dist - restLen) * strength px/tick on
+        // tick 1, which for dist=600 is ~44px — enough to send nodes to the bounds
+        // wall where the position clamp kills one axis while velocity continues
+        // accumulating in the other, forming the characteristic axis-aligned chains.
+        const v = Math.hypot(n.vx || 0, n.vy || 0);
+        if (v > MAX_V) { n.vx = (n.vx / v) * MAX_V; n.vy = (n.vy / v) * MAX_V; }
+
         const r = nodeRadius(n);
         n.x = Math.max(r + 4, Math.min(VW - r - 4, n.x));
         n.y = Math.max(r + 4, Math.min(VH - r - 4, n.y));
-
       });
 
       refLines
