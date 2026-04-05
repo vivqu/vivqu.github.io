@@ -81,12 +81,12 @@ The site's key breakpoints (from `styles.scss`):
 
 The `reading.html` layout uses `d-md-flex` (Primer flex at ≥768px), so below 768px the sidebar becomes a top bar and the graph container height needs to account for that. The graph currently computes `H = container.clientHeight` at load time but may not re-measure correctly on mobile.
 
-- [ ] **Match content width** — the reading layout caps the header at `max-width: 700px` with consistent side margins; constrain `#graph-container` to the same width so the graph edges align with the page content rather than stretching full viewport width
+- [x] **Match content width** — the reading layout header is already capped at `max-width: 700px`; the graph intentionally fills the remaining flex content column (`width: 100%`) — capping it at 700px would waste space on wide screens; by design, graph stays full-width within the content area
 - [ ] **Graph height on mobile** — on ≤767px the graph container `calc(100vh - 180px)` offset should be increased to account for the stacked header/nav; measure actual header height dynamically at render time rather than using a hardcoded offset
-- [ ] **Tooltip positioning on mobile** — `event.clientX/Y` positioning can push tooltips off-screen on narrow viewports; clamp to viewport width on small screens (≤767px)
+- [ ] **Tooltip positioning on mobile** — right-side clamp (`window.innerWidth - 260`) is already in place; still missing: bottom clamp so tooltip doesn't overflow below viewport on short screens; also verify on ≤414px that the 240px max-width doesn't clip
 - [ ] **Cluster label readability** — at small viewport widths the cluster label text (11px) may overlap; consider hiding labels below ≤414px or reducing font size
-- [ ] **Legend placement on mobile** — the bottom-left age color legend and top-right zoom buttons may collide with the graph content on narrow screens; stack or relocate them below ≤767px
-- [ ] **Verify simulation bounds** — `W` and `H` are computed once on load; on mobile after orientation change, they'll be stale — add a `ResizeObserver` or `resize` event listener to recompute and restart the simulation
+- [ ] **Legend placement on mobile** — the bottom-left age color legend (absolute SVG) and top-right zoom buttons (40×40px, below the 44px touch-target minimum) may collide with graph content on narrow screens; increase zoom button tap target to ≥44px; stack or relocate legend below ≤767px
+- [ ] **Verify simulation bounds** — `W`, `H`, `VW`, `VH` are computed once at load via `getBoundingClientRect()`; after orientation change or resize they go stale — add a `ResizeObserver` on `#graph-container` to recompute dimensions and restart the simulation
 
 ### Cluster layout
 
