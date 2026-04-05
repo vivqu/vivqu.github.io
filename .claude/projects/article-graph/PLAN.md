@@ -90,25 +90,30 @@ The `reading.html` layout uses `d-md-flex` (Primer flex at ≥768px), so below 7
 
 ### Cluster layout
 
-> **See [force-changes.md](force-changes.md)** for the full analysis of what was attempted, why it failed, and the concrete next steps.
 > **See [TEST_PLAN.md](TEST_PLAN.md)** for the test dataset design (`test_graph.yml`, 103 nodes) and test mode color coding (`?testmode=1`) used to verify the force changes.
 
-Current known issues:
+All known layout issues are resolved. The simulation uses the following force stack (registered in this order):
 
-- `forecasting`-only nodes (e.g. "Could AI Slow Science?") drift inside the `skepticism` sub-circle because `forceLink` (~16 units) overpowers the cluster push (~3 units)
-- `open-source`-only nodes (Tailwind, Tldraw) drift between the `frameworks` and `agent-harness` sub-circles for the same reason
+| Force | What it does |
+| --- | --- |
+| `forceLink` | Ref-link edges. Distance 40. Strength varies by link type: `sub-cross` 0.01, `sub-free` 0.10, default 0.08. Weak cross-cluster links prevent forceLink from overpowering cluster placement. |
+| `forceManyBody` | Global charge −35. |
+| `forceCollide` | Collision radius = `nodeRadius(d) + 8`. |
+| `forceX` / `forceY` | Soft anchor toward each supercluster's seed position (strength 0.025). Zero strength for non-supercluster nodes — prevents free/orphan nodes from being pulled to center. |
+| `clusterForce` | Pulls each node toward its tag's centroid. Subcluster pull 0.15, supercluster pull 0.06 (weaker so nodes prefer their subcluster over the outer ring). Non-member clustered nodes are repelled outside `circle.r + 56`. Free nodes skipped. |
+| `clusterBoundaryForce` | Pushes cluster node groups away from SVG edges so circles don't clip the viewport boundary. |
+| `subclusterSeparationForce` | Pushes sibling subcluster circles apart (gap ≥ 20px). Skips pairs that share nodes (intentional Venn overlap). |
+| `superclusterProximityForce` | Supercluster ↔ supercluster: attracts when gap > 50px, repels with strength `overlap * alpha * 1.2` when closer. Orphan clusters ↔ all other circles: repel only (gap ≥ 30px). |
+| `ringOrbitalForce` | Pulls supercluster-only nodes (no sub-tag) to an orbital ring that clears all subcluster circles within their supercluster. Target radius = max(0.82 × supercluster.r, edge of furthest sub-circle + 50). |
+| `nodeExclusionForce` | Pushes any node out of sibling subcluster circles it doesn't belong to (boundary = `sib.r + nodeRadius + 12`, strength `penetration * 3.0 * alpha`). Covers supercluster-only, dual-subcluster, and single-subcluster nodes. |
+| `freeNodeForce` | Keeps free nodes (no cluster tag) outside all cluster circles (margin 40px). Also gently attracts them toward the nearest circle's edge so they park nearby rather than drifting. |
 
-Proposed fix (details in the linked plan):
+**Initial seeding** — nodes start separated by type to give forces a clean start:
 
-- [ ] Weaken `forceLink`: `distance(60).strength(0.8)` → `distance(120).strength(0.3)`
-- [ ] Replace `forceCenter` with `forceX(W/2).strength(0.02)` + `forceY(H/2).strength(0.02)`
-- [ ] Strengthen centroid pull in `clusterForce`: `0.08` → `0.20` for primary tag, `0.08` for secondary
-
-### Unclustered nodes layout
-
-Use the [disjoint force-directed graph](https://observablehq.com/@d3/disjoint-force-directed-graph/2) approach for nodes with no tag (or tags that have only one article):
-
-- [ ] Keep `forceX` + `forceY` (already added above) — this naturally prevents isolated/disjoint nodes from escaping the viewport, unlike `forceCenter`
+- Supercluster nodes: evenly spaced on a ring at 0.22× canvas radius from center
+- Subcluster nodes: offset within their supercluster seed by a pre-computed angle
+- Orphan cluster nodes (≥2 nodes, not a sub/supercluster): evenly spaced on the outer ring at 0.42× radius
+- Free nodes: random angle on the same 0.42× outer ring
 
 ### Node visual encoding
 
