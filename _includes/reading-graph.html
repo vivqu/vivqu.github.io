@@ -790,7 +790,9 @@
             + `<br><span style="color:#999">cross-cluster refs: ${crossRefs}${crossRefs > 0 ? ' ⚠' : ''}</span>`;
         }
         {% endif %}
-        tooltip.innerHTML = `<strong>${esc(d.label)}</strong><br>${esc(d.author)}${dateStr ? ' · ' + dateStr : ''}${tagsHtml}${blurbHtml}{% if include.test_mode %}${testInfoHtml}{% endif %}`;
+        const domain = d.self ? null : (() => { try { const parts = new URL(d.id).hostname.split('.'); return parts.slice(-2).join('.'); } catch { return null; } })();
+        const domainHtml = domain ? `<br><span style="color:#666">${esc(domain)}</span>` : '';
+        tooltip.innerHTML = `<strong>${esc(d.label)}</strong><br>${esc(d.author)}${dateStr ? ' · ' + dateStr : ''}${domainHtml}${tagsHtml}${blurbHtml}{% if include.test_mode %}${testInfoHtml}{% endif %}`;
         tooltip.style.display = 'block';
         positionTooltip(event);
       })
