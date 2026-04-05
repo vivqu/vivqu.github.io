@@ -1,8 +1,8 @@
 {% assign graph_url = include.data_url | default: '/reading/graph.json' %}
-<div id="graph-container" style="width: 100%; height: calc(100vh - 180px); position: relative;">
+<div id="graph-container" style="width: 100%; max-width: 920px; margin: 0 auto; height: calc(100vh - 180px); position: relative;">
   <div style="position: absolute; top: 12px; right: 12px; z-index: 10; display: flex; flex-direction: column; gap: 4px;">
-    <button id="zoom-in"  style="width:40px;height:40px;background:#1e1e2e;border:1px solid #3a3a5c;color:#ccc;font-size:22px;cursor:pointer;border-radius:4px;line-height:1;padding:0">+</button>
-    <button id="zoom-out" style="width:40px;height:40px;background:#1e1e2e;border:1px solid #3a3a5c;color:#ccc;font-size:22px;cursor:pointer;border-radius:4px;line-height:1;padding:0">−</button>
+    <button id="zoom-in"  style="width:44px;height:44px;background:#1e1e2e;border:1px solid #3a3a5c;color:#ccc;font-size:22px;cursor:pointer;border-radius:4px;line-height:1;padding:0">+</button>
+    <button id="zoom-out" style="width:44px;height:44px;background:#1e1e2e;border:1px solid #3a3a5c;color:#ccc;font-size:22px;cursor:pointer;border-radius:4px;line-height:1;padding:0">−</button>
   </div>
   {% if include.test_mode %}
   <div id="test-legend" style="display:none;position:absolute;bottom:16px;left:16px;z-index:10;background:#1e1e2e;border:1px solid #3a3a5c;border-radius:6px;padding:10px 14px;font-size:12px;color:#ccc;line-height:2;">
@@ -81,15 +81,32 @@
   const container = document.getElementById('graph-container');
   const tooltip   = document.getElementById('graph-tooltip');
 
+  // Set container height based on actual distance from viewport top so the graph
+  // fills the remaining viewport on both desktop and mobile (where the sidebar
+  // stacks above the content and the calc(100vh - 180px) hardcode falls short).
+  function updateContainerHeight() {
+    const top = container.getBoundingClientRect().top;
+    container.style.height = Math.max(300, window.innerHeight - top - 20) + 'px';
+  }
+  updateContainerHeight();
+
   const svg = d3.select(container).append('svg')
     .attr('width', '100%').attr('height', '100%')
     .style('background', BG).style('display', 'block');
 
-  // Read dimensions after the SVG is in the DOM so layout is settled
-  const { width: W, height: H } = svg.node().getBoundingClientRect();
-  // Virtual simulation canvas — same size as the viewport.
-  // The initial 0.5x zoom fits the entire VW×VH space into the W×H viewport.
-  const VW = W, VH = H;
+  // Mutable dimensions — updated by readDimensions() on load and on resize.
+  // W/H are the real container pixels; VW/VH are the virtual simulation canvas,
+  // clamped to a minimum so forces have enough room even on small screens.
+  const MIN_VW = 950, MIN_VH = 700;
+  let W, H, VW, VH, INIT_ZOOM;
+  function readDimensions() {
+    const rect = svg.node().getBoundingClientRect();
+    W = rect.width; H = rect.height;
+    VW = Math.max(W, MIN_VW); VH = Math.max(H, MIN_VH);
+    // Scale initial view so the virtual canvas fits inside the real viewport.
+    INIT_ZOOM = Math.min(0.8, Math.min(W / VW, H / VH) * 0.95);
+  }
+  readDimensions();
 
   const g = svg.append('g');
 
@@ -98,9 +115,12 @@
     .translateExtent([[-VW, -VH], [2 * VW, 2 * VH]])
     .on('zoom', e => g.attr('transform', e.transform));
   svg.call(zoom);
-  // Show virtual canvas centered in viewport at initial zoom
-  const INIT_ZOOM = 0.8;
   svg.call(zoom.transform, d3.zoomIdentity.translate(W / 2, H / 2).scale(INIT_ZOOM).translate(-VW / 2, -VH / 2));
+
+  // Stored so the ResizeObserver can re-render without re-fetching.
+  let graphData    = null;
+  let currentSim   = null;
+  let legendEl     = null;
 
   document.getElementById('zoom-in').addEventListener('click', () =>
     svg.transition().duration(300).call(zoom.scaleBy, 1.4));
@@ -109,7 +129,7 @@
 
   fetch('{{ graph_url }}')
     .then(r => r.json())
-    .then(render)
+    .then(data => { graphData = data; render(data); })
     .catch(() => {
       container.innerHTML = '<p style="color:#666;padding:24px">Could not load graph data.</p>';
     });
@@ -643,7 +663,7 @@
 
     function positionTooltip(event) {
       tooltip.style.left = Math.min(event.clientX + 14, window.innerWidth - 260) + 'px';
-      tooltip.style.top  = Math.max(event.clientY - 32, 8) + 'px';
+      tooltip.style.top  = Math.min(Math.max(event.clientY - 32, 8), window.innerHeight - 220) + 'px';
     }
 
     function updateClusters() {
@@ -692,11 +712,13 @@
         .attr('font-size',   '11px')
         .attr('text-anchor', 'middle')
         .style('pointer-events', 'none')
+        .style('display',    W < 415 ? 'none' : null)
         .text(d => d.tag)
         .attr('x', d => d.cx)
         .attr('y', d => d.cy + d.r - 8);
     }
 
+    currentSim = sim;
     sim.on('tick', () => {
       const MAX_V = 25;
       nodes.forEach(n => {
@@ -725,6 +747,9 @@
   }
 
   function buildAgeLegend() {
+    if (legendEl) { d3.select(legendEl).remove(); legendEl = null; }
+    if (W < 415) return;
+
     const labels  = ['< 1mo', '1–3mo', '3–6mo', '6–12mo', '1–2yr', '2yr+'];
     const swatchW = 16, swatchH = 12, gap = 5;
     const legendW = 88;
@@ -737,6 +762,7 @@
       .style('bottom', '16px')
       .style('left', '16px')
       .style('pointer-events', 'none');
+    legendEl = legend.node();
 
     legend.append('text')
       .text('Article age')
@@ -767,5 +793,22 @@
   function esc(s) {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
+
+  // Re-render when the container resizes (orientation change, window resize).
+  // Debounced to avoid thrashing during continuous resize drags.
+  let resizeTimer = null;
+  new ResizeObserver(() => {
+    if (!graphData) return;
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      updateContainerHeight();
+      readDimensions();
+      zoom.translateExtent([[-VW, -VH], [2 * VW, 2 * VH]]);
+      svg.call(zoom.transform, d3.zoomIdentity.translate(W / 2, H / 2).scale(INIT_ZOOM).translate(-VW / 2, -VH / 2));
+      if (currentSim) { currentSim.stop(); currentSim = null; }
+      g.selectAll('*').remove();
+      render(graphData);
+    }, 250);
+  }).observe(container);
 })();
 </script>

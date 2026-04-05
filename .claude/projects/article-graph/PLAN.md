@@ -81,12 +81,12 @@ The site's key breakpoints (from `styles.scss`):
 
 The `reading.html` layout uses `d-md-flex` (Primer flex at ≥768px), so below 768px the sidebar becomes a top bar and the graph container height needs to account for that. The graph currently computes `H = container.clientHeight` at load time but may not re-measure correctly on mobile.
 
-- [x] **Match content width** — the reading layout header is already capped at `max-width: 700px`; the graph intentionally fills the remaining flex content column (`width: 100%`) — capping it at 700px would waste space on wide screens; by design, graph stays full-width within the content area
-- [ ] **Graph height on mobile** — on ≤767px the graph container `calc(100vh - 180px)` offset should be increased to account for the stacked header/nav; measure actual header height dynamically at render time rather than using a hardcoded offset
-- [ ] **Tooltip positioning on mobile** — right-side clamp (`window.innerWidth - 260`) is already in place; still missing: bottom clamp so tooltip doesn't overflow below viewport on short screens; also verify on ≤414px that the 240px max-width doesn't clip
-- [ ] **Cluster label readability** — at small viewport widths the cluster label text (11px) may overlap; consider hiding labels below ≤414px or reducing font size
-- [ ] **Legend placement on mobile** — the bottom-left age color legend (absolute SVG) and top-right zoom buttons (40×40px, below the 44px touch-target minimum) may collide with graph content on narrow screens; increase zoom button tap target to ≥44px; stack or relocate legend below ≤767px
-- [ ] **Verify simulation bounds** — `W`, `H`, `VW`, `VH` are computed once at load via `getBoundingClientRect()`; after orientation change or resize they go stale — add a `ResizeObserver` on `#graph-container` to recompute dimensions and restart the simulation
+- [x] **Match content width** — add `max-width: 920px; margin: 0 auto` to `#graph-container` so the graph edges align with the header/subtitle text above it
+- [x] **Graph height on mobile** — replaced `calc(100vh - 180px)` with `updateContainerHeight()`: measures `container.getBoundingClientRect().top` at render time and sets `height = innerHeight - top - 20px`; called on load and inside ResizeObserver
+- [x] **Tooltip positioning on mobile** — added bottom clamp: `Math.min(..., window.innerHeight - 220)`; right clamp was already present
+- [x] **Cluster label readability** — cluster label text hidden via `display: none` when `W < 415`
+- [x] **Legend placement on mobile** — zoom buttons increased to 44×44px; age legend hidden (skipped entirely) when `W < 415`; `legendEl` tracked so it's removed cleanly on re-render
+- [x] **Verify simulation bounds** — added debounced `ResizeObserver` on `#graph-container`; on fire: updates container height, re-reads W/H/VW/VH, updates zoom `translateExtent` + resets initial transform, stops old simulation, clears `g` content, re-renders with stored `graphData`
 
 ### Cluster layout
 
