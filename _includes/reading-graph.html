@@ -436,12 +436,14 @@
       });
     }
 
-    // Push single-subcluster nodes out of sibling subcluster circles.
-    // When two subclusters share nodes (Venn diagram), their circles overlap intentionally —
-    // but single-subcluster nodes (purple) must stay in the non-overlapping region.
-    // This boundary exclusion force is stronger and more direct than soft repulsion.
-    function singleSubclusterBoundaryForce(alpha) {
-      // Build supercluster → child subTags map (tags that have circles)
+    // Generalized subcluster exclusion: push nodes out of sibling subcluster circles.
+    // Replaces singleSubclusterBoundaryForce which only handled nodes with exactly 1 subcluster tag,
+    // skipping supercluster-only nodes (0 sub-tags) and dual-subcluster nodes (2 sub-tags).
+    // Rule: a node must stay outside every subcluster circle within its supercluster that it doesn't belong to.
+    function nodeExclusionForce(alpha) {
+      if (Object.keys(clusterCircle).length === 0) return;
+
+      // Build supercluster → child subTags map (tags with circles inside each supercluster)
       const superToSubTags = {};
       superTagSet.forEach(st => {
         const superNodeIds = new Set((tagGroups[st] || []).map(n => n.id));
@@ -452,23 +454,21 @@
       });
 
       nodes.forEach(n => {
-        const mySubTags = (n.tags || []).filter(t => !superTagSet.has(t) && clusterCircle[t]);
-        if (mySubTags.length !== 1) return;  // only single-subcluster nodes
-        const mySubTag = mySubTags[0];
+        const nodeTags = new Set(n.tags || []);
         const superTag = (n.tags || []).find(t => superTagSet.has(t));
-        if (!superTag) return;
-        const siblings = (superToSubTags[superTag] || []).filter(t => t !== mySubTag);
+        if (!superTag) return; // free nodes handled by freeNodeForce
 
+        // Push out of every sibling subcluster circle this node doesn't belong to
+        const siblings = (superToSubTags[superTag] || []).filter(t => !nodeTags.has(t));
         siblings.forEach(sibTag => {
           const sib = clusterCircle[sibTag];
           if (!sib) return;
           const dx = n.x - sib.cx, dy = n.y - sib.cy;
           const dist = Math.hypot(dx, dy) || 1;
-          // Push out of sibling circle with a buffer zone so nodes don't hug the boundary
           const boundary = sib.r + 12;
           if (dist < boundary) {
             const penetration = boundary - dist;
-            const force = penetration * 2.5 * alpha;
+            const force = penetration * 3.0 * alpha;
             n.vx += (dx / dist) * force;
             n.vy += (dy / dist) * force;
           }
@@ -538,7 +538,7 @@
       .force('subSeparation',  () => sim && subclusterSeparationForce(sim.alpha()))
       .force('superProximity', () => sim && superclusterProximityForce(sim.alpha()))
       .force('ringOrbital',    () => sim && ringOrbitalForce(sim.alpha()))
-      .force('singleBoundary', () => sim && singleSubclusterBoundaryForce(sim.alpha()))
+      .force('nodeExclusion',  () => sim && nodeExclusionForce(sim.alpha()))
       .force('freeNode',       () => sim && freeNodeForce(sim.alpha()))
       .alphaDecay(0.015)
       .velocityDecay(0.45);
@@ -680,6 +680,7 @@
         const r = nodeRadius(n);
         n.x = Math.max(r + 4, Math.min(VW - r - 4, n.x));
         n.y = Math.max(r + 4, Math.min(VH - r - 4, n.y));
+
       });
 
       refLines
