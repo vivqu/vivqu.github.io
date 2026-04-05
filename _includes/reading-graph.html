@@ -239,9 +239,31 @@
       });
     });
 
+    // Orphan cluster tags: have >= 2 nodes, are not a supercluster, and are not a
+    // subcluster of any supercluster. Seed them around the outer edge so they don't
+    // start in the center where the superclusters are.
+    const orphanClusterTags = Object.keys(tagGroups).filter(t =>
+      !superTagSet.has(t) &&
+      (tagGroups[t] || []).length >= 2 &&
+      !(t in subSeedAngle)
+    );
+    const orphanSeedPos = {};
+    orphanClusterTags.forEach((t, i) => {
+      const angle = (i / Math.max(orphanClusterTags.length, 1)) * 2 * Math.PI;
+      orphanSeedPos[t] = {
+        x: VW / 2 + Math.cos(angle) * VW * 0.42,
+        y: VH / 2 + Math.sin(angle) * VH * 0.42,
+      };
+    });
+
     nodes.forEach(n => {
       const superTag = (n.tags || []).find(t => superTagSet.has(t));
-      const seed = superTag ? superSeedPos[superTag] : { x: VW / 2, y: VH / 2 };
+      const orphanTag = !superTag ? (n.tags || []).find(t => orphanSeedPos[t]) : undefined;
+      const freeAngle = Math.random() * 2 * Math.PI;
+      const seed = superTag ? superSeedPos[superTag]
+                 : orphanTag ? orphanSeedPos[orphanTag]
+                 : { x: VW / 2 + Math.cos(freeAngle) * VW * 0.42,
+                     y: VH / 2 + Math.sin(freeAngle) * VH * 0.42 };
       const subTag = (n.tags || []).find(t => subSeedAngle[t] !== undefined);
       const angle = subTag !== undefined ? subSeedAngle[subTag] : Math.random() * 2 * Math.PI;
       const spreadR = subTag !== undefined ? 60 : 40;
