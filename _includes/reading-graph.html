@@ -394,7 +394,7 @@
           const cA = clusterCircle[tA], cB = clusterCircle[tB];
           const dx = cB.cx - cA.cx, dy = cB.cy - cA.cy;
           const dist = Math.hypot(dx, dy) || 1;
-          const minDist = cA.r + cB.r + 20;
+          const minDist = cA.r + cB.r + 50;
           const nx = dx / dist, ny = dy / dist;
           if (dist > minDist) {
             const pull = (dist - minDist) * 0.008 * alpha;
@@ -402,7 +402,7 @@
             (tagGroups[tB] || []).forEach(n => { n.vx -= nx * pull; n.vy -= ny * pull; });
           } else {
             const overlap = minDist - dist;
-            const push = (overlap / minDist) * alpha * 12.0;
+            const push = overlap * alpha * 1.2;
             (tagGroups[tA] || []).forEach(n => { n.vx -= nx * push; n.vy -= ny * push; });
             (tagGroups[tB] || []).forEach(n => { n.vx += nx * push; n.vy += ny * push; });
           }
