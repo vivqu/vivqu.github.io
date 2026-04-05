@@ -87,14 +87,15 @@
 
   // Read dimensions after the SVG is in the DOM so layout is settled
   const { width: W, height: H } = svg.node().getBoundingClientRect();
-  // Virtual simulation canvas — 1.5x the viewport so superclusters have room to spread.
+  // Virtual simulation canvas — same size as the viewport.
   // The initial 0.5x zoom fits the entire VW×VH space into the W×H viewport.
-  const VW = W * 1.5, VH = H * 1.5;
+  const VW = W, VH = H;
 
   const g = svg.append('g');
 
   const zoom = d3.zoom()
     .scaleExtent([0.1, 4])
+    .translateExtent([[-VW, -VH], [2 * VW, 2 * VH]])
     .on('zoom', e => g.attr('transform', e.transform));
   svg.call(zoom);
   // Show virtual canvas centered in viewport at initial zoom
