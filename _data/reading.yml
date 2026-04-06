@@ -48,7 +48,7 @@
   url: "https://www.anildash.com/2026/03/13/coders-after-ai/"
   author: "Anil Dash"
   domain: anildash.com
-  tags: [career]
+  tags: [career, tech]
   date: "2026-03-13"
   blurb: "A vision for the way forward for software developers in the age of AI."
   refs: []
@@ -86,7 +86,7 @@
   domain: normaltech.ai
   tags: [forecasting, skepticism]
   date: "2025-04-15"
-  blurb: "Economic benefits of AI will be gradual. Adoption of advanced AI will be limited by organization integrating it as 'normal' technology."
+  blurb: "Economic benefits of AI will be gradual. Adoption of advanced AI will be limited by organizations integrating it as 'normal' technology."
   refs: []
 
 - title: "No AGI in Sight: What This Means for LLMs"
@@ -129,7 +129,7 @@
   url: "https://github.com/tailwindlabs/tailwindcss.com/pull/2388"
   author: "Tailwind Labs"
   domain: github.com
-  tags: [open-source]
+  tags: [open-source, github-debates]
   date: "2025-11-18"
   blurb: "Discussion on the impact of AI coding agents on Tailwind's economics."  
   refs: []
@@ -138,7 +138,7 @@
   url: "https://github.com/tldraw/tldraw/issues/8082"
   author: "tldraw"
   domain: github.com
-  tags: [open-source]
+  tags: [open-source, github-debates]
   date: "2026-02-25"
   blurb: "Tldraw (jokingly) proposes moves its test suite to a private repo to prevent AI copycat frameworks."
   refs: []
@@ -160,3 +160,183 @@
   date: "2026-03-31"
   blurb: "Interesting technical insights from the leaked Claude Code source code."
   refs: ["https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/"]
+
+- title: "The machines are fine. I'm worried about us."
+  url: "https://ergosphere.blog/posts/the-machines-are-fine/"
+  author: "Minas Karamanis"
+  domain: ergosphere.blog
+  tags: [career, academia]
+  date: "2026-03-30"
+  blurb: "The bottleneck is supervision."
+  refs: ["https://arxiv.org/abs/2602.10181"]
+
+- title: "Why do we do astrophysics?"
+  url: "https://arxiv.org/abs/2602.10181"
+  author: "David W. Hogg"
+  domain: arxiv.org
+  date: "2026-02-10"
+  blurb: "People are always the ends, not merely the means."
+  tags: [career, academia]
+  refs: []
+
+- title: "What is the impact of AI on productivity?"
+  url: "https://aleximas.substack.com/p/what-is-the-impact-of-ai-on-productivity"
+  author: "Alex Imas"
+  domain: aleximas.substack.com
+  date: "2026-03-01"
+  blurb: "Aggregation of current research on productivity impacts of AI."
+  tags: [outcomes, productivity]
+  refs: []
+
+- title: "Find the stable and pull out the bolt"
+  url: "https://nataliebhogg.com/2026/03/09/find-the-stable-and-pull-out-the-bolt/"
+  author: "Natalie B. Hogg"
+  domain: nataliebhogg.com
+  date: "2026-03-09"
+  blurb: "Changed opinion on using AI in cosmology research."
+  tags: [career, academia]
+  refs: []
+
+- title: "Software Survival 3.0"
+  url: "https://steve-yegge.medium.com/software-survival-3-0-97a2a6255f7b"
+  author: "Steve Yegge"
+  domain: medium.com
+  date: "2026-01-29"
+  blurb: "Predicting what kinds of software will survive."
+  tags: [future-of-coding]
+  refs: []
+
+- title: "chardet: No right to relicense this project"
+  url: "https://github.com/chardet/chardet/issues/327"
+  author: "chardet"
+  domain: github.com
+  date: "2026-03-04"
+  blurb: "Relicensing and the legalities of using AI to generate a 'clean room' reimplementation."
+  tags: [open-source, github-debates]
+  refs: []
+
+- title: "Software Bonkers"
+  url: "https://craigmod.com/essays/software_bonkers/"
+  author: "Craig Mod"
+  domain: craigmod.com
+  date: "2026-03-01"
+  blurb: "Optimism for the future of custom personal-sized software."
+  tags: [future-of-coding, home-cooked]
+  refs: []
+
+- title: "The Human Skill That Eludes AI"
+  url: "https://www.theatlantic.com/technology/2026/03/ai-creative-writing/686418/"
+  author: "Jasmine Sun"
+  domain: theatlantic.com
+  date: "2026-03-17"
+  blurb: "Why LLMs are not optimized for creative writing."
+  tags: [outcomes, creativity]
+  refs: []
+
+- title: "AI Where It Matters: Where, Why, and How Developers Want AI Support in Daily Work"
+  url: "https://arxiv.org/abs/2510.00762"
+  author: "Rudrajit Choudhuri, et al."
+  domain: arxiv.org
+  date: "2025-10-01"
+  blurb: "Survey of developers on AI adoption and usage."
+  tags: [outcomes, productivity]
+  refs: []
+
+- title: "Systems design 3: LLMs and the semantic revolution"
+  url: "https://apenwarr.ca/log/20251120"
+  author: "Avery Pennarun"
+  domain: apenwarr.ca
+  date: "2025-11-20"
+  blurb: "LLMs interconnect anything to anything."
+  tags: [future-of-coding, systems]
+  refs: []
+
+- title: "Home-Cooked Software and Barefoot Developers"
+  url: "https://maggieappleton.com/home-cooked-software/"
+  author: "Maggie Appleton"
+  domain: maggieappleton.com
+  date: "2024-05-01"
+  blurb: "Personal-sized software is the future."
+  tags: [future-of-coding, home-cooked]
+  refs: []
+
+- title: "Writing as theory-building"
+  url: "/blog/2026/03/25/writing-as-theory-building/"
+  author: "Vivian Qu"
+  domain: self
+  date: "2026-03-25"
+  blurb: "Innovation requires constructing robust mental models."
+  tags: [outcomes, understanding]
+  refs: ["https://pages.cs.wisc.edu/~remzi/Naur.pdf", "https://margaretstorey.com/blog/2026/02/09/cognitive-debt/"]
+
+- title: "Programming as Theory-Building"
+  url: "https://pages.cs.wisc.edu/~remzi/Naur.pdf"
+  author: "Peter Naur"
+  domain: pages.cs.wisc.edu
+  date: "1985-05-01"
+  blurb: "The primary challenge of software is not delivering the final artifacts but constructing the underlying theory."
+  tags: [outcomes, understanding]
+  refs: []
+
+- title: "How Generative and Agentic AI Shift Concern from Technical Debt to Cognitive Debt"
+  url: "https://margaretstorey.com/blog/2026/02/09/cognitive-debt/"
+  author: "Margaret Storey"
+  domain: margaretstorey.com
+  date: "2026-02-09"
+  blurb: "Velocity without understanding is not sustainable."
+  tags: [outcomes, understanding]
+  refs: ["https://pages.cs.wisc.edu/~remzi/Naur.pdf"]
+
+- title: "There's no accounting for taste"
+  url: "/blog/2025/06/29/no-accounting-for-taste/"
+  author: "Vivian Qu"
+  domain: self
+  date: "2025-06-29"
+  blurb: "The importance of taste in software engineering."
+  tags: [career, tech]
+  refs: ["/blog/2025/06/01/gen-ai-is-not-a-silver-bullet/"]
+
+- title: "Gen AI is not a silver bullet"
+  url: "/blog/2025/06/01/gen-ai-is-not-a-silver-bullet/"
+  author: "Vivian Qu"
+  domain: self
+  date: "2025-06-01"
+  blurb: "Cultivating great software designers is the essential work of the industry."
+  tags: [career, tech]
+  refs: ["https://www.cs.unc.edu/techreports/86-020.pdf"]
+
+- title: "No Silver Bullet—Essence and Accident in Software Engineering"
+  url: "https://www.cs.unc.edu/techreports/86-020.pdf"
+  author: "Frederick P. Brooks, Jr."
+  domain: unc.edu
+  date: "1986-02-01"
+  blurb: "The conceptual essence of software is one of abstract, creative problem-solving."
+  tags: [career, tech]
+  refs: []
+
+- title: "Writing as fitness exercise"
+  url: "/blog/2026/02/22/writing-as-fitness-exercise/"
+  author: "Vivian Qu"
+  domain: self
+  date: "2026-02-22"
+  blurb: "I don’t use AI shortcuts in my writing because the core purpose is to build my mental muscles. I need to be the one feeling the friction."
+  tags: [outcomes, creativity]
+  refs: []
+
+- title: "Programming (with AI agents) as theory building"
+  url: "https://www.seangoedecke.com/programming-with-ai-agents-as-theory-building/"
+  author: "Sean Goedecke"
+  domain: seangoedecke.com
+  date: "2026-04-03"
+  blurb: "Asks whether agents can build and retain Naur theories"
+  tags: [outcomes, understanding]
+  refs: ["https://pages.cs.wisc.edu/~remzi/Naur.pdf"]
+
+- title: "What about juniors?"
+  url: "https://brooker.co.za/blog/2026/03/25/ic-junior.html"
+  author: "Marc Brooker"
+  domain: brooker.co.za
+  date: "2026-03-25"
+  blurb: "Junior engineers should expect to expand their scope beyond just coding."
+  tags: [career, tech]
+  refs: []
