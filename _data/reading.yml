@@ -358,3 +358,21 @@
   blurb: "Arguing that native apps already lost to web apps."
   tags: [future-of-coding, mobile]
   refs: ["https://www.dbreunig.com/2026/02/21/why-is-claude-an-electron-app.html"]
+
+- title: "Open Source in the age of AI"
+  url: "https://john.onolan.org/open-source-in-the-age-of-ai/"
+  author: "John O'Nolan"
+  domain: john.onolan.org
+  date: "2026-02-26"
+  blurb: "If code is cheap, does that mean everything will be open source?"
+  tags: [open-source, frameworks]
+  refs: []
+
+- title: "Some Simple Economics of AGI"
+  url: "https://arxiv.org/abs/2602.20946"
+  author: "Christian Catalini, et al."
+  domain: arxiv.org
+  date: "2026-02-24"
+  blurb: "Human verification bandwidth is the binding constraint on growth."
+  tags: [outcomes, understanding]
+  refs: []
