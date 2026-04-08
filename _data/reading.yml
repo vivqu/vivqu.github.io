@@ -340,3 +340,21 @@
   blurb: "Junior engineers should expect to expand their scope beyond just coding."
   tags: [career, tech]
   refs: []
+
+- title: "Why is Claude an Electron App?"
+  url: "https://www.dbreunig.com/2026/02/21/why-is-claude-an-electron-app.html"
+  author: "David Breunig"
+  domain: dbreunig.com
+  date: "2026-02-21"
+  blurb: "Pointing out that Claude Code is an Electron app, not native Mac/Linus/Windows apps."
+  tags: [future-of-coding, mobile]
+  refs: []
+
+- title: "Claude is an Electron App because we’ve lost native"
+  url: "https://tonsky.me/blog/fall-of-native/"
+  author: "Nikita Prokopov"
+  domain: tonsky.me
+  date: "2026-03-03"
+  blurb: "Arguing that native apps already lost to web apps."
+  tags: [future-of-coding, mobile]
+  refs: ["https://www.dbreunig.com/2026/02/21/why-is-claude-an-electron-app.html"]
