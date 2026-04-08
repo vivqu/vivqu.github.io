@@ -147,7 +147,7 @@
   url: "https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/"
   author: "Alex Kim"
   domain: alex000kim.com
-  tags: [open-source, agent-harness]
+  tags: [capabilities, agent-harness]
   date: "2026-03-31"
   blurb: "Posits that the worst impacts of the source code leak was losing strategic advantage against competition."  
   refs: []
@@ -156,7 +156,7 @@
   url: "https://lr0.org/blog/p/claude-code-source/?&aid=recgjCmoUY17o8Fsm&_bhlid=ca73afa2934111f4ea381a845f7852f047bfe3a0"
   author: "Sergei Parajanov"
   domain: lr0.org
-  tags: [open-source, agent-harness]
+  tags: [capabilities, agent-harness]
   date: "2026-03-31"
   blurb: "Interesting technical insights from the leaked Claude Code source code."
   refs: ["https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/"]
@@ -347,7 +347,7 @@
   domain: dbreunig.com
   date: "2026-02-21"
   blurb: "Pointing out that Claude Code is an Electron app, not native Mac/Linus/Windows apps."
-  tags: [future-of-coding, mobile]
+  tags: [capabilities, mobile]
   refs: []
 
 - title: "Claude is an Electron App because we’ve lost native"
@@ -356,7 +356,7 @@
   domain: tonsky.me
   date: "2026-03-03"
   blurb: "Arguing that native apps already lost to web apps."
-  tags: [future-of-coding, mobile]
+  tags: [capabilities, mobile]
   refs: ["https://www.dbreunig.com/2026/02/21/why-is-claude-an-electron-app.html"]
 
 - title: "Open Source in the age of AI"
@@ -392,5 +392,13 @@
   domain: dbreunig.com
   date: "2026-04-04"
   blurb: "Visualization of Claude Code's system prompt."
-  tags: [open-source, agent-harness]
+  tags: [capabilities, agent-harness]
+  refs: []
+
+- title: "Apple's Xcode now supports the Claude Agent SDK"
+  url: "https://www.anthropic.com/news/apple-xcode-claude-agent-sdk"
+  domain: anthropic.com
+  date: "2026-02-03"
+  blurb: "Apple's Xcode now supports the Claude Agent SDK."
+  tags: [capabilities, mobile]
   refs: []
