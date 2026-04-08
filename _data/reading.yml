@@ -376,3 +376,21 @@
   blurb: "Human verification bandwidth is the binding constraint on growth."
   tags: [outcomes, understanding]
   refs: []
+
+- title: "Eight years of wanting, three months of building with AI"
+  url: "https://lalitm.com/post/building-syntaqlite-ai/"
+  author: "Lalit Maganti"
+  domain: lalitm.com
+  date: "2026-04-05"
+  blurb: "In-depth breakdown of the pros and cons of AI coding agents for building an open source project."
+  tags: [open-source, projects]
+  refs: []
+
+- title: "How Claude Code Builds a System Prompt"
+  url: "https://www.dbreunig.com/2026/04/04/how-claude-code-builds-a-system-prompt.html"
+  author: "David Breunig"
+  domain: dbreunig.com
+  date: "2026-04-04"
+  blurb: "Visualization of Claude Code's system prompt."
+  tags: [open-source, agent-harness]
+  refs: []
