@@ -54,10 +54,10 @@
   refs: []
 
 - title: "The fate of 'small' open source"
-  url: "https://nolanlawson.com/2025/11/16/the-fate-of-small-open-source/"
+  url: "https://nolanlawson.com/2025/11/16/the-fate-of-small-ecosystem/"
   author: "Nolan Lawson"
   domain: nolanlawson.com
-  tags: [open-source, frameworks]
+  tags: [ecosystem, frameworks]
   date: "2025-11-16"
   blurb: "Is small open source dead? Big, inventive, and niche projects might still be safe."
   refs: []
@@ -66,7 +66,7 @@
   url: "https://aifoc.us/dead-framework-theory/"
   author: "Paul Kinlan"
   domain: aifoc.us
-  tags: [open-source, frameworks]
+  tags: [ecosystem, frameworks]
   date: "2025-10-12"
   blurb: "Framework success now depends on distribution by and through LLMs. Focus on building net new capabilities."
   refs: []
@@ -129,7 +129,7 @@
   url: "https://github.com/tailwindlabs/tailwindcss.com/pull/2388"
   author: "Tailwind Labs"
   domain: github.com
-  tags: [open-source, github-debates]
+  tags: [ecosystem, github-debates]
   date: "2025-11-18"
   blurb: "Discussion on the impact of AI coding agents on Tailwind's economics."  
   refs: []
@@ -138,7 +138,7 @@
   url: "https://github.com/tldraw/tldraw/issues/8082"
   author: "tldraw"
   domain: github.com
-  tags: [open-source, github-debates]
+  tags: [ecosystem, github-debates]
   date: "2026-02-25"
   blurb: "Tldraw (jokingly) proposes moves its test suite to a private repo to prevent AI copycat frameworks."
   refs: []
@@ -212,7 +212,7 @@
   domain: github.com
   date: "2026-03-04"
   blurb: "Relicensing and the legalities of using AI to generate a 'clean room' reimplementation."
-  tags: [open-source, github-debates]
+  tags: [ecosystem, github-debates]
   refs: []
 
 - title: "Software Bonkers"
@@ -360,12 +360,12 @@
   refs: ["https://www.dbreunig.com/2026/02/21/why-is-claude-an-electron-app.html"]
 
 - title: "Open Source in the age of AI"
-  url: "https://john.onolan.org/open-source-in-the-age-of-ai/"
+  url: "https://john.onolan.org/ecosystem-in-the-age-of-ai/"
   author: "John O'Nolan"
   domain: john.onolan.org
   date: "2026-02-26"
   blurb: "If code is cheap, does that mean everything will be open source?"
-  tags: [open-source, frameworks]
+  tags: [ecosystem, frameworks]
   refs: []
 
 - title: "Some Simple Economics of AGI"
@@ -383,7 +383,7 @@
   domain: lalitm.com
   date: "2026-04-05"
   blurb: "In-depth breakdown of the pros and cons of AI coding agents for building an open source project."
-  tags: [open-source, projects]
+  tags: [ecosystem, projects]
   refs: []
 
 - title: "How Claude Code Builds a System Prompt"
@@ -401,4 +401,65 @@
   date: "2026-02-03"
   blurb: "Apple's Xcode now supports the Claude Agent SDK."
   tags: [capabilities, mobile]
+  refs: []
+
+- title: "Why ATMs didn’t kill bank teller jobs, but the iPhone did"
+  url: "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller"
+  author: "David Oks"
+  domain: davidoks.blog
+  date: "2026-03-10"
+  blurb: "The true force of a technology is felt not with the substitution of tasks, but the invention of new paradigms."
+  tags: [forecasting]
+  refs: ["https://en.wikipedia.org/wiki/Jevons_paradox"]
+
+- title: "Jevon's Paradox"
+  url: "https://en.wikipedia.org/wiki/Jevons_paradox"
+  domain: wikipedia.org
+  blurb: "Technological improvements that increase the efficiency of a resource's use lead to a rise, rather than a fall, in total consumption of that resource."
+  tags: [forecasting]
+  refs: []
+
+- title: "AI and the human voice"
+  url: "https://gilest.org/notes/2026/human-ai/"
+  author: "Giles Turnbull"
+  domain: gilest.org
+  date: "2026-03-27"
+  blurb: "AI does not know how to use subtlety."
+  tags: [outcomes, creativity]
+  refs: []
+
+- title: "What Are Chinese People Vibecoding?"
+  url: "https://www.chinatalk.media/p/what-are-chinese-people-vibecoding"
+  author: "Irene Zhang"
+  domain: chinatalk.media
+  date: "2026-02-24"
+  blurb: "Survey of Chinese vibe-coded apps."
+  tags: [ecosystem, china]
+  refs: []
+
+- title: "The China Tech Canon"
+  url: "https://asteriskmag.com/issues/12/the-china-tech-canon"
+  author: "Afra Wang"
+  domain: asteriskmag.com
+  date: "2025-10-01"
+  blurb: "Reading list of Chinese tech founders."
+  tags: [ecosystem, china]
+  refs: []
+
+- title: "100 Hours Inside Kimi"
+  url: "https://x.com/ruima/status/2039245985520681257"
+  author: "Liu Mo"
+  domain: x.com
+  date: "2026-04-01"
+  blurb: "Translated from Chinese. Deep-dive into AI company Kimi."
+  tags: [ecosystem, china]
+  refs: []
+
+- title: "The Eternal Promise: A History of Attempts to Eliminate Programmers"
+  url: "https://www.ivanturkovic.com/2026/01/22/history-software-simplification-cobol-ai-hype/"
+  author: "Ivan Turkovic"
+  domain: ivanturkovic.com
+  date: "2026-01-22"
+  blurb: "History of attempts to eliminate programmers."
+  tags: [career, tech]
   refs: []

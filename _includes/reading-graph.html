@@ -54,6 +54,7 @@
   const BG          = '#14141f';
   const ARTICLE_COL = '#7c6edb';
   const OWN_COL     = '#f0c060';
+  const WIKI_COL    = '#888';
   const TAG_PALETTE = [
     '#d87878', // 0°   red
     '#d89a6a', // 22°  orange-red
@@ -88,6 +89,7 @@
 
   function nodeColor(d) {
     if (d.self) return OWN_COL;
+    if (d.id && d.id.includes('wikipedia.org')) return WIKI_COL;
     if (!d.date) return ARTICLE_COL;
     const ageMonths = (Date.now() - new Date(d.date).getTime()) / (1000 * 60 * 60 * 24 * 30.44);
     const c = d3.hsl(ARTICLE_COL);
@@ -809,7 +811,11 @@
         {% endif %}
         const domain = d.self ? null : (() => { try { const parts = new URL(d.id).hostname.split('.'); return parts.slice(-2).join('.'); } catch { return null; } })();
         const domainHtml = domain ? `<br><span style="color:#666">${esc(domain)}</span>` : '';
-        tooltip.innerHTML = `<strong>${esc(d.label)}</strong><br>${esc(d.author)}${dateStr ? ' · ' + dateStr : ''}${domainHtml}${tagsHtml}${blurbHtml}{% if include.test_mode %}${testInfoHtml}{% endif %}`;
+        const isWiki = domain === 'wikipedia.org';
+        const metaHtml = isWiki
+          ? `<span style="color:#666">${esc(domain)}</span>`
+          : `${esc(d.author)}${dateStr ? ' · ' + dateStr : ''}${domainHtml}`;
+        tooltip.innerHTML = `<strong>${esc(d.label)}</strong><br>${metaHtml}${tagsHtml}${blurbHtml}{% if include.test_mode %}${testInfoHtml}{% endif %}`;
         tooltip.style.display = 'block';
         positionTooltip(event);
       })
