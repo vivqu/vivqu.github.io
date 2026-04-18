@@ -463,3 +463,20 @@
   blurb: "History of attempts to eliminate programmers."
   tags: [career, tech]
   refs: []
+
+- title: "Open-world evaluations for measuring frontier AI capabilities"
+  url: "https://www.normaltech.ai/p/open-world-evaluations-for-measuring"
+  author: "Sayash Kapoor and Arvind Narayanan"
+  domain: normaltech.ai
+  date: "2026-04-16"
+  blurb: "The case for open-world evals and publishing a simple iOS app to the App Store."
+  tags: [capabilities, mobile]
+  refs: ["https://cruxevals.com/"]
+
+- title: "CRUX Evals"
+  url: "https://cruxevals.com/"
+  domain: cruxevals.com
+  date: "2026-04-16"
+  blurb: "Survey of open-world evals for measuring long, messy, real-world tasks."
+  tags: [capabilities, evals]
+  refs: []
