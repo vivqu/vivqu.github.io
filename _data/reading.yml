@@ -480,3 +480,12 @@
   blurb: "Survey of open-world evals for measuring long, messy, real-world tasks."
   tags: [capabilities, evals]
   refs: []
+
+- title: "Research note: Many SWE-bench-Passing PRs Would Not Be Merged into Main"
+  url: "https://metr.org/notes/2026-03-10-many-swe-bench-passing-prs-would-not-be-merged-into-main/"
+  author: "Parker Whitfil, et al."
+  domain: metr.org
+  date: "2026-03-10"
+  blurb: "Analysis of why many SWE-bench-passing PRs would not be merged into main."
+  tags: [capabilities, evals]
+  refs: []

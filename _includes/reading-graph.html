@@ -814,7 +814,7 @@
         const isWiki = domain === 'wikipedia.org';
         const metaHtml = isWiki
           ? `<span style="color:#666">${esc(domain)}</span>`
-          : `${esc(d.author)}${dateStr ? ' · ' + dateStr : ''}${domainHtml}`;
+          : `${d.author ? esc(d.author) + (dateStr ? ' · ' + dateStr : '') : dateStr || ''}${domainHtml}`;
         tooltip.innerHTML = `<strong>${esc(d.label)}</strong><br>${metaHtml}${tagsHtml}${blurbHtml}{% if include.test_mode %}${testInfoHtml}{% endif %}`;
         tooltip.style.display = 'block';
         positionTooltip(event);
