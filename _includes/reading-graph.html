@@ -1019,15 +1019,47 @@
         .style('user-select', 'none');
       clusterLegendEl = div.node();
 
-      div.append('div')
+      let collapsed = false;
+
+      const header = div.append('div')
+        .style('display', 'flex')
+        .style('align-items', 'center')
+        .style('justify-content', 'space-between')
+        .style('gap', '10px')
+        .style('cursor', 'pointer')
+        .style('margin-bottom', '4px');
+
+      header.append('span')
         .style('font-size', '10px')
         .style('color', '#666')
-        .style('margin-bottom', '4px')
         .style('letter-spacing', '0.05em')
         .text('Clusters');
 
+      const toggleBtn = header.append('span')
+        .style('font-size', '12px')
+        .style('color', '#666')
+        .style('line-height', '1')
+        .text('−');
+
+      const body = div.append('div');
+
+      const collapse = () => {
+        collapsed = true;
+        body.style('display', 'none');
+        toggleBtn.text('+');
+        header.style('margin-bottom', '0');
+      };
+      const expand = () => {
+        collapsed = false;
+        body.style('display', null);
+        toggleBtn.text('−');
+        header.style('margin-bottom', '4px');
+      };
+
+      header.on('click', () => collapsed ? expand() : collapse());
+
       legendTags.forEach(tag => {
-        const item = div.append('div')
+        const item = body.append('div')
           .datum(tag)
           .attr('class', 'cl-item')
           .style('display', 'flex')
@@ -1052,6 +1084,11 @@
           .style('color', tagColor[tag])
           .text(tag);
       });
+
+      // Lock width to expanded size so collapsing doesn't shrink the box
+      div.style('width', clusterLegendEl.offsetWidth + 'px');
+
+      if (window.innerHeight > window.innerWidth) collapse();
     }
   }
 
