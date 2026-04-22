@@ -1,0 +1,13 @@
+# Blogroll data for /reading
+# Fields:
+#   name:        display name of the blog/newsletter
+#   url:         full URL to the blog
+#   domain:      bare hostname, no www (e.g. "paulgraham.com")
+#   description: one-sentence description of what makes it worth reading
+#   category:    grouping label shown as a section header
+
+- name: "A Working Library"
+  url: "https://aworkinglibrary.com/"
+  domain: "aworkinglibrary.com"
+  description: "Mandy curates really great books on work and tech."
+  category: "AI & Tech"

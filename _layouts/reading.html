@@ -7,9 +7,12 @@
   <div class="content-body border-top border-md-top-0 bg-gray-light" style="flex: 1; min-width: 0;">
     <div class="mx-auto mt-3 mb-4" style="padding-top: 4px; max-width: 700px;">
       <h1>{{ page.title }}</h1>
-      <p class="blog-subtitle mb-5">an interactive map of AI articles and essays I've found worth reading, clustered by topic and connected by references</p>
     </div>
     <div style="max-width: 920px; margin: 0 auto;">
+      <div style="max-width: 700px; margin: 0 auto 16px;">
+        <h2>Discussions about AI</h2>
+        <p class="blog-subtitle">an interactive map of articles and essays worth reading, clustered by topic.</p>
+      </div>
       {% if page.test_mode %}
         {% include reading-graph.html data_url=page.graph_data_url test_mode=true %}
       {% else %}
@@ -17,6 +20,28 @@
       {% endif %}
       <p style="text-align: right; font-size: 12px; color: #999; margin: 6px 0 4px;"><a href="https://github.com/vivqu/vivqu.github.io/blob/master/_includes/reading-graph.html" style="color: #999;" target="_blank">Built</a> with <a href="https://d3js.org/" style="color: #999;" target="_blank">d3</a> &amp; Claude Code. All content is human-curated. Last updated {{ page.last_updated }}.</p>
     </div>
+
+    <div class="mx-auto mt-6 mb-4" style="max-width: 700px;">
+      <h2>Blogroll</h2>
+      <p class="blog-subtitle mb-4">personal and independent websites I read regularly and recommend.</p>
+
+      {% assign blogroll_by_category = site.data.blogroll | group_by: "category" %}
+      {% for group in blogroll_by_category %}
+      <div class="blogroll-section mb-5">
+        <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin-bottom: 12px;">{{ group.name }}</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          {% for blog in group.items %}
+          <li style="margin-bottom: 16px;">
+            <a href="{{ blog.url }}" style="font-weight: 600;" target="_blank">{{ blog.name }}</a>
+            <span style="color: #999; font-size: 13px; margin-left: 6px;">{{ blog.domain }}</span>
+            <p style="margin: 2px 0 0; font-size: 14px; color: #555;">{{ blog.description }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+
     {% include nav-footer.html %}
   </div>
 </div>

@@ -104,9 +104,11 @@
   // Set container height based on actual distance from viewport top so the graph
   // fills the remaining viewport on both desktop and mobile (where the sidebar
   // stacks above the content and the calc(100vh - 180px) hardcode falls short).
+  // On desktop, subtract extra to let the blogroll peek below the fold.
   function updateContainerHeight() {
     const top = container.getBoundingClientRect().top;
-    container.style.height = Math.max(300, window.innerHeight - top - 20) + 'px';
+    const offset = window.innerWidth < 768 ? 60 : 170;
+    container.style.height = Math.max(300, window.innerHeight - top - offset) + 'px';
   }
   updateContainerHeight();
 
