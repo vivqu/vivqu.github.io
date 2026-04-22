@@ -489,3 +489,12 @@
   blurb: "Analysis of why many SWE-bench-passing PRs would not be merged into main."
   tags: [capabilities, evals]
   refs: []
+
+- title: "Resurrecting a 1992 MUD with Agentic AI"
+  url: "https://meditations.metavert.io/p/resurrecting-a-1992-mud-with-agentic?hide_intro_popup=true"
+  author: "Jon Radoff"
+  domain: meditations.metavert.io
+  date: "2026-04-16"
+  blurb: "Real-world example of software archaeology resurrecting an obsolete game."
+  tags: [future-of-coding, archaeology]
+  refs: []
