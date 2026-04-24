@@ -11,3 +11,33 @@
   domain: "aworkinglibrary.com"
   description: "Mandy curates really great books on work and tech."
   category: "AI & Tech"
+
+- name: "The Pragmatic Engineer"
+  url: "https://newsletter.pragmaticengineer.com/"
+  domain: "pragmaticengineer.com"
+  description: "Up-to-date insider news for the software industry."
+  category: "AI & Tech"
+
+- name: "Engineering Enablement"
+  url: "https://newsletter.getdx.com/"
+  domain: "getdx.com"
+  description: "Regular updates about concrete research on developer productivity."
+  category: "AI & Tech"
+
+- name: "Sean Goedecke"
+  url: "https://www.seangoedecke.com/"
+  domain: "seangoedecke.com"
+  description: "Sean has excellent posts on using AI and being an engineer in Big Tech."
+  category: "AI & Tech"
+
+- name: "Simon Willison"
+  url: "https://simonw.substack.com/"
+  domain: "simonw.substack.com"
+  description: "The go-to newsletter for cutting edge insights on LLMs and coding agents."
+  category: "AI & Tech"
+
+- name: "Construction Physics"
+  url: "https://www.construction-physics.com/"
+  domain: "construction-physics.com"
+  description: "My favorite kind of blog which is the intersection of technology, economics, and social studies & policy."
+  category: "Science"

@@ -498,3 +498,21 @@
   blurb: "Real-world example of software archaeology resurrecting an obsolete game."
   tags: [future-of-coding, archaeology]
   refs: []
+
+- title: "Agents with taste"
+  url: "https://emilkowal.ski/ui/agents-with-taste"
+  author: "Emil Kowalski"
+  domain: emilkowal.ski
+  date: "2026-03-25"
+  blurb: "Creating Claude skills to encode UX taste into software."
+  tags: [career, design]
+  refs: []
+
+- title: "Don't Use AI to Do This"
+  url: "https://www.nytimes.com/2026/04/15/opinion/art-artificial-intelligence.html?unlocked_article_code=1.bFA.1HK4.VITxEnlxQ9LR&smid=url-share&utm_source=substack&utm_medium=email"
+  author: "Colson Whitehead"
+  domain: nytimes.com
+  date: "2026-04-15"
+  blurb: "Don't use AI for art but do use it to calculate when to buy onions. Chung-chung."
+  tags: [outcomes, creativity]
+  refs: []
