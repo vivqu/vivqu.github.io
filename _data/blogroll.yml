@@ -18,12 +18,6 @@
   description: "Up-to-date insider news for the software industry."
   category: "AI & Tech"
 
-- name: "Engineering Enablement"
-  url: "https://newsletter.getdx.com/"
-  domain: "getdx.com"
-  description: "Regular updates about concrete research on developer productivity."
-  category: "AI & Tech"
-
 - name: "Sean Goedecke"
   url: "https://www.seangoedecke.com/"
   domain: "seangoedecke.com"
