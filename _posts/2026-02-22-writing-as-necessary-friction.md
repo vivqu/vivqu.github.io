@@ -30,7 +30,7 @@ There are four different kinds of drivers<sup><a href="#fn2" id="ref2">2</a></su
 - writing as [fitness exercise](/blog/2026/02/22/writing-as-fitness-exercise/)
 - writing as [synchronizing with reality](/blog/2026/03/01/writing-as-synchronizing-reality/)
 - writing as [theory-building](/blog/2026/03/25/writing-as-theory-building/)
-- writing as aliveness
+- writing as [aliveness](/blog/2026/04/26/writing-as-aliveness/)
 
 Let's explore what gets me to torture myself with the act of writing, and why its actually a necessary friction.
 

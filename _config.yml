@@ -7,7 +7,7 @@ description: "Using metaheuristics as a metaphor for life. This product may cont
 author: 
   name: Vivian Qu
   twitter: vivqu
-  
+
 plugins:
   - jekyll-feed
   - jekyll-last-modified-at
