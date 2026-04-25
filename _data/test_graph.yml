@@ -23,6 +23,11 @@
 #     film       (subcluster D2)
 #     literature (subcluster D3)
 #   misc       (no circle — only 2 nodes)
+#
+# Ring-to-ring ref test cases (supercluster-only nodes that ref each other):
+#   tech ring hub + 2 spokes  — hub-and-spoke pattern (mirrors career/Jevons case)
+#   science ring A→B→C        — chain pattern
+# Expected: connected ring nodes land near each other; lines stay outside subcluster circles.
 
 # ─── HIGH-BACKLINK HUB (category 1 — frontend, referenced by 8 other nodes) ──
 # This node is the target of 8 refs: 4 from tech-only nodes + 3 from frontend nodes + 1 from a free node.
@@ -494,6 +499,72 @@
   tags: [society]
   date: "2025-10-18"
   blurb: "Test node: supercluster-only (society). No refs."
+  refs: []
+
+# ─── RING-TO-RING REFS: hub-and-spoke within tech (3 nodes) ──────────────────
+# Mirrors the career cluster pattern: Jevons Paradox (hub) ← ATM + jobsdata (spokes).
+# Expected: all three land near each other on the tech outer ring.
+# Their ref lines should NOT cross through the frontend or backend subcluster circles.
+# Test color: RED (supercluster-only). Verify short local lines confined to the outer ring.
+
+- title: "Tech Ring Hub"
+  url: "https://example.com/tech-ring-hub"
+  author: "Test Author"
+  domain: example.com
+  tags: [tech]
+  date: "2024-06-01"
+  blurb: "Test node: supercluster-only (tech), ring-to-ring hub. Referenced by two other ring nodes — line from each spoke must not cross frontend or backend circle."
+  refs: []
+
+- title: "Tech Ring Spoke A"
+  url: "https://example.com/tech-ring-spoke-a"
+  author: "Test Author"
+  domain: example.com
+  tags: [tech]
+  date: "2024-08-15"
+  blurb: "Test node: supercluster-only (tech), ring-to-ring spoke. Refs tech-ring-hub — should land near hub on the outer ring."
+  refs: ["https://example.com/tech-ring-hub"]
+
+- title: "Tech Ring Spoke B"
+  url: "https://example.com/tech-ring-spoke-b"
+  author: "Test Author"
+  domain: example.com
+  tags: [tech]
+  date: "2024-10-30"
+  blurb: "Test node: supercluster-only (tech), ring-to-ring spoke. Refs tech-ring-hub — should land near hub on the outer ring."
+  refs: ["https://example.com/tech-ring-hub"]
+
+# ─── RING-TO-RING REFS: chain within science (3 nodes) ───────────────────────
+# Chain topology: A → B → C among ring-only nodes.
+# Expected: all three land near each other on the science outer ring.
+# Their ref lines should NOT cross through the biology or physics subcluster circles.
+# Test color: RED (supercluster-only).
+
+- title: "Science Ring A"
+  url: "https://example.com/science-ring-a"
+  author: "Test Author"
+  domain: example.com
+  tags: [science]
+  date: "2024-07-10"
+  blurb: "Test node: supercluster-only (science), ring-to-ring chain start. Refs science-ring-b — should land near B and C on the outer ring."
+  refs: ["https://example.com/science-ring-b"]
+
+- title: "Science Ring B"
+  url: "https://example.com/science-ring-b"
+  author: "Test Author"
+  domain: example.com
+  tags: [science]
+  date: "2024-09-22"
+  blurb: "Test node: supercluster-only (science), ring-to-ring chain middle. Refs science-ring-c — in the same connected component as A."
+  refs: ["https://example.com/science-ring-c"]
+
+- title: "Science Ring C"
+  url: "https://example.com/science-ring-c"
+  author: "Test Author"
+  domain: example.com
+  tags: [science]
+  date: "2025-01-14"
+  blurb: "Test node: supercluster-only (science), ring-to-ring chain end. No outgoing ring refs — should land near A and B."
   refs: []
 
 # ─── DUAL-SUBCLUSTER: frontend + backend (category 14, 1 node) ───────────────
