@@ -35,3 +35,9 @@
   domain: "construction-physics.com"
   description: "My favorite kind of blog which is the intersection of technology, economics, and social studies & policy."
   category: "Science"
+
+- name: "Maggie Appleton"
+  url: "https://maggieappleton.com/"
+  domain: "maggieappleton.com"
+  description: "Digital garden on design, tech, and home-cooked apps."
+  category: "AI & Tech"
