@@ -102,7 +102,7 @@
   url: "https://open.substack.com/pub/forecastingresearch/p/how-well-did-superforecasters-and"
   author: "Forecasting Research Institute"
   domain: forecastingresearch.substack.com
-  tags: [forecasting]
+  tags: [forecasting, risk]
   date: "2026-02-19"
   blurb: "Breakdown of how well superforecasters performed at predicting LLM innovation gains in molecular biology."
   refs: []
@@ -409,14 +409,14 @@
   domain: davidoks.blog
   date: "2026-03-10"
   blurb: "The true force of a technology is felt not with the substitution of tasks, but the invention of new paradigms."
-  tags: [forecasting]
+  tags: [career]
   refs: ["https://en.wikipedia.org/wiki/Jevons_paradox"]
 
 - title: "Jevon's Paradox"
   url: "https://en.wikipedia.org/wiki/Jevons_paradox"
   domain: wikipedia.org
   blurb: "Technological improvements that increase the efficiency of a resource's use lead to a rise, rather than a fall, in total consumption of that resource."
-  tags: [forecasting]
+  tags: [career]
   refs: []
 
 - title: "AI and the human voice"
@@ -516,3 +516,30 @@
   blurb: "Don't use AI for art but do use it to calculate when to buy onions. Chung-chung."
   tags: [outcomes, creativity]
   refs: []
+
+- title: "The term “AGI” is almost useless at this point"
+  url: "https://helentoner.substack.com/p/the-term-agi-is-almost-useless-at"
+  author: "Helen Toner"
+  domain: helentoner.substack.com
+  date: "2026-04-15"
+  blurb: "The term 'AGI' is imprecise and does not signal concrete milestones."
+  tags: [forecasting]
+  refs: []
+
+- title: "Tacit Knowledge: The Missing Factor in AI Bio Risk Assessments"
+  url: "https://secondthoughts.ai/p/tacit-knowledge-the-missing-factor"
+  author: "Abi Olvera"
+  domain: secondthoughts.ai
+  date: "2026-04-15"
+  blurb: "Tacit knowledge should be factored into AI biosecurity risk."
+  tags: [forecasting, risk]
+  refs: []
+
+- title: "jobsdata.ai Methodology"
+  url: "https://jobsdata.ai/methodology"
+  author: "Matt Zieger"
+  domain: jobsdata.ai
+  date: "2026-02-03"
+  blurb: "Live meta-analysis of AI's impact on the job market."
+  tags: [career]
+  refs: ["https://en.wikipedia.org/wiki/Jevons_paradox"]
