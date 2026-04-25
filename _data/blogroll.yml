@@ -33,7 +33,7 @@
 - name: "Construction Physics"
   url: "https://www.construction-physics.com/"
   domain: "construction-physics.com"
-  description: "My favorite kind of blog which is the intersection of technology, economics, and social studies & policy."
+  description: "The economics of construction, housing policy, and mechanical processes."
   category: "Science"
 
 - name: "Maggie Appleton"
@@ -41,3 +41,15 @@
   domain: "maggieappleton.com"
   description: "Digital garden on design, tech, and home-cooked apps."
   category: "AI & Tech"
+
+- name: "The Imperfectionist"
+  url: "https://www.oliverburkeman.com/the-imperfectionist"
+  domain: "oliverburkeman.com"
+  description: "Meditations on philosophy, life, and the human condition."
+  category: "Culture"
+
+- name: "Culture Study"
+  url: "https://www.patreon.com/cw/CultureStudy"
+  domain: "patreon.com"
+  description: "Wide-ranging cultural commentary and analysis."
+  category: "Culture"
