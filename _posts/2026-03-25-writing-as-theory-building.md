@@ -174,4 +174,8 @@ If you don't believe me, try this yourself. Come back later in a week and try ou
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 03/25/2026. v1 is 3,870 words and took 6.5 hours to write and edit.</footer>
+Read the final part of the series — [writing as aliveness](/blog/2026/04/26/writing-as-aliveness/).
+
+<hr class="section-divider" />
+
+<footer>This article was last updated on 04/26/2026. v1 is 3,870 words and took 6.5 hours to write and edit.</footer>

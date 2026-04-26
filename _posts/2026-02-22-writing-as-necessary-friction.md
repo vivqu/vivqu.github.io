@@ -48,4 +48,4 @@ Head to the first part of the series — [writing as fitness exercise](/blog/202
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 3/25/2026. v1 is 1,495 words and took 4.5 hours to write and edit.</footer>
+<footer>This article was last updated on 04/26/2026. v1 is 1,495 words and took 4.5 hours to write and edit.</footer>
