@@ -203,7 +203,7 @@
   domain: medium.com
   date: "2026-01-29"
   blurb: "Predicting what kinds of software will survive."
-  tags: [future-of-coding]
+  tags: [future-of-coding, open-source]
   refs: []
 
 - title: "chardet: No right to relicense this project"
@@ -543,3 +543,11 @@
   blurb: "Live meta-analysis of AI's impact on the job market."
   tags: [career]
   refs: ["https://en.wikipedia.org/wiki/Jevons_paradox"]
+
+- title: "I accidentally started a green screen revolution..."
+  url: "https://www.youtube.com/watch?v=Y3Dfw969itU"
+  author: "Corridor Crew"
+  domain: youtube.com
+  blurb: "Non-programmers released CorridorKey, a green screen keying tool that often outperforms other existing tools."
+  tags: [future-of-coding, open-source]
+  refs: []

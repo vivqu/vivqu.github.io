@@ -53,3 +53,15 @@
   domain: "patreon.com"
   description: "Wide-ranging cultural commentary and analysis."
   category: "Culture"
+
+- name: "Sunday Letter"
+  url: "https://www.jackcheng.com/sunday/"
+  domain: "jackcheng.com"
+  description: "Jack Cheng has lovely dispatches on creative work, architecture, and tech."
+  category: "AI & Tech"
+
+- name: "Robin Sloan"
+  url: "https://www.robinsloan.com/"
+  domain: "robinsloan.com"
+  description: "Writer, olive oil producer, home-cooked apps maker, printmaker, what does this man not do?"
+  category: "Culture"
