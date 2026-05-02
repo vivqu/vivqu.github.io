@@ -548,6 +548,16 @@
   url: "https://www.youtube.com/watch?v=Y3Dfw969itU"
   author: "Corridor Crew"
   domain: youtube.com
+  date: "2026-04-12"
   blurb: "Non-programmers released CorridorKey, a green screen keying tool that often outperforms other existing tools."
   tags: [future-of-coding, open-source]
+  refs: []
+
+- title: "Why can't they just...? Revisited"
+  url: "https://larahogan.me/blog/why-cant-they-just-revisited/"
+  author: "Lara Hogan"
+  domain: larahogan.me
+  date: "2026-04-22"
+  blurb: "A useful perspective on the AI chaos inside organizations these days."
+  tags: [career, tech]
   refs: []
