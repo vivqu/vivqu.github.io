@@ -409,14 +409,14 @@
   domain: davidoks.blog
   date: "2026-03-10"
   blurb: "The true force of a technology is felt not with the substitution of tasks, but the invention of new paradigms."
-  tags: [career]
+  tags: [career, jobs-impact]
   refs: ["https://en.wikipedia.org/wiki/Jevons_paradox"]
 
 - title: "Jevon's Paradox"
   url: "https://en.wikipedia.org/wiki/Jevons_paradox"
   domain: wikipedia.org
   blurb: "Technological improvements that increase the efficiency of a resource's use lead to a rise, rather than a fall, in total consumption of that resource."
-  tags: [career]
+  tags: [career, jobs-impact]
   refs: []
 
 - title: "AI and the human voice"
@@ -541,7 +541,7 @@
   domain: jobsdata.ai
   date: "2026-02-03"
   blurb: "Live meta-analysis of AI's impact on the job market."
-  tags: [career]
+  tags: [career, jobs-impact]
   refs: ["https://en.wikipedia.org/wiki/Jevons_paradox"]
 
 - title: "I accidentally started a green screen revolution..."
@@ -560,4 +560,13 @@
   date: "2026-04-22"
   blurb: "A useful perspective on the AI chaos inside organizations these days."
   tags: [career, tech]
+  refs: []
+
+- title: "We Are (Still) Living in the Long Boring"
+  url: "https://freddiedeboer.substack.com/p/we-are-still-living-in-the-long-boring"
+  author: "Freddie DeBoer"
+  domain: freddiedeboer.substack.com
+  date: "2026-04-23"
+  blurb: "Bits are easy, atoms are hard."
+  tags: [forecasting, skepticism]
   refs: []

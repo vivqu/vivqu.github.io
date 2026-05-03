@@ -65,3 +65,9 @@
   domain: "robinsloan.com"
   description: "Writer, olive oil producer, home-cooked apps maker, printmaker, what does this man not do?"
   category: "Culture"
+
+- name: "The Linkfest"
+  url: "https://buttondown.com/clivethompson"
+  domain: "buttondown.com"
+  description: "Clive Thompson's excellent roundup of links."
+  category: "Culture"
