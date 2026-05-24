@@ -36,16 +36,16 @@
       <div class="mb-7">
         <h2 class="mb-3">Recent</h2>
         <div class="mb-2">
-          {% include blog-list.html limit=5 show_best_of=true %}
+          {% include blog-list.html limit=7 show_best_of=true %}
         </div>
-        <p class="post-subtitle ">Check out {{ site.posts.size | minus: 5 }} more posts at the <a href="/archive">full
+        <p class="post-subtitle ">Check out {{ site.posts.size | minus: 7 }} more posts at the <a href="/archive">full
             archive</a>.</p>
       </div>
-      <h2 class="mb-3">Most popular</h2>
+      <h2 class="mt-7 mb-3">Most popular ⭐️</h2>
       <div>
         {% for post in site.posts %}
         {% if post.best_of %}
-        {% include post-list.html hide_subtitle=true hide_tags=true %}
+        {% include post-list.html hide_tags=true %}
         {% endif %}
         {% endfor %}
       </div>
