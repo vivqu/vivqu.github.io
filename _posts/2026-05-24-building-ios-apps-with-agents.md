@@ -5,7 +5,7 @@ published: true
 source: false
 seo_description: "mobile-apps agentic-coding workflows"
 tags: work tech
-image: assets/img/posts/writing-aliveness/mischief-repose.jpg
+image: assets/img/posts/building-ios-apps-agents/cover-slide.png
 read_time: 14 min
 ---
 
