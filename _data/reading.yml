@@ -129,7 +129,7 @@
   url: "https://github.com/tailwindlabs/tailwindcss.com/pull/2388"
   author: "Tailwind Labs"
   domain: github.com
-  tags: [ecosystem, github-debates]
+  tags: [ecosystem, debates]
   date: "2025-11-18"
   blurb: "Discussion on the impact of AI coding agents on Tailwind's economics."  
   refs: []
@@ -138,7 +138,7 @@
   url: "https://github.com/tldraw/tldraw/issues/8082"
   author: "tldraw"
   domain: github.com
-  tags: [ecosystem, github-debates]
+  tags: [ecosystem, debates]
   date: "2026-02-25"
   blurb: "Tldraw (jokingly) proposes moves its test suite to a private repo to prevent AI copycat frameworks."
   refs: []
@@ -212,7 +212,7 @@
   domain: github.com
   date: "2026-03-04"
   blurb: "Relicensing and the legalities of using AI to generate a 'clean room' reimplementation."
-  tags: [ecosystem, github-debates]
+  tags: [ecosystem, debates]
   refs: []
 
 - title: "Software Bonkers"
@@ -569,4 +569,41 @@
   date: "2026-04-23"
   blurb: "Bits are easy, atoms are hard."
   tags: [forecasting, skepticism]
+  refs: []
+
+
+- title: "Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial Intelligence on Knowledge Worker Productivity and Quality"
+  url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321"
+  author: "Fabrizio Dell'Acqua, et al."
+  domain: papers.ssrn.com
+  date: "2023-09-18"
+  blurb: "Jaggedness in model capabilities."
+  tags: [capabilities]
+  refs: []
+
+- title: "How we rebuilt Next.js with AI in one week"
+  url: "https://blog.cloudflare.com/vinext/"
+  author: "Steve Faulkner"
+  domain: cloudflare.com
+  date: "2026-02-24"
+  blurb: "How Cloudflare rebuilt Next.js with AI and kicked off a firestorm."
+  tags: [ecosystem, debates]
+  refs: []
+
+- title: "Cloudflare rewrites Next.js as AI rewrites commercial open source"
+  url: "https://newsletter.pragmaticengineer.com/p/the-pulse-cloudflare-rewrites-nextjs"
+  author: "Gergely Orosz"
+  domain: pragmaticengineer.com
+  date: "2026-03-05"
+  blurb: "A recap of the Cloudflare Next.js fiasco."
+  tags: [ecosystem, debates]
+  refs: ["https://blog.cloudflare.com/vinext/"]
+
+- title: "Using encapsulated development to code on my phone"
+  url: "https://maryrosecook.com/blog/post/using-encapsulated-development-to-code-on-my-phone"
+  author: "Mary Rose Cook"
+  domain: maryrosecook.com
+  date: "2026-05-26"
+  blurb: "Coding on the phone with tight verification feedback loop."
+  tags: [future-of-coding, home-cooked]
   refs: []

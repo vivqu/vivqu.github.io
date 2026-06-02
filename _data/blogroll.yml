@@ -71,3 +71,15 @@
   domain: "buttondown.com"
   description: "Clive Thompson's excellent roundup of links."
   category: "Culture"
+
+- name: "Dense Discovery"
+  url: "https://www.densediscovery.com/"
+  domain: "densediscovery.com"
+  description: "Reading links and insights from Offscreen creator Kai."
+  category: "Culture"
+
+- name: "One Thing"
+  url: "https://onethingnewsletter.substack.com/"
+  domain: "onethingnewsletter.substack.com"
+  description: "Newsletter on taste and cultural zeitgeist from Kyle Chayka & friends."
+  category: "Culture"
