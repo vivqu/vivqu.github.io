@@ -607,3 +607,21 @@
   blurb: "Coding on the phone with tight verification feedback loop."
   tags: [future-of-coding, home-cooked]
   refs: []
+
+- title: "Introducing talkie: a 13B vintage language model from 1930"
+  url: "https://talkie-lm.com/introducing-talkie"
+  author: "Nick Levine, David Duvenaud, Alec Radford"
+  domain: talkie-lm.com
+  date: "2026-04-01"
+  blurb: "'Vintage' 13B-parameter language model trained on 260B tokens written before 1930."
+  tags: [capabilities, exploration]
+  refs: []
+
+- title: "Labor market impacts of AI: A new measure and early evidence"
+  url: "https://www.anthropic.com/research/labor-market-impacts"
+  author: "Anthropic"
+  domain: anthropic.com
+  date: "2026-03-05"
+  blurb: "Anthropic's analysis of labor market impacts of AI."
+  tags: [career, jobs-impact]
+  refs: []
