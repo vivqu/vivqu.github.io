@@ -1179,11 +1179,56 @@
 
     function buildClusterLegend() {
       if (clusterLegendEl) { d3.select(clusterLegendEl).remove(); clusterLegendEl = null; }
-      if (W < 415) return;
 
       // Only show superclusters and orphan clusters — subclusters are navigable by zooming in
       const legendTags = [...superTagList, ...orphanClusterTags];
       if (legendTags.length === 0) return;
+
+      // Narrow screens (phones): render as a compact horizontal pill strip
+      // pinned to the bottom of the graph area. The standard floating box
+      // would either be too cramped or have to be hidden entirely.
+      if (W < 415) {
+        const strip = d3.select(container).append('div')
+          .style('position', 'absolute')
+          .style('left', '0').style('right', '0').style('bottom', '0')
+          .style('z-index', '10')
+          .style('background', '#1e1e2e')
+          .style('border-top', '1px solid #3a3a5c')
+          .style('padding', '6px 8px')
+          .style('font-size', '11px')
+          .style('color', '#ccc')
+          .style('user-select', 'none')
+          .style('display', 'flex')
+          .style('flex-wrap', 'wrap')
+          .style('gap', '4px 6px')
+          .style('justify-content', 'center');
+        clusterLegendEl = strip.node();
+
+        legendTags.forEach(tag => {
+          const item = strip.append('div')
+            .datum(tag)
+            .attr('class', 'cl-item')
+            .style('display', 'inline-flex')
+            .style('align-items', 'center')
+            .style('gap', '4px')
+            .style('padding', '3px 8px')
+            .style('border-radius', '11px')
+            .style('cursor', 'pointer')
+            .style('background', 'transparent')
+            .on('click', () => focusTag(tag));
+
+          item.append('span')
+            .style('display', 'inline-block')
+            .style('width', '8px').style('height', '8px')
+            .style('border-radius', '50%')
+            .style('border', `2px solid ${tagColor[tag]}`)
+            .style('background', tagColor[tag] + '30')
+            .style('flex-shrink', '0');
+
+          item.append('span').style('color', tagColor[tag]).text(tag);
+        });
+        return;
+      }
 
       const div = d3.select(container).append('div')
         .style('position', 'absolute')

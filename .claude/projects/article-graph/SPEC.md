@@ -120,7 +120,9 @@ Hovering a swatch (or tapping on touch devices) emphasises every article in that
 
 Disabled while a cluster is focused — `pointer-events: none` is applied to the legend so the cursor doesn't suggest interactivity. Cluster focus takes precedence; activating cluster focus also clears any in-flight age highlight.
 
-**Cluster legend** (bottom-right) — lists superclusters and orphan clusters only; subclusters are deliberately omitted. The legend is a navigation aid for the top-level shape of the graph — subclusters are a detail visible by zooming into their parent, not a separate destination. Each entry has a color swatch and the tag name. Hidden on the smallest screen sizes; auto-collapses on portrait orientation.
+**Cluster legend** (bottom-right) — lists superclusters and orphan clusters only; subclusters are deliberately omitted. The legend is a navigation aid for the top-level shape of the graph — subclusters are a detail visible by zooming into their parent, not a separate destination. Each entry has a color swatch and the tag name. Auto-collapses on portrait orientation.
+
+On narrow screens (`W < 415`, e.g. phones) the legend is rendered as a compact horizontal pill strip pinned to the bottom edge of the graph area instead — same entries and same click-to-focus behavior, but no header/collapse since the bottom strip is always visible. The standard floating box is too cramped at that width.
 
 **Cluster focus** — clicking a legend entry zooms the graph so that cluster fills ~70% of the viewport and fades all unrelated nodes and edges. Clicking the same entry again, or the background, resets to the full view. Node labels appear automatically when a cluster is focused, regardless of zoom level.
 
