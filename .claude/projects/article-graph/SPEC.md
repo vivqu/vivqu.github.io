@@ -95,15 +95,17 @@ Edit `_data/reading.yml`. The graph regenerates automatically on the next Jekyll
 
 ### Interaction
 
-- **Click node** — opens article URL in a new tab
+- **Click node** — opens article URL in a new tab (hover devices); on touch devices, pins the tooltip with an explicit "Open article →" button instead, since touch has no hover state to surface the tooltip first
 - **Drag node** — re-anchors the node; simulation heats up briefly while dragging
 - **Scroll / pinch** — zoom
 - **Pan** — drag on the empty graph background
-- **Click empty background** — resets any active cluster focus
+- **Click empty background** — resets any active cluster focus, clears any age legend highlight, and dismisses any pinned tooltip on touch
 
 ### Tooltip
 
 Hovering a node shows a tooltip with: title, author, full publication date, domain, tags, and blurb.
+
+On touch devices (detected via `matchMedia('(hover: hover)')`), the tooltip is instead pinned by tapping a node and includes an "Open article →" button at the bottom — the button is the only way to open the article on touch. Tapping the same node again, tapping a different node, or tapping the empty background dismisses the tooltip. Tooltip `pointer-events` flips to `auto` when the Open button is present so it's tappable, and back to `none` otherwise.
 
 ### Legends and controls
 

@@ -76,6 +76,13 @@
   const CLUSTER_PAD        = 20;
   const LABEL_ZOOM_THRESHOLD = 1.3; // labels appear above this zoom level
 
+  // Touch devices have no hover, so several interactions adapt:
+  //   - Age legend swatches: tap-to-toggle instead of mouseenter-to-highlight
+  //   - Node tooltips: tap pins the tooltip (with an explicit Open button)
+  //     instead of opening the URL on click
+  const hasHover = typeof window.matchMedia === 'function' &&
+                   window.matchMedia('(hover: hover)').matches;
+
   // Backlink-based radius scale: [0 refs, 1, 2–3, 4–6, 7+] → radius px
   const rScale = d3.scaleThreshold([1, 2, 4, 7], [6, 8, 11, 15, 20]);
 
@@ -836,6 +843,7 @@
       .on('click', () => {
         if (activeTag) resetFocus();
         if (activeAgeBracket !== null) clearAgeHighlight();
+        if (!hasHover && hoveredNode) hideNodeTooltip(hoveredNode);
       });
 
     // Layers (back to front)
@@ -898,73 +906,110 @@
     // Track which node is currently hovered for tick updates
     let hoveredNode = null;
 
-    nodeG
-      .on('mouseenter', function (event, d) {
-        hoveredNode = d;
-        // Paint a duplicate circle in the topmost layer so it renders above all labels
-        hoverCircleLayer.selectAll('circle').remove();
-        const srcCircle = this.querySelector('circle');
-        hoverCircleLayer.append('circle')
-          .attr('r',    d3.select(srcCircle).attr('r'))
-          .attr('fill', d3.select(srcCircle).attr('fill'))
-          .attr('stroke',       d3.select(srcCircle).attr('stroke'))
-          .attr('stroke-width', d3.select(srcCircle).attr('stroke-width'))
-          .attr('cx', d.x)
-          .attr('cy', d.y);
-        const lbl = labelById.get(d.id);
-        if (lbl) {
-          d3.select(lbl).raise(); // bring label to front within nodeLabelLayer
-          d3.select(lbl).style('font-weight', 'bold').style('opacity', 1);
-          // Dim any other label that overlaps the hovered label OR the hovered circle
-          const hr = lbl.getBoundingClientRect();
-          const cr = hoverCircleLayer.select('circle').node()?.getBoundingClientRect();
-          nodeLabels.each(function (ld) {
-            if (ld.id === d.id || parseFloat(this.style.opacity || 1) <= 0) return;
-            const r = this.getBoundingClientRect();
-            if (r.width === 0) return;
-            const overlapsLabel  = r.left < hr.right && r.right > hr.left && r.top < hr.bottom && r.bottom > hr.top;
-            const overlapsCircle = cr && r.left < cr.right && r.right > cr.left && r.top < cr.bottom && r.bottom > cr.top;
-            if (overlapsLabel || overlapsCircle) this.style.opacity = '0.38';
-          });
+    // Paint the hovered node's circle into a topmost layer (so it renders above
+    // labels) and emphasise its label by dimming overlapping neighbour labels.
+    function applyHoverEffect(nodeEl, d) {
+      hoverCircleLayer.selectAll('circle').remove();
+      const srcCircle = nodeEl.querySelector('circle');
+      hoverCircleLayer.append('circle')
+        .attr('r',    d3.select(srcCircle).attr('r'))
+        .attr('fill', d3.select(srcCircle).attr('fill'))
+        .attr('stroke',       d3.select(srcCircle).attr('stroke'))
+        .attr('stroke-width', d3.select(srcCircle).attr('stroke-width'))
+        .attr('cx', d.x)
+        .attr('cy', d.y);
+      const lbl = labelById.get(d.id);
+      if (!lbl) return;
+      d3.select(lbl).raise();
+      d3.select(lbl).style('font-weight', 'bold').style('opacity', 1);
+      const hr = lbl.getBoundingClientRect();
+      const cr = hoverCircleLayer.select('circle').node()?.getBoundingClientRect();
+      nodeLabels.each(function (ld) {
+        if (ld.id === d.id || parseFloat(this.style.opacity || 1) <= 0) return;
+        const r = this.getBoundingClientRect();
+        if (r.width === 0) return;
+        const overlapsLabel  = r.left < hr.right && r.right > hr.left && r.top < hr.bottom && r.bottom > hr.top;
+        const overlapsCircle = cr && r.left < cr.right && r.right > cr.left && r.top < cr.bottom && r.bottom > cr.top;
+        if (overlapsLabel || overlapsCircle) this.style.opacity = '0.38';
+      });
+    }
+
+    function clearHoverEffect(d) {
+      hoverCircleLayer.selectAll('circle').remove();
+      const lbl = labelById.get(d.id);
+      if (lbl) d3.select(lbl).style('font-weight', null);
+      if (runLabelOcclusion) runLabelOcclusion();
+    }
+
+    // Build tooltip HTML. On touch devices we append an explicit Open button
+    // since tap-to-pin replaces tap-to-open.
+    function buildTooltipHtml(d, withOpenButton) {
+      const dateStr = d.date
+        ? new Date(d.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+        : '';
+      const tagsHtml = (d.tags || []).length
+        ? `<br><span style="color:#888">${d.tags.join(', ')}</span>` : '';
+      const blurbHtml = d.blurb
+        ? `<br><span style="color:#aaa;font-style:italic">${esc(d.blurb)}</span>` : '';
+      {% if include.test_mode %}
+      let testInfoHtml = '';
+      if (TEST_MODE) {
+        const primaryCluster = (d.tags || []).find(t => SUPER_TAGS.has(t)) || '—';
+        const crossRefs = crossClusterRefCount.get(d.id) || 0;
+        testInfoHtml = `<br><span style="color:#555">── test info ──</span>`
+          + `<br><span style="color:#999">category: ${esc(d.testCategory || '?')}</span>`
+          + `<br><span style="color:#999">primary cluster: ${esc(primaryCluster)}</span>`
+          + `<br><span style="color:#999">cross-cluster refs: ${crossRefs}${crossRefs > 0 ? ' ⚠' : ''}</span>`;
+      }
+      {% endif %}
+      const domain = d.self ? null : (() => { try { const parts = new URL(d.id).hostname.split('.'); return parts.slice(-2).join('.'); } catch { return null; } })();
+      const domainHtml = domain ? `<br><span style="color:#666">${esc(domain)}</span>` : '';
+      const isWiki = domain === 'wikipedia.org';
+      const metaHtml = isWiki
+        ? `<span style="color:#666">${esc(domain)}</span>`
+        : `${d.author ? esc(d.author) + (dateStr ? ' · ' + dateStr : '') : dateStr || ''}${domainHtml}`;
+      const openHtml = withOpenButton
+        ? `<a href="${esc(d.id)}" target="_blank" rel="noopener" style="display:block;margin-top:10px;padding:8px;background:#3a3a5c;color:#ddd;text-decoration:none;border-radius:4px;font-size:12px;text-align:center;font-weight:bold;">Open article →</a>`
+        : '';
+      return `<strong>${esc(d.label)}</strong><br>${metaHtml}${tagsHtml}${blurbHtml}{% if include.test_mode %}${testInfoHtml}{% endif %}${openHtml}`;
+    }
+
+    function showNodeTooltip(event, d, nodeEl, withOpenButton) {
+      hoveredNode = d;
+      applyHoverEffect(nodeEl, d);
+      tooltip.innerHTML = buildTooltipHtml(d, withOpenButton);
+      tooltip.style.display = 'block';
+      // Open button needs to be tappable; default is pointer-events: none.
+      tooltip.style.pointerEvents = withOpenButton ? 'auto' : 'none';
+      positionTooltip(event);
+    }
+
+    function hideNodeTooltip(d) {
+      hoveredNode = null;
+      if (d) clearHoverEffect(d);
+      tooltip.style.display = 'none';
+      tooltip.style.pointerEvents = 'none';
+    }
+
+    if (hasHover) {
+      nodeG
+        .on('mouseenter', function (event, d) { showNodeTooltip(event, d, this, false); })
+        .on('mousemove', positionTooltip)
+        .on('mouseleave', function (event, d) { hideNodeTooltip(d); })
+        .on('click', (event, d) => { event.stopPropagation(); window.open(d.id, '_blank'); });
+    } else {
+      // Touch: tap pins tooltip with Open button. Re-tapping the same node, or
+      // tapping the graph background, dismisses it.
+      nodeG.on('click', function (event, d) {
+        event.stopPropagation();
+        if (hoveredNode && hoveredNode.id === d.id) {
+          hideNodeTooltip(d);
+        } else {
+          if (hoveredNode) clearHoverEffect(hoveredNode);
+          showNodeTooltip(event, d, this, true);
         }
-        const dateStr = d.date
-          ? new Date(d.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
-          : '';
-        const tagsHtml = (d.tags || []).length
-          ? `<br><span style="color:#888">${d.tags.join(', ')}</span>` : '';
-        const blurbHtml = d.blurb
-          ? `<br><span style="color:#aaa;font-style:italic">${esc(d.blurb)}</span>` : '';
-        {% if include.test_mode %}
-        let testInfoHtml = '';
-        if (TEST_MODE) {
-          const primaryCluster = (d.tags || []).find(t => SUPER_TAGS.has(t)) || '—';
-          const crossRefs = crossClusterRefCount.get(d.id) || 0;
-          testInfoHtml = `<br><span style="color:#555">── test info ──</span>`
-            + `<br><span style="color:#999">category: ${esc(d.testCategory || '?')}</span>`
-            + `<br><span style="color:#999">primary cluster: ${esc(primaryCluster)}</span>`
-            + `<br><span style="color:#999">cross-cluster refs: ${crossRefs}${crossRefs > 0 ? ' ⚠' : ''}</span>`;
-        }
-        {% endif %}
-        const domain = d.self ? null : (() => { try { const parts = new URL(d.id).hostname.split('.'); return parts.slice(-2).join('.'); } catch { return null; } })();
-        const domainHtml = domain ? `<br><span style="color:#666">${esc(domain)}</span>` : '';
-        const isWiki = domain === 'wikipedia.org';
-        const metaHtml = isWiki
-          ? `<span style="color:#666">${esc(domain)}</span>`
-          : `${d.author ? esc(d.author) + (dateStr ? ' · ' + dateStr : '') : dateStr || ''}${domainHtml}`;
-        tooltip.innerHTML = `<strong>${esc(d.label)}</strong><br>${metaHtml}${tagsHtml}${blurbHtml}{% if include.test_mode %}${testInfoHtml}{% endif %}`;
-        tooltip.style.display = 'block';
-        positionTooltip(event);
-      })
-      .on('mousemove', positionTooltip)
-      .on('mouseleave', function (event, d) {
-        hoveredNode = null;
-        hoverCircleLayer.selectAll('circle').remove();
-        const lbl = labelById.get(d.id);
-        if (lbl) d3.select(lbl).style('font-weight', null);
-        if (runLabelOcclusion) runLabelOcclusion();
-        tooltip.style.display = 'none';
-      })
-      .on('click', (event, d) => { event.stopPropagation(); window.open(d.id, '_blank'); });
+      });
+    }
 
     function positionTooltip(event) {
       tooltip.style.left = Math.min(event.clientX + 14, window.innerWidth - 260) + 'px';
@@ -1255,9 +1300,6 @@
     // On touch devices a tap fires mouseenter but never mouseleave, so the
     // highlight would get stuck. Switch to click-to-toggle when hover isn't
     // available; the background click handler clears it when tapping away.
-    const hasHover = typeof window.matchMedia === 'function' &&
-                     window.matchMedia('(hover: hover)').matches;
-
     const rowOffset = Math.floor(gap / 2);
     labels.forEach((label, i) => {
       const c = d3.hsl(ARTICLE_COL);
