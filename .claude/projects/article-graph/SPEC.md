@@ -111,6 +111,13 @@ Hovering a node shows a tooltip with: title, author, full publication date, doma
 
 **Age legend** (bottom-left) — 6 color swatches showing how article color shifts from vivid purple (recent) to grey (old). Hidden on the smallest screen sizes.
 
+Hovering a swatch (or tapping on touch devices) emphasises every article in that age bracket by fading all other nodes, ref edges, and cluster circles. Own posts and Wikipedia articles are always treated as out-of-bracket since they don't get age coloring. The interaction model adapts to the device:
+
+- **Hover devices** — `mouseenter` on a swatch activates that bracket; moving between swatches switches brackets continuously; `mouseleave` on the legend clears.
+- **Touch devices** (detected via `matchMedia('(hover: hover)')`) — first tap activates, second tap on the same swatch toggles off, tap on a different swatch switches, and tap on the empty graph background clears.
+
+Disabled while a cluster is focused — `pointer-events: none` is applied to the legend so the cursor doesn't suggest interactivity. Cluster focus takes precedence; activating cluster focus also clears any in-flight age highlight.
+
 **Cluster legend** (bottom-right) — lists superclusters and orphan clusters only; subclusters are deliberately omitted. The legend is a navigation aid for the top-level shape of the graph — subclusters are a detail visible by zooming into their parent, not a separate destination. Each entry has a color swatch and the tag name. Hidden on the smallest screen sizes; auto-collapses on portrait orientation.
 
 **Cluster focus** — clicking a legend entry zooms the graph so that cluster fills ~70% of the viewport and fades all unrelated nodes and edges. Clicking the same entry again, or the background, resets to the full view. Node labels appear automatically when a cluster is focused, regardless of zoom level.

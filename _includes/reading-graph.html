@@ -98,6 +98,20 @@
     return c.formatHex();
   }
 
+  // Returns the age bracket index (0–5) matching the AGE_THRESHOLDS scale, or
+  // -1 for nodes that don't get age coloring (own posts, wikipedia, undated).
+  function ageBracketIndex(d) {
+    if (!d) return -1;
+    if (d.self) return -1;
+    if (d.id && d.id.includes('wikipedia.org')) return -1;
+    if (!d.date) return -1;
+    const ageMonths = (Date.now() - new Date(d.date).getTime()) / (1000 * 60 * 60 * 24 * 30.44);
+    for (let i = 0; i < AGE_THRESHOLDS.length; i++) {
+      if (ageMonths < AGE_THRESHOLDS[i]) return i;
+    }
+    return AGE_THRESHOLDS.length;
+  }
+
   const container = document.getElementById('graph-container');
   const tooltip   = document.getElementById('graph-tooltip');
 
@@ -125,6 +139,8 @@
   let activeMemberIds   = null; // Set of node IDs in focused cluster; null when no focus
   let runLabelOcclusion = null; // assigned by render(); invoked by zoom handler
   let focusScale        = null; // zoom scale used when a cluster was focused
+  let highlightAgeBracketFn = null; // assigned by render(); invoked by age legend hover
+  let clearAgeHighlightFn   = null; // assigned by render(); invoked by age legend mouseleave
   function readDimensions() {
     const rect = svg.node().getBoundingClientRect();
     W = rect.width; H = rect.height;
@@ -153,6 +169,7 @@
   let legendEl        = null;
   let clusterLegendEl = null;
   let activeTag       = null; // currently focused supercluster or orphan cluster tag
+  let activeAgeBracket = null; // index of hovered age legend swatch; null when none
 
   document.getElementById('zoom-in').addEventListener('click', () =>
     svg.transition().duration(300).call(zoom.scaleBy, 1.4));
@@ -675,6 +692,11 @@
     function focusTag(tag) {
       if (activeTag === tag) { resetFocus(); return; }
       activeTag = tag;
+      // Cluster focus overrides any in-flight age legend hover.
+      activeAgeBracket = null;
+      if (legendEl) {
+        d3.select(legendEl).style('pointer-events', 'none');
+      }
 
       // Member node IDs for this cluster (supercluster tagGroups already includes subcluster nodes)
       const memberIds = new Set((tagGroups[tag] || []).map(n => n.id));
@@ -712,6 +734,9 @@
       activeTag = null;
       activeMemberIds = null;
       focusScale = null;
+      if (legendEl) {
+        d3.select(legendEl).style('pointer-events', null);
+      }
 
       // Interrupt any in-flight transitions before starting new ones
       nodeG.interrupt();
@@ -735,6 +760,46 @@
         .style('font-weight', d => d === activeTag ? 'bold' : 'normal')
         .style('text-decoration', d => d === activeTag ? 'underline' : 'none');
     }
+
+    // ── Age legend hover ──────────────────────────────────────────────────
+    // Dim everything except articles in the hovered age bracket.
+    // Disabled while a cluster is focused (cluster focus takes precedence).
+    function highlightAgeBracket(idx) {
+      if (activeTag !== null) return;
+      if (activeAgeBracket === idx) return;
+      activeAgeBracket = idx;
+
+      nodeG.interrupt();
+      refLines.interrupt();
+
+      nodeG.transition().duration(200)
+        .style('opacity', d => ageBracketIndex(d) === idx ? 1 : 0.12);
+      refLines.transition().duration(200)
+        .style('opacity', l => {
+          const srcId = typeof l.source === 'object' ? l.source.id : l.source;
+          const tgtId = typeof l.target === 'object' ? l.target.id : l.target;
+          return ageBracketIndex(nodeById.get(srcId)) === idx &&
+                 ageBracketIndex(nodeById.get(tgtId)) === idx ? 1 : 0.04;
+        });
+
+      updateClusters();
+    }
+
+    function clearAgeHighlight() {
+      if (activeAgeBracket === null) return;
+      activeAgeBracket = null;
+
+      nodeG.interrupt();
+      refLines.interrupt();
+
+      nodeG.transition().duration(200).style('opacity', 1);
+      refLines.transition().duration(200).style('opacity', 1);
+
+      updateClusters();
+    }
+
+    highlightAgeBracketFn = highlightAgeBracket;
+    clearAgeHighlightFn   = clearAgeHighlight;
 
     const sim = d3.forceSimulation(nodes)
       .force('link',           d3.forceLink(refLinks).id(d => d.id).distance(40).strength(l => {
@@ -768,7 +833,10 @@
       .attr('width', VW).attr('height', VH)
       .attr('fill', 'transparent')
       .style('cursor', 'default')
-      .on('click', () => { if (activeTag) resetFocus(); });
+      .on('click', () => {
+        if (activeTag) resetFocus();
+        if (activeAgeBracket !== null) clearAgeHighlight();
+      });
 
     // Layers (back to front)
     const clusterLayer      = g.append('g');
@@ -932,6 +1000,7 @@
       clusterData.forEach(d => { clusterCircle[d.tag] = { cx: d.cx, cy: d.cy, r: d.r }; });
 
       const highlightSet = activeTag ? getHighlightTagsForFocus(activeTag) : null;
+      const ageDimmed    = activeAgeBracket !== null;
 
       clusterLayer.selectAll('circle')
         .data(clusterData, d => d.tag)
@@ -940,7 +1009,7 @@
         .attr('stroke',           {% if include.test_mode %}d => TEST_MODE ? (SUPER_TAGS.has(d.tag) ? '#4a80e0' : '#e04a4a') : (highlightSet ? (highlightSet.has(d.tag) ? tagColor[d.tag] : tagColor[d.tag] + '25') : tagColor[d.tag] + '60'){% else %}d => highlightSet ? (highlightSet.has(d.tag) ? tagColor[d.tag] : tagColor[d.tag] + '25') : tagColor[d.tag] + '60'{% endif %})
         .attr('stroke-width',     {% if include.test_mode %}d => TEST_MODE ? 2 : (highlightSet && highlightSet.has(d.tag) ? 2.5 : 1.5){% else %}d => highlightSet && highlightSet.has(d.tag) ? 2.5 : 1.5{% endif %})
         .attr('stroke-dasharray', {% if include.test_mode %}d => TEST_MODE && SUPER_TAGS.has(d.tag) ? '6 3' : null{% else %}null{% endif %})
-        .style('opacity',         d => highlightSet ? (highlightSet.has(d.tag) ? 1 : 0.2) : 1)
+        .style('opacity',         d => highlightSet ? (highlightSet.has(d.tag) ? 1 : 0.2) : (ageDimmed ? 0.2 : 1))
         .attr('cx', d => d.cx)
         .attr('cy', d => d.cy)
         .attr('r',  d => d.r);
@@ -953,7 +1022,7 @@
         .attr('text-anchor', 'middle')
         .style('pointer-events', 'none')
         .style('display',    W < 415 ? 'none' : null)
-        .style('opacity',    d => highlightSet ? (highlightSet.has(d.tag) ? 1 : 0.15) : 1)
+        .style('opacity',    d => highlightSet ? (highlightSet.has(d.tag) ? 1 : 0.15) : (ageDimmed ? 0.15 : 1))
         .text(d => d.tag)
         .attr('x', d => d.cx)
         .attr('y', d => d.cy + d.r - 8);
@@ -1173,32 +1242,65 @@
       .style('position', 'absolute')
       .style('bottom', '16px')
       .style('left', '16px')
-      .style('pointer-events', 'none');
+      .on('mouseleave', () => clearAgeHighlightFn && clearAgeHighlightFn());
     legendEl = legend.node();
 
     legend.append('text')
       .text('Article age')
       .attr('x', 0).attr('y', 10)
       .attr('fill', '#888')
-      .attr('font-size', '10px');
+      .attr('font-size', '10px')
+      .style('pointer-events', 'none');
 
+    // On touch devices a tap fires mouseenter but never mouseleave, so the
+    // highlight would get stuck. Switch to click-to-toggle when hover isn't
+    // available; the background click handler clears it when tapping away.
+    const hasHover = typeof window.matchMedia === 'function' &&
+                     window.matchMedia('(hover: hover)').matches;
+
+    const rowOffset = Math.floor(gap / 2);
     labels.forEach((label, i) => {
       const c = d3.hsl(ARTICLE_COL);
       c.s = SAT_FACTORS[i];
       c.l = LIT_FACTORS[i];
       const y = 16 + i * (swatchH + gap);
 
-      legend.append('rect')
+      const row = legend.append('g').style('cursor', 'pointer');
+
+      if (hasHover) {
+        row.on('mouseenter', () => highlightAgeBracketFn && highlightAgeBracketFn(i));
+      } else {
+        row.on('click', (event) => {
+          event.stopPropagation();
+          if (activeAgeBracket === i) {
+            if (clearAgeHighlightFn) clearAgeHighlightFn();
+          } else if (highlightAgeBracketFn) {
+            highlightAgeBracketFn(i);
+          }
+        });
+      }
+
+      // Transparent hit area spans the full row (including the half-gap above
+      // and below) so adjacent swatch rows touch — moving between brackets
+      // updates the active bracket continuously without any dead zones.
+      row.append('rect')
+        .attr('x', 0).attr('y', y - rowOffset)
+        .attr('width', legendW).attr('height', swatchH + gap)
+        .attr('fill', 'transparent');
+
+      row.append('rect')
         .attr('x', 0).attr('y', y)
         .attr('width', swatchW).attr('height', swatchH)
         .attr('rx', 2)
-        .attr('fill', c.formatHex());
+        .attr('fill', c.formatHex())
+        .style('pointer-events', 'none');
 
-      legend.append('text')
+      row.append('text')
         .text(label)
         .attr('x', swatchW + 5).attr('y', y + swatchH - 1)
         .attr('fill', '#888')
-        .attr('font-size', '10px');
+        .attr('font-size', '10px')
+        .style('pointer-events', 'none');
     });
   }
 
@@ -1219,6 +1321,9 @@
       activeMemberIds = null;
       focusScale = null;
       runLabelOcclusion = null;
+      activeAgeBracket = null;
+      highlightAgeBracketFn = null;
+      clearAgeHighlightFn = null;
       zoom.translateExtent([[-VW, -VH], [2 * VW, 2 * VH]]);
       svg.call(zoom.transform, d3.zoomIdentity.translate(W / 2, H / 2).scale(INIT_ZOOM).translate(-VW / 2, -VH / 2));
       if (currentSim) { currentSim.stop(); currentSim = null; }
