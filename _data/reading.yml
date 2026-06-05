@@ -625,3 +625,12 @@
   blurb: "Anthropic's analysis of labor market impacts of AI."
   tags: [career, jobs-impact]
   refs: []
+
+- title: "After Automation"
+  url: "https://every.to/p/after-automation"
+  author: "Dan Shipper"
+  domain: every.to
+  date: "2026-05-21"
+  blurb: "Arguing that AI progress creates more work for humans, not less."
+  tags: [career, jobs-impact]
+  refs: ["https://www.anthropic.com/research/labor-market-impacts"]
