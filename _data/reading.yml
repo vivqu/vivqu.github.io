@@ -129,7 +129,7 @@
   url: "https://github.com/tailwindlabs/tailwindcss.com/pull/2388"
   author: "Tailwind Labs"
   domain: github.com
-  tags: [ecosystem, debates]
+  tags: [ecosystem, open-source]
   date: "2025-11-18"
   blurb: "Discussion on the impact of AI coding agents on Tailwind's economics."  
   refs: []
@@ -138,7 +138,7 @@
   url: "https://github.com/tldraw/tldraw/issues/8082"
   author: "tldraw"
   domain: github.com
-  tags: [ecosystem, debates]
+  tags: [ecosystem, open-source]
   date: "2026-02-25"
   blurb: "Tldraw (jokingly) proposes moves its test suite to a private repo to prevent AI copycat frameworks."
   refs: []
@@ -203,7 +203,7 @@
   domain: medium.com
   date: "2026-01-29"
   blurb: "Predicting what kinds of software will survive."
-  tags: [future-of-coding, open-source]
+  tags: [future-of-coding]
   refs: []
 
 - title: "chardet: No right to relicense this project"
@@ -212,7 +212,7 @@
   domain: github.com
   date: "2026-03-04"
   blurb: "Relicensing and the legalities of using AI to generate a 'clean room' reimplementation."
-  tags: [ecosystem, debates]
+  tags: [ecosystem, open-source]
   refs: []
 
 - title: "Software Bonkers"
@@ -550,7 +550,7 @@
   domain: youtube.com
   date: "2026-04-12"
   blurb: "Non-programmers released CorridorKey, a green screen keying tool that often outperforms other existing tools."
-  tags: [future-of-coding, open-source]
+  tags: [future-of-coding]
   refs: []
 
 - title: "Why can't they just...? Revisited"
@@ -587,7 +587,7 @@
   domain: cloudflare.com
   date: "2026-02-24"
   blurb: "How Cloudflare rebuilt Next.js with AI and kicked off a firestorm."
-  tags: [ecosystem, debates]
+  tags: [ecosystem, open-source]
   refs: []
 
 - title: "Cloudflare rewrites Next.js as AI rewrites commercial open source"
@@ -634,3 +634,11 @@
   blurb: "Arguing that AI progress creates more work for humans, not less."
   tags: [career, jobs-impact]
   refs: ["https://www.anthropic.com/research/labor-market-impacts"]
+
+- title: "Changing How We Develop Ladybird"
+  url: "https://ladybird.org/posts/changing-how-we-develop-ladybird/"
+  author: "Andreas Kling"
+  domain: ladybird.org
+  date: "2026-06-05"
+  blurb: "Ladybird open source browser project will no longer accept pull requests."
+  tags: [ecosystem, open-source]
