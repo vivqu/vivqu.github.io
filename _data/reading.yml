@@ -642,3 +642,12 @@
   date: "2026-06-05"
   blurb: "Ladybird open source browser project will no longer accept pull requests."
   tags: [ecosystem, open-source]
+
+- title: "Google Is Quietly Buying Code From Play Store Developers to Train AI"
+  url: "https://www.404media.co/google-is-quietly-buying-code-from-play-store-developers-to-train-ai/"
+  author: "Jason Koebler"
+  domain: 404media.co
+  date: "2026-06-02"
+  blurb: "Google is quietly paying developers for access to their mobile codebases."
+  tags: [capabilities, mobile]
+  refs: []
