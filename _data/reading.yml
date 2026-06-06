@@ -596,7 +596,7 @@
   domain: pragmaticengineer.com
   date: "2026-03-05"
   blurb: "A recap of the Cloudflare Next.js fiasco."
-  tags: [ecosystem, debates]
+  tags: [ecosystem, open-source, debates]
   refs: ["https://blog.cloudflare.com/vinext/"]
 
 - title: "Using encapsulated development to code on my phone"
