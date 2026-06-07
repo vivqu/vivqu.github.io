@@ -350,15 +350,6 @@
   tags: [capabilities, mobile]
   refs: []
 
-- title: "Claude is an Electron App because we’ve lost native"
-  url: "https://tonsky.me/blog/fall-of-native/"
-  author: "Nikita Prokopov"
-  domain: tonsky.me
-  date: "2026-03-03"
-  blurb: "Arguing that native apps already lost to web apps."
-  tags: [capabilities, mobile]
-  refs: ["https://www.dbreunig.com/2026/02/21/why-is-claude-an-electron-app.html"]
-
 - title: "Open Source in the age of AI"
   url: "https://john.onolan.org/ecosystem-in-the-age-of-ai/"
   author: "John O'Nolan"
