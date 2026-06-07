@@ -54,6 +54,29 @@ ul {
   }
 }
 
+.about-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  float: right;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 767px) {
+  .about-content {
+    margin-top: 0 !important;
+  }
+
+  .about-photo {
+    width: 112px;
+    height: 112px;
+    float: none;
+    display: block;
+    margin: 0 auto 0.25em;
+  }
+}
+
 p {
   margin-block-start: 1em;
   margin-block-end: 1em;
