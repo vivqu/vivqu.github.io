@@ -220,7 +220,7 @@ In hindsight, it's not surprising that this phase took 3x as long as the plannin
 <br />
 # Sailing on the jagged frontier
 
-In many ways, this is a perfect demonstration in the [jagged frontier](https://www.oneusefulthing.org/p/the-shape-of-ai-jaggedness-bottlenecks) of coding agents. AI is an incredibly beneficial instrument that made it faster and easier for me to build my project and to more quickly understand the D3 framework. But unless there's a true breakthrough in AI capabilities, these agents will never replace the need for human with an accurate mental model of the system. 
+In many ways, this is a perfect demonstration in the [jagged frontier](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321) of coding agents. AI is an incredibly beneficial instrument that made it faster and easier for me to build my project and to more quickly understand the D3 framework. But unless there's a true breakthrough in AI capabilities, these agents will never replace the need for human with an accurate mental model of the system. 
 
 Without humans in the loop, it would not have been possible for the agents alone to build my reading graph to the level of high quality I demanded, not to mention scale it correctly to increasing content node density.
 

@@ -569,7 +569,7 @@
   domain: papers.ssrn.com
   date: "2023-09-18"
   blurb: "Jaggedness in model capabilities."
-  tags: [capabilities]
+  tags: [future-of-coding]
   refs: []
 
 - title: "How we rebuilt Next.js with AI in one week"
@@ -686,7 +686,7 @@
   date: "2026-06-07"
   blurb: "Navigating uncharted waters to build a cool little tool."
   tags: [future-of-coding, workflows]
-  refs: []
+  refs: ["https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321"]
 
 - title: "My mobile vibe coding setup"
   url: "/blog/2025/11/30/vibe-coding-setup/"
@@ -695,7 +695,7 @@
   date: "2025-11-30"
   blurb: "Building a home-cooked mobile app."
   tags: [capabilities, mobile]
-  refs: []
+  refs: ["/blog/2025/11/23/mobile-coding-agents/"]
 
 - title: "Why are mobile coding agents worse?"
   url: "/blog/2025/11/23/mobile-coding-agents/"
