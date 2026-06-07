@@ -470,7 +470,7 @@
   domain: normaltech.ai
   date: "2026-04-16"
   blurb: "The case for open-world evals and publishing a simple iOS app to the App Store."
-  tags: [capabilities, mobile]
+  tags: [capabilities, mobile, evals]
   refs: ["https://cruxevals.com/"]
 
 - title: "CRUX Evals"
@@ -650,4 +650,31 @@
   date: "2026-06-02"
   blurb: "Google is quietly paying developers for access to their mobile codebases."
   tags: [capabilities, mobile]
+  refs: []
+
+- title: "Building iOS Apps with Agents"
+  url: "/blog/2026/05/24/building-ios-apps-with-agents/"
+  author: "Vivian Qu"
+  domain: self
+  date: "2026-05-24"
+  blurb: "Talk on coding agent workflows for mobile, covering verification loops, scoping, and a getting-started SwiftUI toolkit."
+  tags: [capabilities, mobile]
+  refs: ["https://developer.android.com/bench", "https://rn-evals.vercel.app/"]
+
+- title: "AndroidBench"
+  url: "https://developer.android.com/bench"
+  author: "Google"
+  domain: developer.android.com
+  date: "2026-03-10"
+  blurb: "First comprehensive official benchmark for mobile development, surfacing where coding agents still struggle on Android tasks."
+  tags: [capabilities, mobile, evals]
+  refs: []
+
+- title: "React Native Evals"
+  url: "https://rn-evals.vercel.app/"
+  author: "Callstack"
+  domain: rn-evals.vercel.app
+  date: "2026-03-10"
+  blurb: "Benchmark suite for React Native coding agents, focused on UI/UX behaviors like animation, async, and navigation."
+  tags: [capabilities, mobile, evals]
   refs: []
