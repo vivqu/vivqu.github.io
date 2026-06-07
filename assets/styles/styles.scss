@@ -358,6 +358,7 @@ nav > p {
   .masthead-links {
     margin-top: 20px;
     display: flex;
+    justify-content: space-between;
   }
 
   .masthead-links h4 {
@@ -365,7 +366,7 @@ nav > p {
     display: flex;
     flex-shrink: 1;
     padding-left: 0px;
-    padding-right: 25px;
+    padding-right: 0px;
   }
 
   .masthead p {
@@ -376,6 +377,10 @@ nav > p {
 }
 
 @media only screen and (max-width: 414px) {
+  .masthead-links h4.masthead-subscribe {
+    display: none;
+  }
+
   nav.masthead {
     margin-block-start: 1em;
   }
@@ -383,17 +388,15 @@ nav > p {
   .masthead-links {
     margin-top: 20px;
     display: flex;
-    align-content: flex-start;
-    justify-content: center;
-    width: 80%;
-    align-self: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .masthead-links h4 {
-    min-width: 60px;
-    padding-left: 5px;
-    padding-right: 5px;
-    width: 30%;
+    width: auto;
+    min-width: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .masthead p {
