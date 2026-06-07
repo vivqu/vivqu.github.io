@@ -374,7 +374,7 @@
   domain: lalitm.com
   date: "2026-04-05"
   blurb: "In-depth breakdown of the pros and cons of AI coding agents for building an open source project."
-  tags: [ecosystem, projects]
+  tags: [future-of-coding, workflows]
   refs: []
 
 - title: "How Claude Code Builds a System Prompt"
@@ -496,7 +496,7 @@
   domain: emilkowal.ski
   date: "2026-03-25"
   blurb: "Creating Claude skills to encode UX taste into software."
-  tags: [career, design]
+  tags: [future-of-coding, workflows]
   refs: []
 
 - title: "Don't Use AI to Do This"
@@ -596,7 +596,16 @@
   domain: maryrosecook.com
   date: "2026-05-26"
   blurb: "Coding on the phone with tight verification feedback loop."
-  tags: [future-of-coding, home-cooked]
+  tags: [future-of-coding, workflows]
+  refs: []
+
+- title: "Code generation that just works"
+  url: "https://maryrosecook.com/blog/post/code-generation-that-just-works"
+  author: "Mary Rose Cook"
+  domain: maryrosecook.com
+  date: "2026-04-01"
+  blurb: "Making a game-making tool with agents."
+  tags: [future-of-coding, workflows]
   refs: []
 
 - title: "Introducing talkie: a 13B vintage language model from 1930"
@@ -648,7 +657,7 @@
   author: "Vivian Qu"
   domain: self
   date: "2026-05-24"
-  blurb: "Talk on coding agent workflows for mobile, covering verification loops, scoping, and a getting-started SwiftUI toolkit."
+  blurb: "Vibe-coding mobile apps by closing the loop."
   tags: [capabilities, mobile]
   refs: ["https://developer.android.com/bench", "https://rn-evals.vercel.app/"]
 
@@ -657,7 +666,7 @@
   author: "Google"
   domain: developer.android.com
   date: "2026-03-10"
-  blurb: "First comprehensive official benchmark for mobile development, surfacing where coding agents still struggle on Android tasks."
+  blurb: "First Android development coding benchmark."
   tags: [capabilities, mobile, evals]
   refs: []
 
@@ -666,6 +675,33 @@
   author: "Callstack"
   domain: rn-evals.vercel.app
   date: "2026-03-10"
-  blurb: "Benchmark suite for React Native coding agents, focused on UI/UX behaviors like animation, async, and navigation."
+  blurb: "React Native coding benchmark."
   tags: [capabilities, mobile, evals]
+  refs: []
+
+- title: "The problem with dead reckoning"
+  url: "/blog/2026/06/07/dead-reckoning/"
+  author: "Vivian Qu"
+  domain: self
+  date: "2026-06-07"
+  blurb: "Navigating uncharted waters to build a cool little tool."
+  tags: [future-of-coding, workflows]
+  refs: []
+
+- title: "My mobile vibe coding setup"
+  url: "/blog/2025/11/30/vibe-coding-setup/"
+  author: "Vivian Qu"
+  domain: self
+  date: "2025-11-30"
+  blurb: "Building a home-cooked mobile app."
+  tags: [capabilities, mobile]
+  refs: []
+
+- title: "Why are mobile coding agents worse?"
+  url: "/blog/2025/11/23/mobile-coding-agents/"
+  author: "Vivian Qu"
+  domain: self
+  date: "2025-11-23"
+  blurb: "Challenges in AI-assisted mobile development."
+  tags: [capabilities, mobile]
   refs: []
