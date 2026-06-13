@@ -31,12 +31,15 @@ Well, yes and no. Like [everything](/blog/2026/05/24/building-ios-apps-with-agen
 <br />
 # What it does
 
-The reading graph is made up of content nodes which represent links to specific articles, essays, or papers on AI. You can hover over a node to see more details on the piece. Clicking on the node takes you directly to the source. Each node is colored based on when it was published, so you can easily see which articles are recent and which are older. Nodes can link to each other, which is represented by a dotted line between nodes. The article being referenced (the "sink") is larger in size, indicating that being referenced by the other node (the "source").
+The reading graph is made up of content nodes which represent links to specific articles, essays, or papers on AI. You can hover over a node to see more details on the piece. Clicking on the node takes you directly to the source. 
 
 <br />
 ![link-refs](/assets/img/posts/dead-reckoning/link-refs.png)
 *Particularly popular or noteworthy articles have a lot of references/citations.*
 <br />
+
+Each node is colored based on when it was published, so you can easily see which articles are recent and which are older. Nodes can link to each other, which is represented by a dotted line between nodes. The article being linked (the "sink") is larger in size, indicating that it's being referenced by the other node (the "source").
+
 
 The visuals of a graph with connected nodes was inspired by the [Obsidian graph view](https://obsidian.md/help/plugins/graph), which visualizes the relationships between notes in your collection. Lines here represent internal links between two notes.
 
@@ -49,6 +52,8 @@ Nodes are clustered by categories or themes. The graph supports two levels of gr
 
 Subclusters can overlap if they share common nodes. There can also be "orphan nodes" and "orphan clusters" if there are no nodes or other clusters which share the same tags.
 
+I wanted to do something similar to Obsidian to unlock various ways of visually representing and conceptually classifying my reading on AI. The grouping and coloring based on recency already has been really helpful to reflect areas of my own interests. 
+
 <br />
 ![zooming-cluter](/assets/img/posts/dead-reckoning/zooming-cluster.gif)
 *Zooming in closer will cause the node titles to appear.*
@@ -60,8 +65,6 @@ The graph is dynamically generated based on simulated physics parameters which p
 ![graph-interaction](/assets/img/posts/dead-reckoning/graph-interaction.gif)
 *Pulling the nodes around doesn't really do anything, it's just fun.*
 <br />
-
-I wanted to do something similar to explore various ways of visually representing and conceptually classifying my reading on AI. The grouping and coloring based on recency already has been really helpful to reflect areas of my own interests. 
 
 I also added nodes representing my own writing, shown in gold, so that I can also see where I have contributed to the discourse. The visualization will also help me generate future ideas on what to think more about and write on, since I can see a dense concentration of nodes in one specific cluster.
 
@@ -77,7 +80,7 @@ The graph also adapts to small screen sizes by automatically hiding or transform
 *Cluster-only legend on iPhone 14 Pro Max. Minimized legend and button to open links on the node tooltips for iPad Air.*
 <br />
 
-The code is all publically accessible. You can read/clone/remix it [here](https://github.com/vivqu/vivqu.github.io/blob/master/.claude/projects/article-graph/SPEC.md).
+The code is all publicly accessible. You can read/clone/remix it [here](https://github.com/vivqu/vivqu.github.io/blob/master/.claude/projects/article-graph/SPEC.md).
 
 Now let's get into how I built it!
 
@@ -98,7 +101,7 @@ Let's get into why this was the case.
 
 Building this tool fell into three distinct phases: (1) planning and basic scaffolding, (2) supervised problem-solving, and (3) autonomous last mile improvements.
 
-Human supervision was required for both the initial planning and the supervised problem-solving stages, where I heavily troubleshooted the graph interactions, which ended up taking the bulk of project time.
+Human supervision was required for both the initial planning and the supervised problem-solving stages. During stage 2, I was heavily troubleshooting the graph interactions, which ended up taking the bulk of project time.
 
 <br />
 **Phase 1 (Planning and Basic Scaffolding)**: involved iterating with the coding agent (Claude Code running Opus 4.7) on a PLAN.md for execution and setting up the initial code structure with a small set of real content nodes. Overall, this phase took 2.5 hours to have the agent research the d3 libraries, manually find reference visualizations to use as references to the plan, mock up my intended UX, and prompt the agent to set up the scaffolding for the tool. At this point, it looked great for our small set of nodes.
@@ -139,17 +142,16 @@ I've learned a lot about AI workflows from both my personal hacking and my day j
 1. A clear, well-documented product spec
 2. Tests and verification harness to enable the agent to check it's work
 
-Generating a product spec is still an incredibly time-intensive, fundamentally _human_ process requiring multiple rounds of manual revision. It's an exercise in recording the goals, requirements, behavior, and motivations for your software product so that the coding agent can execute without having to guess the intent behind the request. See my [PLAN.md](https://github.com/vivqu/vivqu.github.io/blob/master/.claude/projects/article-graph/PLAN.md) for reference.
+Generating a product spec is still an incredibly time-intensive, fundamentally _human_ process requiring multiple rounds of manual revision. It's an exercise in recording the goals, requirements, behavior, and motivations for your software product so that the coding agent can execute without having to guess the intent behind the request.
 
 I've found that the more upfront time and energy is spent in the planning phase, the better the quality of the AI output. The agents still are not good at doing the kind of abstract [design thinking](/blog/2025/06/01/gen-ai-is-not-a-silver-bullet/) that the best experienced engineers and designers can do almost subconsciously. Its feeble attempts at guessing the right solution are sometimes comically bad.
 
-Once the plan is in place and a basic initial software scaffold is built, a testing harness is the next crucial piece of project tooling that must be added. This is both for AI agent productivity and for human sanity. Manual end-to-end feature and regression testing is the slowest part of any iteration loop, and making this process visible and accessible to the coding agent is the most powerful part of the workflow. The agent, which never gets tired or bored or distracted, is an incredible manual tester -- but **only if it is able to do the verification.**
+Once [the plan](https://github.com/vivqu/vivqu.github.io/blob/master/.claude/projects/article-graph/PLAN.md) is in place and a basic initial software scaffold is built, a testing harness is the next crucial piece of project tooling that must be added. This is both for AI agent productivity and for human sanity. Manual end-to-end feature and regression testing is the slowest part of any iteration loop, and making this process visible and accessible to the coding agent is the most powerful part of the workflow. The agent, which never gets tired or bored or hungry, is an incredible manual tester -- but **only if it is able to do the verification.**
 
-I created a [testing plan](https://github.com/vivqu/vivqu.github.io/blob/master/.claude/projects/article-graph/TEST_PLAN.md) to configure access to the web interface using [Playwright CLI](https://github.com/microsoft/playwright-cli) and outline how the agent should generate a large test data set. I included detailed instructions for the agent on where to store screenshots and when to clean them up. My goal was to build a verification harness that could scale to hundreds of content nodes but I didn't have a backlog of articles I could use for the initial data dump.
+I created a [testing plan](https://github.com/vivqu/vivqu.github.io/blob/master/.claude/projects/article-graph/TEST_PLAN.md) to configure access to the web interface using [Playwright CLI](https://github.com/microsoft/playwright-cli). I included detailed instructions for the agent on where to store screenshots and when to clean them up. My goal was to build a verification harness that could scale to hundreds of content nodes.
 
-I put the test data set on a local testing page for verification which only runs locally, with the jekyll bundler excludes it from the final published website.
+I didn't have an existing collection of articles that could represent all the possible edge cases, so I outlined how the agent should generate a large test data set. I put the test data set on a local testing page for verification which only runs locally, with the static site bundler excluding it from the final published website.
 
-<br />
 ![test-page](/assets/img/posts/dead-reckoning/test-page.png)
 *Testing page is loaded at /reading-test when run locally. The test data generated two months ago did a great job approximating of the real content I would eventually collect.*
 <br />
@@ -169,7 +171,7 @@ However, the ability to verify the website was not enough on it's own to build t
 
 # The problem with dead reckoning
 
-It turns out that scaling an interactive, physics-based simulation to even ~100 nodes is not easy, even with a fully set up verification harness. The fundamental gap here was that my initial spec focused on _product_ requirements and did not sufficiently detail how to build the graph using the _underlying framework constraints._
+It turns out that scaling an interactive, physics-based simulation to ~100 nodes is not easy, even with a fully set up verification harness. The fundamental gap here was that my initial spec focused on _product_ requirements and did not sufficiently detail how to build the graph using the _underlying framework constraints._
 
 D3 is an enormously flexible data visualization framework, but like any piece of software, it is built with certain assumptions and limitations baked into the platform. No software can be infinitely adapatable and perfectly suited for every single use case (and yes, that's true even for LLMs).
 
@@ -184,36 +186,36 @@ So as soon as I enabled the test data set, ramping up the content density, the g
 
 At risk of overusing this sailing metaphor, I was building this project using **dead reckoning**. This is a navigation method of used by ships before the invention of the marine chronometer in the late 1700s. Outside of sight of land or stars to anchor their position, ships were forced to calculate their position from a known starting point and navigate by keeping track of travel speed and the time elapsed. Longitude could not be determined without precise time-keeping or a fixed external reference. Ocean drifts inevitably introduced discrepancies on long journeys, with the errors compounding over time.
 
-My agent and I were navigating blind. Every undefined aspect or assumption about how the force simulation worked carried forward and multipled. I spent several conversational cycles (and thousands of tokens) just throwing the agent at the problem. It attempted to diagnose the problem multiple times and solve it, only to get stuck in reasoning loops. Sometimes it also claimed it solved it, only for me to check it's work, and find it obviously didn't work. 
+My agent and I were navigating blind. Every undefined aspect or assumption about how the force simulation worked carried forward and multipled. I spent several conversational cycles (and thousands of tokens) just throwing the agent at the problem. It attempted to diagnose the problem multiple times and solve it, only to get stuck in reasoning loops. Sometimes it also claimed it worked, only for me to check  and find it was obviously still broken. 
 
-We kept navigating in wrong directions. Even documenting the observed bugs and prompting the agent to [deeply investigate and reason through it's proposed fixes](https://github.com/vivqu/vivqu.github.io/blob/master/.claude/projects/article-graph/force-changes.md) didn't help resolve it.
+We kept navigating in wrong directions. The agent, even on deep research mode, with detailed prompts documenting the observed bugs and requests to [step through the implementation line-by-line](https://github.com/vivqu/vivqu.github.io/blob/master/.claude/projects/article-graph/force-changes.md) didn't help speed up resolution.
 
 <br />
 ![fixes-for-clusters](/assets/img/posts/dead-reckoning/fixes-for-clusters.png)
 *Visual graphic to summarize the multiple bugs with force interactions I gave to the agent.*
 <br />
 
-So after repeatedly failing at auto-fixing the force interactions between nodes, I decided to babysit the agent while it problem solved.
+So after repeatedly failing at auto-fixing the force interactions between nodes, I decided to babysit the agent directly.
 
-I started reading the agent's reasoning as it attempted to problem solve, and this supervision was both needed and extremely helpful. I was able to short-circuit some obvious dead-ends and redirect the agent to new directions to explore. I repeatedly instructed it to rewrite the simulation in a way that ended up being simpler and solved multiple problems at once. The agent kept defaulting to changing the parameters of the interaction forces, instead of taking a step back to consider the initial node placement or address implicit assumptions that made the simulation excessively complex.
+I read the agent's stream of reasoning as it attempted to problem solve, and this supervision was both needed and extremely helpful. I was able to short-circuit some obvious dead-ends and redirect the agent to new directions to explore. I repeatedly instructed it to rewrite the simulation in a way that ended up being simpler and solved multiple problems at once. The agent kept defaulting to changing the parameters of the interaction forces, instead of taking a step back to consider the initial node placement or address implicit assumptions that made the simulation excessively complex.
 
-At a meta level, what was happening was that I was slowly learning how the underlying D3 framework itself worked as I watched the agent's attempts to fix the bugs. I could see the levers and buttons the agent tried to interact with, as well as when it had to backtrack and reconsider. My conceptual framework was being assembled via the agent, and I had both an actual understanding of what was happening and the ability to make the right judgement calls. The entire [theory of the program](/blog/2026/03/25/writing-as-theory-building/) became fully built in my mind.
+At a meta level, what was happening was that by watching the agent's attempts to fix the bugs, I was slowly learning how the underlying D3 framework itself worked. I could see the levers and buttons the agent tried to interact with, as well as when it had to backtrack and reconsider. My conceptual framework was being assembled via the agent's reasoning, and pretty quickly I had acquired both an actual understanding of what was happening and the ability to make the right judgement calls. The entire [theory of the program](/blog/2026/03/25/writing-as-theory-building/) became fully built in my mind.
 
 <br />
 ![force-issues](/assets/img/posts/dead-reckoning/force-issues.png)
 *Dozens of rounds of attempted fixes and tests slowly revealed the underlying constraints I was working with. All of these screenshots are nodes and subclusters with incorrect behavior.*
 <br />
 
-It was a very fascinating experience. By the end, I built a fully working mental model of the system. I can tell you how the data is assembled and labeled, how the system does pre-processing to simplify the initial simulation state, how we preseed the nodes to reliably produce nice-looking results--especially for orphan nodes to not get trapped between superclusters. I can explain how each tick of graph simulation time causes the nodes within subclusters to pull together and the neighboring clusters to repel, how we've balanced the attraction used for reference link lines and and how we've tuned the overall graph spatial dimensions and zoom levels to best highlight the average clustering behavior.
+It was a fascinating experience. By the end, I built a fully working mental model of the system. I can tell you how the data is assembled and labeled, how the system does pre-processing to simplify the initial simulation state, how we preseed the nodes to reliably produce nice-looking results--especially for orphan nodes to not get trapped between superclusters. I can explain how each tick of graph simulation time causes the nodes within subclusters to pull together and the neighboring clusters to repel, how we've balanced the attraction used for reference link lines and and how we've tuned the overall graph spatial dimensions and zoom levels to best highlight the average clustering behavior.
 
-I also know about all the edge cases (aka bugs that I've just conceded to be part of the final product) which will still cause the graph to explode. Please don't judge me for occasional explosion that still may occur.
+I also know about all the edge cases (aka bugs that I've just conceded to be part of the final product) which will still cause the graph to explode. So please don't judge me for occasional explosion that still may occur.
 
 <br />
 ![exploding-graph](/assets/img/posts/dead-reckoning/exploding-graph.gif)
 *Pulling nodes too far to the edge of the canvas will sometimes cause catastrophic collapse.*
 <br />
 
-This is very much the operating behavior of a senior architect that is directing junior engineers on implementation. I know all the important aspects of the system, and yet I still have no idea about the specific force constants used or the particular D3 APIs that are being called. I don't need to know those details, because that's not the gap I needed to fill with critical reasoning.
+This is exactly the operating behavior of a senior architect that is directing junior engineers on implementation. I know all the important aspects of the system, and yet I can't tell you any of the specific force constants being used or how the particular D3 APIs are called. I don't need to know those details because that's not the gap in understanding that I am bridging.
 
 In hindsight, it's not surprising that this phase took 3x as long as the planning and final fixes stages. I was building the conceptual framework to find our real heading, providing the fixed references for the agents to stop navigating blindly.
 
@@ -233,4 +235,4 @@ But besides the learnings, it's also just fun to play around with my cool little
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 06/07/2026. v1 is 3,180 words and took 7.25 hours to write and edit.</footer>
+<footer>This article was last updated on 06/13/2026. v2 is 3,183 words and took 7.25 hours to write and edit.</footer>
