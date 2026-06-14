@@ -34,7 +34,13 @@
   url: "https://www.construction-physics.com/"
   domain: "construction-physics.com"
   description: "The economics of construction, housing policy, and mechanical processes."
-  category: "Science"
+  category: "Math & Science"
+
+- name: "Terry Tao"
+  url: "https://terrytao.wordpress.com/"
+  domain: "terrytao.wordpress.com"
+  description: "I can't pretend to comprehend most of the research here, but I try to follow along."
+  category: "Math & Science"
 
 - name: "Maggie Appleton"
   url: "https://maggieappleton.com/"
@@ -100,4 +106,10 @@
   url: "https://jasmi.news/"
   domain: "jasmi.news"
   description: "Insightful and personal journalism about AI and Silicon Valley culture."
+  category: "AI & Tech"
+
+- name: "charity.wtf"
+  url: "https://charitydotwtf.substack.com/"
+  domain: "charitydotwtf.substack.com"
+  description: "Really brilliant takes on observability and engineering management."
   category: "AI & Tech"
