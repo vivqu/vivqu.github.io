@@ -83,3 +83,21 @@
   domain: "onethingnewsletter.substack.com"
   description: "Newsletter on taste and cultural zeitgeist from Kyle Chayka & friends."
   category: "Culture"
+
+- name: "100 Rabbits"
+  url: "https://100r.co/site/home.html"
+  domain: "100r.co"
+  description: "Two-person art collective building video games and software on a boat."
+  category: "AI & Tech"
+
+- name: "Hillel Wayne"
+  url: "https://www.hillelwayne.com/"
+  domain: "hillelwayne.com"
+  description: "Great newsletter about formal methods, software practices, and the annual April Cools post."
+  category: "AI & Tech"
+
+- name: "Jasmine Sun"
+  url: "https://jasmi.news/"
+  domain: "jasmi.news"
+  description: "Independent journalist writing about AI and Silicon Valley culture."
+  category: "AI & Tech"
