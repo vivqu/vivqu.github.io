@@ -113,3 +113,9 @@
   domain: "charitydotwtf.substack.com"
   description: "Really brilliant takes on observability and engineering management."
   category: "AI & Tech"
+
+- name: "Platformer"
+  url: "https://www.platformer.news/"
+  domain: "platformer.news"
+  description: "Casey Newton reports on the latest AI & tech developments."
+  cateogry: "AI & Tech"
