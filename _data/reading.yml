@@ -203,7 +203,7 @@
   domain: medium.com
   date: "2026-01-29"
   blurb: "Predicting what kinds of software will survive."
-  tags: [future-of-coding]
+  tags: [future-of-coding, architecture]
   refs: []
 
 - title: "chardet: No right to relicense this project"
@@ -248,7 +248,7 @@
   domain: apenwarr.ca
   date: "2025-11-20"
   blurb: "LLMs interconnect anything to anything."
-  tags: [future-of-coding, systems]
+  tags: [future-of-coding, architecture]
   refs: []
 
 - title: "Home-Cooked Software and Barefoot Developers"
@@ -569,7 +569,7 @@
   domain: papers.ssrn.com
   date: "2023-09-18"
   blurb: "Jaggedness in model capabilities."
-  tags: [future-of-coding]
+  tags: [future-of-coding, workflows]
   refs: []
 
 - title: "How we rebuilt Next.js with AI in one week"
@@ -705,3 +705,21 @@
   blurb: "Challenges in AI-assisted mobile development."
   tags: [capabilities, mobile]
   refs: []
+
+- title: "The Generative Stack"
+  url: "https://aicoding.leaflet.pub/3miwhqqvwxc2x"
+  author: "Chad Fowler"
+  domain: "aicoding.leaflet.pub"
+  date: "2026-04-07"
+  blurb: "Create abstractions for each layer in the generative stack, so you don't get left behind when each layer evolves."
+  tags: [future-of-coding, architecture]
+  refs: []
+
+- title: "AI enthusiasts are in a race against time, AI skeptics are in a race against entropy"
+  url: "https://charitydotwtf.substack.com/p/ai-enthusiasts-are-in-a-race-against"
+  author: "Charity Majors"
+  domain: "charitydotwtf.substack.com"
+  date: "2026-06-02"
+  blurb: "The missing middle between AI enthusiasts and skeptics"
+  tags: [forecasting]
+  ref:s: []
