@@ -39,7 +39,7 @@
   url: "https://www.theatlantic.com/technology/2026/03/ai-boom-polycrisis/686559/?gift=nwn-guseqS6cY1kVeEKZAeB1EU9tGg8Uju7RCq6VZtk"
   author: "Matteo Wong and Charlie Warzel"
   domain: theatlantic.com
-  tags: [forecasting, skepticism, economics]
+  tags: [forecasting, skepticism]
   date: "2026-03-26"
   blurb: "Overview of the polycrisis linking the war with Iran to AI companies to the entire country's economy."
   refs: []
@@ -57,7 +57,7 @@
   url: "https://nolanlawson.com/2025/11/16/the-fate-of-small-open-source/"
   author: "Nolan Lawson"
   domain: nolanlawson.com
-  tags: [ecosystem, frameworks]
+  tags: [ecosystem, open-source, economics]
   date: "2025-11-16"
   blurb: "Is small open source dead? Big, inventive, and niche projects might still be safe."
   refs: []
@@ -66,7 +66,7 @@
   url: "https://aifoc.us/dead-framework-theory/"
   author: "Paul Kinlan"
   domain: aifoc.us
-  tags: [ecosystem, frameworks]
+  tags: [ecosystem, economics]
   date: "2025-10-12"
   blurb: "Framework success now depends on distribution by and through LLMs. Focus on building net new capabilities."
   refs: []
@@ -138,7 +138,7 @@
   url: "https://github.com/tldraw/tldraw/issues/8082"
   author: "tldraw"
   domain: github.com
-  tags: [ecosystem, open-source]
+  tags: [ecosystem, open-source, economics]
   date: "2026-02-25"
   blurb: "Tldraw (jokingly) proposes moves its test suite to a private repo to prevent AI copycat frameworks."
   refs: []
@@ -230,7 +230,7 @@
   domain: theatlantic.com
   date: "2026-03-17"
   blurb: "Why LLMs are not optimized for creative writing."
-  tags: [outcomes, creativity]
+  tags: [outcomes, writing]
   refs: []
 
 - title: "AI Where It Matters: Where, Why, and How Developers Want AI Support in Daily Work"
@@ -320,7 +320,7 @@
   domain: self
   date: "2026-02-22"
   blurb: "I don’t use AI shortcuts in my writing because the core purpose is to build my mental muscles. I need to be the one feeling the friction."
-  tags: [outcomes, creativity]
+  tags: [outcomes, writing]
   refs: []
 
 - title: "Programming (with AI agents) as theory building"
@@ -356,7 +356,7 @@
   domain: john.onolan.org
   date: "2026-02-26"
   blurb: "If code is cheap, does that mean everything will be open source?"
-  tags: [ecosystem, frameworks]
+  tags: [ecosystem, economics]
   refs: []
 
 - title: "Some Simple Economics of AGI"
@@ -416,7 +416,7 @@
   domain: gilest.org
   date: "2026-03-27"
   blurb: "AI does not know how to use subtlety."
-  tags: [outcomes, creativity]
+  tags: [outcomes, writing]
   refs: []
 
 - title: "What Are Chinese People Vibecoding?"
@@ -505,7 +505,7 @@
   domain: nytimes.com
   date: "2026-04-15"
   blurb: "Don't use AI for art but do use it to calculate when to buy onions. Chung-chung."
-  tags: [outcomes, creativity]
+  tags: [outcomes, writing]
   refs: []
 
 - title: "The term “AGI” is almost useless at this point"
@@ -614,7 +614,7 @@
   domain: talkie-lm.com
   date: "2026-04-01"
   blurb: "'Vintage' 13B-parameter language model trained on 260B tokens written before 1930."
-  tags: [capabilities, exploration]
+  tags: [capabilities, models]
   refs: []
 
 - title: "Labor market impacts of AI: A new measure and early evidence"
@@ -641,7 +641,7 @@
   domain: ladybird.org
   date: "2026-06-05"
   blurb: "Ladybird open source browser project will no longer accept pull requests."
-  tags: [ecosystem, open-source]
+  tags: [ecosystem, open-source, economics]
 
 - title: "Google Is Quietly Buying Code From Play Store Developers to Train AI"
   url: "https://www.404media.co/google-is-quietly-buying-code-from-play-store-developers-to-train-ai/"
@@ -723,3 +723,72 @@
   blurb: "The missing middle between AI enthusiasts and skeptics"
   tags: [forecasting]
   ref:s: []
+
+- title: "Running local models is good now"
+  url: "https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/"
+  author: "Vicki Boykis"
+  domain: "vickiboykis.com"
+  date: "2026-06-15"
+  blurb: "OSS models are now good enough to do agentic coding locally."
+  tags: [capabilities, models]
+  refs: []
+
+- title: "The Pressure"
+  url: "https://daniel.haxx.se/blog/2026/05/26/the-pressure/"
+  author: "Daniel Stenberg"
+  domain: "daniel.haxx.se"
+  date: "2026-05-26"
+  blurb: "Impact of LLM-generated (Mythos) security reports on curl"
+  tags: [ecosystem, open-source, security]
+  refs: []
+
+- title: "NHS Goes To War Against Open Source"
+  url: "https://shkspr.mobi/blog/2026/05/nhs-goes-to-war-against-open-source/"
+  author: "Terence Eden"
+  domain: "shkspr.mobi"
+  date: "2026-05-01"
+  blurb: "NHS is closing down all its OSS repositories due to Mythos fears."
+  tags: [ecosystem, open-source, security]
+  refs: []
+
+- title: "ChipotleAI Max"
+  url: "https://github.com/cyberpapiii/chipotlai-max"
+  author: "rob dezendorf"
+  domain: "github.com"
+  date: "2026-06-03"
+  blurb: "Project exposing the model powering Chipotle's PepperAI"
+  tags: [ecosystem, security]
+  refs: []
+
+- title: "Signs of AI writing"
+  url: "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing"
+  domain: "wikipedia.org"
+  date: "2026-05-20"
+  blurb: "List of AI writing hallmarks"
+  tags: [outcomes, writing, ai-voice]
+  refs: []
+
+- title: "Index of stylistic 'tics' and 'tells'"
+  url: "https://github.com/nostalgebraist/crammed-poetics/blob/main/catalogue.md"
+  domain: "github.com"
+  author: "nostalgebraist"
+  date: "2026-03-15"
+  blurb: "Index of AI stylistic tells"
+  tags: [outcomes, writing, ai-voice]
+  refs: []
+
+- title: "What is the kind of walking that made benches become men?"
+  url: "https://www.patreon.com/MaxRead/posts/what-is-kind-of-158691107"
+  author: "Max Read"
+  domain: "patreon.com"
+  blurb: "The author behind the AI-generated short story 'The Serpent in the Grove'."
+  tags: [outcomes, ai-voice]
+  refs: ["https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing", "https://github.com/nostalgebraist/crammed-poetics/blob/main/catalogue.md"]
+
+- title: "Em Dash Appreciation Society for Humans"
+  url: "https://em-dash-appreciation.org/"
+  domain: "em-dash-appreciation.org"
+  author: "Jed Hartman"
+  blurb: "Em dashes have been co-opted by generative AI as a sign of AI text, but humans still love and appreciate it."
+  tags: [outcomes, ai-voice]
+  refs: []

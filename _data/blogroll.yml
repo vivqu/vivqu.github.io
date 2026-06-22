@@ -119,3 +119,9 @@
   domain: "platformer.news"
   description: "Casey Newton reports on the latest AI & tech developments."
   category: "AI & Tech"
+
+- name: "Vicki Boykis"
+  url: "https://vickiboykis.com"
+  domain: "vickiboykis.com"
+  description: "Technical and creative insights from ML engineer Vicki."
+  category: "AI & Tech"
