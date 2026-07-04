@@ -161,15 +161,15 @@ The graph layout is computed by a D3 force simulation that runs when the page lo
 
 ### Tuning knobs
 
-Two constants in `_includes/reading-graph.html` are the intended dials for the two most common "the graph feels off on load" complaints. Both are safe to adjust — neither changes which nodes end up in which circles.
+Dials in `_includes/reading-graph.html`:
 
-**Breathing room / default zoom — `MIN_VW` / `MIN_VH`** (the virtual simulation canvas, near the top of the script). `VW`/`VH` are clamped to at least these values, and the canvas size drives two things at once: superclusters seed on a ring proportional to `VW` (so a bigger canvas spreads them farther apart), and `INIT_ZOOM` scales the whole `VW×VH` canvas to fit the viewport (so a bigger canvas loads more zoomed out). **If clusters look too large / crowded / overlapping on load, widen the canvas** (e.g. `1280×920`) — they get more margin between and around them without changing their actual radii.
-
-> Note: cluster circle *size* is force-determined (charge + collision + node count), **not** seed-determined. You cannot shrink a cluster by tightening the seed spread (`spreadR` in the seeding loop) — the settled radius is what it is. A *modest* `spreadR` reduction (e.g. `60/40` → `50/33`) just makes nodes start a little closer and is safe on a roomy canvas, but a *drastic* one (→ `36/24`, especially on a small canvas) knocks the layout into a worse equilibrium where clusters balloon and cross-cluster ref links stretch across the canvas. Adjust gently, and widen the canvas rather than tightening the seed if the goal is smaller-looking clusters.
-
-**Space between superclusters — seed ring + `superclusterProximityForce`.** Two constants set how far apart the top-level clusters sit: the supercluster seed ring (`VW * 0.27` in the seeding block, where each supercluster anchors) and the `minDist = cA.r + cB.r + <gap>` in `superclusterProximityForce` (the distance they repel to and get gently pulled toward). Raise **both together** for more space between clusters — the ring widens their anchors so the wider `minDist` isn't fighting an anchor pull holding them close. Watch for clusters clipping the canvas edge or crowding the legend if pushed too far.
-
-**Settle pace — `alphaDecay`** (chained onto the `forceSimulation`, alongside `velocityDecay`). This controls how quickly the simulation cools to rest. **Lower = slower, more gradual settle** (it stays active longer); higher = snappier. D3's default is `0.0228`; the graph runs slower than that for a calmer load animation. Below roughly `0.004` the drift starts to feel like it never fully stops. `velocityDecay` (friction per tick, default `0.4`) is a secondary dial — raise it for gentler per-frame motion.
+- **`#graph-container` `max-width`** — physical width of the graph box on the page (height auto-fills the viewport via `updateContainerHeight`).
+- **`MIN_VW` / `MIN_VH`** — virtual canvas floor; bigger = clusters spread farther apart and load more zoomed out, smaller = clusters fill the frame (don't go so small they crowd the walls).
+- **seed ring (`VW * 0.27`) + `minDist` gap in `superclusterProximityForce`** — space between superclusters; raise both together.
+- **`spreadR` (seeding loop)** — how tightly nodes start within a subcluster; adjust gently, and note it can't change the force-determined settled radius.
+- **initial `alpha`** — energy of the first ticks; lower softens the opening so big clusters don't pop oversized.
+- **`alphaDecay`** — settle speed; lower = slower, more gradual (below ~`0.004` it never quite stops).
+- **`velocityDecay`** — per-tick friction; higher = gentler motion.
 
 ---
 
