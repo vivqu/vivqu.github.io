@@ -57,7 +57,7 @@
   url: "https://nolanlawson.com/2025/11/16/the-fate-of-small-open-source/"
   author: "Nolan Lawson"
   domain: nolanlawson.com
-  tags: [ecosystem, open-source, economics]
+  tags: [ecosystem, open-source]
   date: "2025-11-16"
   blurb: "Is small open source dead? Big, inventive, and niche projects might still be safe."
   refs: []
@@ -66,7 +66,7 @@
   url: "https://aifoc.us/dead-framework-theory/"
   author: "Paul Kinlan"
   domain: aifoc.us
-  tags: [ecosystem, economics]
+  tags: [ecosystem, open-source]
   date: "2025-10-12"
   blurb: "Framework success now depends on distribution by and through LLMs. Focus on building net new capabilities."
   refs: []
@@ -138,7 +138,7 @@
   url: "https://github.com/tldraw/tldraw/issues/8082"
   author: "tldraw"
   domain: github.com
-  tags: [ecosystem, open-source, economics]
+  tags: [ecosystem, open-source, security]
   date: "2026-02-25"
   blurb: "Tldraw (jokingly) proposes moves its test suite to a private repo to prevent AI copycat frameworks."
   refs: []
@@ -356,7 +356,7 @@
   domain: john.onolan.org
   date: "2026-02-26"
   blurb: "If code is cheap, does that mean everything will be open source?"
-  tags: [ecosystem, economics]
+  tags: [ecosystem, open-source]
   refs: []
 
 - title: "Some Simple Economics of AGI"
@@ -791,4 +791,31 @@
   author: "Jed Hartman"
   blurb: "Em dashes have been co-opted by generative AI as a sign of AI text, but humans still love and appreciate it."
   tags: [outcomes, ai-voice]
+  refs: []
+
+- title: "Using SwiftUI to Build a Mac-assed App in 2026"
+  url: "https://pfandrade.me/blog/mac-assed-swiftui-app/"
+  domain: "pfandrade.me"
+  author: "Paulo Andrade"
+  date: "2026-05-06"
+  blurb: "SwiftUI doesn't work as it claims it should on Mac apps"
+  tags: [capabilities, mobile]
+  refs: []
+
+- title: "SwiftUI Only Makes It Easy to Develop Bad Apps"
+  url: "https://daringfireball.net/2026/06/swiftui_only_makes_it_easy_to_develop_bad_apps"
+  domain: "daringfireball.net"
+  author: "Jon Gruber"
+  date: "2026-06-07"
+  blurb: "Apple is dropping the ball on being able to build 'good idiomatically native apps'."
+  tags: [capabilities, mobile]
+  refs: ["https://pfandrade.me/blog/mac-assed-swiftui-app/"]
+
+- title: "Choosing to Stay Human"
+  url: "https://www.oneusefulthing.org/p/choosing-to-stay-human"
+  domain: "oneusefulthing.org"
+  author: "Ethan Mollick"
+  date: "2026-05-26"
+  blurb: "Make AI use a conscious choice."
+  tags: [outcomes, norms]
   refs: []

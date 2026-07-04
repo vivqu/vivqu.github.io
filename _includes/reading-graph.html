@@ -140,7 +140,7 @@
   // Mutable dimensions — updated by readDimensions() on load and on resize.
   // W/H are the real container pixels; VW/VH are the virtual simulation canvas,
   // clamped to a minimum so forces have enough room even on small screens.
-  const MIN_VW = 950, MIN_VH = 700;
+  const MIN_VW = 1180, MIN_VH = 850;
   let W, H, VW, VH, INIT_ZOOM;
   let currentZoomK      = 0;    // current zoom scale; must be declared before zoom setup
   let activeMemberIds   = null; // Set of node IDs in focused cluster; null when no focus
@@ -306,8 +306,8 @@
     superTagList.forEach((st, i) => {
       const angle = (i / superTagList.length) * 2 * Math.PI - Math.PI / 2;
       superSeedPos[st] = {
-        x: VW / 2 + Math.cos(angle) * VW * 0.22,
-        y: VH / 2 + Math.sin(angle) * VH * 0.22,
+        x: VW / 2 + Math.cos(angle) * VW * 0.27,
+        y: VH / 2 + Math.sin(angle) * VH * 0.27,
       };
     });
 
@@ -407,9 +407,9 @@
       const angle = subTag !== undefined ? subSeedAngle[subTag]
                   : ringNodeAngles[n.id] !== undefined ? ringNodeAngles[n.id]
                   : Math.random() * 2 * Math.PI;
-      const spreadR = subTag !== undefined ? 60 : 40;
-      n.x = seed.x + Math.cos(angle) * spreadR + (Math.random() - 0.5) * 30;
-      n.y = seed.y + Math.sin(angle) * spreadR + (Math.random() - 0.5) * 30;
+      const spreadR = subTag !== undefined ? 50 : 33;
+      n.x = seed.x + Math.cos(angle) * spreadR + (Math.random() - 0.5) * 22;
+      n.y = seed.y + Math.sin(angle) * spreadR + (Math.random() - 0.5) * 22;
     });
 
     const clusterCircle = {};
@@ -535,7 +535,7 @@
           const cA = clusterCircle[tA], cB = clusterCircle[tB];
           const dx = cB.cx - cA.cx, dy = cB.cy - cA.cy;
           const dist = Math.hypot(dx, dy) || 1;
-          const minDist = cA.r + cB.r + 50;
+          const minDist = cA.r + cB.r + 85;
           const nx = dx / dist, ny = dy / dist;
           if (dist > minDist) {
             const pull = (dist - minDist) * 0.008 * alpha;
@@ -832,8 +832,9 @@
       .force('ringOrbital',    () => sim && ringOrbitalForce(sim.alpha()))
       .force('nodeExclusion',  () => sim && nodeExclusionForce(sim.alpha()))
       .force('freeNode',       () => sim && freeNodeForce(sim.alpha()))
-      .alphaDecay(0.015)
-      .velocityDecay(0.45);
+      .alpha(0.4)
+      .alphaDecay(0.007)
+      .velocityDecay(0.52);
 
     // Background rect — catches clicks on empty canvas to reset focus
     g.append('rect')
@@ -1146,6 +1147,12 @@
     currentSim = sim;
     sim.on('tick', () => {
       const MAX_V = 25;
+      // Leash radius scales with the canvas rather than being hard-coded: cluster
+      // radius grows with node count, and the canvas (MIN_VW/MIN_VH) is scaled up as
+      // the reading list grows, so a canvas fraction tracks cluster size automatically.
+      // 0.3·min(VW,VH) sits comfortably above a healthy cluster (~180px today) yet well
+      // below the inter-cluster spacing, so it only ever catches genuine runaways.
+      const LEASH = 0.3 * Math.min(VW, VH);
       nodes.forEach(n => {
         // Cap velocity to prevent explosion when nodes start far apart (e.g. a
         // high-degree hub linked to nodes on the opposite side of the canvas).
@@ -1156,9 +1163,32 @@
         const v = Math.hypot(n.vx || 0, n.vy || 0);
         if (v > MAX_V) { n.vx = (n.vx / v) * MAX_V; n.vy = (n.vy / v) * MAX_V; }
 
+        // Leash: no node may sit absurdly far from its own cluster's center. A healthy
+        // cluster is ~180px in radius, so anything past LEASH is a runaway — a node (or
+        // whole subcluster) that a force flung across the canvas and that would otherwise
+        // stick there, stretching the supercluster circle to span everything (the rare
+        // "explosion"). Snap it back to the leash boundary and kill its velocity; normal
+        // forces recompact it from there. This hard-bounds cluster size no matter what
+        // the force interactions do.
+        const homeTag = (n.tags || []).find(t => superTagSet.has(t) && clusterCircle[t])
+                     || (n.tags || []).find(t => clusterCircle[t] && orphanClusterTags.includes(t));
+        if (homeTag) {
+          const c = clusterCircle[homeTag];
+          const lx = n.x - c.cx, ly = n.y - c.cy, ld = Math.hypot(lx, ly);
+          if (ld > LEASH) { n.x = c.cx + (lx / ld) * LEASH; n.y = c.cy + (ly / ld) * LEASH; n.vx = 0; n.vy = 0; }
+        }
+
         const r = nodeRadius(n);
-        n.x = Math.max(r + 4, Math.min(VW - r - 4, n.x));
-        n.y = Math.max(r + 4, Math.min(VH - r - 4, n.y));
+        const cx = Math.max(r + 4, Math.min(VW - r - 4, n.x));
+        const cy = Math.max(r + 4, Math.min(VH - r - 4, n.y));
+        // If a node reaches the canvas wall it's a runaway (clusters never touch the
+        // edge in a healthy layout). Zero its velocity so it can't keep sliding along
+        // the wall — that sliding is what accumulates into the axis-aligned chains and
+        // drags the whole cluster circle huge. Killed here, the inward centroid/boundary
+        // forces simply pull it back on the next tick.
+        if (cx !== n.x || cy !== n.y) { n.vx = 0; n.vy = 0; }
+        n.x = cx;
+        n.y = cy;
       });
 
       refLines
