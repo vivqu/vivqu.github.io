@@ -321,8 +321,35 @@
         (tagGroups[t] || []).length >= 2 &&
         (tagGroups[t] || []).every(n => superNodeIds.has(n.id))
       );
-      subTagsForSuper.forEach((subTag, i) => {
-        subSeedAngle[subTag] = (i / Math.max(subTagsForSuper.length, 1)) * 2 * Math.PI;
+      // Order subclusters so Venn-overlapping ones (sharing nodes) seed at ADJACENT
+      // angles and disjoint ones land apart. Assigning angles by iteration order can
+      // put two subclusters that overlap `open-source` on opposite sides of the
+      // supercluster; their shared nodes then get dragged violently across it on the
+      // first ticks (the ecosystem "expands superfast then settles" artifact). We
+      // seriate into a path: start from an overlap-graph endpoint (fewest partners)
+      // and greedily append whichever remaining subcluster shares the most nodes with
+      // the last placed, so a hub like open-source ends up between its two partners.
+      const idSets = {};
+      subTagsForSuper.forEach(t => { idSets[t] = new Set((tagGroups[t] || []).map(n => n.id)); });
+      const shares = (a, b) => { let s = 0; idSets[a].forEach(id => { if (idSets[b].has(id)) s++; }); return s; };
+      const deg = {};
+      subTagsForSuper.forEach(a => { deg[a] = subTagsForSuper.filter(b => b !== a && shares(a, b) > 0).length; });
+      const withPartners = subTagsForSuper.filter(t => deg[t] > 0);
+      const startPool = withPartners.length ? withPartners : subTagsForSuper;
+      let ordered = [];
+      if (startPool.length) {
+        const start = startPool.reduce((m, t) => deg[t] < deg[m] ? t : m, startPool[0]);
+        ordered = [start];
+        const remaining = subTagsForSuper.filter(t => t !== start);
+        while (remaining.length) {
+          const last = ordered[ordered.length - 1];
+          let bestIdx = 0, bestShare = -1;
+          remaining.forEach((t, idx) => { const s = shares(last, t); if (s > bestShare) { bestShare = s; bestIdx = idx; } });
+          ordered.push(remaining.splice(bestIdx, 1)[0]);
+        }
+      }
+      ordered.forEach((subTag, i) => {
+        subSeedAngle[subTag] = (i / Math.max(ordered.length, 1)) * 2 * Math.PI;
       });
     });
 
@@ -403,13 +430,27 @@
                  : orphanTag ? orphanSeedPos[orphanTag]
                  : { x: VW / 2 + Math.cos(freeAngle) * VW * 0.42,
                      y: VH / 2 + Math.sin(freeAngle) * VH * 0.42 };
-      const subTag = (n.tags || []).find(t => subSeedAngle[t] !== undefined);
-      const angle = subTag !== undefined ? subSeedAngle[subTag]
-                  : ringNodeAngles[n.id] !== undefined ? ringNodeAngles[n.id]
-                  : Math.random() * 2 * Math.PI;
-      const spreadR = subTag !== undefined ? 50 : 33;
-      n.x = seed.x + Math.cos(angle) * spreadR + (Math.random() - 0.5) * 22;
-      n.y = seed.y + Math.sin(angle) * spreadR + (Math.random() - 0.5) * 22;
+      const nodeSubTags = (n.tags || []).filter(t => subSeedAngle[t] !== undefined);
+      if (nodeSubTags.length > 0) {
+        // Seed at the average direction of ALL subclusters this node belongs to, so a
+        // Venn node (in 2+ overlapping subclusters, now adjacent) starts in the overlap
+        // region rather than dumped into one subcluster and yanked toward the other.
+        let dx = 0, dy = 0;
+        nodeSubTags.forEach(t => { dx += Math.cos(subSeedAngle[t]); dy += Math.sin(subSeedAngle[t]); });
+        const mag = Math.hypot(dx, dy);
+        if (mag < 0.2) { // subclusters roughly opposite — park near the supercluster center
+          n.x = seed.x + (Math.random() - 0.5) * 30;
+          n.y = seed.y + (Math.random() - 0.5) * 30;
+        } else {
+          n.x = seed.x + (dx / mag) * 50 + (Math.random() - 0.5) * 22;
+          n.y = seed.y + (dy / mag) * 50 + (Math.random() - 0.5) * 22;
+        }
+      } else {
+        const angle = ringNodeAngles[n.id] !== undefined ? ringNodeAngles[n.id]
+                    : Math.random() * 2 * Math.PI;
+        n.x = seed.x + Math.cos(angle) * 33 + (Math.random() - 0.5) * 22;
+        n.y = seed.y + Math.sin(angle) * 33 + (Math.random() - 0.5) * 22;
+      }
     });
 
     const clusterCircle = {};
@@ -1147,12 +1188,6 @@
     currentSim = sim;
     sim.on('tick', () => {
       const MAX_V = 25;
-      // Leash radius scales with the canvas rather than being hard-coded: cluster
-      // radius grows with node count, and the canvas (MIN_VW/MIN_VH) is scaled up as
-      // the reading list grows, so a canvas fraction tracks cluster size automatically.
-      // 0.3·min(VW,VH) sits comfortably above a healthy cluster (~180px today) yet well
-      // below the inter-cluster spacing, so it only ever catches genuine runaways.
-      const LEASH = 0.3 * Math.min(VW, VH);
       nodes.forEach(n => {
         // Cap velocity to prevent explosion when nodes start far apart (e.g. a
         // high-degree hub linked to nodes on the opposite side of the canvas).
@@ -1162,21 +1197,6 @@
         // accumulating in the other, forming the characteristic axis-aligned chains.
         const v = Math.hypot(n.vx || 0, n.vy || 0);
         if (v > MAX_V) { n.vx = (n.vx / v) * MAX_V; n.vy = (n.vy / v) * MAX_V; }
-
-        // Leash: no node may sit absurdly far from its own cluster's center. A healthy
-        // cluster is ~180px in radius, so anything past LEASH is a runaway — a node (or
-        // whole subcluster) that a force flung across the canvas and that would otherwise
-        // stick there, stretching the supercluster circle to span everything (the rare
-        // "explosion"). Snap it back to the leash boundary and kill its velocity; normal
-        // forces recompact it from there. This hard-bounds cluster size no matter what
-        // the force interactions do.
-        const homeTag = (n.tags || []).find(t => superTagSet.has(t) && clusterCircle[t])
-                     || (n.tags || []).find(t => clusterCircle[t] && orphanClusterTags.includes(t));
-        if (homeTag) {
-          const c = clusterCircle[homeTag];
-          const lx = n.x - c.cx, ly = n.y - c.cy, ld = Math.hypot(lx, ly);
-          if (ld > LEASH) { n.x = c.cx + (lx / ld) * LEASH; n.y = c.cy + (ly / ld) * LEASH; n.vx = 0; n.vy = 0; }
-        }
 
         const r = nodeRadius(n);
         const cx = Math.max(r + 4, Math.min(VW - r - 4, n.x));
