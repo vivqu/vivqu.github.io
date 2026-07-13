@@ -827,3 +827,19 @@
   date: "2026-07-12"
   blurb: "Terry Tao builds a small web visualizer and declarative language for number randomness"
   tags: [future-of-coding, experts-in-other-fields]
+
+- title: "Old and new apps, via modern coding agents"
+  url: "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/"
+  domain: "terrytao.wordpress.com"
+  author: "Terry Tao"
+  date: "2026-07-11"
+  blurb: "Old web page applets coming back to life via AI coding tools"
+  tags: [future-of-coding, archaeology]
+
+- title: "Banning AI in Law School: We've Seen This Before"
+  url: "https://hardcoresoftware.learningbyshipping.com/p/240-banning-ai-in-law-school-weve"
+  domain: "hardcoresoftware.learningbyshipping.com"
+  author: "Steven Sinofsky"
+  date: "2026-07-11"
+  blurb: "Harvard banned the use of personal computers back in 1982"
+  tags: [forecasting, history]
