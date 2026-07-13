@@ -541,7 +541,7 @@
   domain: youtube.com
   date: "2026-04-12"
   blurb: "Non-programmers released CorridorKey, a green screen keying tool that often outperforms other existing tools."
-  tags: [future-of-coding]
+  tags: [future-of-coding, experts-in-other-fields]
   refs: []
 
 - title: "Why can't they just...? Revisited"
@@ -819,3 +819,11 @@
   blurb: "Make AI use a conscious choice."
   tags: [outcomes, norms]
   refs: []
+
+- title: "A random variable visualizer"
+  url: "https://terrytao.wordpress.com/2026/07/12/a-random-variable-visualizer/"
+  domain: "terrytao.wordpress.com"
+  author: "Terry Tao"
+  date: "2026-07-12"
+  blurb: "Terry Tao builds a small web visualizer and declarative language for number randomness"
+  tags: [future-of-coding, experts-in-other-fields]
