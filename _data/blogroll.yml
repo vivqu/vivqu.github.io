@@ -125,3 +125,9 @@
   domain: "vickiboykis.com"
   description: "Technical and creative insights from ML engineer Vicki."
   category: "AI & Tech"
+
+- name: "Hardcore Software"
+  url: "https://hardcoresoftware.learningbyshipping.com/"
+  domain: "hardcoresoftware.learningbyshipping.com"
+  description: "Steven Sinofsky writes about his experiences at Microsoft during the PC revolution"
+  category: "AI & Tech"
