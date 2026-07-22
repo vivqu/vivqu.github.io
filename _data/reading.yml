@@ -843,3 +843,11 @@
   date: "2026-07-11"
   blurb: "Harvard banned the use of personal computers back in 1982"
   tags: [forecasting, history]
+
+- title: "Claude Code Can Now Build and Test iOS Apps in Apple's Simulator"
+  url: "https://www.macrumors.com/2026/07/21/claude-code-ios-simulator/"
+  domain: "macrumors.com"
+  author: "Juli Clover"
+  date: "2026-07-21"
+  blurb: "Anthropic can now work with the iOS simulator (use test users though!)"
+  tags: [capabilities, mobile]
