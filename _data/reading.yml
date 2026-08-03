@@ -851,3 +851,11 @@
   date: "2026-07-21"
   blurb: "Anthropic can now work with the iOS simulator (use test users though!)"
   tags: [capabilities, mobile]
+
+- title: "Protecting our FLOSS commons from LLMs"
+  url: "https://blog.codeberg.org/protecting-our-floss-commons-from-llms.html"
+  domain: "blog.codeberg.org"
+  author: "Codeberg"
+  date: "2026-07-23"
+  blurb: "Codeberg's decision to prohibit projects that mostly consist of generative-AI-written code sparked controversy and discussion."
+  tags: [ecosystem, open-source]
