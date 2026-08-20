@@ -859,3 +859,11 @@
   date: "2026-07-23"
   blurb: "Codeberg's decision to prohibit projects that mostly consist of generative-AI-written code sparked controversy and discussion."
   tags: [ecosystem, open-source]
+
+- title: "Open Source Must Be Fun (Or It Will Die)"
+  url: "https://mikemcquaid.com/open-source-must-be-fun-or-it-will-die/"
+  domain: "mikemcquaid.com"
+  author: "Mike McQuaid"
+  date: "2026-07-26"
+  blurb: "Fun must be the prime motivation for OSS to survive."
+  tags: [ecosystem, open-source]
