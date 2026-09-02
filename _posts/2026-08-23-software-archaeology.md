@@ -31,6 +31,11 @@ Nowadays we have a different problem: the proliferation of AI slop on the Intern
 
 What happens when these two forces collide? Will the Internet end up being the doomsayers' worst nightmare? Natural content deterioration will slowly rot away the genuine human content while AI mass-production keeps going on, until it's just AI outputting and consuming it's own content, an ouroboros of endless generated content.
 
+<br />
+![ouroboros](/assets/img/posts/software-archaeology/ouroboros.png)
+*An ouroboros is a mythical snake eating it's own tail.*
+<br />
+
 But I believe there is another hidden force at play here--the irrepressible desire of humans to create beautiful and useful things. It's now cheaper than ever to produce AI slop, but it's also cheaper than ever to excavate dead software and provide ongoing maintenance to existing programs. 
 
 I have been so inspired reading about people reviving their old programs. Their stories explaining the creation of the original software, why it languished or became obsolete, and how it was resurrected in the past few months are addicting to read. It clearly showcases the changing dynamics of software development and exciting possibilities for more creative, non-slop things. 
