@@ -883,3 +883,11 @@
   date: "2026-08-01"
   blurb: "How pudding.cool enables non-devs to make visual data-driven essays"
   tags: [future-of-coding, workflows]
+
+- title: "Boarding China's Last Bus"
+  url: "https://asteriskmag.com/issues/15/chinas-last-bus"
+  domain: "asteriskmag.com"
+  author: "Zilan Qian"
+  date: "2026-05-01"
+  blurb: "China's response to AI is a mixture of necessary optimism and anxiety."
+  tags: [ecosystem, china]
