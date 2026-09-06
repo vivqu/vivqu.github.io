@@ -867,3 +867,11 @@
   date: "2026-07-26"
   blurb: "Fun must be the prime motivation for OSS to survive."
   tags: [ecosystem, open-source]
+
+- title: "Extensible Software in the age of LLMs"
+  url: "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/"
+  domain: "jeremymorrell.dev"
+  author: "Jeremy Morrell"
+  date: "2026-08-18"
+  blurb: "Turning web apps into a platform for AI agents."
+  tags: [future-of-coding, architecture]
