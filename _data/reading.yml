@@ -875,3 +875,11 @@
   date: "2026-08-18"
   blurb: "Turning web apps into a platform for AI agents."
   tags: [future-of-coding, architecture]
+
+- title: "How to make dope shit - working with data"
+  url: "https://pudding.cool/process/how-to-make-dope-shit-part-1/"
+  domain: "pudding.cool"
+  author: "Ilia Blinderman"
+  date: "2026-08-01"
+  blurb: "How pudding.cool enables non-devs to make visual data-driven essays"
+  tags: [future-of-coding, workflows]
