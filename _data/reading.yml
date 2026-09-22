@@ -258,7 +258,7 @@
   date: "2024-05-01"
   blurb: "Personal-sized software is the future."
   tags: [future-of-coding, home-cooked]
-  refs: []
+  refs: ["https://www.robinsloan.com/notes/home-cooked-app/"]
 
 - title: "Writing as theory-building"
   url: "/blog/2026/03/25/writing-as-theory-building/"
@@ -891,3 +891,68 @@
   date: "2026-05-01"
   blurb: "China's response to AI is a mixture of necessary optimism and anxiety."
   tags: [ecosystem, china]
+
+- title: "The contagion of fear"
+  url: "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/"
+  domain: "bcantrill.dtrace.org"
+  author: "Bryan Cantrill"
+  date: "2026-09-13"
+  blurb: "Intelligence does not exempt a system from the realities of the physical world"
+  tags: [forecasting, risk]
+
+- title: "Statement from Tristan Buckmaster"
+  url: "https://cims.nyu.edu/~tristanb/statement.pdf"
+  domain: "cims.nyu.edu"
+  author: "Tristan Buckmaster"
+  date: "2026-09-08"
+  blurb: "Addressing the LLM generated proofs for the Navier-Stokes theorem."
+  tags: [ecosystem, math]
+
+- title: "A beginning for mathematics"
+  url: "https://proofsandprompts.com/2026/09/14/a-beginning-for-mathematics/"
+  domain: "proofsandprompts.com"
+  author: "Daniel Litt"
+  date: "2026-09-14"
+  blurb: "How to shape the future of mathematics with and without AI"
+  tags: [ecosystem, math]
+
+- title: "A Severe Misalignment of AI in Mathematics"
+  url: "https://terrytao.wordpress.com/2026/09/11/a-severe-misalignment-of-ai-in-mathematics/"
+  domain: "terrytao.wordpress.com"
+  author: "Terry Tao"
+  date: "2026-09-11"
+  blurb: "Declaration about AI usage and the impact on the math community"
+  tags: [ecosystem, math]
+
+- title: "Crowdsourcing a list of general resources on the purpose, value, and nature of mathematics"
+  url: "https://terrytao.wordpress.com/2026/09/12/crowdsourcing-a-list-of-general-resources-on-the-purpose-value-and-nature-of-mathematics/"
+  domain: "terrytao.wordpress.com"
+  author: "Terry Tao"
+  date: "2026-09-12"
+  blurb: "Resources on the question of what mathematics is."
+  tags: [ecosystem, math]
+
+- title: "The end of an era"
+  url: "https://hughhowey.com/the-end-of-an-era/"
+  domain: "hughhowey.com"
+  author: "Hugh Howey"
+  date: "2026-07-31"
+  blurb: "Machine-books vs. meat-books"
+  tags: [outcomes, writing]
+
+- title: "An app can be a home-cooked meal"
+  url: "https://www.robinsloan.com/notes/home-cooked-app/"
+  domain: "robinsloan.com"
+  author: "Robin Sloan"
+  date: "2020-02-01"
+  blurb: "Making a messaging app for, and with, Sloan's family."
+  tags: [future-of-coding, home-cooked]
+
+- title: "'Ask for what you want' is a key skill for the 21st century"
+  url: "https://www.robinsloan.com/lab/ask-for-what-you-want/"
+  domain: "robinsloan.com"
+  author: "Robin Sloan"
+  date: "2026-09-18"
+  blurb: "Follow-up to home-cooked apps in the climate of 2026 AI tools"
+  tags: [future-of-coding, home-cooked]
+  refs: ["https://www.robinsloan.com/notes/home-cooked-app/"]
