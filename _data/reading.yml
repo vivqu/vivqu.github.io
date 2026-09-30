@@ -21,7 +21,7 @@
   url: "https://www.oreilly.com/radar/what-if-ai-in-2026-and-beyond/?ref=sentiers.media"
   author: "Tim O'Reilly and Mike Loukides"
   domain: oreilly.com
-  tags: [forecasting]
+  tags: [forecasting, skepticism]
   date: "2025-12-08"
   blurb: "Analyzing market dynamics between the big frontier labs and projecting various outcomes."
   refs: ["https://www.normaltech.ai/p/ai-as-normal-technology"]
@@ -111,7 +111,7 @@
   url: "https://www.normaltech.ai/p/could-ai-slow-science"
   author: "Sayash Kapoor and Arvind Narayanan"
   domain: normaltech.ai
-  tags: [forecasting]
+  tags: [forecasting, risk]
   date: "2025-07-16"
   blurb: "Concerns on the impact of AI on scientific institutions and overall progress."
   refs: ["https://www.normaltech.ai/p/ai-as-normal-technology"]
@@ -541,7 +541,7 @@
   domain: youtube.com
   date: "2026-04-12"
   blurb: "Non-programmers released CorridorKey, a green screen keying tool that often outperforms other existing tools."
-  tags: [future-of-coding, experts-in-other-fields]
+  tags: [future-of-coding]
   refs: []
 
 - title: "Why can't they just...? Revisited"
@@ -826,7 +826,7 @@
   author: "Terry Tao"
   date: "2026-07-12"
   blurb: "Terry Tao builds a small web visualizer and declarative language for number randomness"
-  tags: [future-of-coding, experts-in-other-fields]
+  tags: [future-of-coding]
 
 - title: "Old and new apps, via modern coding agents"
   url: "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents/"
@@ -956,3 +956,30 @@
   blurb: "Follow-up to home-cooked apps in the climate of 2026 AI tools"
   tags: [future-of-coding, home-cooked]
   refs: ["https://www.robinsloan.com/notes/home-cooked-app/"]
+
+- title: "Government(s) Controlling AI Sounds Safer, But..."
+  url: "https://hardcoresoftware.learningbyshipping.com/p/243-governments-controlling-ai-sounds"
+  domain: "hardcoresoftware.learningbyshipping.com"
+  author: "Steven Sinofsky"
+  date: "2026-09-29"
+  blurb: "Cryptography is the historical precedent for AI regulation"
+  tags: [forecasting, history]
+  refs: []
+
+- title: "Why has Shopify dropped React Native?"
+  url: "https://newsletter.pragmaticengineer.com/p/shopify-native-mobile"
+  domain: "pragmaticengineer.com"
+  author: "Gergely Orosz"
+  date: "2026-09-29"
+  blurb: "The negatives of building native mobile apps compared to React Native have been mitigated with coding agents"
+  tags: [capabilities, mobile]
+  refs: []
+
+- title: "AI existential risk probabilities are (still) too unreliable to inform policy"
+  url: "https://www.normaltech.ai/p/p-doom"
+  domain: "normaltech.ai"
+  author: "Arvind Narayanan & Sayash Kapoor"
+  date: "2026-09-28"
+  blurb: "Forecasting is misleading for setting AI regulation/policy"
+  tags: [forecasting, risk]
+  refs: []
