@@ -983,3 +983,11 @@
   blurb: "Forecasting is misleading for setting AI regulation/policy"
   tags: [forecasting, risk]
   refs: []
+
+- title: "Responsible Release of AI-Generated Mathematics"
+  url: "https://agmai.org/general-sep29/"
+  domain: "agmai.org"
+  author: "Institute for Advanced Study"
+  date: "2026-09-29"
+  blurb: "Guidelines for how to use AI in mathematics"
+  tags: [ecosystem, math]
