@@ -53,6 +53,7 @@ I've collected a few case studies about the resurrection of vintage games:
 - [Micropolis](https://github.com/c-ehrlich/micropolis/tree/main) - Typescript port of SimCity (1989) built using Codex 5.3 in 4 days.
 - [Crimsonland](https://banteg.xyz/posts/crimsonland/) - a full rewrite of a top-down shooter originally released in 2003. The original creators took a year to port the game in 2014, and this author took 2 weeks to rewrite it using the binaries only and no access to the original source code.
 - [Snowboard Kids 2](https://blog.chrislewis.au/the-long-tail-of-llm-assisted-decompilation/) - the author decompiled "the greatest N64 game ever made" with a detailed breakdown of his workflow. Discovered some new [cheat codes](https://www.reddit.com/r/SnowboardKids/comments/1pw1nj4/new_sbk2_cheat_code/?share_id=_dyHtZV9QtJ9Nbed1Vrxw&utm_content=1&utm_medium=ios_app&utm_name=ioscss&utm_source=share&utm_term=1) along the way.
+- [Smash Bros Melee on a Meta Quest](https://www.kevin.md/i-put-melee-in-my-living-room.md/) - used the melee decomp to build a Quest app with agents.
 
 All of these examples make me very excited for *more* interesting software being created, not less. The culture of [software archaeology](https://en.wikipedia.org/wiki/Software_archaeology) might spread from the niche gaming subcultures to something that any hobbyist can do. We can keep alive and enhance old software in ways that used to be too cost-prohibitive. These works might even be further enhanced, remixed, and recombined into new and different tools and experiences.
 
@@ -65,4 +66,4 @@ How many more of these cool projects will exist now that it's easier and cheaper
 
 <hr class="section-divider" />
 
-<footer>This article was last updated on 08/23/2026. v2 is 1,503 words and took 4 hours to write and edit.</footer>
+<footer>This article was last updated on 10/26/2026. v3 is 1,539 words, and the essay took 4 hours to write and edit.</footer>
