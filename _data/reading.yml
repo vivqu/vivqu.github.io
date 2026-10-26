@@ -1007,3 +1007,11 @@
   date: "2026-10-11"
   blurb: "Deconstructing the quality of DHH's rewrite of Campfire in Rust vs. Elixir"
   tags: [capabilities]
+
+- title: "How to effectively debug when you no longer understand the code"
+  url: "https://copyconstruct.medium.com/how-to-effectively-debug-when-you-no-longer-understand-the-code-bd3dcb2c5f7b"
+  author: "Cindy Sridharan"
+  domain: "copyconstruct.medium.com"
+  date: "2026-10-10"
+  blurb: "Really insightful post with real world examples. Two-tier framework (factual and derivative)"
+  tags: [future-of-coding, workflows, debugging]
