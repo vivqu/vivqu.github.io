@@ -991,3 +991,11 @@
   date: "2026-09-29"
   blurb: "Guidelines for how to use AI in mathematics"
   tags: [ecosystem, math]
+
+- title: "More on Anthropic’s Scion ripping off Mononoke"
+  url: "https://sunshowers.io/posts/anthropic-mononoke-2/"
+  domain: "sunshowers.io"
+  author: "Rain"
+  date: "2026-10-15"
+  blurb: "Anthropic copied Mononoke without attribution"
+  tags: [ecosystem, open-source]
