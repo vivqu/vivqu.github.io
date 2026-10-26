@@ -908,9 +908,37 @@
       .join('g')
       .style('cursor', 'pointer')
       .call(d3.drag()
-        .on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
-        .on('drag',  (e, d) => { d.fx = e.x; d.fy = e.y; })
-        .on('end',   (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }));
+        .on('start', (e, d) => {
+          if (!e.active) sim.alphaTarget(0.3).restart();
+          d.fx = d.x; d.fy = d.y;
+          d.leash = dragLeash(d);
+        })
+        .on('drag',  (e, d) => {
+          // Clamp the drag target to the leash so a node can't be hauled far outside
+          // its cluster. A cluster circle's radius is the farthest member's distance
+          // from the centroid, so one far-flung node balloons its circle, the balloon
+          // overlaps every other circle, and the (unbounded) overlap-push forces slam
+          // the other clusters into the canvas walls — the "explosion".
+          const { cx, cy, maxR } = d.leash;
+          const dx = e.x - cx, dy = e.y - cy;
+          const dist = Math.hypot(dx, dy);
+          if (dist > maxR) { d.fx = cx + (dx / dist) * maxR; d.fy = cy + (dy / dist) * maxR; }
+          else             { d.fx = e.x; d.fy = e.y; }
+        })
+        .on('end',   (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; delete d.leash; }));
+
+    // Snapshot the drag leash at drag start (not per tick — the circle grows as the
+    // node is pulled outward, so a live leash would ratchet). Clustered nodes are
+    // leashed to the tightest circle they belong to; free nodes to their own position.
+    function dragLeash(d) {
+      let circle = null;
+      (d.tags || []).forEach(t => {
+        const c = clusterCircle[t];
+        if (c && (!circle || c.r < circle.r)) circle = c;
+      });
+      if (circle) return { cx: circle.cx, cy: circle.cy, maxR: circle.r + 70 };
+      return { cx: d.x, cy: d.y, maxR: 140 };
+    }
 
     nodeG.append('circle')
       .attr('r', d => nodeRadius(d))
