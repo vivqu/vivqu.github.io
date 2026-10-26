@@ -999,3 +999,11 @@
   date: "2026-10-15"
   blurb: "Anthropic copied Mononoke without attribution"
   tags: [ecosystem, open-source]
+
+- title: "I'm sorry, but you still have to think"
+  url: "https://itsallaboutthebit.com/i-am-sorry-but-you-still-have-to-think/"
+  domain: "itsallaboutthebit.com"
+  author: "Piotr Sarnacki"
+  date: "2026-10-11"
+  blurb: "Deconstructing the quality of DHH's rewrite of Campfire in Rust vs. Elixir"
+  tags: [capabilities]
