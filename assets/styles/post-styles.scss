@@ -310,3 +310,99 @@ a {
 a:hover {
   color: $link-color;
 }
+details.vision-doc {
+  margin-block-start: 2em;
+  margin-block-end: 2em;
+  margin-left: 2rem;
+  font-style: italic;
+  color: $blockquote-color;
+
+  summary {
+    font-family: 'GeistMono', monospace;
+    font-style: normal;
+    font-size: $code-text-size;
+    color: $text-color;
+    cursor: pointer;
+
+    &::after {
+      content: "(expand to read more)";
+      font-size: 12px;
+      margin-left: 0.75em;
+      font-style: italic;
+      color: $blockquote-border-color;
+    }
+  }
+
+  &[open] summary::after {
+    content: none;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+}
+
+.paginator {
+  margin-block-start: 2em;
+  margin-block-end: 2em;
+  outline: none;
+
+  figure {
+    display: none;
+    margin: 0;
+  }
+
+  &:not(.is-ready) figure:first-child,
+  figure.is-active {
+    display: block;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 7 / 4;
+    object-fit: cover;
+    border: 1px solid $post-table-border-color;
+    border-radius: 4px;
+  }
+
+  figcaption {
+    text-align: center;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 5px;
+    color: $secondary-color;
+  }
+
+  &:focus-visible img {
+    border-color: $link-color;
+  }
+}
+
+.paginator-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  font-family: 'GeistMono', monospace;
+  font-size: $code-text-size;
+  color: $secondary-color;
+
+  button {
+    background: none;
+    border: 1px solid $post-table-border-color;
+    border-radius: 4px;
+    color: $text-color;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 2px 10px;
+    line-height: 1.4;
+
+    &:hover {
+      border-color: $link-color;
+      color: $link-color;
+    }
+  }
+}
