@@ -45,6 +45,10 @@ social_media:
   twitter: vivqu
 
 projects:
+  - name: Weird Little Apps
+    web_url: https://weirdlittleapps.com
+    image_url: assets/img/weird-little-apps-icon.png
+    description: Purveyors of fine apps
   - name: Recite
     web_url: https://chrome.google.com/webstore/detail/recite/jpngepoglfflfacfcjfodbgnmhejlaoa
     image_url: assets/img/recite-icon.png
