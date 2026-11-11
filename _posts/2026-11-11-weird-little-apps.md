@@ -16,7 +16,7 @@ In a [previous newsletter](https://vivqu.substack.com/p/making-space-for-weirdne
 
 For as long as there have been personal computers and the Internet, there have been attempts at bringing the power of coding to the masses -- from low-code/no-code platforms to WYSIWYG site builders to software consultants raking in $300/hr to build mobile apps. All these options were either too restrictive or inflexible or expensive to fully meet demand. But coding agents have democratized access beyond those with the relevant expertise. And with Fable-class models proving significantly more capable at software design and architecture, these AI-generated apps are finally well-formed enough to have rich feature-sets and complex functionality. We've broken past the limit of previous generations of models, which needed a firm guiding hand to prevent development from grinding to a halt. Even six months ago, if you didn't know what you were doing, your AI agent would be hopelessly lost in their own hallucinated spaghetti code as soon as you try to do something remotely interesting. 
 
-Now you can build that ultra-custom thing for your hobby! You want to classify [all of David Attenborough's documentaries](https://weirdlittleapps.com/apps/attenborough-100/)? Think that every recipe should be displayed in [table format](https://weirdlittleapps.com/apps/recipe-tables/)? Turn all of NYC into [a pixel art map](https://weirdlittleapps.com/apps/isometric-nyc/)? How about a site for [finding bootleg Knicks merch](https://weirdlittleapps.com/apps/knickknacks/) during the 2026 NBA Finals? 
+Now you can build that ultra-custom thing for your hobby! You want to classify [all of David Attenborough's documentaries](https://weirdlittleapps.com/apps/attenborough-100/?ref=vivqu-blog)? Think that every recipe should be displayed in [table format](https://weirdlittleapps.com/apps/recipe-tables/?ref=vivqu-blog)? Turn all of NYC into [a pixel art map](https://weirdlittleapps.com/apps/isometric-nyc/?ref=vivqu-blog)? How about a site for [finding bootleg Knicks merch](https://weirdlittleapps.com/apps/knickknacks/?ref=vivqu-blog) during the 2026 NBA Finals? 
 
 I'm frustrated that we don't have good language to describe this kind of software (["home-cooked"](https://www.robinsloan.com/lab/ask-for-what-you-want/) is maybe the closest). Vibe-coding and AI slop all suggest a fundamental lack of care in the creation of the thing. But people building on a small scale can put more craft and care into the execution of an idea than even the largest tech companies in the world. You can still put days and weeks into making something good even if you don't look at the code these days. It's the opposite of slop, in fact: instead of farting out the bare minimum crap to farm clicks or grab eyeballs from our ever-rotting attention spans, these projects are full of intention. The passion practically radiates through the screen!
 
@@ -32,7 +32,7 @@ There's still no certainty about where the rapid development of AI will take us.
 >
 > But I can think of no better reason for leisure than the idea of _agency_ itself: the drive to create that comes from a personal sense of freedom and choice.
 
-I made [Weird Little Apps](https://weirdlittleapps.com/) to celebrate the one-off creations, from the frivolous to the serious. I am delighted by all the ideas that are bubbling forth that I would never in my life ever dream up. And there's probably more out there that are not visible to me! Cool ideas are popping up left and right. What little gems are out there, glowing softly in the dark, that simply need to be uncovered?
+I made [Weird Little Apps](https://weirdlittleapps.com/?ref=vivqu-blog) to celebrate the one-off creations, from the frivolous to the serious. I am delighted by all the ideas that are bubbling forth that I would never in my life ever dream up. And there's probably more out there that are not visible to me! Cool ideas are popping up left and right. What little gems are out there, glowing softly in the dark, that simply need to be uncovered?
 
 I am practicing what I preach, too. I used coding agents to set up all the scaffold and plumbing for the website (thanks Claude!). But the care and attention to detail for the final product was the bulk of the work. You'll notice it doesn't [look like](https://www.reddit.com/r/webdesign/comments/1w4r7dj/is_everyone_using_the_same_website_builder_or/) an AI-generated website.
 
@@ -82,10 +82,10 @@ I spent an hour just tuning the animation between desktop and mobile screenshots
 
 <br />
 ![transition](/assets/img/posts/weird-little-apps/transition.gif)
-*<a href="https://weirdlittleapps.com/apps/bingebrowse/" target="_blank">Bingebrowse</a> putting coding agents to the test.*
+*<a href="https://weirdlittleapps.com/apps/bingebrowse/?ref=vivqu-blog" target="_blank">Bingebrowse</a> putting coding agents to the test.*
 <br />
 
-I spent a many hours designing the [suggestion form](https://weirdlittleapps.com/suggest/) to look and behave like a postcard, just because it was fun.
+I spent a many hours designing the [suggestion form](https://weirdlittleapps.com/suggest/?ref=vivqu-blog) to look and behave like a postcard, just because it was fun.
 
 <br />
 ![postcard](/assets/img/posts/weird-little-apps/postcard.png)
@@ -106,7 +106,7 @@ This webpage for weird little apps is my way of keeping track of the making and 
 
 <hr class="section-divider" />
 
-If you have a weird little app you would like to share, please [submit a suggestion](https://weirdlittleapps.com/suggest/)! Credit will go to the original curator of the app.
+If you have a weird little app you would like to share, please [submit a suggestion](https://weirdlittleapps.com/suggest/?ref=vivqu-blog)! Credit will go to the original curator of the app.
 
 
 <hr class="section-divider" />
