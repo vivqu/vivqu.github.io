@@ -85,7 +85,7 @@ I spent an hour just tuning the animation between desktop and mobile screenshots
 *<a href="https://weirdlittleapps.com/apps/bingebrowse/?ref=vivqu-blog" target="_blank">Bingebrowse</a> putting coding agents to the test.*
 <br />
 
-I spent a many hours designing the [suggestion form](https://weirdlittleapps.com/suggest/?ref=vivqu-blog) to look and behave like a postcard, just because it was fun.
+I spent many hours designing the [suggestion form](https://weirdlittleapps.com/suggest/?ref=vivqu-blog) to look and behave like a postcard, just because it was fun.
 
 <br />
 ![postcard](/assets/img/posts/weird-little-apps/postcard.png)
